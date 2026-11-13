@@ -6,9 +6,8 @@
  * text block (circle circumscribing the rectangle) plus a margin. If it still does
  * not fit, the font shrinks down to `CONCEPT_FONT_MIN`.
  *
- * The circle stroke is drawn like the library's `circulo.svg` (from 5 to 95 of the
- * 100-unit viewBox) so that `connect` anchors, which still use the `circulo` meta,
- * land exactly on the stroke. That is why the box is larger than the drawn circle by
+ * The circle stroke is drawn from 5 to 95 of a 100-unit viewBox so that `connect`
+ * anchors land exactly on the stroke. That is why the box is larger than the drawn circle by
  * `1 / CONCEPT_DRAWN_RATIO`.
  */
 import { layoutRuns } from './text-runs.js'

@@ -2,24 +2,23 @@
  * Tests of the hit-test and cascade-delete utilities.
  *
  * Covers:
- * - promotedObjectAtPoint: hits a stroke translated by the box; misses when far away;
- *   ignores objects without inkGeometry; prefers the last inserted.
+ * - objectAtBoxPoint: hits the box of an object; misses when far away; prefers the last inserted.
  * - removeObjectCascade: deletes the object + connections + group membership;
  *   an empty group is removed; unknown id → no change.
  */
 import { describe, it, expect } from 'vitest'
 import { emptyScene } from './model.js'
 import type { Scene, SceneObject, SceneConnection, SceneGroup } from './model.js'
-import { removeObjectCascade, objectAtBoxPoint } from './promoted-hit.js'
+import { removeObjectCascade, objectAtBoxPoint } from './object-hit.js'
 
 // ── Scene-building helpers ────────────────────────────────────────────────────
 
-/** Creates a normal scene object (no inkGeometry). */
+/** Creates a normal scene object (text or concept). */
 function makeNormal(id: string): SceneObject {
   return {
     id,
-    object: 'nube',
-    label: null,
+    object: 'concepto',
+    label: 'nube',
     text: null,
     role: null,
     box: { x: 0, y: 0, width: 100, height: 100 },
@@ -39,17 +38,15 @@ function makeScene(
   return scene
 }
 
-// ── promotedObjectAtPoint ─────────────────────────────────────────────────────
-
 // ── objectAtBoxPoint ──────────────────────────────────────────────────────────
 
 describe('objectAtBoxPoint', () => {
-  it('hits inside the box of an object without inkGeometry', () => {
+  it('hits inside the box of an object', () => {
     // makeNormal uses box {x:0,y:0,w:100,h:100}; we create one with a custom box
     const custom: import('./model.js').SceneObject = {
       id: 'nube_1_1',
-      object: 'nube',
-      label: null,
+      object: 'concepto',
+      label: 'nube',
       text: null,
       
       role: null,
@@ -65,8 +62,8 @@ describe('objectAtBoxPoint', () => {
   it('fails when the point is outside the box', () => {
     const obj: import('./model.js').SceneObject = {
       id: 'nube_1_1',
-      object: 'nube',
-      label: null,
+      object: 'concepto',
+      label: 'nube',
       text: null,
       
       role: null,
@@ -82,8 +79,8 @@ describe('objectAtBoxPoint', () => {
     // Both share the same box; the second inserted must win
     const obj1: import('./model.js').SceneObject = {
       id: 'a',
-      object: 'sol',
-      label: null,
+      object: 'concepto',
+      label: 'sol',
       text: null,
       
       role: null,
@@ -91,8 +88,8 @@ describe('objectAtBoxPoint', () => {
     }
     const obj2: import('./model.js').SceneObject = {
       id: 'b',
-      object: 'nube',
-      label: null,
+      object: 'concepto',
+      label: 'nube',
       text: null,
       
       role: null,
@@ -110,7 +107,7 @@ describe('objectAtBoxPoint', () => {
     expect(hit).toBeUndefined()
   })
 
-  it('includes objects WITHOUT inkGeometry', () => {
+  it('includes every kind of object', () => {
     const obj = makeNormal('sol_1_1')
     // makeNormal has box {x:0,y:0,w:100,h:100}
     const scene = makeScene([obj])

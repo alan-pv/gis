@@ -16,18 +16,16 @@
 
 /**
  * Representation of an SVG command token with its numeric arguments.
- * Exported for reuse by src/recognizer/sample-path.ts.
  */
-export interface PathToken {
+interface PathToken {
   cmd: string
   args: number[]
 }
 
 /**
  * Tokenizes an SVG path into command tokens + array of numbers.
- * Exported for reuse by src/recognizer/sample-path.ts.
  */
-export function tokenizePath(d: string): PathToken[] {
+function tokenizePath(d: string): PathToken[] {
   const tokens: PathToken[] = []
   // Regex that captures a command letter followed by zero or more numbers
   const re = /([MmLlHhVvCcSsQqTtAaZz])([^MmLlHhVvCcSsQqTtAaZz]*)/g

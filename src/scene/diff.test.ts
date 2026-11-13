@@ -15,30 +15,7 @@ import type { SceneEnv } from './apply.js'
 
 const CANVAS = { width: 1200, height: 900 }
 
-function makeMockLibrary(): SceneEnv['library'] {
-  const makeMeta = (name: string, width: number, height: number, render?: 'text') => ({
-    name,
-    format_version: 1 as const,
-    default_size: { width, height },
-    anchors: {
-      top: { x: width / 2, y: 0 },
-      bottom: { x: width / 2, y: height },
-      left: { x: 0, y: height / 2 },
-      right: { x: width, y: height / 2 },
-    },
-    ...(render === 'text'
-      ? { render: 'text' as const }
-      : { stroke_order: ['cuerpo'] }),
-  })
-
-  const lib = new Map()
-  lib.set('sol', { name: 'sol', meta: makeMeta('sol', 120, 120), svg: '<svg><path id="cuerpo"/></svg>' })
-  lib.set('nube', { name: 'nube', meta: makeMeta('nube', 160, 100), svg: '<svg><path id="cuerpo"/></svg>' })
-  lib.set('texto', { name: 'texto', meta: makeMeta('texto', 200, 40, 'text'), svg: null })
-  return lib
-}
-
-const ENV: SceneEnv = { canvas: CANVAS, library: makeMockLibrary() }
+const ENV: SceneEnv = { canvas: CANVAS }
 
 // ── Tests ─────────────────────────────────────────────────────────────────────
 
@@ -47,13 +24,13 @@ describe('diffAddedObjects', () => {
     // Previous scene with a sun
     const { scene: prev } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     // Next scene with sun and cloud
     const { scene: next } = applyOperations(
       prev,
-      [{ op: 'add', id: 'nube_1', object: 'nube' }],
+      [{ op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' }],
       ENV,
     )
 
@@ -69,7 +46,7 @@ describe('diffAddedObjects', () => {
   it('returns an empty array when there are no new objects', () => {
     const { scene: prev } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
 
@@ -83,8 +60,8 @@ describe('diffAddedObjects', () => {
     const { scene: next } = applyOperations(
       prev,
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
       ],
       ENV,
     )
@@ -100,7 +77,7 @@ describe('diffAddedObjects', () => {
   it('does not include objects already present in prev', () => {
     const { scene: prev } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     const { scene: next } = applyOperations(

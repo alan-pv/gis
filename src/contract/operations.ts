@@ -17,12 +17,12 @@ export type Role = z.infer<typeof RoleSchema>
 
 // ── `add.object` vocabulary of the agent ─────────────────────────────────────
 
-/** Text object (bold with `**word**`). */
-const OBJECT_TEXT = 'texto' as const
-/** A figure is a concept: a circle with its free-form name (`label`) inside. */
-const OBJECT_CONCEPT = 'concepto' as const
-/** Values of `add.object` the agent may emit. */
-export const AGENT_OBJECTS = [OBJECT_TEXT, OBJECT_CONCEPT] as const
+/**
+ * The two kinds of object on the board: `texto` (text, bold with `**word**`) and
+ * `concepto` (a circle with its free-form name, `label`, inside).
+ */
+export const ObjectKindSchema = z.enum(['texto', 'concepto'])
+export type ObjectKind = z.infer<typeof ObjectKindSchema>
 
 // ── add ──────────────────────────────────────────────────────────────────────
 
@@ -31,12 +31,7 @@ const AddOperationSchema = z
     op: z.literal('add'),
     /** Suggested id; the canvas renames on collision. */
     id: z.string().min(1),
-    /**
-     * `texto` | `concepto` for the agent. The schema leaves `object` free so
-     * that scene-level tests and promoted ink can use library names; the
-     * validator restricts it to AGENT_OBJECTS.
-     */
-    object: z.string().min(1),
+    object: ObjectKindSchema,
     /** Only for object "texto"; admits `**bold**`. */
     text: z.string().optional(),
     /** For "concepto": free-form name, required and non-empty. Admits `**bold**`. */
@@ -50,7 +45,7 @@ const AddOperationSchema = z
     role: RoleSchema.optional(),
   })
   .strict()
-  .refine((v) => v.object !== OBJECT_CONCEPT || (v.label !== undefined && v.label.trim() !== ''), {
+  .refine((v) => v.object !== 'concepto' || (v.label !== undefined && v.label.trim() !== ''), {
     message: "add of a 'concepto' requires a non-empty label (the concept name)",
     path: ['label'],
   })

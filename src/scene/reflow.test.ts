@@ -7,7 +7,6 @@
  * immutability of the input scene.
  */
 import { describe, it, expect, beforeAll } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
 import { validateAgentOutput } from '@/validator/index.js'
 import type { ValidationContext } from '@/validator/index.js'
 import type { BBox, Canvas } from '@/layout/index.js'
@@ -33,12 +32,10 @@ import dorado2 from '../__fixtures__/golden-2.json'
 
 const CANVAS = { width: 1200, height: 800 }
 
-let library: ReturnType<typeof loadLibrary>
 let env: SceneEnv
 
 beforeAll(() => {
-  library = loadLibrary()
-  env = { canvas: CANVAS, library }
+  env = { canvas: CANVAS }
 })
 
 interface FixtureEntry {
@@ -132,7 +129,7 @@ describe('reflowScene — the page areaTree overrides the layout', () => {
     const ctx1 = makeValidationCtx(scene)
     const { accepted: acc1 } = validateAgentOutput({
       schema_version: '1.0',
-      operations: [{ op: 'add', id: 'sol_1_1', object: 'sol' }],
+      operations: [{ op: 'add', id: 'sol_1_1', object: 'concepto', label: 'sol' }],
     }, ctx1)
     scene = applyOperations(scene, acc1, env).scene
 

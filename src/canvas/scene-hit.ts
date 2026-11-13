@@ -1,7 +1,6 @@
 /** Pure helpers of the Konva board: selection anchors, highlight targets, word ranges, label position. */
 import { LABEL_OFFSET } from './canvas-style.js'
 import { groupBBox, type SceneObject } from '@/scene/index.js'
-import { resolveObject, type Library, type ObjectMeta } from '@/library/index.js'
 import type { BBox } from '@/layout/index.js'
 import type { Point } from './anchors.js'
 import { layoutTextForRender } from './runs-layout.js'
@@ -14,39 +13,26 @@ import { TEXT_PADDING, ROLE_STYLE } from '@/scene/text-measure.js'
  * Anchor points (top/bottom/left/right) of an object in page coords,
  * for the selection overlay.
  *
- * - With SVG meta (render !== 'text') → scales meta.anchors from the viewBox to the box.
- * - Otherwise (inkGeometry, no meta, text) → midpoints of the sides.
+ * - A concept: the circle stroke (spans 5–95 % of the box), so the anchors sit on it.
+ * - A text: midpoints of the sides of its box.
  */
-export function selectionAnchors(obj: SceneObject, library: Library): Point[] {
+export function selectionAnchors(obj: SceneObject): Point[] {
   const box = obj.box
   const cx = box.x + box.width / 2
   const cy = box.y + box.height / 2
 
-  // Try to resolve meta if it is not a promoted object
-  let meta: ObjectMeta | undefined
-  if (!obj.inkGeometry) {
-    try {
-      meta = resolveObject(library, obj.object).obj.meta
-    } catch {
-      meta = undefined
-    }
+  if (obj.object === 'concepto') {
+    // Same stroke as `conceptCirclePath`: from 5 % to 95 % of the box on each axis.
+    const near = 0.05
+    const far = 0.95
+    return [
+      { x: box.x + 0.5 * box.width,  y: box.y + near * box.height }, // top
+      { x: box.x + 0.5 * box.width,  y: box.y + far * box.height  }, // bottom
+      { x: box.x + near * box.width, y: box.y + 0.5 * box.height  }, // left
+      { x: box.x + far * box.width,  y: box.y + 0.5 * box.height  }, // right
+    ]
   }
 
-  if (meta !== undefined && meta.render !== 'text') {
-    // Scale each anchor from the viewBox to the instantiated box
-    const vw = meta.default_size.width
-    const vh = meta.default_size.height
-    const sides = ['top', 'bottom', 'left', 'right'] as const
-    return sides.map(side => {
-      const a = meta!.anchors[side]
-      return {
-        x: box.x + (a.x / vw) * box.width,
-        y: box.y + (a.y / vh) * box.height,
-      }
-    })
-  }
-
-  // Fallback: midpoints of the sides
   return [
     { x: cx,              y: box.y              }, // top
     { x: cx,              y: box.y + box.height }, // bottom

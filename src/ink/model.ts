@@ -9,7 +9,9 @@
  * agent). It takes no part in layout: the teacher places strokes where they want
  * and the canvas does not move them.
  */
-import type { Color } from '@/library/index.js'
+
+/** Pen colors: a closed palette (hex values live in `src/canvas/palette.ts`). */
+export type Color = 'negro' | 'azul' | 'rojo' | 'verde' | 'amarillo' | 'naranja' | 'café' | 'gris'
 
 /** An ink stroke: flattened x,y pairs [x0,y0,x1,y1,...] (Konva.Line format). */
 export interface InkStroke {

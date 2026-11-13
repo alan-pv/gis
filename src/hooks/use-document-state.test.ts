@@ -2,7 +2,6 @@
  * Tests of the reducer and logic of useDocumentState.
  *
  * Pure logic only: no Konva, no rendering, no DOM.
- * Reuses the makeMockLibrary helper pattern from document.test.ts.
  *
  * Cases covered:
  * a) ADD_PAGE / SET_ACTIVE_PAGE / REMOVE_PAGE empty pendingSteps.
@@ -26,65 +25,17 @@ import {
   setActivePage,
   activeScene,
   activeInk,
-  updateActiveInk,
-  promoteInk,
 } from '@/document/index.js'
 import { applyToActivePage } from '@/document/index.js'
-import { addStroke } from '@/ink/index.js'
 import { documentToAgentState } from '@/document/index.js'
-import type { SceneEnv } from '@/scene/index.js'
 import { allIds } from '@/scene/index.js'
 import { defaultAreaTree, leafIds, splitLeaf } from '@/layout/index.js'
 
-// ── Test environment (same pattern as document.test.ts) ─────────────────────
+// ── Test environment ─────────────────────────────────────────────────────────
 
 const CANVAS = { width: 1200, height: 800 }
 
-/**
- * Minimal library for tests, identical to the one in document.test.ts.
- */
-function makeMockLibrary(): SceneEnv['library'] {
-  const makeMeta = (name: string, width: number, height: number, render?: 'text') => ({
-    name,
-    format_version: 1 as const,
-    default_size: { width, height },
-    anchors: {
-      top: { x: width / 2, y: 0 },
-      bottom: { x: width / 2, y: height },
-      left: { x: 0, y: height / 2 },
-      right: { x: width, y: height / 2 },
-    },
-    ...(render === 'text' ? { render: 'text' as const } : { stroke_order: ['cuerpo'] }),
-  })
-
-  const lib = new Map()
-
-  const objects = [
-    { name: 'sol', w: 120, h: 120 },
-    { name: 'nube', w: 160, h: 100 },
-    { name: 'mar', w: 200, h: 80 },
-    { name: 'lluvia', w: 80, h: 120 },
-  ]
-
-  for (const { name, w, h } of objects) {
-    lib.set(name, {
-      name,
-      meta: makeMeta(name, w, h),
-      svg: `<svg><path id="cuerpo"/></svg>`,
-    })
-  }
-
-  lib.set('texto', {
-    name: 'texto',
-    meta: makeMeta('texto', 200, 40, 'text'),
-    svg: null,
-  })
-
-  return lib
-}
-
-const LIBRARY = makeMockLibrary()
-const ENV = { canvas: CANVAS, library: LIBRARY }
+const ENV = { canvas: CANVAS }
 
 // ── Helper: seed animation steps into the state ───────────────────────────
 
@@ -96,7 +47,7 @@ function stateWithPendingSteps(): DocumentState {
   // Build a document with an object on page 1
   let doc = newDocument()
   const result = applyToActivePage(doc, [
-    { op: 'add', id: 'sol_1_1', object: 'sol' },
+    { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
   ], ENV)
   doc = result.document
 
@@ -224,12 +175,12 @@ describe('OBJECT_MOVED', () => {
     // Page 1: sol_1_1; page 2: nube_2_1 (active)
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
     doc = addPage(doc) // active = page 2
     const r2 = applyToActivePage(doc, [
-      { op: 'add', id: 'nube_2_1', object: 'nube' },
+      { op: 'add', id: 'nube_2_1', object: 'concepto', label: 'Cloud' },
     ], ENV)
     doc = r2.document
 
@@ -257,7 +208,7 @@ describe('global id collision in applyToActivePage', () => {
     // Create sol_1_1 on page 1
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
     expect(allIds(activeScene(doc)).has('sol_1_1')).toBe(true)
@@ -265,7 +216,7 @@ describe('global id collision in applyToActivePage', () => {
     // Add page 2 and suggest EXACTLY sol_1_1 (it already exists on page 1)
     doc = addPage(doc) // page number = 2
     const r2 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
 
     // The draw_object event must carry an id different from sol_1_1
@@ -274,8 +225,8 @@ describe('global id collision in applyToActivePage', () => {
     expect(drawEvent!.type).toBe('draw_object')
     const assignedId = (drawEvent as { type: 'draw_object'; id: string }).id
     expect(assignedId).not.toBe('sol_1_1')
-    // The assigned id must be sol_2_1 (first free one on page 2)
-    expect(assignedId).toBe('sol_2_1')
+    // The assigned id is built from the kind: concepto_2_1 (first free one on page 2)
+    expect(assignedId).toBe('concepto_2_1')
   })
 })
 
@@ -284,14 +235,14 @@ describe('documentToAgentState after switching to page 2', () => {
     // Sun on page 1
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
 
     // Move to page 2 and add a cloud
     doc = addPage(doc) // active = page 2
     const r2 = applyToActivePage(doc, [
-      { op: 'add', id: 'nube_2_1', object: 'nube' },
+      { op: 'add', id: 'nube_2_1', object: 'concepto', label: 'Cloud' },
     ], ENV)
     doc = r2.document
 
@@ -307,7 +258,7 @@ describe('documentToAgentState after switching to page 2', () => {
   it('going back to page 1 after being on page 2 shows the objects of page 1', () => {
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
     doc = addPage(doc) // active = page 2
@@ -414,73 +365,15 @@ describe('SET_ACTIVE_PAGE still empties pendingSteps', () => {
   })
 })
 
-// ── ERASE_PROMOTED ─────────────────────────────────────────────────
-
-/** Creates a state with a promoted object in the active scene. */
-function stateWithPromotedObject(): { state: DocumentState; objectId: string } {
-  let doc = newDocument()
-  const inkLayer = addStroke(activeInk(doc), [10, 20, 100, 200])
-  doc = updateActiveInk(doc, inkLayer)
-  const strokeId = activeInk(doc).strokes[0]!.id
-
-  const { document: newDoc, objectId } = promoteInk(doc, [strokeId], 'sol')
-  const state: DocumentState = { document: newDoc, pendingSteps: [], warnings: [], undoStack: [] }
-  return { state, objectId: objectId! }
-}
-
-describe('ERASE_PROMOTED', () => {
-  it('deletes the promoted object, cascading to connections and groups', () => {
-    const { state, objectId } = stateWithPromotedObject()
-    expect(activeScene(state.document).objects.has(objectId)).toBe(true)
-
-    const next = documentReducer(state, { type: 'ERASE_PROMOTED', id: objectId })
-    expect(activeScene(next.document).objects.has(objectId)).toBe(false)
-  })
-
-  it('NO empties pendingSteps', () => {
-    const base = stateWithPendingSteps()
-    // Add a promoted object to the document with steps
-    let doc = base.document
-    const inkLayer = addStroke(activeInk(doc), [0, 0, 50, 50])
-    doc = updateActiveInk(doc, inkLayer)
-    const strokeId = activeInk(doc).strokes[0]!.id
-    const { document: newDoc, objectId } = promoteInk(doc, [strokeId], 'sol')
-
-    const state: DocumentState = { ...base, document: newDoc }
-    expect(state.pendingSteps.length).toBeGreaterThan(0)
-
-    const next = documentReducer(state, { type: 'ERASE_PROMOTED', id: objectId! })
-    expect(next.pendingSteps.length).toBeGreaterThan(0)
-  })
-
-  it('ignores objects without inkGeometry (agent objects are not deleted with the eraser)', () => {
-    const base = stateWithPendingSteps()
-    // sol_1_1 exists in the scene but has no inkGeometry
-    expect(activeScene(base.document).objects.has('sol_1_1')).toBe(true)
-    const obj = activeScene(base.document).objects.get('sol_1_1')!
-    expect(obj.inkGeometry).toBeUndefined()
-
-    const next = documentReducer(base, { type: 'ERASE_PROMOTED', id: 'sol_1_1' })
-    // The agent's object is untouched
-    expect(activeScene(next.document).objects.has('sol_1_1')).toBe(true)
-  })
-
-  it('unknown id → no change', () => {
-    const state = initialDocumentState()
-    const next = documentReducer(state, { type: 'ERASE_PROMOTED', id: 'no_existe' })
-    expect(next).toBe(state)
-  })
-})
-
 // ── REMOVE_OBJECT ────────────────────────────────────────────────────
 
 describe('REMOVE_OBJECT', () => {
-  it('deletes an agent object (without inkGeometry), cascading to connections', () => {
+  it('deletes an object, cascading to connections', () => {
     // Create sol_1_1 and nube_1_1 with a connection between them
     let doc = newDocument()
     const r = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
-      { op: 'add', id: 'nube_1_1', object: 'nube' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
+      { op: 'add', id: 'nube_1_1', object: 'concepto', label: 'Cloud' },
       { op: 'connect', id: 'f1', from: 'sol_1_1', to: 'nube_1_1', style: 'arrow' },
     ], ENV)
     doc = r.document
@@ -519,12 +412,12 @@ describe('REMOVE_OBJECT', () => {
     expect(next.pendingSteps.length).toBeGreaterThan(0)
   })
 
-  it('deletes an agent object that belongs to a group: it leaves the group and the group survives with the rest', () => {
+  it('deletes an object that belongs to a group: it leaves the group and the group survives with the rest', () => {
     // sol_1_1 and nube_1_1 grouped in g1
     let doc = newDocument()
     const r = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
-      { op: 'add', id: 'nube_1_1', object: 'nube' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
+      { op: 'add', id: 'nube_1_1', object: 'concepto', label: 'Cloud' },
       { op: 'group', id: 'g1', label: 'ciclo', members: ['sol_1_1', 'nube_1_1'] },
     ], ENV)
     doc = r.document
@@ -547,7 +440,7 @@ describe('REMOVE_OBJECT', () => {
   it('deletes the only member of a group: the empty group is removed by cascade', () => {
     let doc = newDocument()
     const r = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
       { op: 'group', id: 'g1', label: 'solo', members: ['sol_1_1'] },
     ], ENV)
     doc = r.document
@@ -628,42 +521,12 @@ describe('UNDO — reverts ADD_INK_STROKE', () => {
   })
 })
 
-describe('UNDO — reverts PROMOTE_INK', () => {
-  it('UNDO after a promotion restores the strokes and removes the object', () => {
-    // Add a stroke and promote it
-    let doc = newDocument()
-    const inkLayer = addStroke(activeInk(doc), [10, 20, 100, 200])
-    doc = updateActiveInk(doc, inkLayer)
-    const strokeId = activeInk(doc).strokes[0]!.id
-
-    let state: DocumentState = { document: doc, pendingSteps: [], warnings: [], undoStack: [] }
-    // Apply the promotion (through the reducer so it takes a snapshot)
-    state = documentReducer(state, {
-      type: 'PROMOTE_INK',
-      strokeIds: [strokeId],
-      objectType: 'sol',
-    })
-
-    // Check that the promotion happened: object in the scene, stroke out of the ink
-    expect(activeScene(state.document).objects.size).toBeGreaterThan(0)
-    expect(activeInk(state.document).strokes).toHaveLength(0)
-    expect(state.undoStack).toHaveLength(1)
-
-    // UNDO: the object must disappear and the stroke return to the ink
-    const next = documentReducer(state, { type: 'UNDO' })
-    expect(activeScene(next.document).objects.size).toBe(0)
-    expect(activeInk(next.document).strokes).toHaveLength(1)
-    expect(activeInk(next.document).strokes[0]!.id).toBe(strokeId)
-    expect(next.undoStack).toHaveLength(0)
-  })
-})
-
 describe('UNDO — reverts REMOVE_OBJECT', () => {
-  it('UNDO after deleting an agent object restores the object', () => {
-    // Create an agent object
+  it('UNDO after deleting an object restores the object', () => {
+    // Create an object
     let doc = newDocument()
     const r = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r.document
 

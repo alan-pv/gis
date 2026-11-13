@@ -18,7 +18,7 @@ function withText(role: 'titulo' | 'lista' | null): Scene {
     text: 'Hola',
     role,
   } as never)
-  scene.objects.set('sol_1', { id: 'sol_1', object: 'sol', label: null, role: null } as never)
+  scene.objects.set('sol_1', { id: 'sol_1', object: 'concepto', label: null, role: null } as never)
   return scene
 }
 
@@ -42,7 +42,7 @@ describe('sceneToAgentState — role', () => {
   it('non-text objects carry no role', () => {
     const state = sceneToAgentState(withText('lista'), CANVAS, [])
     const sol = state.objects.find((o) => o.id === 'sol_1')
-    expect(sol).toEqual({ id: 'sol_1', object: 'sol', label: null })
+    expect(sol).toEqual({ id: 'sol_1', object: 'concepto', label: null })
     expect('role' in (sol as object)).toBe(false)
   })
 })
@@ -50,8 +50,7 @@ describe('sceneToAgentState — role', () => {
 describe('sceneToAgentState — paragraph extended with update', () => {
   it('the state of later turns shows the grown paragraph with role cuerpo', async () => {
     const { applyGoldenEnvelope, CANVAS: GCANVAS } = await import('@/__fixtures__/golden-helpers.js')
-    const { loadLibrary } = await import('@/library/index.js')
-    const env = { canvas: GCANVAS, library: loadLibrary() }
+    const env = { canvas: GCANVAS }
     const env1 = {
       schema_version: '1.0',
       operations: [

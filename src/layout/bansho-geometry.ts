@@ -385,8 +385,8 @@ interface MemberOffset {
  * dimensions precomputed at a fixed width.
  *
  * - For text objects, `measure` calls the measurer with the given width.
- * - For library objects (figures), `measure` ignores `contentWidth` and
- *   returns the fixed normalized dimensions from the library.
+ * - For concepts (a circle with its name inside), `measure` ignores `contentWidth`
+ *   and returns the concept's own dimensions.
  *
  * @param plan      Board structure (planBoard).
  * @param measure   Measuring callback: `(id, contentWidth) => { width, height }`.

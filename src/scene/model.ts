@@ -5,8 +5,7 @@
  * All geometry lives in logical BBoxes resolved by the layout engine.
  */
 import type { BBox } from '@/layout/index.js'
-import type { ConnectStyle, Role } from '@/contract/index.js'
-import type { Color, Fill } from '@/library/index.js'
+import type { ConnectStyle, ObjectKind, Role } from '@/contract/index.js'
 
 // ── Scene object ──────────────────────────────────────────────────────────────
 
@@ -16,16 +15,12 @@ import type { Color, Fill } from '@/library/index.js'
  */
 export interface SceneObject {
   id: string
-  /** Library type: "sol", "nube", "texto", etc. */
-  object: string
+  /** Kind of object: a text or a concept (a circle with its name). */
+  object: ObjectKind
   /** Visible label of the object; null if none. */
   label: string | null
   /** Text of the object; only meaningful for object === "texto". */
   text: string | null
-  /** Effective color of the object. Optional so existing constructors keep working. */
-  color?: Color
-  /** Effective fill of the object. Optional so existing constructors keep working. */
-  fill?: Fill
   /**
    * Semantic role of the object.
    * Only meaningful for object === 'texto'; null for non-text.
@@ -38,17 +33,9 @@ export interface SceneObject {
    * Font size computed at insertion time.
    * Only relevant for object === 'texto' with role === 'titulo' (auto-fit).
    * Internal engine field: it is NOT in the contract nor in the agent state
-   * (like inkGeometry). Rendering falls back to ROLE_STYLE[role].fontSize.
+   * (like layoutAttach). Rendering falls back to ROLE_STYLE[role].fontSize.
    */
   fontSize?: number
-  /**
-   * Original ink strokes of the teacher (from promotion), flattened points
-   * [x0,y0,...] RELATIVE to the box origin. If present, rendering uses THESE
-   * strokes instead of the library SVG and the anchors are the midpoints of the
-   * bounding box. Internal engine field: it is NOT in the contract nor in the
-   * agent state.
-   */
-  inkGeometry?: number[][]
   /**
    * Id of the group this LOOSE figure is attached to FOR LAYOUT ONLY (a late member of
    * the block). Set once, when processing a `connect` in the same batch in which the figure

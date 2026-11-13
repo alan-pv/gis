@@ -9,7 +9,6 @@
  */
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { EnvelopeSchema } from '@/contract/index.js'
-import type { Library } from '@/library/index.js'
 import { documentToAgentState } from '@/document/index.js'
 import type { GisDocument } from '@/document/index.js'
 import { interpretUtterance } from '@/sidecar/index.js'
@@ -42,8 +41,7 @@ interface TurnOutcome {
 
 export interface UseTurnQueueOptions {
   document: GisDocument
-  library: Library
-  applyEnvelope: (raw: unknown, library: Library, canvas: { width: number; height: number }, mode?: ValidationMode) => ApplyEnvelopeResult
+  applyEnvelope: (raw: unknown, canvas: { width: number; height: number }, mode?: ValidationMode) => ApplyEnvelopeResult
   isRunning: boolean
   isInterpreting: boolean
   setIsRunning: (running: boolean) => void
@@ -57,7 +55,7 @@ export interface UseTurnQueueOptions {
 }
 
 export function useTurnQueue({
-  document, library, applyEnvelope, isRunning, isInterpreting, setIsRunning, setIsInterpreting,
+  document, applyEnvelope, isRunning, isInterpreting, setIsRunning, setIsInterpreting,
   setParseError, setAgentInfo, clearTransient, showTurn,
 }: UseTurnQueueOptions) {
   /** Text of the teacher-phrase input. */
@@ -123,7 +121,7 @@ export function useTurnQueue({
       if (parsed.ok) {
         // Apply timing: only the layout computation, not the animation.
         const applyStart = performance.now()
-        const { steps, accepted } = applyEnvelope(parsed.envelope, library, { width: CANVAS_W, height: CANVAS_H }, mode)
+        const { steps, accepted } = applyEnvelope(parsed.envelope, { width: CANVAS_W, height: CANVAS_H }, mode)
         applyMs = performance.now() - applyStart
         opsAccepted = accepted
         if (steps > 0) {
@@ -159,7 +157,7 @@ export function useTurnQueue({
     } finally {
       setIsInterpreting(false)
     }
-  }, [isRunning, isInterpreting, document, recentUtterances, library, applyEnvelope,
+  }, [isRunning, isInterpreting, document, recentUtterances, applyEnvelope,
     setIsInterpreting, setParseError, setAgentInfo, clearTransient, showTurn, setIsRunning])
 
   /**

@@ -9,7 +9,6 @@ import { buildTimeline } from './timeline.js'
 import type { AnimationStep } from './timeline.js'
 import type { SceneEvent } from '@/scene/index.js'
 import type { Scene } from '@/scene/index.js'
-import type { Library, LibraryObject } from '@/library/index.js'
 import {
   STROKE_MIN_MS,
   STROKE_MAX_MS,
@@ -35,86 +34,13 @@ function makeScene(partial: Partial<Scene> = {}): Scene {
   }
 }
 
-function makeLibrary(entries: Record<string, LibraryObject>): Library {
-  return new Map(Object.entries(entries)) as Library
-}
-
-const sunMeta = {
-  name: 'sol',
-  format_version: 1 as const,
-  default_size: { width: 120, height: 120 },
-  anchors: {
-    top:    { x: 60, y: 5 },
-    bottom: { x: 60, y: 115 },
-    left:   { x: 13, y: 55 },
-    right:  { x: 107, y: 55 },
-  },
-  stroke_order: ['cuerpo', 'rayo_1'],
-}
-
-const sunSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <path id="cuerpo" d="M 60 30 C 73.8 30 85 41.2 85 55 C 85 68.8 73.8 80 60 80 C 46.2 80 35 68.8 35 55 C 35 41.2 46.2 30 60 30 Z"/>
-  <path id="rayo_1" d="M 60 5 L 60 22"/>
-</svg>`
-
-const textMeta = {
-  render: 'text' as const,
-  name: 'texto',
-  format_version: 1 as const,
-  default_size: { width: 200, height: 40 },
-  anchors: {
-    top:    { x: 100, y: 0 },
-    bottom: { x: 100, y: 40 },
-    left:   { x: 0,   y: 20 },
-    right:  { x: 200, y: 20 },
-  },
-}
-
 // ── Tests ─────────────────────────────────────────────────────────────────────
 
 describe('buildTimeline', () => {
 
   it('empty scene → empty timeline', () => {
-    const steps = buildTimeline([], makeScene(), makeLibrary({}))
+    const steps = buildTimeline([], makeScene())
     expect(steps).toHaveLength(0)
-  })
-
-  it('draw_object SVG: generates strokes in stroke_order', () => {
-    const events: SceneEvent[] = [{ type: 'draw_object', id: 'sol_1' }]
-    const scene = makeScene({
-      objects: new Map([['sol_1', {
-        id: 'sol_1', object: 'sol', label: null, text: null,
-        role: null, box: { x: 0, y: 0, width: 120, height: 120 },
-      }]]),
-    })
-    const library = makeLibrary({ sol: { name: 'sol', meta: sunMeta, svg: sunSvg } })
-
-    const steps = buildTimeline(events, scene, library)
-
-    // stroke cuerpo + pause + stroke rayo_1
-    const strokes = steps.filter(s => s.kind === 'stroke')
-    expect(strokes).toHaveLength(2)
-    expect(strokes[0]).toMatchObject({ kind: 'stroke', targetId: 'sol_1', pathId: 'cuerpo' })
-    expect(strokes[1]).toMatchObject({ kind: 'stroke', targetId: 'sol_1', pathId: 'rayo_1' })
-  })
-
-  it('draw_object SVG: intra-object pause between paths', () => {
-    const events: SceneEvent[] = [{ type: 'draw_object', id: 'sol_1' }]
-    const scene = makeScene({
-      objects: new Map([['sol_1', {
-        id: 'sol_1', object: 'sol', label: null, text: null,
-        role: null, box: { x: 0, y: 0, width: 120, height: 120 },
-      }]]),
-    })
-    const library = makeLibrary({ sol: { name: 'sol', meta: sunMeta, svg: sunSvg } })
-
-    const steps = buildTimeline(events, scene, library)
-
-    // There must be a PATH_PAUSE_MS pause between the two strokes
-    const pathPauses = steps.filter(
-      s => s.kind === 'pause' && s.durationMs === PATH_PAUSE_MS,
-    )
-    expect(pathPauses.length).toBeGreaterThanOrEqual(1)
   })
 
   it('draw_object text: generates type_text', () => {
@@ -125,9 +51,8 @@ describe('buildTimeline', () => {
         role: null, box: { x: 0, y: 0, width: 200, height: 40 },
       }]]),
     })
-    const library = makeLibrary({ texto: { name: 'texto', meta: textMeta, svg: null } })
 
-    const steps = buildTimeline(events, scene, library)
+    const steps = buildTimeline(events, scene)
 
     const typeStep = steps.find(s => s.kind === 'type_text')
     expect(typeStep).toBeDefined()
@@ -141,9 +66,9 @@ describe('buildTimeline', () => {
     const events: SceneEvent[] = [{ type: 'draw_connection', id: 'flecha_1' }]
     const scene = makeScene({
       objects: new Map([
-        ['sol_1', { id: 'sol_1', object: 'sol', label: null, text: null, role: null,
+        ['sol_1', { id: 'sol_1', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 0, width: 120, height: 120 } }],
-        ['mar_1', { id: 'mar_1', object: 'mar', label: null, text: null, role: null,
+        ['mar_1', { id: 'mar_1', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 600, width: 240, height: 80 } }],
       ]),
       connections: new Map([['flecha_1', {
@@ -151,7 +76,7 @@ describe('buildTimeline', () => {
         style: 'arrow' as const, label: null,
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
 
     const stroke = steps.find(s => s.kind === 'stroke')
     expect(stroke).toBeDefined()
@@ -164,9 +89,9 @@ describe('buildTimeline', () => {
     const events: SceneEvent[] = [{ type: 'draw_connection', id: 'flecha_1' }]
     const scene = makeScene({
       objects: new Map([
-        ['sol_1', { id: 'sol_1', object: 'sol', label: null, text: null, role: null,
+        ['sol_1', { id: 'sol_1', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 0, width: 120, height: 120 } }],
-        ['mar_1', { id: 'mar_1', object: 'mar', label: null, text: null, role: null,
+        ['mar_1', { id: 'mar_1', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 600, width: 240, height: 80 } }],
       ]),
       connections: new Map([['flecha_1', {
@@ -174,7 +99,7 @@ describe('buildTimeline', () => {
         style: 'arrow' as const, label: null,
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
 
     // There must be a stroke for 'line', one for 'arrowTo' and one for 'arrowFrom'
     const strokes = steps.filter(s => s.kind === 'stroke') as Extract<AnimationStep, { kind: 'stroke' }>[]
@@ -193,16 +118,16 @@ describe('buildTimeline', () => {
     const events: SceneEvent[] = [{ type: 'draw_connection', id: 'flecha_1' }]
     const scene = makeScene({
       objects: new Map([
-        ['a', { id: 'a', object: 'sol', label: null, text: null, role: null,
+        ['a', { id: 'a', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 0, width: 120, height: 120 } }],
-        ['b', { id: 'b', object: 'sol', label: null, text: null, role: null,
+        ['b', { id: 'b', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 600, width: 120, height: 120 } }],
       ]),
       connections: new Map([['flecha_1', {
         id: 'flecha_1', from: 'a', to: 'b', style: 'arrow' as const, label: null,
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
 
     // There must be PATH_PAUSE_MS pauses before arrowTo and arrowFrom
     const pathPauses = steps.filter(s => s.kind === 'pause' && s.durationMs === PATH_PAUSE_MS)
@@ -220,7 +145,7 @@ describe('buildTimeline', () => {
         { id: HL3, ref: 'flecha_1' },
       ],
     }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     // There must be 3 strokes without pathId (one per highlight)
     const hlStrokes = steps.filter(s => s.kind === 'stroke' && s.pathId === undefined)
@@ -239,7 +164,7 @@ describe('buildTimeline', () => {
 
   it('highlight: a single highlight has NO pause before the stroke', () => {
     const events: SceneEvent[] = [{ type: 'highlight', highlights: [{ id: HL1, ref: 'sol_1' }] }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     // Only one highlight stroke and no intra-highlight pause
     const hlStrokes = steps.filter(s => s.kind === 'stroke' && s.pathId === undefined)
@@ -254,7 +179,7 @@ describe('buildTimeline', () => {
       type: 'highlight',
       highlights: [{ id: HL1, ref: 'def_1', word: 'evaporación' }],
     }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     const hlStroke = steps.find(s => s.kind === 'stroke' && s.pathId === undefined)
     expect(hlStroke).toBeDefined()
@@ -266,7 +191,7 @@ describe('buildTimeline', () => {
       type: 'highlight',
       highlights: [{ id: HL1, ref: 'sol_1' }],
     }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     const hlStroke = steps.find(s => s.kind === 'stroke' && s.pathId === undefined)
     expect(hlStroke).toBeDefined()
@@ -280,15 +205,14 @@ describe('buildTimeline', () => {
     ]
     const scene = makeScene({
       objects: new Map([
-        ['sol_1', { id: 'sol_1', object: 'sol', label: null, text: null, role: null,
+        ['sol_1', { id: 'sol_1', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 0, width: 120, height: 120 } }],
-        ['nube_1', { id: 'nube_1', object: 'sol', label: null, text: null, role: null,
+        ['nube_1', { id: 'nube_1', object: 'concepto', label: null, text: null, role: null,
           box: { x: 200, y: 0, width: 120, height: 120 } }],
       ]),
     })
-    const library = makeLibrary({ sol: { name: 'sol', meta: sunMeta, svg: sunSvg } })
 
-    const steps = buildTimeline(events, scene, library)
+    const steps = buildTimeline(events, scene)
 
     // There must be at least one MICRO_PAUSE between the two events
     const microPauses = steps.filter(
@@ -299,7 +223,7 @@ describe('buildTimeline', () => {
 
   it('remove: generates fade_out with the right ids', () => {
     const events: SceneEvent[] = [{ type: 'remove', ids: ['sol_1', 'flecha_1'] }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     const fade = steps.find(s => s.kind === 'fade_out')
     expect(fade).toMatchObject({ kind: 'fade_out', targetIds: ['sol_1', 'flecha_1'] })
@@ -307,7 +231,7 @@ describe('buildTimeline', () => {
 
   it('update: generates move', () => {
     const events: SceneEvent[] = [{ type: 'update', id: 'sol_1' }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     expect(steps.find(s => s.kind === 'move')).toMatchObject({
       kind: 'move', targetId: 'sol_1',
@@ -322,7 +246,7 @@ describe('buildTimeline', () => {
         role: 'cuerpo', box: { x: 0, y: 0, width: 200, height: 60 },
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
     expect(steps).toEqual([{
       kind: 'type_text', targetId: 'p_1', text: ' It cools.', prefix: 'Water rises.',
       durationMs: ' It cools.'.length * LETTER_MS,
@@ -337,13 +261,13 @@ describe('buildTimeline', () => {
         role: 'cuerpo', box: { x: 0, y: 0, width: 200, height: 60 },
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
     expect(steps.map(s => s.kind)).toEqual(['move'])
   })
 
   it('group: generates appear', () => {
     const events: SceneEvent[] = [{ type: 'group', id: 'ciclo_1' }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     expect(steps.find(s => s.kind === 'appear')).toMatchObject({
       kind: 'appear', targetId: 'ciclo_1',
@@ -352,7 +276,7 @@ describe('buildTimeline', () => {
 
   it('clear: generates fade_out with __all__', () => {
     const events: SceneEvent[] = [{ type: 'clear' }]
-    const steps = buildTimeline(events, makeScene(), makeLibrary({}))
+    const steps = buildTimeline(events, makeScene())
 
     expect(steps.find(s => s.kind === 'fade_out')).toMatchObject({
       kind: 'fade_out', targetIds: ['__all__'],
@@ -364,16 +288,16 @@ describe('buildTimeline', () => {
     const events: SceneEvent[] = [{ type: 'draw_connection', id: 'c_1' }]
     const scene = makeScene({
       objects: new Map([
-        ['a', { id: 'a', object: 'sol', label: null, text: null, role: null,
+        ['a', { id: 'a', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 0, width: 1, height: 1 } }],
-        ['b', { id: 'b', object: 'sol', label: null, text: null, role: null,
+        ['b', { id: 'b', object: 'concepto', label: null, text: null, role: null,
           box: { x: 1, y: 0, width: 1, height: 1 } }],
       ]),
       connections: new Map([['c_1', {
         id: 'c_1', from: 'a', to: 'b', style: 'arrow' as const, label: null,
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
     const stroke = steps.find(s => s.kind === 'stroke')
     expect(stroke).toBeDefined()
     const dur = (stroke as Extract<AnimationStep, { kind: 'stroke' }>).durationMs
@@ -385,16 +309,16 @@ describe('buildTimeline', () => {
     const events: SceneEvent[] = [{ type: 'draw_connection', id: 'c_1' }]
     const scene = makeScene({
       objects: new Map([
-        ['a', { id: 'a', object: 'sol', label: null, text: null, role: null,
+        ['a', { id: 'a', object: 'concepto', label: null, text: null, role: null,
           box: { x: 0, y: 0, width: 1, height: 1 } }],
-        ['b', { id: 'b', object: 'sol', label: null, text: null, role: null,
+        ['b', { id: 'b', object: 'concepto', label: null, text: null, role: null,
           box: { x: 5000, y: 0, width: 1, height: 1 } }],
       ]),
       connections: new Map([['c_1', {
         id: 'c_1', from: 'a', to: 'b', style: 'arrow' as const, label: null,
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
     const stroke = steps.find(s => s.kind === 'stroke')
     expect(stroke).toBeDefined()
     const dur = (stroke as Extract<AnimationStep, { kind: 'stroke' }>).durationMs
@@ -405,11 +329,11 @@ describe('buildTimeline', () => {
     const events: SceneEvent[] = [{ type: 'set_label', ref: 'nube_1' }]
     const scene = makeScene({
       objects: new Map([['nube_1', {
-        id: 'nube_1', object: 'nube', label: 'condensación', text: null,
+        id: 'nube_1', object: 'concepto', label: 'condensación', text: null,
         role: null, box: { x: 0, y: 0, width: 160, height: 100 },
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
 
     const typeStep = steps.find(s => s.kind === 'type_text')
     expect(typeStep).toBeDefined()
@@ -429,7 +353,7 @@ describe('buildTimeline', () => {
         role: null, box: { x: 0, y: 0, width: 80, height: 80 },
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
     const kinds = steps.map((s) => s.kind)
     expect(kinds).toEqual(['stroke', 'pause', 'type_text'])
     expect(steps[0]).toMatchObject({ kind: 'stroke', targetId: 'sun_1', pathId: 'circle' })
@@ -444,8 +368,7 @@ describe('buildTimeline', () => {
         role: 'cuerpo', box: { x: 0, y: 0, width: 200, height: 40 },
       }]]),
     })
-    const library = makeLibrary({ texto: { name: 'texto', meta: textMeta, svg: '' } })
-    const steps = buildTimeline(events, scene, library)
+    const steps = buildTimeline(events, scene)
     const t = steps.find((s) => s.kind === 'type_text') as Extract<AnimationStep, { kind: 'type_text' }>
     expect(t.text).toBe('Water is liquid')
     expect(t.durationMs).toBe('Water is liquid'.length * LETTER_MS)
@@ -459,7 +382,7 @@ describe('buildTimeline', () => {
         role: 'cuerpo', box: { x: 0, y: 0, width: 200, height: 40 },
       }]]),
     })
-    const steps = buildTimeline(events, scene, makeLibrary({}))
+    const steps = buildTimeline(events, scene)
     expect(steps).toEqual([
       { kind: 'type_text', targetId: 'texto_1', text: ' and cold', prefix: 'Water is liquid', durationMs: ' and cold'.length * LETTER_MS },
     ])

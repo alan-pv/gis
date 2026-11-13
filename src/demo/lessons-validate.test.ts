@@ -3,7 +3,6 @@
  * src/demo/lessons goes through validate → apply with ZERO rejected operations.
  */
 import { describe, it, expect } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
 import { validateAgentOutput } from '@/validator/index.js'
 import { newDocument, applyToActivePage, activeScene } from '@/document/index.js'
 import { allIds } from '@/scene/index.js'
@@ -11,7 +10,6 @@ import { domMeasureText, domMeasureConcept } from '@/canvas/measure-text.js'
 import { loadSeeds } from './lessons.js'
 
 const canvas = { width: 1200, height: 900 }
-const library = loadLibrary()
 
 describe('recorded lessons', () => {
   const lessons = loadSeeds()
@@ -32,7 +30,7 @@ describe('recorded lessons', () => {
         if (result.accepted.length > 0) {
           doc = applyToActivePage(
             doc, result.accepted,
-            { canvas, library, measureText: domMeasureText, measureConcept: domMeasureConcept }, 'live',
+            { canvas, measureText: domMeasureText, measureConcept: domMeasureConcept }, 'live',
           ).document
         }
       })

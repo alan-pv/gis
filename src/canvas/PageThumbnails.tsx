@@ -2,15 +2,14 @@
  * PageThumbnails.tsx — thumbnail strip for the page selector.
  *
  * Canva-style thumbnail strip for the page selector.
- * Each page is previewed with a static inline SVG render that draws the real
- * paths of every object (resolving against the library with
- * resolveObject/parseSvgPaths), the connection lines, and also the mute ink
- * (unpromoted InkLayer strokes), all without Konva and without animation,
- * so it does not compete with the live animation of SceneCanvas.
+ * Each page is previewed with a static inline SVG render that draws every object
+ * (texts as plain strings, concepts as a circle with their name), the connection
+ * lines, and also the freehand ink (InkLayer strokes), all without Konva and
+ * without animation, so it does not compete with the live animation of SceneCanvas.
  *
  * Structure per card:
- *   - <ScenePreview>: static SVG with real paths per object, lines per
- *     connection, and polylines for mute ink strokes (on top of everything).
+ *   - <ScenePreview>: static SVG with a shape per object, lines per
+ *     connection, and polylines for ink strokes (on top of everything).
  *   - "Page {number}" label below the preview.
  *   - × button overlaid (top-right corner) if there is more than one page.
  *   - Click on the card → onSelect(index).
@@ -25,15 +24,9 @@ import type { Page } from '@/document/model.js'
 import { sceneForDisplay } from '@/scene/open-question.js'
 import type { Scene, SceneObject } from '@/scene/model.js'
 import type { InkLayer } from '@/ink/index.js'
-import { colorHex, outlineHex, isFilled } from '@/canvas/palette.js'
-import { resolveObject } from '@/library/index.js'
-import type { Library } from '@/library/index.js'
-import { parseSvgPaths } from './svg-paths.js'
+import { colorHex } from '@/canvas/palette.js'
 import { FONT_FAMILY } from './font.js'
-
-// ── Text constants (aligned with SceneCanvas, which does not export them) ─────
-
-const LABEL_COLOR = '#1a1a1a'
+import { INK_COLOR } from './board-colors.js'
 
 // ── Props of the main component ───────────────────────────────────────────────
 
@@ -51,8 +44,6 @@ export interface PageThumbnailsProps {
   onRemove: (index: number) => void
   /** Strip direction. 'horizontal' (default) or 'vertical' (side rail). */
   orientation?: 'horizontal' | 'vertical'
-  /** Object library to resolve the SVG paths of the thumbnails. */
-  library: Library
   /**
    * Captures of the real canvas render, by page number (data URL). If present, the
    * thumbnail is that image (faithful: colors, bold, concepts, paragraphs). Without a capture
@@ -73,7 +64,6 @@ interface ScenePreviewProps {
   ink: InkLayer
   canvasWidth: number
   canvasHeight: number
-  library: Library
 }
 
 /**
@@ -87,16 +77,16 @@ function flatToPoints(pts: number[]): string {
 }
 
 /**
- * Static render of a scene with the real SVG paths:
- * - For each SceneObject: replicates the ObjectNode cases (promoted ink,
- *   text, library SVG, placeholder) in flat SVG, without animation.
+ * Static render of a scene:
+ * - For each SceneObject: a text string, or a circle with the concept name,
+ *   in flat SVG, without animation.
  * - A <line> for each SceneConnection, from the center of the from object
  *   to the center of the to object (if either is missing, the line is omitted).
- * - Polylines for each mute ink stroke (InkLayer, not promoted), drawn
+ * - Polylines for each ink stroke (InkLayer), drawn
  *   on top of objects and connections, like in SceneCanvas.
  * No animation, no Konva.
  */
-function ScenePreview({ scene: fullScene, ink, canvasWidth, canvasHeight, library }: ScenePreviewProps) {
+function ScenePreview({ scene: fullScene, ink, canvasWidth, canvasHeight }: ScenePreviewProps) {
   // The open question does not appear in thumbnails.
   const scene = sceneForDisplay(fullScene)
   /** Geometric center of a SceneObject. */
@@ -109,51 +99,9 @@ function ScenePreview({ scene: fullScene, ink, canvasWidth, canvasHeight, librar
 
   const objectNodes = Array.from(scene.objects.values()).map((obj) => {
     const box = obj.box
-    const filled = isFilled(obj.fill)
-    const fillColor = filled ? colorHex(obj.color) : 'none'
-    const strokeColor = outlineHex(obj.color, obj.fill)
 
-    // 1) Promoted ink: the teacher's original strokes (points relative to the box origin)
-    if (obj.inkGeometry) {
-      let contentW = 1
-      let contentH = 1
-      for (const pts of obj.inkGeometry) {
-        for (let i = 0; i < pts.length; i += 2) { const x = pts[i]; if (x !== undefined && x > contentW) contentW = x }
-        for (let i = 1; i < pts.length; i += 2) { const y = pts[i]; if (y !== undefined && y > contentH) contentH = y }
-      }
-      const sx = box.width / contentW
-      const sy = box.height / contentH
-      return (
-        <g key={obj.id} transform={`translate(${box.x} ${box.y}) scale(${sx} ${sy})`}>
-          {obj.inkGeometry.map((pts, idx) => (
-            <polyline
-              key={idx}
-              points={flatToPoints(pts)}
-              fill="none"
-              stroke={colorHex(obj.color)}
-              strokeWidth={1.5}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              vectorEffect="non-scaling-stroke"
-            />
-          ))}
-        </g>
-      )
-    }
-
-    // 2) Resolve against the library (hit, or a circle-shaped placeholder). Broken library -> fallback rect.
-    let resolved: ReturnType<typeof resolveObject> | undefined
-    try { resolved = resolveObject(library, obj.object) } catch { resolved = undefined }
-    if (!resolved) {
-      return (
-        <rect key={obj.id} x={box.x} y={box.y} width={box.width} height={box.height}
-          fill={fillColor} stroke={strokeColor} strokeWidth={1.5} vectorEffect="non-scaling-stroke" />
-      )
-    }
-    const libObj = resolved.obj
-
-    // 3) Text -> render the string centered in the box
-    if (libObj.meta.render === 'text') {
+    // Text -> render the string centered in the box
+    if (obj.object === 'texto') {
       return (
         <text
           key={obj.id}
@@ -161,47 +109,37 @@ function ScenePreview({ scene: fullScene, ink, canvasWidth, canvasHeight, librar
           y={box.y + box.height / 2}
           fontSize={Math.max(12, Math.round(box.height * 0.55))}
           fontFamily={FONT_FAMILY}
-          fill={colorHex(obj.color)}
+          fill={INK_COLOR}
           textAnchor="middle"
           dominantBaseline="central"
         >{obj.text ?? ''}</text>
       )
     }
 
-    // 4) Real SVG: paths scaled from the viewBox to the box
-    const svgInfo = libObj.svg ? parseSvgPaths(libObj.svg) : null
-    const vbW = svgInfo?.viewBox.width ?? libObj.meta.default_size.width
-    const vbH = svgInfo?.viewBox.height ?? libObj.meta.default_size.height
-    const sx = box.width / vbW
-    const sy = box.height / vbH
+    // Concept -> the circle (5-95 % of the box) with its name centered inside
+    const cx = box.x + box.width / 2
+    const cy = box.y + box.height / 2
     return (
       <g key={obj.id}>
-        <g transform={`translate(${box.x} ${box.y}) scale(${sx} ${sy})`}>
-          {(svgInfo?.paths ?? []).map(({ id: pathId, d }) => (
-            <path
-              key={pathId}
-              d={d}
-              fill={fillColor}
-              stroke={strokeColor}
-              strokeWidth={1.5}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              vectorEffect="non-scaling-stroke"
-            />
-          ))}
-        </g>
-        {/* Placeholder (miss -> circle shape): label centered inside the bbox */}
-        {resolved.isPlaceholder && (
-          <text
-            x={box.x + box.width / 2}
-            y={box.y + box.height / 2}
-            fontSize={Math.max(20, Math.round(box.height * 0.28))}
-            fontFamily={FONT_FAMILY}
-            fill={LABEL_COLOR}
-            textAnchor="middle"
-            dominantBaseline="central"
-          >{obj.label ?? obj.object}</text>
-        )}
+        <ellipse
+          cx={cx}
+          cy={cy}
+          rx={box.width * 0.45}
+          ry={box.height * 0.45}
+          fill="none"
+          stroke={INK_COLOR}
+          strokeWidth={1.5}
+          vectorEffect="non-scaling-stroke"
+        />
+        <text
+          x={cx}
+          y={cy}
+          fontSize={Math.max(20, Math.round(box.height * 0.28))}
+          fontFamily={FONT_FAMILY}
+          fill={INK_COLOR}
+          textAnchor="middle"
+          dominantBaseline="central"
+        >{obj.label ?? ''}</text>
       </g>
     )
   })
@@ -225,7 +163,7 @@ function ScenePreview({ scene: fullScene, ink, canvasWidth, canvasHeight, librar
     ]
   })
 
-  // Mute ink (not promoted): strokes in absolute canvas coords, drawn on top.
+  // Ink: strokes in absolute canvas coords, drawn on top.
   const inkNodes = ink.strokes.map((stroke) => (
     <polyline
       key={stroke.id}
@@ -269,7 +207,6 @@ export function PageThumbnails({
   onAdd,
   onRemove,
   orientation = 'horizontal',
-  library,
   snapshots,
 }: PageThumbnailsProps) {
   const stripStyle: CSSProperties = orientation === 'vertical'
@@ -382,7 +319,6 @@ export function PageThumbnails({
                 ink={page.ink}
                 canvasWidth={canvasWidth}
                 canvasHeight={canvasHeight}
-                library={library}
               />
             )}
 

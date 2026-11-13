@@ -18,8 +18,6 @@
  */
 import { flagOpenQuestion } from './open-question.js'
 import type { Operation } from '@/contract/index.js'
-import type { Library, ResolvedObject } from '@/library/index.js'
-import { normalizedFigureSize, resolveObject, metaColor, metaFill } from '@/library/index.js'
 import { planBoard, layoutPlan, STANDARD_MARGIN } from '@/layout/index.js'
 import type { BoardItem, Size, AreaTree } from '@/layout/index.js'
 import { defaultAreaTree } from '@/layout/index.js'
@@ -36,11 +34,10 @@ import type { TextFragment } from '@/layout/index.js'
 // ── Public types ───────────────────────────────────────────────────────────────
 
 /**
- * Environment injected by the caller: canvas and library.
+ * Environment injected by the caller: canvas, measurers and layout options.
  */
 export interface SceneEnv {
   canvas: { width: number; height: number }
-  library: Library
   /**
    * Active page number for the canonical id format object_page_n.
    * Defaults to 1 when omitted.
@@ -128,7 +125,7 @@ export interface ApplyResult {
  *
  * @param scene  Current scene (not modified).
  * @param ops    Operations already validated by src/validator.
- * @param env    Environment: canvas and object library.
+ * @param env    Environment: canvas, measurers and layout options.
  * @returns      New scene + animation script + warnings.
  */
 export function applyOperations(scene: Scene, ops: Operation[], env: SceneEnv): ApplyResult {
@@ -233,12 +230,8 @@ export function applyOperations(scene: Scene, ops: Operation[], env: SceneEnv): 
         existing.listStart,
       )
     }
-    if (existing.object === 'concepto') {
-      const d = measureConceptLabel(existing.label ?? '', contentWidth)
-      return { width: d, height: d }
-    }
-    // Non-text: fixed dims (contentWidth is ignored).
-    return { width: existing.box.width, height: existing.box.height }
+    const d = measureConceptLabel(existing.label ?? '', contentWidth)
+    return { width: d, height: d }
   }
 
   /** Side of the (square) box of a concept with that name, capped at `cap`. */
@@ -378,17 +371,6 @@ export function applyOperations(scene: Scene, ops: Operation[], env: SceneEnv): 
 
         // ── 3.1 add ────────────────────────────────────────────────────────────
         case 'add': {
-          // Open catalog: hit -> library object; miss -> placeholder using 'circulo'.
-          let resolved: ResolvedObject
-          try {
-            resolved = resolveObject(env.library, op.object)
-          } catch (err) {
-            // Broken base library (build bug)
-            warnings.push(`add: ${err instanceof Error ? err.message : String(err)}`)
-            break
-          }
-          const libObj = resolved.obj
-
           // fontSize computed for the title (auto-fit, single line). Only for
           // role==='titulo'; not used by the layout (which re-measures through
           // measure) but stored on the SceneObject.
@@ -416,8 +398,6 @@ export function applyOperations(scene: Scene, ops: Operation[], env: SceneEnv): 
           // its dims at the width of the area it lands in. The closure captures:
           //   - `canonical` + op data, for the new object (not yet in `objects`).
           //   - `objects` + `env`, for the existing ones.
-          // Non-text: fixed library dims, normalized to the standard figure box
-          // (`normalizedFigureSize`); contentWidth is ignored.
           const measureFn = (id: string, contentWidth: number): Size => {
             if (id === canonical) {
               // New object (not yet inserted in `objects`).
@@ -429,11 +409,8 @@ export function applyOperations(scene: Scene, ops: Operation[], env: SceneEnv): 
                   pendingListStarts.get(canonical),
                 )
               }
-              if (op.object === 'concepto') {
-                const d = measureConceptLabel(op.label ?? op.object, contentWidth)
-                return { width: d, height: d }
-              }
-              return normalizedFigureSize(libObj.meta)
+              const d = measureConceptLabel(op.label ?? op.object, contentWidth)
+              return { width: d, height: d }
             }
             // Existing object in the scene.
             return measureExisting(id, contentWidth)
@@ -499,26 +476,11 @@ export function applyOperations(scene: Scene, ops: Operation[], env: SceneEnv): 
             objects.set(existingId, withPlacement(existingObj, placed.get(existingId), lastFragments))
           }
 
-          // Placeholder without an agent label: use the requested name as label
-          // (the requested name is the teacher's semantic concept).
-          // If the agent did bring a label, it is respected.
-          let labelFinal: string | null = op.label ?? null
-          if (resolved.isPlaceholder && labelFinal === null) {
-            labelFinal = op.object
-          }
-
-          // The agent no longer sends color/fill; they come from the library meta
-          // (per-section color is applied at render time).
-          const effectiveColor = metaColor(libObj.meta)
-          const effectiveFill = metaFill(libObj.meta)
-
           const sceneObj: SceneObject = {
             id: canonical,
             object: op.object,
-            label: labelFinal,
+            label: op.label ?? null,
             text: op.text ?? null,
-            color: effectiveColor,
-            fill: effectiveFill,
             // Semantic role: only for 'texto' objects; null for the rest.
             role: op.object === 'texto' ? (op.role ?? 'cuerpo') : null,
             box,

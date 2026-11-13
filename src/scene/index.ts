@@ -15,7 +15,7 @@ export { applyOperations } from './apply.js'
 export { sceneToAgentState } from './agent-state.js'
 
 // ── Hit-test and cascade delete ──────────────────────────────────────────────
-export { removeObjectCascade, objectAtBoxPoint } from './promoted-hit.js'
+export { removeObjectCascade, objectAtBoxPoint } from './object-hit.js'
 
 // ── Difference between scenes ────────────────────────────────────────────────
 export { diffAddedObjects } from './diff.js'

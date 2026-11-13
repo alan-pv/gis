@@ -8,7 +8,7 @@
  *   4. Calls onRemove with the right index when the × button is clicked.
  *   5. Does not show the × button when there is only one page.
  *   6. The active card has aria-current="page".
- *   7. The preview renders real SVG paths for library objects.
+ *   7. The preview renders a circle with its name for concepts and a string for texts.
  *
  * No Konva, no animation: the component is plain SVG/HTML, compatible
  * with the vitest happy-dom environment. Uses react-dom/client + act
@@ -26,11 +26,7 @@ import type { PageThumbnailsProps } from './PageThumbnails.js'
 import { emptyScene } from '@/scene/model.js'
 import { emptyInk, addStroke } from '@/ink/index.js'
 import type { Page } from '@/document/model.js'
-import { loadLibrary } from '@/library/index.js'
 import { defaultAreaTree } from '@/layout/index.js'
-
-// Library loaded once at module level (synchronous, cached)
-const library = loadLibrary()
 
 // ── Fixture: test pages ───────────────────────────────────────────────────────
 
@@ -53,7 +49,6 @@ function baseProps(overrides: Partial<PageThumbnailsProps> = {}): PageThumbnails
     onSelect: vi.fn(),
     onAdd: vi.fn(),
     onRemove: vi.fn(),
-    library,
     ...overrides,
   }
 }
@@ -219,53 +214,50 @@ describe('PageThumbnails', () => {
 
   })
 
-  describe('real SVG render', () => {
+  describe('static SVG render', () => {
 
-    /** Builds a page with a 'sol' object (library hit). */
-    function makePageWithSol(): Page {
+    /** Builds a page with one object of the given kind. */
+    function makePageWith(object: 'texto' | 'concepto'): Page {
       const scene = emptyScene()
-      scene.objects.set('sol_1_a', {
-        id: 'sol_1_a', object: 'sol', label: null, text: null,
+      scene.objects.set('obj_1_a', {
+        id: 'obj_1_a', object,
+        label: object === 'concepto' ? 'Sun' : null,
+        text: object === 'texto' ? 'Hello' : null,
         role: null, box: { x: 100, y: 100, width: 200, height: 200 },
       })
       return { number: 1, scene, ink: emptyInk(), areaTree: defaultAreaTree(3) }
     }
 
-    it('the preview of a page with a "sol" object contains at least one real <path>', () => {
-      renderComponent(baseProps({ pages: [makePageWithSol()] }))
-      // With a healthy library, 'sol' resolves to SVG → there must be real paths
-      expect(container.querySelectorAll('path').length).toBeGreaterThan(0)
+    it('a concept renders a circle with its name inside', () => {
+      renderComponent(baseProps({ pages: [makePageWith('concepto')] }))
+      expect(container.querySelectorAll('ellipse')).toHaveLength(1)
+      expect(container.querySelector('text')?.textContent).toBe('Sun')
     })
 
-    it('the preview of a page with a "sol" object does NOT use the bbox fallback rect', () => {
-      renderComponent(baseProps({ pages: [makePageWithSol()] }))
-      // The fallback rect only appears when the library is broken (resolved = undefined).
-      // With a healthy library, 'sol' resolves correctly → there must be no rect with width="200".
-      const fallbackRects = Array.from(container.querySelectorAll('rect')).filter(
-        (el) => el.getAttribute('width') === '200' && el.getAttribute('height') === '200',
-      )
-      expect(fallbackRects).toHaveLength(0)
+    it('a text renders its string and no circle', () => {
+      renderComponent(baseProps({ pages: [makePageWith('texto')] }))
+      expect(container.querySelectorAll('ellipse')).toHaveLength(0)
+      expect(container.querySelector('text')?.textContent).toBe('Hello')
     })
 
   })
 
-  describe('mute ink in the thumbnail', () => {
+  describe('ink in the thumbnail', () => {
 
-    /** Builds a page with no objects but with a mute ink stroke. */
+    /** Builds a page with no objects but with an ink stroke. */
     function makePageWithInk(): Page {
       const ink = addStroke(emptyInk(), [10, 10, 200, 200, 300, 100])
       return { number: 1, scene: emptyScene(), ink, areaTree: defaultAreaTree(3) }
     }
 
-    it('the preview shows one polyline per mute ink stroke', () => {
+    it('the preview shows one polyline per ink stroke', () => {
       renderComponent(baseProps({ pages: [makePageWithInk()] }))
       expect(container.querySelectorAll('polyline').length).toBeGreaterThan(0)
     })
 
-    it('pages without mute ink produce no ink polylines', () => {
+    it('pages without ink produce no ink polylines', () => {
       renderComponent(baseProps({ pages: ONE_PAGE }))
       // ONE_PAGE uses emptyInk() → no strokes → no ink polylines
-      // (there are no objects with inkGeometry either in emptyScene)
       expect(container.querySelectorAll('polyline').length).toBe(0)
     })
 

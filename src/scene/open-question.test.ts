@@ -1,7 +1,6 @@
 // @vitest-environment node
 /** The open question is in the scene and the agent state, but it is neither drawn nor does it take up space. */
 import { describe, it, expect, beforeAll } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
 import { applyOperations } from './apply.js'
 import { emptyScene } from './model.js'
 import { sceneToAgentState } from './agent-state.js'
@@ -11,7 +10,7 @@ import type { Operation } from '@/contract/index.js'
 import type { Scene } from './model.js'
 
 const canvas = { width: 1200, height: 900 }
-const env = { canvas, library: loadLibrary() }
+const env = { canvas }
 const apply = (s: Scene, ops: Operation[]) => applyOperations(s, ops, env)
 const txt = (id: string, text: string, role: 'cuerpo' | 'subtitulo' | 'titulo', group?: string): Operation =>
   ({ op: 'add', id, object: 'texto', role, text, ...(group ? { group } : {}) }) as Operation

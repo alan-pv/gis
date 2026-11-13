@@ -4,7 +4,6 @@
  * and sticky widening of groups.
  */
 import { describe, it, expect } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
 import { applyOperations } from './apply.js'
 import { emptyScene } from './model.js'
 import type { Operation } from '@/contract/index.js'
@@ -12,7 +11,7 @@ import type { Scene } from './model.js'
 import { CONCEPT_DIAMETER } from './concept-measure.js'
 import { TITLE_BAND_HEIGHT } from '@/layout/index.js'
 
-const env = { canvas: { width: 1200, height: 900 }, library: loadLibrary() }
+const env = { canvas: { width: 1200, height: 900 } }
 const apply = (s: Scene, ops: Operation[]) => applyOperations(s, ops, env)
 const txt = (id: string, text: string, group?: string, role: 'cuerpo' | 'subtitulo' | 'titulo' = 'cuerpo'): Operation =>
   ({ op: 'add', id, object: 'texto', role, text, ...(group ? { group } : {}) }) as Operation

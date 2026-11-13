@@ -9,7 +9,6 @@
  * page's scene replaced.
  */
 import type { Operation } from '@/contract/index.js'
-import type { Library } from '@/library/index.js'
 import type { SceneEvent, TextMeasurer, ConceptMeasurer } from '@/scene/index.js'
 import { applyOperations, reflowScene } from '@/scene/index.js'
 import type { ValidationMode } from '@/validator/index.js'
@@ -48,14 +47,14 @@ export interface DocumentApplyResult {
  *
  * @param doc   Current document (not mutated).
  * @param ops   List of validated operations.
- * @param env   Canvas and object library.
+ * @param env   Canvas, measurers and layout options.
  * @param mode  Validation/placement mode (live/slide). Default 'live'.
  * @returns     New document + animation script + warnings.
  */
 export function applyToActivePage(
   doc: GisDocument,
   ops: Operation[],
-  env: { canvas: { width: number; height: number }; library: Library; measureText?: TextMeasurer; measureConcept?: ConceptMeasurer; attachConnectedFigure?: boolean; attachWithoutXGuard?: boolean; fallbackNearTarget?: boolean },
+  env: { canvas: { width: number; height: number }; measureText?: TextMeasurer; measureConcept?: ConceptMeasurer; attachConnectedFigure?: boolean; attachWithoutXGuard?: boolean; fallbackNearTarget?: boolean },
   mode: ValidationMode = 'live',
 ): DocumentApplyResult {
   const currentPage = activePage(doc)

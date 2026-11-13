@@ -501,7 +501,7 @@ describe('Vocabulary of the contract', () => {
     expect(result.rejected[0]?.rule).toBe('R1')
   })
 
-  it('rejects a library object name: the agent vocabulary is texto | concepto', () => {
+  it('rejects any other object name: the vocabulary is texto | concepto', () => {
     const result = validateAgentOutput(envelope([{ op: 'add', id: 'sol_2', object: 'arbol' }]), makeCtx())
     expect(result.accepted).toHaveLength(0)
     expect(result.rejected[0]?.rule).toBe('R1')

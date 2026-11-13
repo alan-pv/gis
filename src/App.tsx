@@ -5,7 +5,7 @@
  * and the overlays layer) and wires the hooks that own each concern:
  *
  *   useDocumentState  the multi-page document (scene + ink per page), undo
- *   useBoardTools     the teacher's manual tools: pen, eraser, selection, text, shapes
+ *   useBoardTools     the teacher's manual tools: pen, eraser, selection, text
  *   usePages          page navigation and thumbnails
  *   useTurnQueue      live session: utterance queue → sidecar → envelope → board
  *   useSpeechInput    Web Speech microphone (continuous + push to talk)
@@ -32,8 +32,6 @@ import { SpeechStatus } from '@/ui/SpeechStatus.js'
 import { AreaMenu, AreasToggle } from '@/ui/AreaMenu.js'
 import { DevConsole } from '@/ui/console/DevConsole.js'
 import lessonStyles from '@/ui/Lessons.module.css'
-import { loadLibrary } from '@/library/index.js'
-import { buildTemplatesFromLibrary } from '@/recognizer/index.js'
 import { PageThumbnails } from '@/canvas/PageThumbnails.js'
 import { SceneCanvas } from '@/canvas/SceneCanvas.js'
 import { BoardOverlays } from '@/canvas/BoardOverlays.js'
@@ -52,8 +50,6 @@ import { loadSeeds } from '@/demo/lessons.js'
 import { isDemoMode, DEMO_MIC_MESSAGE } from '@/demo/demo-mode.js'
 import { useLessonPlayer } from '@/demo/useLessonPlayer.js'
 
-const library = loadLibrary()
-const recognizerTemplates = buildTemplatesFromLibrary(library)
 const lessons = loadSeeds()
 
 function App() {
@@ -63,7 +59,7 @@ function App() {
   const { state, applyEnvelope, objectMoved, stepsConsumed,
     addPage: dispatchAddPage, removePage: dispatchRemovePage,
     setActivePage: dispatchSetActivePage, resetDocument,
-    addInkStroke, removeInkStroke, promoteInkStrokes,
+    addInkStroke, removeInkStroke,
     moveInkStroke, removeObject, removeHighlight, undo, canUndo,
     setAreaTree } = useDocumentState()
 
@@ -79,8 +75,8 @@ function App() {
   const areas = useAreaEditing(state.document, setAreaTree)
 
   const tools = useBoardTools({
-    document: state.document, library, recognizerTemplates, isRunning, isInterpreting, setIsRunning,
-    applyEnvelope, objectMoved, removeInkStroke, moveInkStroke, removeObject, undo, promoteInkStrokes,
+    document: state.document, isRunning, isInterpreting, setIsRunning,
+    applyEnvelope, objectMoved, removeObject, undo,
   })
 
   /**
@@ -91,9 +87,9 @@ function App() {
   const applyAndAnimate = useCallback((envelope: unknown, mode: ValidationMode): number => {
     setParseError(null)
     setAgentInfo(null)
-    // Applying an envelope may change the canvas: hide the shape menu and the selection
+    // Applying an envelope may change the canvas: hide the selection
     tools.clearTransient()
-    const { steps } = applyEnvelope(envelope, library, { width: CANVAS_W, height: CANVAS_H }, mode)
+    const { steps } = applyEnvelope(envelope, { width: CANVAS_W, height: CANVAS_H }, mode)
     if (steps > 0) setIsRunning(true)
     return steps
   }, [applyEnvelope, tools])
@@ -108,7 +104,7 @@ function App() {
   })
 
   const turns = useTurnQueue({
-    document: state.document, library, applyEnvelope, isRunning, isInterpreting, setIsRunning, setIsInterpreting,
+    document: state.document, applyEnvelope, isRunning, isInterpreting, setIsRunning, setIsInterpreting,
     setParseError, setAgentInfo, clearTransient: tools.clearTransient, showTurn: devConsole.showTurn,
   })
 
@@ -181,7 +177,7 @@ function App() {
       menubar={
         <MenuBar
           onNew={handleNewBoard}
-          onUndo={tools.handleUndo}
+          onUndo={undo}
           canUndo={canUndo}
           onInsertPage={pages.handleAddPage}
           devMode={devConsole.devMode}
@@ -200,7 +196,7 @@ function App() {
           penColor={tools.penColor}
           onSetPenColor={tools.setPenColor}
           canUndo={canUndo}
-          onUndo={tools.handleUndo}
+          onUndo={undo}
         />
       }
       banners={
@@ -220,7 +216,6 @@ function App() {
           onAdd={pages.handleAddPage}
           onRemove={pages.handleRemovePage}
           orientation="vertical"
-          library={library}
           snapshots={pages.pageSnapshots}
         />
       }
@@ -232,7 +227,6 @@ function App() {
           <SceneCanvas
             key={activePage(state.document).number}
             scene={scene}
-            library={library}
             pendingSteps={state.pendingSteps}
             onStepsConsumed={stepsConsumed}
             width={CANVAS_W}
@@ -246,11 +240,10 @@ function App() {
             ink={activeInk(state.document)}
             onInkStrokeAdded={(points) => addInkStroke(points, tools.penColor)}
             penColor={tools.penColor}
-            onInkStrokeErased={tools.handleInkStrokeErased}
+            onInkStrokeErased={removeInkStroke}
             onObjectErased={removeObject}
             onHighlightErased={removeHighlight}
-            onInkStrokeMoved={tools.handleInkStrokeMoved}
-            onMarqueeSelect={tools.handleMarqueeSelect}
+            onInkStrokeMoved={moveInkStroke}
             selectedId={tools.selectedId}
             onSelectObject={tools.setSelectedId}
             onRequestTextBox={tools.handleRequestTextBox}
@@ -266,17 +259,12 @@ function App() {
           <BoardOverlays
             scene={scene}
             view={view}
-            library={library}
             textBoxAt={tools.textBoxAt}
             onTextBoxConfirm={tools.handleTextBoxConfirm}
             onTextBoxCancel={tools.handleTextBoxCancel}
             editingId={tools.editingId}
             onEditCommit={tools.handleEditCommit}
             onEditCancel={tools.handleEditCancel}
-            inkSelection={tools.inkSelection}
-            selectionSuggestion={tools.selectionSuggestion}
-            onPromote={tools.handlePromote}
-            onCloseShapeMenu={tools.handleCloseShapeMenu}
             selectedId={tools.selectedId}
             onDeleteSelected={() => {
               if (tools.selectedId !== null) removeObject(tools.selectedId)
