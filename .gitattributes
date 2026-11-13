@@ -1,0 +1,5 @@
+# Los scripts de shell DEBEN conservar finales de línea LF.
+# En Windows con core.autocrlf=true, git convertiría los LF a CRLF al hacer
+# checkout y bash falla con "set: pipefail: invalid option name" (el \r queda
+# pegado al token). Forzar eol=lf protege todo clon, en cualquier plataforma.
+*.sh text eol=lf
