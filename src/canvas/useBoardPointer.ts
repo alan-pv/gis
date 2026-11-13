@@ -1,13 +1,12 @@
 /**
- * useBoardPointer — pointer handling of the board: pen strokes, eraser, marquee
- * selection, object hit-test and selection, resize handles, double click detection
+ * useBoardPointer — pointer handling of the board: pen strokes, eraser,
+ * object hit-test and selection, resize handles, double click detection
  * (text box on empty area, in-place edit on a text) and the right-click area menu.
  */
 import { useRef, useCallback, useState } from 'react'
-import { resolveObject, type Library } from '@/library/index.js'
 import { objectAtBoxPoint, type Scene } from '@/scene/index.js'
 import { computeAreaRects, computeBodyRect, type BBox, type AreaTree } from '@/layout/index.js'
-import { strokeAtBoxPoint, strokesInRect, type InkLayer, type SelectionRect } from '@/ink/index.js'
+import { strokeAtBoxPoint, type InkLayer } from '@/ink/index.js'
 import { resizeBox, handleAtPoint, type ResizeHandle } from './resize.js'
 import { DOUBLE_TAP_MS, DOUBLE_TAP_DIST, RESIZE_HANDLE_SIZE } from './canvas-style.js'
 import { highlightAtPoint } from './scene-hit.js'
@@ -18,7 +17,6 @@ export interface UseBoardPointerOptions {
   tool: CanvasTool
   ink?: InkLayer
   scene: Scene
-  library: Library
   hasTitle: boolean
   width: number
   height: number
@@ -28,7 +26,6 @@ export interface UseBoardPointerOptions {
   onInkStrokeErased?: (id: string) => void
   onObjectErased?: (id: string) => void
   onHighlightErased?: (id: string) => void
-  onMarqueeSelect?: (strokeIds: string[], rect: SelectionRect) => void
   onSelectObject?: (id: string | null) => void
   onRequestTextBox?: (point: { x: number; y: number }) => void
   onRequestEditText?: (objectId: string) => void
@@ -38,19 +35,14 @@ export interface UseBoardPointerOptions {
 }
 
 export function useBoardPointer({
-  tool, ink, scene, library, hasTitle, width, height, selectedId,
-  onObjectMoved, onInkStrokeAdded, onInkStrokeErased, onObjectErased, onHighlightErased, onMarqueeSelect,
+  tool, ink, scene, hasTitle, width, height, selectedId,
+  onObjectMoved, onInkStrokeAdded, onInkStrokeErased, onObjectErased, onHighlightErased,
   onSelectObject, onRequestTextBox, onRequestEditText, showAreas, areaTree, onRequestAreaMenu,
 }: UseBoardPointerOptions) {
   // Points of the stroke in progress (only while drawing with the pen)
   const [currentStroke, setCurrentStroke] = useState<number[]>([])
   const isDrawing = useRef(false)
   const isErasing = useRef(false)
-
-  // Selection marquee (only in select mode, over an empty area)
-  const [marqueeRect, setMarqueeRect] = useState<SelectionRect | null>(null)
-  const marqueeStart = useRef<{ x: number; y: number } | null>(null)
-  const isMarqueeActive = useRef(false)
 
   // Active resize handle
   const resizeHandleRef = useRef<ResizeHandle | null>(null)
@@ -94,7 +86,7 @@ export function useBoardPointer({
       if (hitObj) {
         // Double-click on a text object -> open the edit overlay.
         // Detect two consecutive pointerdowns on the same id within DOUBLE_TAP_MS.
-        // Only if the object resolves to a libObj with render === 'text' (guard for placeholders).
+        // Only on a text object (a concept has no editable text).
         const nowObj = Date.now()
         const lastObj = lastObjectTapRef.current
         if (
@@ -103,17 +95,7 @@ export function useBoardPointer({
           nowObj - lastObj.t < DOUBLE_TAP_MS &&
           onRequestEditText
         ) {
-          // Check it is a text object before opening the overlay
-          let isTextObj = false
-          if (!hitObj.inkGeometry) {
-            try {
-              const resolved = resolveObject(library, hitObj.object)
-              isTextObj = resolved.obj.meta.render === 'text'
-            } catch {
-              isTextObj = false
-            }
-          }
-          if (isTextObj) {
+          if (hitObj.object === 'texto') {
             lastObjectTapRef.current = null
             onSelectObject?.(null)
             onRequestEditText(hitObj.id)
@@ -122,7 +104,7 @@ export function useBoardPointer({
         }
         lastObjectTapRef.current = { t: nowObj, id: hitObj.id }
         onSelectObject?.(hitObj.id)
-        return  // do not start a marquee if we landed on an object
+        return
       }
 
       // Manual double-click on an empty area -> text box.
@@ -139,16 +121,13 @@ export function useBoardPointer({
         lastEmptyTapRef.current = null
         onSelectObject?.(null)
         onRequestTextBox?.({ x: pos.x, y: pos.y })
-        return  // no iniciar marquee
+        return
       }
       lastEmptyTapRef.current = { t: now, x: pos.x, y: pos.y }
 
-      // Empty: deselect and start an ink marquee (selection by area)
+      // Empty: deselect
       onSelectObject?.(null)
       e.evt.preventDefault()
-      marqueeStart.current = { x: pos.x, y: pos.y }
-      isMarqueeActive.current = true
-      setMarqueeRect({ x: pos.x, y: pos.y, width: 0, height: 0 })
       return
     }
 
@@ -183,14 +162,14 @@ export function useBoardPointer({
       if (hit) {
         onInkStrokeErased?.(hit.id)
       } else {
-        // The 🧽 erases any object under the cursor (agent or promoted) with a cascade.
+        // The 🧽 erases any object under the cursor with a cascade.
         // Only on pointerdown (deliberate tap): object erasing does NOT happen while
         // dragging because there is no object undo yet (Ctrl+Z only undoes ink).
         const obj = objectAtBoxPoint(scene, pos.x, pos.y)
         if (obj) onObjectErased?.(obj.id)
       }
     }
-  }, [tool, ink, scene, library, onInkStrokeErased, onObjectErased, onHighlightErased, onSelectObject, selectedId, onObjectMoved, onRequestTextBox, onRequestEditText])
+  }, [tool, ink, scene, onInkStrokeErased, onObjectErased, onHighlightErased, onSelectObject, selectedId, onObjectMoved, onRequestTextBox, onRequestEditText])
 
   const handlePointerMove = useCallback((e: Konva.KonvaEventObject<PointerEvent>) => {
     if (tool === 'select') {
@@ -206,22 +185,7 @@ export function useBoardPointer({
           const newBox = resizeBox(sel.box, resizeHandleRef.current, pos.x, pos.y)
           onObjectMoved?.(selectedId, newBox)
         }
-        return
       }
-
-      if (!isMarqueeActive.current || !marqueeStart.current) return
-      const stage = e.target.getStage()
-      if (!stage) return
-      // Logical canvas coords (undoing the transform): getRelativePointerPosition
-      const pos = stage.getRelativePointerPosition()
-      if (!pos) return
-      const start = marqueeStart.current
-      setMarqueeRect({
-        x: start.x,
-        y: start.y,
-        width: pos.x - start.x,
-        height: pos.y - start.y,
-      })
       return
     }
 
@@ -265,25 +229,6 @@ export function useBoardPointer({
       return
     }
 
-    if (tool === 'select' && isMarqueeActive.current) {
-      isMarqueeActive.current = false
-      const start = marqueeStart.current
-      marqueeStart.current = null
-
-      if (start && marqueeRect) {
-        const rect = marqueeRect
-    // Minimum threshold: 4 px in both dimensions
-        if (Math.abs(rect.width) >= 4 && Math.abs(rect.height) >= 4 && ink) {
-          const ids = strokesInRect(ink.strokes, rect)
-          if (ids.length >= 1) {
-            onMarqueeSelect?.(ids, rect)
-          }
-        }
-      }
-      setMarqueeRect(null)
-      return
-    }
-
     if (tool === 'pen' && isDrawing.current) {
       isDrawing.current = false
       if (currentStroke.length >= 4) {
@@ -292,7 +237,7 @@ export function useBoardPointer({
       setCurrentStroke([])
     }
     isErasing.current = false
-  }, [tool, currentStroke, onInkStrokeAdded, marqueeRect, ink, onMarqueeSelect])
+  }, [tool, currentStroke, onInkStrokeAdded])
 
   // Cursor by tool
   const cursorStyle = (tool === 'pen' ? 'crosshair' : tool === 'eraser' ? 'cell' : 'default')
@@ -324,5 +269,5 @@ export function useBoardPointer({
     if (hit) onRequestAreaMenu(hit.id, { x: screen.x, y: screen.y })
   }, [showAreas, areaTree, onRequestAreaMenu, tool, width, height, hasTitle])
 
-  return { currentStroke, marqueeRect, cursorStyle, handlePointerDown, handlePointerMove, handlePointerUp, handleWheel, handleContextMenu }
+  return { currentStroke, cursorStyle, handlePointerDown, handlePointerMove, handlePointerUp, handleWheel, handleContextMenu }
 }

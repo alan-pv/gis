@@ -6,7 +6,6 @@
  * Layout only: membership in the scene and in the agent state does not change.
  */
 import { describe, it, expect, beforeAll } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
 import type { Operation } from '@/contract/index.js'
 import { sceneToAgentState } from './agent-state.js'
 import { applyOperations, type SceneEnv } from './apply.js'
@@ -15,12 +14,12 @@ import { emptyScene, type Scene } from './model.js'
 const CANVAS = { width: 1200, height: 800 }
 let env: SceneEnv
 beforeAll(() => {
-  env = { canvas: CANVAS, library: loadLibrary() }
+  env = { canvas: CANVAS }
 })
 
 const txt = (id: string, text: string, group?: string): Operation =>
   ({ op: 'add', id, object: 'texto', text, role: 'cuerpo', ...(group ? { group } : {}) }) as Operation
-const fig = (id: string): Operation => ({ op: 'add', id, object: 'circulo' }) as Operation
+const fig = (id: string): Operation => ({ op: 'add', id, object: 'concepto', label: 'circulo' }) as Operation
 const conn = (id: string, from: string, to: string): Operation =>
   ({ op: 'connect', id, from, to, style: 'arrow' }) as Operation
 
@@ -137,7 +136,8 @@ describe('attach fallback: figure next to the target when the attachment is reve
     for (const [id, o] of s0.objects) expect(box(con.scene, id)).toEqual(o.box)
     // The figure follows the group into the next column, colliding with nothing.
     const c = box(con.scene, 'c_1')
-    expect(c.x).toBeGreaterThan(box(con.scene, 'a_19').x)
+    expect(c.x).toBeGreaterThanOrEqual(box(con.scene, 'a_19').x)
+    expect(c.y).toBeGreaterThan(box(con.scene, 'a_19').y)
     for (const [id, o] of con.scene.objects) if (id !== 'c_1') expect(overlap(c, o.box)).toBe(false)
     // Membership in the scene and in the agent state is intact.
     expect(con.scene.groups.get('gA')!.members).toHaveLength(19)

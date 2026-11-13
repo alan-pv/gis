@@ -10,8 +10,7 @@
  * collision), neither the engine nor the fixture is modified: the failure is
  * reported as is.
  */
-import { describe, it, expect, beforeAll } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
+import { describe, it, expect } from 'vitest'
 import { applyOperations, type SceneEnv, type SceneEvent } from '@/scene/index.js'
 import { emptyScene, type Scene } from '@/scene/index.js'
 import { sceneToAgentState } from '@/scene/index.js'
@@ -23,13 +22,7 @@ import { validateAgentOutput } from '@/validator/index.js'
 
 // ── Environment ───────────────────────────────────────────────────────────────────
 
-let library: ReturnType<typeof loadLibrary>
-let env: SceneEnv
-
-beforeAll(() => {
-  library = loadLibrary()
-  env = { canvas: CANVAS, library }
-})
+const env: SceneEnv = { canvas: CANVAS }
 
 // ── Local types ─────────────────────────────────────────────────────────────
 
@@ -68,7 +61,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 1: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 1: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 1: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 1: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
       checkNoCollisions(scene)
@@ -81,7 +74,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 2: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 2: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 2: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 2: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
       checkNoCollisions(scene)
@@ -94,7 +87,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 3: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 3: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 3: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 3: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
       checkNoCollisions(scene)
@@ -107,7 +100,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 4: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 4: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 4: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 4: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
     }
@@ -119,7 +112,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 5: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 5: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 5: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 5: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
     }
@@ -131,7 +124,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 6: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 6: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 6: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 6: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
     }
@@ -143,7 +136,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 7: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 7: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 7: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 7: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
       checkNoCollisions(scene)
@@ -156,7 +149,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 8: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 8: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 8: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 8: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
       checkNoCollisions(scene)
@@ -169,7 +162,7 @@ describe('golden example #1 — water cycle (9 utterances)', () => {
       expect(r.rejectedCount, 'envelope 9: rejected operations').toBe(0)
       expect(r.warnings, 'envelope 9: applyOperations warnings').toHaveLength(0)
       expect(r.events.length, 'envelope 9: non-empty script').toBeGreaterThan(0)
-      const steps = buildTimeline(r.events, r.scene, library)
+      const steps = buildTimeline(r.events, r.scene)
       expect(steps.length, 'envelope 9: non-empty timeline').toBeGreaterThan(0)
       scene = r.scene
     }

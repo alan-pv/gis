@@ -3,7 +3,7 @@ import { MousePointer2, Pencil, Eraser, Undo2 } from 'lucide-react'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import * as Popover from '@radix-ui/react-popover'
 import type { CanvasTool } from '@/canvas/SceneCanvas.js'
-import type { Color } from '@/library/index.js'
+import type { Color } from '@/ink/index.js'
 import { PALETTE_HEX } from '@/canvas/palette.js'
 import styles from './Toolbar.module.css'
 

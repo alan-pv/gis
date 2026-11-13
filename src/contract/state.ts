@@ -4,14 +4,14 @@
  * geometry. Unrecognized ink is not part of it.
  */
 import { z } from 'zod'
-import { ConnectStyleSchema, RoleSchema } from './operations.js'
+import { ConnectStyleSchema, ObjectKindSchema, RoleSchema } from './operations.js'
 
 /** Single source of truth for the contract version. */
 export const SCHEMA_VERSION = '1.0' as const
 
 const CanvasObjectSchema = z.object({
   id: z.string().min(1),
-  object: z.string().min(1),
+  object: ObjectKindSchema,
   /** null when it has no label. */
   label: z.string().nullable(),
   /**

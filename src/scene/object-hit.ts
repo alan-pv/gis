@@ -1,10 +1,10 @@
 /**
- * Hit-test and cascading-delete utilities for promoted objects.
+ * Hit-test and cascading-delete utilities for scene objects.
  *
  * - objectAtBoxPoint: hit-test against object bounding boxes.
  * - removeObjectCascade: removes an object from the scene along with its
  *   connections, and takes it out of its groups (an emptied group is deleted).
- *   Reusable from apply.ts and from the ERASE_PROMOTED reducer.
+ *   Used by the REMOVE_OBJECT reducer.
  *
  * Pure functions: they do not mutate the input scene.
  */
@@ -67,8 +67,7 @@ export function removeObjectCascade(scene: Scene, id: string): Scene {
 
 // ── objectAtBoxPoint ──────────────────────────────────────────────────────────
 /**
- * Hit-test against the bounding box of ALL scene objects (not only promoted
- * ones). Walks in reverse insertion order (the last inserted is "on top") and
+ * Hit-test against the bounding box of ALL scene objects. Walks in reverse insertion order (the last inserted is "on top") and
  * returns the first object whose box contains the point. The selectable/draggable
  * area is the box, not the stroke.
  *

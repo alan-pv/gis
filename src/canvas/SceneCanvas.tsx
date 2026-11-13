@@ -14,11 +14,10 @@
 import { useRef, useCallback, useEffect, useState, useMemo } from 'react'
 import { IDENTITY_VIEWPORT, type Viewport } from './viewport.js'
 import { Stage, Layer, Group, Text, Rect, Line, Circle } from 'react-konva'
-import { resolveObject, type Color, type Library } from '@/library/index.js'
 import type { Scene } from '@/scene/index.js'
 import type { AnimationStep } from '@/animation/timeline.js'
 import { computeAreaRects, computeBodyRect, STANDARD_MARGIN, TITLE_BAND_HEIGHT, type BBox, type AreaTree } from '@/layout/index.js'
-import type { InkLayer, SelectionRect } from '@/ink/index.js'
+import type { Color, InkLayer } from '@/ink/index.js'
 import { sceneForDisplay } from '@/scene/open-question.js'
 import { assignConnectionAnchors } from './connection-anchors.js'
 import { useAnimationPlayer, type NodeResolver } from './useAnimationPlayer.js'
@@ -45,7 +44,6 @@ export type CanvasTool = 'select' | 'pen' | 'eraser'
 
 export interface SceneCanvasProps {
   scene: Scene
-  library: Library
   /** Animation steps pending playback (cleared once consumed). */
   pendingSteps: AnimationStep[]
   /** Callback to notify that the steps were consumed. */
@@ -67,7 +65,7 @@ export interface SceneCanvasProps {
   /**
    * Page thumbnail taken from the REAL render of the Stage: a JPEG data URL of the whole
    * board. Emitted with a debounce after the scene changes and when each animation ends;
-   * skipped while there is a selection or a marquee (so their handles are not captured).
+   * skipped while there is a selection (so its handles are not captured).
    */
   onSnapshot?: (dataUrl: string) => void
   /** Active tool; 'select' by default. */
@@ -78,14 +76,12 @@ export interface SceneCanvasProps {
   onInkStrokeAdded?: (points: number[]) => void
   /** Called when the eraser touches a stroke; passes the id of the stroke to delete. */
   onInkStrokeErased?: (id: string) => void
-  /** Called when the eraser touches an object (agent or promoted) with a deliberate tap; passes the object id. */
+  /** Called when the eraser touches an object  with a deliberate tap; passes the object id. */
   onObjectErased?: (id: string) => void
   /** Called when the eraser touches a highlight; passes the id of the highlight. */
   onHighlightErased?: (id: string) => void
   /** Called when an ink stroke finishes dragging; passes id and delta (dx, dy). */
   onInkStrokeMoved?: (id: string, dx: number, dy: number) => void
-  /** Called when a selection marquee is released with ≥1 captured ink stroke. */
-  onMarqueeSelect?: (strokeIds: string[], rect: SelectionRect) => void
   /** Id of the selected object (null = none). Only relevant with the select tool. */
   selectedId?: string | null
   /** Called when an object is selected by click (id) or deselected (null). */
@@ -141,7 +137,6 @@ export interface SceneCanvasProps {
 
 export function SceneCanvas({
   scene: fullScene,
-  library,
   pendingSteps,
   onStepsConsumed,
   width = 1200,
@@ -158,7 +153,6 @@ export function SceneCanvas({
   onObjectErased,
   onHighlightErased,
   onInkStrokeMoved,
-  onMarqueeSelect,
   selectedId,
   onSelectObject,
   penColor,
@@ -249,12 +243,12 @@ export function SceneCanvas({
     (o) => o.object === 'texto' && o.role === 'titulo',
   )
 
-  const { currentStroke, marqueeRect, cursorStyle, handlePointerDown, handlePointerMove, handlePointerUp, handleWheel, handleContextMenu } = useBoardPointer({
-    tool, ink, scene, library, hasTitle, width, height, selectedId,
-    onObjectMoved, onInkStrokeAdded, onInkStrokeErased, onObjectErased, onHighlightErased, onMarqueeSelect,
+  const { currentStroke, cursorStyle, handlePointerDown, handlePointerMove, handlePointerUp, handleWheel, handleContextMenu } = useBoardPointer({
+    tool, ink, scene, hasTitle, width, height, selectedId,
+    onObjectMoved, onInkStrokeAdded, onInkStrokeErased, onObjectErased, onHighlightErased,
     onSelectObject, onRequestTextBox, onRequestEditText, showAreas, areaTree, onRequestAreaMenu,
   })
-  const { stageRef, snapshotSoon } = useStageSnapshot({ scene, onSnapshot, width, height, view, selectedId, marqueeRect })
+  const { stageRef, snapshotSoon } = useStageSnapshot({ scene, onSnapshot, width, height, view, selectedId })
 
   // Play when pending steps arrive (after the Konva render)
   useEffect(() => {
@@ -316,7 +310,7 @@ export function SceneCanvas({
     >
       <Layer>
         {/* Slightly warm board background; listening=false so the
-            pointerdown on an empty area reaches the Stage and triggers the marquee */}
+            pointerdown on an empty area reaches the Stage */}
         <Rect x={0} y={0} width={width} height={height} fill="#fafaf8" listening={false} />
 
         {/* ── Highlight of the context menu area ─────────────────────────────
@@ -347,7 +341,6 @@ export function SceneCanvas({
           <ObjectNode
             key={obj.id}
             obj={obj}
-            library={library}
             reg={reg}
             revealed={revealed}
             section={sectionColorOf(scene, obj.id)}
@@ -390,23 +383,7 @@ export function SceneCanvas({
           .filter(obj => obj.label && obj.object !== 'concepto')
           .map(obj => {
             const labelKey = `${obj.id}__label`
-            // placeholder without inkGeometry -> label centered inside the bbox
-            let isPlaceholder = false
-            try {
-              if (!obj.inkGeometry) isPlaceholder = resolveObject(library, obj.object).isPlaceholder
-            } catch { /* broken library: treat as a non-placeholder */ }
-
-            let x: number, y: number, width: number, align: string
-            if (isPlaceholder) {
-              // Centered inside the object bbox
-              x = obj.box.x
-              y = obj.box.y + obj.box.height / 2 - LABEL_FONT_SIZE / 2
-              width = obj.box.width
-              align = 'center'
-            } else {
-              const pos = labelPos(obj.box)
-              x = pos.x; y = pos.y; width = pos.width; align = pos.align
-            }
+            const { x, y, width, align } = labelPos(obj.box)
             return (
               <Text
                 key={labelKey}
@@ -480,14 +457,14 @@ export function SceneCanvas({
       </Layer>
 
       {/* Selection layer: highlighted outline + anchor points.
-          Above the objects, below the marquee; does not listen to events. */}
+          Above the objects; does not listen to events. */}
       <Layer listening={false}>
         {(() => {
           if (!selectedId) return null
           const sel = scene.objects.get(selectedId)
           if (!sel) return null
           const { box } = sel
-          const anchors = selectionAnchors(sel, library)
+          const anchors = selectionAnchors(sel)
           return (
             <>
               {/* Dotted selection rectangle around the box */}
@@ -562,22 +539,6 @@ export function SceneCanvas({
             />
           ))
         })()}
-      </Layer>
-
-      {/* Marquee layer: above everything, does not listen to events */}
-      <Layer listening={false}>
-        {marqueeRect && (
-          <Rect
-            x={marqueeRect.width >= 0 ? marqueeRect.x : marqueeRect.x + marqueeRect.width}
-            y={marqueeRect.height >= 0 ? marqueeRect.y : marqueeRect.y + marqueeRect.height}
-            width={Math.abs(marqueeRect.width)}
-            height={Math.abs(marqueeRect.height)}
-            stroke="#2563eb"
-            strokeWidth={1}
-            dash={[4, 4]}
-            fill="rgba(37, 99, 235, 0.05)"
-          />
-        )}
       </Layer>
     </Stage>
   )

@@ -8,8 +8,6 @@
  */
 import type { SceneEvent } from '@/scene/index.js'
 import type { Scene } from '@/scene/index.js'
-import type { Library } from '@/library/index.js'
-import { resolveObject } from '@/library/index.js'
 import {
   PEN_SPEED_PX_PER_S,
   STROKE_MIN_MS,
@@ -21,7 +19,6 @@ import {
   FADE_MS,
   MOVE_MS,
 } from './constants.js'
-import { approxPathLength } from './path-length.js'
 import { extensionSuffix } from '@/scene/text-extend.js'
 import { displayText, stripBold } from '@/scene/text-runs.js'
 
@@ -52,22 +49,6 @@ function strokeDuration(lengthPx: number): number {
   return Math.min(STROKE_MAX_MS, Math.max(STROKE_MIN_MS, raw))
 }
 
-/**
- * Extracts the SVG paths from a raw SVG.
- * Returns an array of { id, d } in the order they appear in the SVG.
- */
-function extractPaths(svg: string): Array<{ id: string; d: string }> {
-  const re = /<path[^>]+id="([^"]+)"[^>]+d="([^"]+)"|<path[^>]+d="([^"]+)"[^>]+id="([^"]+)"/g
-  const result: Array<{ id: string; d: string }> = []
-  let m: RegExpExecArray | null
-  while ((m = re.exec(svg)) !== null) {
-    const id = m[1] ?? m[4] ?? ''
-    const d = m[2] ?? m[3] ?? ''
-    if (id && d) result.push({ id, d })
-  }
-  return result
-}
-
 // ── Main function ─────────────────────────────────────────────────────────────
 
 /**
@@ -78,13 +59,11 @@ function extractPaths(svg: string): Array<{ id: string; d: string }> {
  *
  * @param events  Animation script (same order as the accepted ops).
  * @param scene   Resulting scene (to look up labels, texts, etc.).
- * @param library Object library (for SVG and stroke_order).
  * @returns       Ordered list of AnimationStep.
  */
 export function buildTimeline(
   events: SceneEvent[],
   scene: Scene,
-  library: Library,
 ): AnimationStep[] {
   const steps: AnimationStep[] = []
 
@@ -117,55 +96,11 @@ export function buildTimeline(
           break
         }
 
-        // Resolve against the library (hit, or a circle-shaped placeholder)
-        let libObj: ReturnType<Library['get']>
-        try {
-          libObj = resolveObject(library, obj.object).obj
-        } catch {
-          libObj = undefined
-        }
-
-        if (!libObj) break
-
-        if (libObj.meta.render === 'text') {
-          // Text object: letter by letter over the VISIBLE text (no `**`, with the list
-          // marker), so bold marks never appear on screen.
-          const text = displayText(obj.text ?? obj.label ?? '', obj.role, obj.listStart)
-          const durationMs = text.length * LETTER_MS
-          steps.push({ kind: 'type_text', targetId: event.id, text, durationMs })
-        } else {
-          // SVG object: one stroke per path in stroke_order
-          const strokeOrder = libObj.meta.stroke_order
-          const svgPaths = libObj.svg ? extractPaths(libObj.svg) : []
-          const pathMap = new Map(svgPaths.map(p => [p.id, p.d]))
-
-          for (let pi = 0; pi < strokeOrder.length; pi++) {
-            const pathId = strokeOrder[pi]
-            if (!pathId) continue
-
-            // Intra-object pause between paths (except before the first one)
-            if (pi > 0) {
-              steps.push({ kind: 'pause', durationMs: PATH_PAUSE_MS })
-            }
-
-            const d = pathMap.get(pathId) ?? ''
-            const length = approxPathLength(d)
-            const durationMs = strokeDuration(length)
-            steps.push({ kind: 'stroke', targetId: event.id, pathId, durationMs })
-          }
-
-          // Object label (if any) -> type_text after the paths
-          if (obj.label) {
-            steps.push({ kind: 'pause', durationMs: PATH_PAUSE_MS })
-            const labelMs = obj.label.length * LETTER_MS
-            steps.push({
-              kind: 'type_text',
-              targetId: `${event.id}__label`,
-              text: obj.label,
-              durationMs: labelMs,
-            })
-          }
-        }
+        // Text: letter by letter over the VISIBLE text (no `**`, with the list
+        // marker), so bold marks never appear on screen.
+        const text = displayText(obj.text ?? obj.label ?? '', obj.role, obj.listStart)
+        const durationMs = text.length * LETTER_MS
+        steps.push({ kind: 'type_text', targetId: event.id, text, durationMs })
         break
       }
 

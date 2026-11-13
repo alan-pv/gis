@@ -4,7 +4,6 @@
  * numbering of enumerations by the app.
  */
 import { describe, it, expect } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
 import { applyOperations } from './apply.js'
 import { emptyScene } from './model.js'
 import type { Operation } from '@/contract/index.js'
@@ -14,7 +13,7 @@ import { estimateTextSize } from './text-measure.js'
 import { reflowScene } from './reflow.js'
 import { buildTimeline } from '@/animation/timeline.js'
 
-const env = { canvas: { width: 1200, height: 800 }, library: loadLibrary() }
+const env = { canvas: { width: 1200, height: 800 } }
 const apply = (s: Scene, ops: Operation[]) => applyOperations(s, ops, env)
 type R = 'cuerpo' | 'subtitulo' | 'titulo' | 'lista' | 'enumeracion'
 const txt = (id: string, text: string, group?: string, role: R = 'cuerpo'): Operation =>
@@ -61,7 +60,7 @@ describe('split sections (scene)', () => {
     // fragments never extend past the bottom of the canvas
     for (const f of p.fragments!) expect(f.box.y + f.box.height).toBeLessThanOrEqual(800)
     // the animation writes the suffix by character index over the full visible text
-    const steps = buildTimeline(events, scene, env.library)
+    const steps = buildTimeline(events, scene)
     const typed = steps.find((st) => st.kind === 'type_text' && st.targetId === 'p_1')
     expect(typed).toBeDefined()
     if (typed?.kind === 'type_text') {
@@ -137,7 +136,7 @@ describe('split sections — the app numbers enumerations', () => {
     expect(displayText(e1.text!, e1.role, e1.listStart)).toBe('1. Take in water from the soil')
     expect(displayText(e2.text!, e2.role, e2.listStart)).toBe('2. Make food')
     // only the new part is animated: the already written item is not retyped
-    const steps = buildTimeline(r.events, r.scene, env.library)
+    const steps = buildTimeline(r.events, r.scene)
     expect(steps.some((st) => st.kind === 'type_text' && st.targetId === 'e_1')).toBe(false)
   })
 
@@ -152,7 +151,7 @@ describe('split sections — the app numbers enumerations', () => {
 
   it('the animation writes the displayed text with its number', () => {
     const r = apply(emptyScene(), [txt('s_1', 'Steps', 'g', 'subtitulo'), item('e_1', 'One'), item('e_2', 'Two')])
-    const step = buildTimeline(r.events, r.scene, env.library).find((st) => st.kind === 'type_text' && st.targetId === 'e_2')
+    const step = buildTimeline(r.events, r.scene).find((st) => st.kind === 'type_text' && st.targetId === 'e_2')
     expect(step && step.kind === 'type_text' ? step.text : '').toBe('2. Two')
   })
 })

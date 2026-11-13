@@ -1,7 +1,7 @@
 /**
  * Integration test of the scene engine — seed of the golden acceptance test.
  *
- * Full pipeline: validator → applier with the REAL library.
+ * Full pipeline: validator → applier.
  * Mini-script of the water cycle (4 envelopes in sequence):
  *
  *   1. Sol + Mar
@@ -15,7 +15,6 @@
  * grows to the 9 envelopes and the full diagram is verified.
  */
 import { describe, it, expect, beforeAll } from 'vitest'
-import { loadLibrary } from '@/library/index.js'
 import { validateAgentOutput } from '@/validator/index.js'
 import type { ValidationContext } from '@/validator/index.js'
 import { applyOperations } from './apply.js'
@@ -31,12 +30,10 @@ import { TEXT_PADDING, fitTitleFontSize } from './text-measure.js'
 // ── Environment ───────────────────────────────────────────────────────────────────
 
 const CANVAS = { width: 1200, height: 800 }
-let library: ReturnType<typeof loadLibrary>
 let env: SceneEnv
 
 beforeAll(() => {
-  library = loadLibrary()
-  env = { canvas: CANVAS, library }
+  env = { canvas: CANVAS }
 })
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -97,7 +94,7 @@ function checkNoCollisions(scene: Scene): void {
 
 // ── Integration test ───────────────────────────────────────────────────────
 
-describe('integration — water-cycle mini-script (real library)', () => {
+describe('integration — water-cycle mini-script', () => {
   it('full pipeline: 4 envelopes → correct final scene, no collisions, correct events', () => {
     let scene = emptyScene()
     const allEvents: SceneEvent[] = []
@@ -337,8 +334,7 @@ describe('integration — water-cycle mini-script (real library)', () => {
 describe('integration — add texto role:titulo', () => {
   it('obj.fontSize defined, box on the left with NATURAL width', () => {
     const canvas = { width: 1200, height: 800 }
-    const lib = loadLibrary()
-    const localEnv: SceneEnv = { canvas, library: lib }
+    const localEnv: SceneEnv = { canvas }
 
     const { scene, warnings } = applyOperations(emptyScene(), [
       {
@@ -365,8 +361,7 @@ describe('integration — add texto role:titulo', () => {
 
   it('the title fontSize is in [14, 28] and is an integer', () => {
     const canvas = { width: 1200, height: 800 }
-    const lib = loadLibrary()
-    const localEnv: SceneEnv = { canvas, library: lib }
+    const localEnv: SceneEnv = { canvas }
 
     const { scene } = applyOperations(emptyScene(), [
       {
@@ -387,8 +382,7 @@ describe('integration — add texto role:titulo', () => {
 
   it('body text gets no fontSize (only titulo uses it)', () => {
     const canvas = { width: 1200, height: 800 }
-    const lib = loadLibrary()
-    const localEnv: SceneEnv = { canvas, library: lib }
+    const localEnv: SceneEnv = { canvas }
 
     const { scene } = applyOperations(emptyScene(), [
       {
@@ -410,8 +404,7 @@ describe('integration — add texto role:titulo', () => {
     // Checks that the measurer returns a width consistent with the model
     // chars * fontSize * 0.55 at the fittedFontSize (not full-width).
     const canvas = { width: 1200, height: 800 }
-    const lib = loadLibrary()
-    const localEnv: SceneEnv = { canvas, library: lib }
+    const localEnv: SceneEnv = { canvas }
     const text = 'Tema'
 
     const { scene } = applyOperations(emptyScene(), [

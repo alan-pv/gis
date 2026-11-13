@@ -29,7 +29,6 @@ import { leafIds, defaultAreaTree } from '@/layout/index.js'
 import { applyToActivePage } from './apply.js'
 import { documentToAgentState } from './agent-state.js'
 import { allIds } from '@/scene/index.js'
-import type { SceneEnv } from '@/scene/index.js'
 import { CanvasStateSchema } from '@/contract/index.js'
 import type { Operation } from '@/contract/index.js'
 import { addStroke } from '@/ink/index.js'
@@ -38,51 +37,7 @@ import { addStroke } from '@/ink/index.js'
 
 const CANVAS = { width: 1200, height: 800 }
 
-/**
- * Minimal library for tests (same pattern as scene.test.ts).
- */
-function makeMockLibrary(): SceneEnv['library'] {
-  const makeMeta = (name: string, width: number, height: number, render?: 'text') => ({
-    name,
-    format_version: 1 as const,
-    default_size: { width, height },
-    anchors: {
-      top: { x: width / 2, y: 0 },
-      bottom: { x: width / 2, y: height },
-      left: { x: 0, y: height / 2 },
-      right: { x: width, y: height / 2 },
-    },
-    ...(render === 'text' ? { render: 'text' as const } : { stroke_order: ['cuerpo'] }),
-  })
-
-  const lib = new Map()
-
-  const objects = [
-    { name: 'sol', w: 120, h: 120 },
-    { name: 'nube', w: 160, h: 100 },
-    { name: 'mar', w: 200, h: 80 },
-    { name: 'lluvia', w: 80, h: 120 },
-  ]
-
-  for (const { name, w, h } of objects) {
-    lib.set(name, {
-      name,
-      meta: makeMeta(name, w, h),
-      svg: `<svg><path id="cuerpo"/></svg>`,
-    })
-  }
-
-  lib.set('texto', {
-    name: 'texto',
-    meta: makeMeta('texto', 200, 40, 'text'),
-    svg: null,
-  })
-
-  return lib
-}
-
-const LIBRARY = makeMockLibrary()
-const ENV = { canvas: CANVAS, library: LIBRARY }
+const ENV = { canvas: CANVAS }
 
 // ── a) newDocument ─────────────────────────────────────────────────────────────
 
@@ -240,7 +195,7 @@ describe('global id collisions across pages', () => {
     // Apply "sol" on page 1 suggesting sol_1_1 (free → stays sol_1_1)
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
 
@@ -251,7 +206,7 @@ describe('global id collisions across pages', () => {
     // Switch to page 2 and apply another "sol" with any suggested id
     doc = addPage(doc) // active = page 2, number=2
     const r2 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_sugerido', object: 'sol' },
+      { op: 'add', id: 'sol_sugerido', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r2.document
 
@@ -266,14 +221,14 @@ describe('global id collisions across pages', () => {
     // Create sol_1_1 on page 1
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
 
     // Switch to page 2 and suggest EXACTLY sol_1_1 (already exists on page 1)
     doc = addPage(doc) // page number = 2
     const r2 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
 
     // The draw_object event must carry an id different from sol_1_1
@@ -282,8 +237,8 @@ describe('global id collisions across pages', () => {
     expect(drawEvent!.type).toBe('draw_object')
     // The canonical id cannot be sol_1_1 (already taken by page 1)
     expect((drawEvent as { type: 'draw_object'; id: string }).id).not.toBe('sol_1_1')
-    // It must be sol_2_1 (first free on page 2)
-    expect((drawEvent as { type: 'draw_object'; id: string }).id).toBe('sol_2_1')
+    // It must be concepto_2_1 (first free on page 2)
+    expect((drawEvent as { type: 'draw_object'; id: string }).id).toBe('concepto_2_1')
   })
 })
 
@@ -294,7 +249,7 @@ describe('clear only affects the active page', () => {
     // Add a sol on page 1
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
 
@@ -311,7 +266,7 @@ describe('clear only affects the active page', () => {
   it('clear on the active page empties its scene', () => {
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
     expect(activeScene(doc).objects.size).toBe(1)
@@ -329,14 +284,14 @@ describe('documentToAgentState', () => {
     // Sol on page 1
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
 
     // Switch to page 2 and add a cloud
     doc = addPage(doc)
     const r2 = applyToActivePage(doc, [
-      { op: 'add', id: 'nube_2_1', object: 'nube' },
+      { op: 'add', id: 'nube_2_1', object: 'concepto', label: 'Cloud' },
     ], ENV)
     doc = r2.document
 
@@ -370,7 +325,7 @@ describe('applyToActivePage immutability', () => {
     expect(sceneAntes.objects.size).toBe(0)
 
     applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
 
     // The original document did not change
@@ -383,7 +338,7 @@ describe('applyToActivePage immutability', () => {
     const pagesAntes = doc.pages
 
     const { document: newDoc } = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
 
     // The original array is still the same object
@@ -395,7 +350,7 @@ describe('applyToActivePage immutability', () => {
   it('documentIds reflects the ids of the other pages', () => {
     let doc = newDocument()
     const r1 = applyToActivePage(doc, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     doc = r1.document
     doc = addPage(doc)
@@ -476,7 +431,7 @@ describe('ink per page', () => {
     // Document without ink
     let docWithoutInk = newDocument()
     const r = applyToActivePage(docWithoutInk, [
-      { op: 'add', id: 'sol_1_1', object: 'sol' },
+      { op: 'add', id: 'sol_1_1', object: 'concepto', label: 'Sun' },
     ], ENV)
     docWithoutInk = r.document
 

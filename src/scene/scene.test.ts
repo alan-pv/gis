@@ -28,60 +28,7 @@ import type { SceneEnv, SceneEvent } from './apply.js'
 
 const CANVAS = { width: 1200, height: 800 }
 
-/**
- * Minimal library for tests (no need to load files from disk).
- * Mocks the objects we need: sol, nube, texto, lluvia, mar.
- */
-function makeMockLibrary(): SceneEnv['library'] {
-  const makeMeta = (
-    name: string,
-    width: number,
-    height: number,
-    render?: 'text',
-  ) => ({
-    name,
-    format_version: 1 as const,
-    default_size: { width, height },
-    anchors: {
-      top: { x: width / 2, y: 0 },
-      bottom: { x: width / 2, y: height },
-      left: { x: 0, y: height / 2 },
-      right: { x: width, y: height / 2 },
-    },
-    ...(render === 'text'
-      ? { render: 'text' as const }
-      : { stroke_order: ['cuerpo'] }),
-  })
-
-  const lib = new Map()
-
-  const objects = [
-    { name: 'sol', w: 120, h: 120 },
-    { name: 'nube', w: 160, h: 100 },
-    { name: 'mar', w: 200, h: 80 },
-    { name: 'lluvia', w: 80, h: 120 },
-    { name: 'circulo', w: 80, h: 80 },
-    { name: 'rectangulo', w: 120, h: 80 },
-  ]
-
-  for (const { name, w, h } of objects) {
-    lib.set(name, {
-      name,
-      meta: makeMeta(name, w, h),
-      svg: `<svg><path id="cuerpo"/></svg>`,
-    })
-  }
-
-  lib.set('texto', {
-    name: 'texto',
-    meta: makeMeta('texto', 200, 40, 'text'),
-    svg: null,
-  })
-
-  return lib
-}
-
-const ENV: SceneEnv = { canvas: CANVAS, library: makeMockLibrary() }
+const ENV: SceneEnv = { canvas: CANVAS }
 
 // ── Test helpers ──────────────────────────────────────────────────────────────
 
@@ -103,8 +50,8 @@ describe('scene model', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'flecha_1', from: 'sol_1', to: 'nube_1', style: 'arrow' },
         { op: 'group', id: 'grupo_1', members: ['sol_1', 'nube_1'] },
       ],
@@ -121,8 +68,8 @@ describe('scene model', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'a', object: 'circulo' },
-        { op: 'add', id: 'b', object: 'circulo' },
+        { op: 'add', id: 'a', object: 'concepto', label: 'circulo' },
+        { op: 'add', id: 'b', object: 'concepto', label: 'circulo' },
         { op: 'group', id: 'g', members: ['a', 'b'] },
       ],
       ENV,
@@ -143,7 +90,7 @@ describe('add', () => {
   it('adds an object: its box is resolved in the scene', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     expect(scene.objects.has('sol_1')).toBe(true)
@@ -164,8 +111,8 @@ describe('add', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'mar_1', object: 'mar' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
       ],
       ENV,
     )
@@ -181,15 +128,15 @@ describe('add', () => {
     const { scene, warnings } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'sol_1', object: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
       ],
       ENV,
     )
     // The first keeps the suggested id
     expect(scene.objects.has('sol_1')).toBe(true)
     // The second must have been renamed to sol_1_1
-    expect(scene.objects.has('sol_1_1')).toBe(true)
+    expect(scene.objects.has('concepto_1_1')).toBe(true)
     expect(scene.objects.size).toBe(2)
     // No warnings for the rename (it is silent)
     expect(warnings.length).toBe(0)
@@ -199,10 +146,10 @@ describe('add', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         // Second add with the same suggested id "sol_1" but a nube object.
-        { op: 'add', id: 'sol_1', object: 'nube' },
-        { op: 'add', id: 'mar_1', object: 'mar' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'nube' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
         {
           op: 'connect',
           id: 'f1',
@@ -216,7 +163,7 @@ describe('add', () => {
     const conn = scene.connections.get('f1')
     expect(conn).toBeDefined()
     expect(conn!.from).toBe('mar_1')
-    expect(conn!.to).toBe('nube_1_1')
+    expect(conn!.to).toBe('concepto_1_1')
     expect(eventTypes(events)).toEqual([
       'draw_object',
       'draw_object',
@@ -229,10 +176,10 @@ describe('add', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_existente', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_existente', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         // duplicate -> alias nube_1 -> nube_1_1
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         {
           op: 'connect',
           id: 'f2',
@@ -246,7 +193,7 @@ describe('add', () => {
     const conn = scene.connections.get('f2')
     expect(conn).toBeDefined()
     expect(conn!.from).toBe('sol_existente')
-    expect(conn!.to).toBe('nube_1_1')
+    expect(conn!.to).toBe('concepto_1_1')
   })
 
   // ── add with group ──────────────────────────────────────────────────────────
@@ -288,7 +235,7 @@ describe('add', () => {
   it('add without group creates no group', () => {
     const { scene } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     expect(scene.groups.size).toBe(0)
@@ -302,8 +249,8 @@ describe('connect', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'mar_1', object: 'mar' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         {
           op: 'connect',
           id: 'flecha_eva',
@@ -329,10 +276,10 @@ describe('connect', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'cielo', members: ['sol_1', 'nube_1'] },
-        { op: 'add', id: 'mar_1', object: 'mar' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
         { op: 'connect', id: 'f1', from: 'mar_1', to: 'cielo', style: 'arrow' },
       ],
       ENV,
@@ -346,7 +293,7 @@ describe('connect', () => {
     const { scene, warnings } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'INEXISTENTE', style: 'arrow' },
       ],
       ENV,
@@ -363,7 +310,7 @@ describe('label', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'label', ref: 'nube_1', text: 'condensación' },
       ],
       ENV,
@@ -377,8 +324,8 @@ describe('label', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'mar_1', object: 'mar' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'mar_1', to: 'nube_1', style: 'arrow' },
         { op: 'label', ref: 'f1', text: 'evaporación' },
       ],
@@ -391,8 +338,8 @@ describe('label', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'] },
         { op: 'label', ref: 'ciclo', text: 'ciclo del agua' },
       ],
@@ -474,8 +421,8 @@ describe('update', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'cielo', members: ['sol_1', 'nube_1'] },
         { op: 'update', ref: 'cielo', set: { label: 'el cielo' } },
       ],
@@ -483,7 +430,7 @@ describe('update', () => {
     )
     expect(scene.groups.get('cielo')!.label).toBe('el cielo')
     // Members get no label from this operation
-    expect(scene.objects.get('sol_1')!.label).toBeNull()
+    expect(scene.objects.get('sol_1')!.label).toBe('sol')
   })
 })
 
@@ -494,8 +441,8 @@ describe('delete', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'mar_1', object: 'mar' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'mar_1', to: 'nube_1', style: 'arrow' },
         { op: 'delete', ref: 'nube_1' },
       ],
@@ -518,7 +465,7 @@ describe('delete', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'group', id: 'g1', members: ['sol_1'] },
         { op: 'delete', ref: 'sol_1' },
       ],
@@ -538,8 +485,8 @@ describe('delete', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'g1', members: ['sol_1', 'nube_1'] },
         { op: 'delete', ref: 'sol_1' },
       ],
@@ -554,9 +501,9 @@ describe('delete', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
-        { op: 'add', id: 'mar_1', object: 'mar' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow' },
         { op: 'connect', id: 'f2', from: 'mar_1', to: 'nube_1', style: 'line' },
         { op: 'group', id: 'cielo', members: ['sol_1', 'nube_1'] },
@@ -588,8 +535,8 @@ describe('delete', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow' },
         { op: 'delete', ref: 'f1' },
       ],
@@ -609,8 +556,8 @@ describe('group / ungroup', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'], label: 'ciclo del agua' },
       ],
       ENV,
@@ -627,8 +574,8 @@ describe('group / ungroup', () => {
     const { scene, warnings } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'g1', members: ['sol_1'] },
         // g1 is a group: it cannot be a member of another group
         { op: 'group', id: 'g2', members: ['g1', 'nube_1'] },
@@ -647,9 +594,9 @@ describe('group / ungroup', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
-        { op: 'add', id: 'mar_1', object: 'mar' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
         { op: 'group', id: 'cielo', members: ['sol_1', 'nube_1'] },
         // Re-emit with the same id: merges mar_1 into the existing group
         { op: 'group', id: 'cielo', members: ['mar_1'] },
@@ -666,8 +613,8 @@ describe('group / ungroup', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'] },
         { op: 'ungroup', ref: 'ciclo' },
       ],
@@ -689,8 +636,8 @@ describe('clear', () => {
     const { scene, events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow' },
         { op: 'clear' },
       ],
@@ -710,8 +657,8 @@ describe('event order', () => {
     const { events } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow' },
         { op: 'label', ref: 'f1', text: 'evaporación' },
         { op: 'highlight', refs: ['sol_1', 'f1'] },
@@ -750,7 +697,7 @@ describe('robustness: an unknown ref does not throw', () => {
     const { scene, warnings } = applyOperations(
       base,
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'label', ref: 'INEXISTENTE', text: 'algo' },
       ],
       ENV,
@@ -781,7 +728,7 @@ describe('robustness: an unknown ref does not throw', () => {
     const { scene, events, warnings } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'highlight', refs: ['sol_1', 'INEXISTENTE'] },
       ],
       ENV,
@@ -807,8 +754,8 @@ describe('immutability', () => {
     applyOperations(
       original,
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow' },
         { op: 'clear' },
       ],
@@ -826,12 +773,12 @@ describe('immutability', () => {
 
     const { scene: s1 } = applyOperations(
       s0,
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     const { scene: s2 } = applyOperations(
       s1,
-      [{ op: 'add', id: 'nube_1', object: 'nube' }],
+      [{ op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' }],
       ENV,
     )
 
@@ -849,8 +796,8 @@ describe('sceneToAgentState', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow', label: 'evap' },
         { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'], label: 'ciclo del agua' },
       ],
@@ -865,8 +812,8 @@ describe('sceneToAgentState', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'mar_1', object: 'mar' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
       ],
       ENV,
     )
@@ -891,8 +838,8 @@ describe('sceneToAgentState', () => {
     const { scene } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
-        { op: 'add', id: 'nube_1', object: 'nube' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
+        { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'line' },
       ],
       ENV,
@@ -971,7 +918,7 @@ describe('sceneToAgentState', () => {
         {
           op: 'add',
           id: 'sol_99',
-          object: 'sol',
+          object: 'concepto',
           label: 'el sol',
         },
       ],
@@ -988,7 +935,7 @@ describe('sceneToAgentState', () => {
 
 describe('highlight', () => {
   it('is idempotent: repeating a highlight on (ref, word) creates no other', () => {
-    const { scene: s1 } = applyOperations(emptyScene(), [{ op: 'add', id: 'sol_1', object: 'sol' }], ENV)
+    const { scene: s1 } = applyOperations(emptyScene(), [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }], ENV)
     const { scene: s2 } = applyOperations(s1, [{ op: 'highlight', refs: ['sol_1'] }], ENV)
     const { scene: s3, events } = applyOperations(s2, [{ op: 'highlight', refs: ['sol_1', 'sol_1'] }], ENV)
     expect(s3.highlights.size).toBe(1)
@@ -1002,7 +949,7 @@ describe('highlight', () => {
     const { scene: s1 } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'sol_1', object: 'sol' },
+        { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
       ],
       ENV,
     )
@@ -1069,7 +1016,7 @@ describe('highlight', () => {
   it('gesture cycle: figure -> ellipse first', () => {
     const { scene: s1 } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     const { scene: s2 } = applyOperations(s1, [{ op: 'highlight', refs: ['sol_1'] }], ENV)
@@ -1080,7 +1027,7 @@ describe('highlight', () => {
   it('deleting an object cascades to its highlights', () => {
     const { scene: s1 } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     const { scene: s2 } = applyOperations(s1, [{ op: 'highlight', refs: ['sol_1'] }], ENV)
@@ -1092,7 +1039,7 @@ describe('highlight', () => {
   it('clear empties the highlights', () => {
     const { scene: s1 } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     const { scene: s2 } = applyOperations(s1, [{ op: 'highlight', refs: ['sol_1'] }], ENV)
@@ -1104,7 +1051,7 @@ describe('highlight', () => {
   it('highlight ids in the format highlight_<page>_<n>', () => {
     const { scene: s1 } = applyOperations(
       emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
+      [{ op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' }],
       ENV,
     )
     const { scene: s2 } = applyOperations(s1, [{ op: 'highlight', refs: ['sol_1'] }], ENV)
@@ -1113,67 +1060,3 @@ describe('highlight', () => {
   })
 })
 
-// ── Open catalog: placeholder ─────────────────────────────────────────────────
-
-describe('open catalog: an unknown object creates a placeholder', () => {
-  it('add of an unknown object creates an object with label = requested name', () => {
-    const { scene, warnings } = applyOperations(
-      emptyScene(),
-      [{ op: 'add', id: 'dragon_1', object: 'dragón' }],
-      ENV,
-    )
-    const obj = scene.objects.get('dragon_1')
-    expect(obj).toBeDefined()
-    expect(obj!.object).toBe('dragón')
-    expect(obj!.label).toBe('dragón')
-    expect(warnings).toHaveLength(0)
-  })
-
-  it('add of an unknown object with an agent label -> the agent label is respected', () => {
-    const { scene } = applyOperations(
-      emptyScene(),
-      [{ op: 'add', id: 'volcano_1', object: 'volcan', label: 'El volcán Popocatépetl' }],
-      ENV,
-    )
-    const obj = scene.objects.get('volcano_1')
-    expect(obj).toBeDefined()
-    expect(obj!.label).toBe('El volcán Popocatépetl')
-  })
-
-  it('known object without a label -> label is null (the name is not used)', () => {
-    const { scene } = applyOperations(
-      emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
-      ENV,
-    )
-    const obj = scene.objects.get('sol_1')
-    expect(obj).toBeDefined()
-    expect(obj!.label).toBeNull()
-  })
-
-  it('an unknown object generates a normal draw_object event', () => {
-    const { events } = applyOperations(
-      emptyScene(),
-      [{ op: 'add', id: 'mitocondria_1', object: 'mitocondria' }],
-      ENV,
-    )
-    expect(events).toHaveLength(1)
-    expect(events[0]).toMatchObject({ type: 'draw_object', id: 'mitocondria_1' })
-  })
-})
-
-// ── Color and fill in the scene ──────────────────────────────────────────────
-
-describe('color and fill on SceneObject', () => {
-  it('add without override uses the meta default (negro/contorno in the mock library)', () => {
-    const { scene } = applyOperations(
-      emptyScene(),
-      [{ op: 'add', id: 'sol_1', object: 'sol' }],
-      ENV,
-    )
-    const obj = scene.objects.get('sol_1')
-    expect(obj).toBeDefined()
-    expect(obj!.color).toBe('negro')
-    expect(obj!.fill).toBe('contorno')
-  })
-})

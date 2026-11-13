@@ -24,6 +24,3 @@ export { applyToActivePage } from './apply.js'
 // ── Agent state ────────────────────────────────────────────────────────────────
 export { documentToAgentState } from './agent-state.js'
 
-// ── Ink promotion ──────────────────────────────────────────────────────────────
-export { promoteInk } from './promote.js'
-

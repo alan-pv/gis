@@ -14,10 +14,8 @@
  * - RESET_DOCUMENT  : back to a single empty page.
  * - ADD_INK_STROKE  : adds an ink stroke to the active page (does NOT empty pendingSteps).
  * - REMOVE_INK_STROKE: removes an ink stroke by id (does NOT empty pendingSteps).
- * - PROMOTE_INK      : promotes ink strokes to a typed object (does NOT empty pendingSteps).
- * - ERASE_PROMOTED   : deletes an object with inkGeometry, cascading (does NOT empty pendingSteps).
  * - MOVE_INK_STROKE  : translates the points of an ink stroke (does NOT empty pendingSteps).
- * - REMOVE_OBJECT    : deletes any object (agent or promoted), cascading (does NOT empty pendingSteps).
+ * - REMOVE_OBJECT    : deletes an object, cascading (does NOT empty pendingSteps).
  * - UNDO             : restores the latest snapshot of the stack.
  *
  * Why every page action empties pendingSteps: an animation belongs to the page that
@@ -26,8 +24,7 @@
  * ── Unified undo stack ─────────────────────────────────────────────────────────
  * Reversible actions on the active page take a snapshot BEFORE mutating and push it
  * onto undoStack:
- *   ADD_INK_STROKE, PROMOTE_INK, REMOVE_OBJECT, ERASE_PROMOTED,
- *   REMOVE_INK_STROKE, MOVE_INK_STROKE.
+ *   ADD_INK_STROKE, REMOVE_OBJECT, REMOVE_INK_STROKE, MOVE_INK_STROKE.
  *
  * No snapshot is taken for:
  *   - APPLY_RESULT   (agent drawings are not the teacher's work)
@@ -38,7 +35,7 @@
  * empty stack it does nothing.
  */
 import { useReducer, useRef, useEffect } from 'react'
-import type { Color } from '@/library/index.js'
+import type { Color } from '@/ink/index.js'
 import type { GisDocument } from '@/document/index.js'
 import {
   newDocument,
@@ -49,12 +46,11 @@ import {
   activeInk,
   updateActiveInk,
 } from '@/document/index.js'
-import { applyToActivePage, promoteInk } from '@/document/index.js'
+import { applyToActivePage } from '@/document/index.js'
 import { addStroke, removeStroke, translateStroke } from '@/ink/index.js'
 import { domMeasureText, domMeasureConcept } from '../canvas/measure-text.js'
 import type { Scene } from '@/scene/index.js'
 import type { InkLayer } from '@/ink/index.js'
-import type { Library } from '@/library/index.js'
 import { validateAgentOutput } from '@/validator/index.js'
 import type { ValidationMode } from '@/validator/index.js'
 import { allIds, removeObjectCascade, diffAddedObjects, reflowScene } from '@/scene/index.js'
@@ -100,8 +96,6 @@ export type DocumentAction =
   | { type: 'RESET_DOCUMENT' }
   | { type: 'ADD_INK_STROKE'; points: number[]; color?: Color }
   | { type: 'REMOVE_INK_STROKE'; id: string }
-  | { type: 'PROMOTE_INK'; strokeIds: string[]; objectType: string }
-  | { type: 'ERASE_PROMOTED'; id: string }
   | { type: 'MOVE_INK_STROKE'; id: string; dx: number; dy: number }
   | { type: 'REMOVE_OBJECT'; id: string }
   /** Deletes a highlight by id, with a snapshot for UNDO (eraser on a highlight). */
@@ -244,41 +238,6 @@ export function documentReducer(state: DocumentState, action: DocumentAction): D
       return { ...state, undoStack: newUndoStack, document: updateActiveInk(state.document, newInk) }
     }
 
-    // Promoting ink does NOT empty pendingSteps: the stroke was already drawn and the
-    // scene animation is independent of the promotion.
-    // Snapshot BEFORE mutating → Ctrl+Z reverts the promotion to ink.
-    case 'PROMOTE_INK': {
-      const newUndoStack = pushSnapshot(state)
-      const { document: newDoc } = promoteInk(
-        state.document,
-        action.strokeIds,
-        action.objectType,
-      )
-      return { ...state, undoStack: newUndoStack, document: newDoc }
-    }
-
-    // Erasing promoted objects does NOT empty pendingSteps: like the ink actions,
-    // the scene animation is independent.
-    // Only acts if the object exists AND has inkGeometry (agent objects are not
-    // deleted with the eraser).
-    // Snapshot BEFORE mutating → enables UNDO.
-    case 'ERASE_PROMOTED': {
-      const scene = activeScene(state.document)
-      const obj = scene.objects.get(action.id)
-      // Ignore if the object does not exist or has no inkGeometry
-      if (!obj || !obj.inkGeometry) return state
-
-      const newUndoStack = pushSnapshot(state)
-      const newScene = removeObjectCascade(scene, action.id)
-
-      // Replace the active scene without mutating (same pattern as OBJECT_MOVED)
-      const newPages = state.document.pages.map((page, i) =>
-        i === state.document.activeIndex ? { ...page, scene: newScene } : page,
-      )
-      const newDoc: GisDocument = { ...state.document, pages: newPages }
-      return { ...state, undoStack: newUndoStack, document: newDoc }
-    }
-
     // Deleting any object does NOT empty pendingSteps: selection and manual deletion
     // are independent of the animation in progress.
     // Snapshot BEFORE mutating → enables UNDO of the deletion.
@@ -390,11 +349,10 @@ export interface UseDocumentStateResult {
   /**
    * Validates and applies a raw envelope to the document state.
    * @param raw      Raw envelope from the agent (any type).
-   * @param library  Installed object library.
    * @param canvas   Canvas dimensions in pixels.
    * @param mode     Validation mode: 'live' (push-to-talk/phrase, cap 20) or 'slide' (notes/JSON box, cap 200). Default: 'live'.
    */
-  applyEnvelope: (raw: unknown, library: Library, canvas: { width: number; height: number }, mode?: ValidationMode) => ApplyEnvelopeResult
+  applyEnvelope: (raw: unknown, canvas: { width: number; height: number }, mode?: ValidationMode) => ApplyEnvelopeResult
   objectMoved: (id: string, newBox: BBox) => void
   stepsConsumed: () => void
   addPage: () => void
@@ -406,27 +364,13 @@ export interface UseDocumentStateResult {
   /** Removes the ink stroke with the given id from the active page. Does not cancel the animation in progress. */
   removeInkStroke: (id: string) => void
   /**
-   * Promotes the given strokes to a typed SceneObject on the active page.
-   * Does not cancel the animation in progress.
-   *
-   * @param strokeIds   Ids of the strokes to promote.
-   * @param objectType  Object type (e.g. "sol", "nube").
-   */
-  promoteInkStrokes: (strokeIds: string[], objectType: string) => void
-  /**
-   * Deletes a promoted object (with inkGeometry), cascading to connections and groups.
-   * Does not cancel the animation in progress. Ignores objects without inkGeometry.
-   */
-  erasePromoted: (id: string) => void
-  /**
    * Translates every point of the given ink stroke by (dx, dy).
    * Does not cancel the animation in progress.
    */
   moveInkStroke: (id: string, dx: number, dy: number) => void
   /**
    * Deletes any object of the active page, cascading to connections and groups.
-   * Includes agent objects and promoted objects (unlike erasePromoted, which only
-   * acts on those with inkGeometry). Does not cancel the animation in progress.
+   * Does not cancel the animation in progress.
    */
   removeObject: (id: string) => void
   /**
@@ -437,7 +381,7 @@ export interface UseDocumentStateResult {
   /**
    * Unified undo: restores the active page's scene + ink from the latest snapshot
    * of the stack. With an empty stack it does nothing.
-   * Reverts: ink strokes, promotions, object deletion.
+   * Reverts: ink strokes, object deletion.
    */
   undo: () => void
   /** true if the undo stack holds at least one snapshot (to enable/disable the button). */
@@ -466,7 +410,6 @@ export function useDocumentState(): UseDocumentStateResult {
 
   const applyEnvelope = (
     raw: unknown,
-    library: Library,
     canvas: { width: number; height: number },
     mode: ValidationMode = 'live',
   ): ApplyEnvelopeResult => {
@@ -493,8 +436,8 @@ export function useDocumentState(): UseDocumentStateResult {
     const prevScene = activeScene(currentState.document)
 
     // Apply the operations to the document's active page
-    const result = applyToActivePage(currentState.document, accepted, { canvas, library, measureText: domMeasureText, measureConcept: domMeasureConcept }, mode)
-    const steps = buildTimeline(result.events, activeScene(result.document), library)
+    const result = applyToActivePage(currentState.document, accepted, { canvas, measureText: domMeasureText, measureConcept: domMeasureConcept }, mode)
+    const steps = buildTimeline(result.events, activeScene(result.document))
 
     // Objects added by this envelope (present in next but not in prev)
     const created = diffAddedObjects(prevScene, activeScene(result.document))
@@ -536,17 +479,6 @@ export function useDocumentState(): UseDocumentStateResult {
     dispatch({ type: 'REMOVE_INK_STROKE', id })
   }
 
-  const promoteInkStrokes = (
-    strokeIds: string[],
-    objectType: string,
-  ) => {
-    dispatch({ type: 'PROMOTE_INK', strokeIds, objectType })
-  }
-
-  const erasePromoted = (id: string) => {
-    dispatch({ type: 'ERASE_PROMOTED', id })
-  }
-
   const moveInkStroke = (id: string, dx: number, dy: number) => {
     dispatch({ type: 'MOVE_INK_STROKE', id, dx, dy })
   }
@@ -578,8 +510,6 @@ export function useDocumentState(): UseDocumentStateResult {
     resetDocument,
     addInkStroke,
     removeInkStroke,
-    promoteInkStrokes,
-    erasePromoted,
     moveInkStroke,
     removeObject,
     removeHighlight,

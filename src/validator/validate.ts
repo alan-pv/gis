@@ -6,12 +6,12 @@
  *
  * Rules, in order, per operation:
  *   R5 cap        — at most LIVE_CAP / SLIDE_CAP accepted operations per envelope.
- *   R1 schema     — operation matches the contract (strict schemas reject unknown vocabulary);
- *                   `add.object` must be in the agent vocabulary (texto | concepto).
+ *   R1 schema     — operation matches the contract (strict schemas reject unknown vocabulary;
+ *                   `add.object` is `texto` | `concepto`).
  *   R2 refs       — every reference points to a visible id (page ids + ops accepted earlier
  *                   in the same list). An id collision in `add` is not an error: the canvas renames.
  */
-import { LenientEnvelopeSchema, OperationSchema, SCHEMA_VERSION, AGENT_OBJECTS } from '@/contract/index.js'
+import { LenientEnvelopeSchema, OperationSchema, SCHEMA_VERSION } from '@/contract/index.js'
 import type { Operation } from '@/contract/index.js'
 
 // ── Cap constants ─────────────────────────────────────────────────────────────
@@ -136,17 +136,6 @@ export function validateAgentOutput(
     }
 
     const op = parseResult.data
-
-    // ── Agent vocabulary: add.object ∈ {texto, concepto} ──────────────────────
-    if (op.op === 'add' && !(AGENT_OBJECTS as readonly string[]).includes(op.object)) {
-      rejected.push({
-        index: i,
-        operation: rawOp,
-        rule: 'R1',
-        reason: `add.object "${op.object}" is outside the agent vocabulary (texto | concepto)`,
-      })
-      continue
-    }
 
     // ── R2 refs exist ─────────────────────────────────────────────────────────
     // Every reference (ref/from/to/refs[]/members[]) must point to a visible id
