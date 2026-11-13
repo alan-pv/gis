@@ -1,0 +1,14 @@
+{
+  "name": "nube",
+  "format_version": 1,
+  "default_size": { "width": 160, "height": 100 },
+  "anchors": {
+    "top":    { "x": 80, "y": 4 },
+    "bottom": { "x": 80, "y": 86 },
+    "left":   { "x": 5,  "y": 60 },
+    "right":  { "x": 142, "y": 62 }
+  },
+  "stroke_order": ["contorno"],
+  "color": "gris",
+  "fill": "contorno"
+}

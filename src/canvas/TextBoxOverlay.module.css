@@ -1,0 +1,21 @@
+.input {
+  position: absolute;
+  z-index: var(--gis-z-overlay);
+  /* School-style handwriting font to match the canvas render */
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: var(--gis-space-1) var(--gis-space-2);
+  background: var(--gis-surface-raised);
+  color: var(--gis-text-primary);
+  border: 1.5px solid var(--gis-accent);
+  border-radius: var(--gis-radius-sm);
+  box-shadow: var(--gis-shadow-sm);
+  /* Wide enough to type in; the teacher can lengthen it by dragging */
+  min-width: 160px;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--gis-accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}

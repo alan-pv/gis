@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path id="ola_1" d="M 5 20 C 25 12 45 28 65 20 C 85 12 105 28 125 20 C 145 12 165 28 185 20 C 205 12 225 28 235 20"/>
+  <path id="ola_2" d="M 5 40 C 25 32 45 48 65 40 C 85 32 105 48 125 40 C 145 32 165 48 185 40 C 205 32 225 48 235 40"/>
+  <path id="ola_3" d="M 5 60 C 25 52 45 68 65 60 C 85 52 105 68 125 60 C 145 52 165 68 185 60 C 205 52 225 68 235 60"/>
+</svg>

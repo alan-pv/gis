@@ -1,0 +1,14 @@
+{
+  "name": "linea",
+  "format_version": 1,
+  "default_size": { "width": 120, "height": 12 },
+  "anchors": {
+    "top":    { "x": 60, "y": 0 },
+    "bottom": { "x": 60, "y": 12 },
+    "left":   { "x": 5,  "y": 6 },
+    "right":  { "x": 115, "y": 6 }
+  },
+  "stroke_order": ["cuerpo"],
+  "color": "negro",
+  "fill": "contorno"
+}

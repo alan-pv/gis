@@ -1,0 +1,14 @@
+{
+  "name": "circulo",
+  "format_version": 1,
+  "default_size": { "width": 100, "height": 100 },
+  "anchors": {
+    "top":    { "x": 50, "y": 5 },
+    "bottom": { "x": 50, "y": 95 },
+    "left":   { "x": 5,  "y": 50 },
+    "right":  { "x": 95, "y": 50 }
+  },
+  "stroke_order": ["cuerpo"],
+  "color": "negro",
+  "fill": "contorno"
+}

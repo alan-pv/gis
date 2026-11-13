@@ -1,0 +1,14 @@
+{
+  "name": "arbol",
+  "format_version": 1,
+  "default_size": { "width": 140, "height": 180 },
+  "anchors": {
+    "top":    { "x": 70, "y": 10 },
+    "bottom": { "x": 70, "y": 175 },
+    "left":   { "x": 6,  "y": 90 },
+    "right":  { "x": 134, "y": 90 }
+  },
+  "stroke_order": ["tronco", "copa"],
+  "color": "verde",
+  "fill": "contorno"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "gota",
+  "format_version": 1,
+  "default_size": { "width": 60, "height": 90 },
+  "anchors": {
+    "top":    { "x": 30, "y": 5 },
+    "bottom": { "x": 30, "y": 85 },
+    "left":   { "x": 5,  "y": 58 },
+    "right":  { "x": 55, "y": 58 }
+  },
+  "stroke_order": ["cuerpo"],
+  "color": "azul",
+  "fill": "contorno"
+}
