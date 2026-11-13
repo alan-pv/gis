@@ -76,8 +76,8 @@ describe('removeStroke', () => {
 
 describe('addStroke — color', () => {
   it('with a color stores the color on the new stroke', () => {
-    const layer = addStroke(emptyInk(), [0, 0, 10, 10], 'rojo')
-    expect(layer.strokes[0]!.color).toBe('rojo')
+    const layer = addStroke(emptyInk(), [0, 0, 10, 10], 'red')
+    expect(layer.strokes[0]!.color).toBe('red')
   })
 
   it('without a color leaves color undefined (does not pollute colorless strokes)', () => {
@@ -88,11 +88,11 @@ describe('addStroke — color', () => {
   })
 
   it('a stroke keeps its color after addStroke of another stroke', () => {
-    const layer0 = addStroke(emptyInk(), [0, 0, 10, 10], 'azul')
-    const layer1 = addStroke(layer0, [20, 20, 30, 30], 'verde')
+    const layer0 = addStroke(emptyInk(), [0, 0, 10, 10], 'blue')
+    const layer1 = addStroke(layer0, [20, 20, 30, 30], 'green')
     // The first stroke does not lose its color
-    expect(layer1.strokes[0]!.color).toBe('azul')
-    expect(layer1.strokes[1]!.color).toBe('verde')
+    expect(layer1.strokes[0]!.color).toBe('blue')
+    expect(layer1.strokes[1]!.color).toBe('green')
   })
 
 })

@@ -44,7 +44,7 @@ export function useBoardTools({
   const [tool, setTool] = useState<CanvasTool>('select')
 
   // Active pen color; persists across tool or page changes
-  const [penColor, setPenColor] = useState<Color>('negro')
+  const [penColor, setPenColor] = useState<Color>('black')
 
   // Selected object id (null = none); ephemeral, not part of the reducer
   const [selectedId, setSelectedId] = useState<string | null>(null)

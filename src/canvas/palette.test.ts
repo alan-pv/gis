@@ -13,6 +13,6 @@ describe('palette', () => {
   })
 
   it('undefined falls back to black', () => {
-    expect(colorHex(undefined)).toBe(PALETTE_HEX.negro)
+    expect(colorHex(undefined)).toBe(PALETTE_HEX.black)
   })
 })

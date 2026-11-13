@@ -9,19 +9,19 @@ import type { Color } from '@/ink/index.js'
 // ── Closed palette ────────────────────────────────────────────────────────────
 
 export const PALETTE_HEX: Record<Color, string> = {
-  negro:    '#1a1a1a',
-  azul:     '#2563eb',
-  rojo:     '#dc2626',
-  verde:    '#16a34a',
-  amarillo: '#eab308',
-  naranja:  '#ea580c',
-  café:     '#92400e',
-  gris:     '#6b7280',
+  black:    '#1a1a1a',
+  blue:     '#2563eb',
+  red:      '#dc2626',
+  green:    '#16a34a',
+  yellow:   '#eab308',
+  orange:   '#ea580c',
+  brown:    '#92400e',
+  gray:     '#6b7280',
 }
 
 /**
  * Returns the hex of the given color; falls back to black if undefined.
  */
 export function colorHex(color: Color | undefined): string {
-  return PALETTE_HEX[color ?? 'negro']
+  return PALETTE_HEX[color ?? 'black']
 }

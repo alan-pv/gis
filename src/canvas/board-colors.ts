@@ -17,7 +17,7 @@ import { TEXT_BG_COLOR } from '@/scene/text-measure.js'
 
 /** Content ink (strokes, body text, connections). */
 export const INK_COLOR = '#1a1a1a'
-/** Emphasis red (highlights); same as `rojo` in the contract palette. */
+/** Emphasis red (highlights); same as `red` in the pen palette. */
 export const EMPHASIS_COLOR = '#dc2626'
 
 /** Color of a section: light tone (background) and dark tone (text/stroke). */
@@ -31,12 +31,12 @@ export interface SectionColor {
 
 /** Section palette in group creation order (cyclic). No red. */
 export const SECTION_PALETTE: readonly SectionColor[] = [
-  { name: 'verde',        light: '#dcfce7', dark: '#166534' },
-  { name: 'azul',         light: '#dbeafe', dark: '#1e40af' },
-  { name: 'naranja',      light: '#ffedd5', dark: '#9a3412' },
-  { name: 'morado',       light: '#f3e8ff', dark: '#6b21a8' },
-  { name: 'verde azulado', light: '#ccfbf1', dark: '#115e59' },
-  { name: 'marrón',       light: '#f1e4d6', dark: '#6b4226' },
+  { name: 'green',        light: '#dcfce7', dark: '#166534' },
+  { name: 'blue',         light: '#dbeafe', dark: '#1e40af' },
+  { name: 'orange',       light: '#ffedd5', dark: '#9a3412' },
+  { name: 'purple',       light: '#f3e8ff', dark: '#6b21a8' },
+  { name: 'teal',         light: '#ccfbf1', dark: '#115e59' },
+  { name: 'brown',        light: '#f1e4d6', dark: '#6b4226' },
 ]
 
 /** Color of the section at index `index` (cyclic). */

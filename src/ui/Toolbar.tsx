@@ -54,13 +54,10 @@ function ToolButton({
   )
 }
 
-/** Pen color popover, anchored to a swatch showing the active color. */
-/** English display names for the contract's color literals (UI only; the literals are untouched). */
-const COLOR_NAME: Record<Color, string> = {
-  negro: 'Black', azul: 'Blue', rojo: 'Red', verde: 'Green',
-  amarillo: 'Yellow', naranja: 'Orange', café: 'Brown', gris: 'Gray',
-}
+/** Display name of a pen color (the color name, capitalized). */
+const colorName = (c: Color): string => c.charAt(0).toUpperCase() + c.slice(1)
 
+/** Pen color popover, anchored to a swatch showing the active color. */
 function ColorPopover({ penColor, onSetPenColor }: { penColor: Color; onSetPenColor: (c: Color) => void }) {
   return (
     <Popover.Root>
@@ -86,8 +83,8 @@ function ColorPopover({ penColor, onSetPenColor }: { penColor: Color; onSetPenCo
               <Popover.Close asChild key={color}>
                 <button
                   type="button"
-                  title={COLOR_NAME[color]}
-                  aria-label={COLOR_NAME[color]}
+                  title={colorName(color)}
+                  aria-label={colorName(color)}
                   className={styles.swatch}
                   data-selected={penColor === color ? 'true' : undefined}
                   style={{ background: hex }}

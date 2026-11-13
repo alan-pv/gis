@@ -11,7 +11,7 @@
  */
 
 /** Pen colors: a closed palette (hex values live in `src/canvas/palette.ts`). */
-export type Color = 'negro' | 'azul' | 'rojo' | 'verde' | 'amarillo' | 'naranja' | 'café' | 'gris'
+export type Color = 'black' | 'blue' | 'red' | 'green' | 'yellow' | 'orange' | 'brown' | 'gray'
 
 /** An ink stroke: flattened x,y pairs [x0,y0,x1,y1,...] (Konva.Line format). */
 export interface InkStroke {

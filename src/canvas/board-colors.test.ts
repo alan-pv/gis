@@ -13,7 +13,7 @@ function sceneWithGroups(groupIds: string[], membersOf: Record<string, string[]>
 
 describe('board-colors: section palette', () => {
   it('order: green, blue, orange, purple, teal, brown (cyclic)', () => {
-    expect(SECTION_PALETTE.map((c) => c.name)).toEqual(['verde', 'azul', 'naranja', 'morado', 'verde azulado', 'marrón'])
+    expect(SECTION_PALETTE.map((c) => c.name)).toEqual(['green', 'blue', 'orange', 'purple', 'teal', 'brown'])
     expect(sectionColorAt(6)).toBe(SECTION_PALETTE[0])
     expect(sectionColorAt(7)).toBe(SECTION_PALETTE[1])
   })
@@ -23,7 +23,7 @@ describe('board-colors: section palette', () => {
       expect(c.dark).not.toBe(EMPHASIS_COLOR)
       expect(c.light).not.toBe(EMPHASIS_COLOR)
     }
-    expect(EMPHASIS_COLOR).toBe(colorHex('rojo'))
+    expect(EMPHASIS_COLOR).toBe(colorHex('red'))
   })
 
   it('an object\'s section follows the creation order of its group', () => {
@@ -35,29 +35,29 @@ describe('board-colors: section palette', () => {
 })
 
 describe('board-colors: text and concept', () => {
-  const verde = SECTION_PALETTE[0]!
+  const green = SECTION_PALETTE[0]!
 
   it('subtitle with a section: light background and dark text of the section', () => {
-    expect(textBackgroundFor('subtitulo', verde)).toBe(verde.light)
-    expect(textInkColor('subtitulo', verde)).toBe(verde.dark)
+    expect(textBackgroundFor('subtitulo', green)).toBe(green.light)
+    expect(textInkColor('subtitulo', green)).toBe(green.dark)
   })
 
   it('title (and subtitle without a section) keep their style: yellow + heading blue', () => {
-    expect(textBackgroundFor('titulo', verde)).toBe(TEXT_BG_COLOR)
-    expect(textInkColor('titulo', verde)).toBe(INK_COLOR)
+    expect(textBackgroundFor('titulo', green)).toBe(TEXT_BG_COLOR)
+    expect(textInkColor('titulo', green)).toBe(INK_COLOR)
     expect(textBackgroundFor('subtitulo', null)).toBe(TEXT_BG_COLOR)
     expect(textInkColor('subtitulo', null)).toBe(INK_COLOR)
   })
 
   it('body, list, enumeration and no role: black ink and no background, with or without a section', () => {
     for (const r of ['cuerpo', 'lista', 'enumeracion', null, undefined] as const) {
-      expect(textInkColor(r, verde)).toBe(INK_COLOR)
-      expect(textBackgroundFor(r, verde)).toBeNull()
+      expect(textInkColor(r, green)).toBe(INK_COLOR)
+      expect(textBackgroundFor(r, green)).toBeNull()
     }
   })
 
   it('the concept outline is the dark tone of its section (ink without a group)', () => {
-    expect(conceptStrokeColor(verde)).toBe(verde.dark)
+    expect(conceptStrokeColor(green)).toBe(green.dark)
     expect(conceptStrokeColor(null)).toBe(INK_COLOR)
   })
 })
