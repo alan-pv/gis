@@ -10,7 +10,7 @@
 import { describe, it, expect } from 'vitest'
 import { estimateTextSize, fitTitleFontSize, TITLE_FONT_SIZE_MIN, TEXT_LINE_HEIGHT, TEXT_PADDING, ROLE_STYLE, markerizeText } from './text-measure.js'
 
-/** Representative maximum content width (COLUMN_WIDTH - 2*TEXT_PADDING). */
+/** Representative maximum content width (a representative column width minus 2*TEXT_PADDING). */
 const MAX_CONTENT_WIDTH = 264
 
 /** Height of a single line including line spacing, rounded up. */

@@ -137,12 +137,9 @@
  *   purpose because of padding) does not count as a collision between blocks.
  *
  * Design decisions:
- * - Opening measured at COLUMN_WIDTH: preserves the look of the opening strip
- *   (measured at the same width as before, regardless of the areas).
+ * - The opening items flow as the first (ungrouped) block of the body, measured
+ *   at the width of the area they fall in.
  * - Title measured at canvas.width - 2*MARGIN.
- *
- * @deprecated COLUMN_WIDTH / COLUMN_GAP: no longer used for the body.
- *   Kept as exports for compatibility with external code that imports them.
  */
 import type { BBox, Canvas, Size } from './bbox.js'
 import { clampToCanvas } from './bbox.js'
