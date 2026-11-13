@@ -4,10 +4,9 @@
 
 [![CI](https://github.com/alan-pv/gis/actions/workflows/ci.yml/badge.svg)](https://github.com/alan-pv/gis/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Watch the demo](https://img.shields.io/badge/%E2%96%B6_Watch_the_demo-YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=CtOVB2-lHuE)
 
 ![Gis writing a lesson on the food chain while a teacher speaks](docs/images/demo.gif)
-
-[▶ Watch Gis in a real session, with voice (YouTube)](https://www.youtube.com/watch?v=CtOVB2-lHuE)
 
 ## What is it?
 
