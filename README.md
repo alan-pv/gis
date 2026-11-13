@@ -7,6 +7,8 @@
 
 ![Gis writing a lesson on the food chain while a teacher speaks](docs/images/demo.gif)
 
+[▶ Watch Gis in a real session, with voice (YouTube)](https://www.youtube.com/watch?v=CtOVB2-lHuE)
+
 ## What is it?
 
 Gis listens to a teacher explaining a topic and builds the board for them, live:
@@ -99,13 +101,10 @@ src/            the browser app (React + Konva)
   speech/         speech-to-text (Web Speech) and the turn queue
   sidecar/        client for the model sidecar
   ink/            freehand drawing by the teacher
-  recognizer/     recognizes hand-drawn figures
-  library/        loads the figure templates in objects/
   demo/           recorded lessons and their player
   hooks/, ui/     app state, menus, toolbar, dialogs
 sidecar/        Python server that runs the two models
 scripts/        setup.sh and start.sh
-objects/        figure templates (SVG + metadata)
 docs/           architecture, bansho notes, contributing
 ```
 

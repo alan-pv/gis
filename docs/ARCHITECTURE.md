@@ -100,7 +100,7 @@ every turn with "nothing to add"; it needs neither PyTorch nor ollama.
 |---|---|
 | `src/contract/` | Zod schemas for the envelope and operations |
 | `src/validator/` | Operation-by-operation validation |
-| `src/document/` | Document model, applying operations, promoting hand-drawn ink |
+| `src/document/` | Document model (pages) and applying operations to it |
 | `src/scene/` | Scene graph, text runs, concept measuring, list numbering |
 | `src/layout/` | Board layout: areas, columns, geometry |
 | `src/canvas/` | Konva rendering, fonts, rough.js, connection geometry |
@@ -108,12 +108,9 @@ every turn with "nothing to add"; it needs neither PyTorch nor ollama.
 | `src/speech/` | Web Speech provider, turn queue, gate |
 | `src/sidecar/` | Browser client for the sidecar |
 | `src/ink/` | Freehand strokes drawn by the teacher |
-| `src/recognizer/` | Recognizes hand-drawn figures against the templates |
-| `src/library/` | Loads the figure templates from `objects/` |
 | `src/demo/` | Demo mode, lesson player, and the 40 recorded lessons (`lessons/`) |
 | `src/hooks/`, `src/ui/` | App state hooks; menus, toolbar, dialogs, mic button |
 | `sidecar/` | `server.py` and `gis_sidecar/` (board summary, protocol, decider, text writer, filters), tests |
-| `objects/` | Figure templates (SVG + metadata) |
 
 The static demo (`npm run build:demo`) sets `VITE_GIS_DEMO=1`: the microphone and
 sidecar calls are disabled and the recorded lessons are the only input.
@@ -133,4 +130,4 @@ Gis is meant to be used in front of a class, so failures are quiet:
 - A bad operation is dropped; the rest of the turn still applies.
 - If the text model fails or runs out of memory, the turn is reported as a failure, not as "nothing to add", and the board stays as it was.
 - If the sidecar is slow, stale requests are discarded instead of piling up.
-- Hand-drawn ink is invisible to the models unless it is recognized as a known figure.
+- Anything the teacher draws by hand stays on the board but is invisible to the models.

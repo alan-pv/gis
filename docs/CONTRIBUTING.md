@@ -1,6 +1,6 @@
 # Contributing
 
-Contributions are welcome: bug reports, lessons, new drawable objects, fixes.
+Contributions are welcome: bug reports, lessons, fixes.
 Open an issue first for anything big so we can agree on the direction.
 
 ## Setup
@@ -39,14 +39,6 @@ CI runs the same checks.
 A recorded lesson is one JSON file in `src/demo/lessons/`: a title and a list of
 turns, each with a phrase and the operations for it. Copy an existing lesson and
 edit it; `npm test` validates every lesson against the contract.
-
-## Adding figure templates
-
-When a teacher draws on the board by hand, Gis tries to recognize the figure. The
-templates live in `objects/<name>/` as two files: `<name>.svg` (the paths, in
-stroke order) and `<name>.meta.json` (anchor points and default size). Copy an
-existing folder, such as `objects/arbol/`, and adapt it. No code changes are
-needed.
 
 ## License
 
