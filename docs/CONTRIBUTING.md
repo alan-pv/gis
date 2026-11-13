@@ -15,6 +15,14 @@ You do not need the models or a GPU to work on the app: `npm run sidecar:fake` s
 a sidecar that always answers "nothing to add", and the recorded lessons (File →
 Play a lesson) exercise the board without any model.
 
+## Useful commands
+
+```bash
+npm run dev           # app only (expects the sidecar on its default port)
+npm run sidecar:fake  # sidecar without models, for working on the UI
+npm test              # unit tests (Vitest)
+```
+
 ## Checks to run before a PR
 
 ```bash

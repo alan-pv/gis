@@ -17,27 +17,15 @@ primary-school science, in English.
 
 - **Talk, and the board writes itself.** No typing, no slides to prepare.
 - **Structured like a real teacher's board.** The layout is inspired by *bansho*, the Japanese practice of planning the blackboard as the story of the lesson ([details](docs/BANSHO.md)).
-- **Runs 100% on your computer.** No cloud AI model, no account, no subscription.
+- **The models run on your computer.** No cloud AI model, no account, no subscription.
 - **Free and open source** (MIT). No ads, ever.
 
 ## How it works
 
-```
- Voice ──► Laya ──► gis-texto ──► Validator ──► Board
-(browser)  decides   writes the    checks the    lays out and
-           structure  words only   operations    animates it
-```
-
-The browser turns speech into text (Web Speech API). **Laya**, a small fine-tuned
-model, decides what the board needs for that sentence: a new section, a concept,
-an arrow, a keyword to highlight, or nothing. **gis-texto**, a tiny language model
-(Qwen3-0.6B fine-tune, run through ollama), writes only the words. The result is a
-short list of JSON operations that a validator checks; anything malformed is
-dropped, so a bad answer never breaks the lesson.
-
-The key idea: **the model never decides positions.** It only says *what* to put on
-the board and how things relate. The app owns all the geometry: it packs sections
-into the board, flows text, routes arrows and animates the strokes. See
+The browser turns speech into text. **Laya**, a small fine-tuned model, decides what
+the board needs for each sentence (a section, a concept, an arrow, a keyword to
+highlight, or nothing) and **gis-texto**, a 0.6B language model, writes only the
+words. The model never decides positions: the app owns all the geometry. Details in
 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Try it
@@ -63,70 +51,23 @@ npm start       # starts ollama, the model sidecar and the app
 
 Open <http://localhost:5173>, click the microphone and start teaching.
 
-Note: Web Speech sends your audio to the browser vendor's speech service (Google,
-in Chrome) to transcribe it. The Gis models themselves run entirely on your machine.
+Web Speech sends your audio to the browser vendor's speech service to transcribe it
+(see [limitations](docs/USAGE.md#limitations)).
 
 ### Just watch it (no models, no GPU)
 
-The app ships with 40 recorded lessons that replay on the same board without any
-model. After `npm ci`, run `npm run dev`, open the app and choose
-**File → Play a lesson**.
+The app ships with 40 recorded lessons that replay without any model. After
+`npm ci`, run `npm run dev`, open the app and choose **File → Play a lesson**. You can also build it as a static site
+([how](docs/USAGE.md#static-demo)).
 
-You can also build that replay as a static site and host it anywhere (GitHub
-Pages, Netlify, a Raspberry Pi behind nginx):
+## Documentation
 
-```bash
-npm run build:demo   # static site in dist/, no server-side code
-```
+- [Using Gis](docs/USAGE.md): tips, shortcuts, static demo and limitations
+- [Architecture](docs/ARCHITECTURE.md): how it works and where things live
+- [Bansho](docs/BANSHO.md): the teaching practice behind the layout
+- [Contributing](docs/CONTRIBUTING.md): development setup and checks
 
-## Using it
-
-- Speak in short phrases and pause between ideas. The board follows what you say, one sentence at a time.
-- **File → Play a lesson** replays one of the recorded lessons.
-- Tools: move (`V`), pen (`P`), eraser (`E`); undo with `Ctrl+Z`.
-- **View → Developer mode** shows the turn queue and the raw JSON the model produced.
-
-## Project layout
-
-```
-src/            the browser app (React + Konva)
-  contract/       the JSON contract (Zod schemas)
-  validator/      checks model output, drops what is malformed
-  document/       pages and applying operations to them
-  scene/          the objects on the board
-  layout/         where everything goes (sections, columns, areas)
-  canvas/         drawing: text, hand-drawn shapes, arrows
-  animation/      timeline of strokes and typing
-  speech/         speech-to-text (Web Speech) and the turn queue
-  sidecar/        client for the model sidecar
-  ink/            freehand drawing by the teacher
-  demo/           recorded lessons and their player
-  hooks/, ui/     app state, menus, toolbar, dialogs
-sidecar/        Python server that runs the two models
-scripts/        setup.sh and start.sh
-docs/           architecture, bansho notes, contributing
-```
-
-## Development
-
-```bash
-npm run dev           # app only (expects the sidecar on its default port)
-npm test              # unit tests (Vitest)
-npm run lint          # ESLint
-npm run build         # type-check and production build
-npm run sidecar:fake  # sidecar without models, for working on the UI
-```
-
-Sidecar tests: `python3 -m unittest discover -s sidecar/tests -t sidecar`
-(no GPU or PyTorch needed). See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
-
-## Limitations
-
-- English only, and aimed at primary-school science lessons.
-- Voice input needs Chrome or Edge and an internet connection (Web Speech).
-- You need a GPU for comfortable speed; on CPU each turn is noticeably slower.
-- The models are small: they sometimes miss an idea, add an odd one, or file an idea under the wrong section.
-- This is an early project. Expect rough edges.
+This is an early project; expect rough edges.
 
 ## License
 
