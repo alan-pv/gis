@@ -1,0 +1,22 @@
+.btn {
+  position: absolute;
+  z-index: var(--gis-z-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gis-space-1);
+  background: var(--gis-surface-raised);
+  color: var(--gis-danger);
+  border: 1px solid var(--gis-accent);
+  border-radius: var(--gis-radius-sm);
+  cursor: pointer;
+  box-shadow: var(--gis-shadow-sm);
+  line-height: 1;
+}
+.btn:hover {
+  background: var(--gis-danger-soft);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--gis-accent);
+  outline-offset: 2px;
+}

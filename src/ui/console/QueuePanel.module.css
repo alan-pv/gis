@@ -1,0 +1,155 @@
+/**
+ * QueuePanel.module.css — list of queued phrases.
+ * Uses the same --gis-* design tokens as the rest of src/ui/.
+ */
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gis-space-2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gis-space-2);
+}
+
+.counter {
+  font-size: var(--gis-text-xs);
+  color: var(--gis-text-muted);
+  font-weight: 600;
+}
+
+.clear {
+  font-size: var(--gis-text-xs);
+  padding: 3px 8px;
+  border: 1px solid var(--gis-border-strong);
+  border-radius: var(--gis-radius-sm);
+  background: transparent;
+  color: var(--gis-text-muted);
+  cursor: pointer;
+}
+
+.clear:not(:disabled):hover {
+  background: var(--gis-hover);
+  color: var(--gis-text);
+}
+
+.clear:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 340px;
+  overflow-y: auto;
+  border: 1px solid var(--gis-border);
+  border-radius: var(--gis-radius-sm);
+  background: var(--gis-surface-raised);
+}
+
+.empty {
+  padding: var(--gis-space-2) var(--gis-space-3);
+  font-size: var(--gis-text-xs);
+  color: var(--gis-text-muted);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--gis-space-2);
+  padding: 6px var(--gis-space-2);
+  border-bottom: 1px solid var(--gis-border);
+  font-size: var(--gis-text-xs);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.text {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--gis-text);
+}
+
+.detail {
+  flex: 0 0 auto;
+  color: var(--gis-text-muted);
+  white-space: nowrap;
+}
+
+.force {
+  flex: 0 0 auto;
+  font-size: var(--gis-text-xs);
+  padding: 2px 8px;
+  border: 1px solid var(--gis-warning);
+  border-radius: var(--gis-radius-sm);
+  background: var(--gis-warning-soft);
+  color: var(--gis-warning);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.force:hover {
+  filter: brightness(0.96);
+}
+
+/* ── Status chip ──────────────────────────────────────────────────────────── */
+
+.chip {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--gis-radius-round);
+}
+
+.pending {
+  background: var(--gis-border-strong);
+}
+
+.processing {
+  background: var(--gis-accent);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.done {
+  background: var(--gis-success);
+}
+
+.discarded {
+  background: var(--gis-warning);
+}
+
+.error {
+  background: var(--gis-danger);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+/* ── Legend ─────────────────────────────────────────────────────────────────── */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gis-space-3);
+  font-size: var(--gis-text-xs);
+  color: var(--gis-text-muted);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}

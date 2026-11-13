@@ -1,0 +1,76 @@
+/**
+ * MicButton.module.css — Floating microphone button of the teacher.
+ * Anchored bottom-right; above the DevDock (same z-index, later in the DOM wins).
+ * Radix menus/dialogs (--gis-z-menu/modal) stay on top.
+ */
+
+/* ── Positioning ─────────────────────────────────────────────────────────── */
+
+.wrap {
+  position: fixed;
+  bottom: var(--gis-space-5);
+  right: var(--gis-space-5);
+  z-index: var(--gis-z-floating);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Circular button ──────────────────────────────────────────────────────────── */
+
+.btn {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--gis-radius-round);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: var(--gis-shadow-md);
+}
+
+/* State: muted (not active) */
+.btn.muted {
+  background: var(--gis-surface-raised);
+  color: var(--gis-text-muted);
+}
+
+/* Estado: escuchando (active) */
+.btn.listening {
+  background: var(--gis-danger);
+  color: var(--gis-text-inverse);
+  box-shadow: var(--gis-shadow-lg);
+}
+
+/* State: disabled */
+.btn:disabled {
+  background: var(--gis-surface);
+  color: var(--gis-border-strong);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Hover / active (only when not disabled) */
+.btn.muted:not(:disabled):hover {
+  background: var(--gis-hover);
+  color: var(--gis-text);
+}
+
+.btn.listening:not(:disabled):hover {
+  background: var(--gis-danger);
+  filter: brightness(1.08);
+}
+
+.btn:not(:disabled):active {
+  filter: brightness(0.94);
+}
+
+/* Visible focus (accessibility) */
+.btn:focus-visible {
+  outline: 3px solid var(--gis-accent);
+  outline-offset: 3px;
+}

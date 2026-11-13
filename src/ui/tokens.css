@@ -1,0 +1,78 @@
+/**
+ * tokens.css — Gis design tokens.
+ * Custom properties namespaced --gis-* so they do not collide with index.css.
+ * Consumed by each component's CSS module.
+ * Look: minimal chrome, warm neutral (Excalidraw / tldraw / Canva).
+ */
+:root {
+  /* Color — surfaces */
+  --gis-surface: #f7f6f3;        /* chrome bars (menubar, toolbar) */
+  --gis-surface-raised: #ffffff; /* paneles, popovers, ventanas flotantes */
+  --gis-canvas-bg: #eeece7;      /* stage background around the canvas */
+
+  /* Color — text */
+  --gis-text: #1f2329;
+  --gis-text-muted: #6b7280;
+  --gis-text-inverse: #ffffff;
+
+  /* Color — borders / dividers */
+  --gis-border: #d8d4cc;
+  --gis-border-strong: #b8b3a8;
+
+  /* Color — accent (active tool blue) */
+  --gis-accent: #2563eb;
+  --gis-accent-hover: #1d4ed8;
+  --gis-accent-fg: #ffffff;
+  --gis-accent-soft: #dbeafe;
+
+  /* Color — states */
+  --gis-danger: #dc2626;
+  --gis-danger-soft: #fee2e2;
+  --gis-success: #16a34a;
+  --gis-success-soft: #dcfce7;
+  --gis-warning: #d97706;
+  --gis-warning-soft: #fef3c7;
+
+  /* Color — neutral hover / active */
+  --gis-hover: rgba(0, 0, 0, 0.05);
+  --gis-active: rgba(0, 0, 0, 0.09);
+
+  /* Typography */
+  --gis-font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --gis-font-mono: ui-monospace, Consolas, 'Courier New', monospace;
+  --gis-text-xs: 11px;
+  --gis-text-sm: 12px;
+  --gis-text-md: 13px;
+  --gis-text-lg: 15px;
+
+  /* Spacing (base-4 scale) */
+  --gis-space-1: 4px;
+  --gis-space-2: 8px;
+  --gis-space-3: 12px;
+  --gis-space-4: 16px;
+  --gis-space-5: 24px;
+  --gis-space-6: 32px;
+
+  /* Radii */
+  --gis-radius-sm: 4px;
+  --gis-radius-md: 6px;
+  --gis-radius-lg: 10px;
+  --gis-radius-round: 999px;
+
+  /* Shadows */
+  --gis-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.1);
+  --gis-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.08);
+  --gis-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+  /* Chrome heights */
+  --gis-menubar-h: 36px;
+  --gis-toolbar-h: 40px;
+  --gis-rail-w: 156px;
+
+  /* Capas (z-index) */
+  --gis-z-canvas: 0;
+  --gis-z-overlay: 10;
+  --gis-z-floating: 100;
+  --gis-z-menu: 200;
+  --gis-z-modal: 300;
+}

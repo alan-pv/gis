@@ -1,0 +1,85 @@
+[
+  {
+    "utterance": "good morning today we're gonna learn how to classify animals write down the question do all animals have bones",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "titulo_1", "object": "texto", "text": "Classification of Animals", "role": "titulo" },
+        { "op": "add", "id": "pregunta_1", "object": "texto", "text": "Do all animals have bones?" }
+      ]
+    }
+  },
+  {
+    "utterance": "animals are divided into two big groups on this side the vertebrates and on this other side the invertebrates",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "verteb_1", "object": "texto", "text": "Vertebrates", "group": "col_verteb" },
+        { "op": "add", "id": "inverteb_1", "object": "texto", "text": "Invertebrates", "group": "col_inverteb" }
+      ]
+    }
+  },
+  {
+    "utterance": "vertebrates are the ones that have a backbone that is an internal skeleton",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "verteb_def_1", "object": "texto", "text": "Have a **backbone** (internal skeleton)", "group": "col_verteb" }
+      ]
+    }
+  },
+  {
+    "utterance": "what animals are vertebrates mammals birds fish reptiles and amphibians",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "verteb_ej_1", "object": "texto", "text": "Mammals · birds · fish · reptiles · amphibians", "group": "col_verteb" }
+      ]
+    }
+  },
+  {
+    "utterance": "all right hold on did everybody copy that down good let's keep going",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+
+      ]
+    }
+  },
+  {
+    "utterance": "now the invertebrates these don't have a backbone many have their skeleton on the outside or a soft body",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "inverteb_def_1", "object": "texto", "text": "Don't have a **backbone** (exoskeleton or soft body)", "group": "col_inverteb" }
+      ]
+    }
+  },
+  {
+    "utterance": "for example insects spiders snails and worms",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "inverteb_ej_1", "object": "texto", "text": "Insects · arachnids · mollusks · worms", "group": "col_inverteb" }
+      ]
+    }
+  },
+  {
+    "utterance": "pay close attention the only thing that decides which group an animal goes in is whether or not it has a backbone",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "connect", "id": "criterio_1", "from": "verteb_1", "to": "inverteb_1", "style": "double_arrow", "label": "backbone?" }
+      ]
+    }
+  },
+  {
+    "utterance": "so let's remember all animals are either vertebrates with a backbone or invertebrates without one",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "highlight", "refs": ["verteb_1", "inverteb_1", "criterio_1"] }
+      ]
+    }
+  }
+]

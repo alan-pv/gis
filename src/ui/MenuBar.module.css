@@ -1,0 +1,129 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--gis-space-1);
+  height: var(--gis-menubar-h);
+  padding: 0 var(--gis-space-3);
+  background: var(--gis-surface);
+  border-bottom: 1px solid var(--gis-border);
+  box-sizing: border-box;
+}
+.brand {
+  font-weight: 700;
+  font-size: var(--gis-text-lg);
+  color: var(--gis-text);
+  margin-right: var(--gis-space-3);
+  user-select: none;
+}
+.spacer { flex: 1; }
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 var(--gis-space-2);
+  border: none;
+  border-radius: var(--gis-radius-sm);
+  background: transparent;
+  color: var(--gis-text);
+  font-size: var(--gis-text-md);
+  font-family: var(--gis-font-sans);
+  cursor: pointer;
+  user-select: none;
+}
+.trigger:hover { background: var(--gis-hover); }
+.trigger[data-state='open'] { background: var(--gis-accent-soft); color: var(--gis-accent); }
+.trigger:focus-visible { outline: 2px solid var(--gis-accent); outline-offset: 1px; }
+.content {
+  min-width: 220px;
+  background: var(--gis-surface-raised);
+  border: 1px solid var(--gis-border);
+  border-radius: var(--gis-radius-md);
+  box-shadow: var(--gis-shadow-md);
+  padding: var(--gis-space-1);
+  z-index: var(--gis-z-menu);
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gis-space-4);
+  height: 28px;
+  padding: 0 var(--gis-space-2);
+  border-radius: var(--gis-radius-sm);
+  font-size: var(--gis-text-md);
+  color: var(--gis-text);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+.item[data-highlighted] { background: var(--gis-accent-soft); color: var(--gis-accent); }
+.item[data-disabled] { color: var(--gis-text-muted); opacity: 0.55; cursor: default; }
+.shortcut { font-size: var(--gis-text-xs); color: var(--gis-text-muted); }
+.item[data-highlighted] .shortcut { color: var(--gis-accent); }
+.separator { height: 1px; background: var(--gis-border); margin: var(--gis-space-1) 0; }
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: var(--gis-z-modal);
+}
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  background: var(--gis-surface-raised);
+  border: 1px solid var(--gis-border);
+  border-radius: var(--gis-radius-lg);
+  box-shadow: var(--gis-shadow-lg);
+  padding: var(--gis-space-5);
+  z-index: var(--gis-z-modal);
+  box-sizing: border-box;
+}
+.dialogTitle { margin: 0 0 var(--gis-space-3); font-size: var(--gis-text-lg); font-weight: 600; color: var(--gis-text); }
+.dialogClose {
+  position: absolute;
+  top: var(--gis-space-3);
+  right: var(--gis-space-3);
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--gis-radius-sm);
+  background: transparent;
+  color: var(--gis-text-muted);
+  cursor: pointer;
+}
+.dialogClose:hover { background: var(--gis-hover); }
+.shortcutsTable { width: 100%; border-collapse: collapse; font-size: var(--gis-text-md); }
+.shortcutsTable td { padding: 4px 8px; border-bottom: 1px solid var(--gis-border); color: var(--gis-text); }
+.shortcutsTable td:first-child { font-family: var(--gis-font-mono); color: var(--gis-text-muted); white-space: nowrap; }
+.about { font-size: var(--gis-text-md); color: var(--gis-text); line-height: 1.5; }
+.about p { margin: 0 0 var(--gis-space-2); }
+
+/* Provider badge: visible only in developer mode */
+.provider {
+  font-size: var(--gis-text-xs);
+  padding: 2px var(--gis-space-2);
+  border-radius: var(--gis-radius-sm);
+  font-family: var(--gis-font-sans);
+  user-select: none;
+  white-space: nowrap;
+}
+.provider[data-tone='ok']      { background: var(--gis-success-soft); color: #166534; }
+.provider[data-tone='none']    { background: var(--gis-danger-soft);  color: #991b1b; }
+.provider[data-tone='loading'] { background: var(--gis-hover);        color: var(--gis-text-muted); }
+
+/* CheckboxItem indicator for "Developer mode" */
+.itemIndicator {
+  display: inline-flex;
+  align-items: center;
+  margin-right: var(--gis-space-1);
+  color: var(--gis-accent);
+}

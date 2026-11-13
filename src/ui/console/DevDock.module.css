@@ -1,0 +1,14 @@
+.dock {
+  position: fixed;
+  top: calc(var(--gis-menubar-h) + var(--gis-toolbar-h) + var(--gis-space-3));
+  right: var(--gis-space-3);
+  bottom: var(--gis-space-3);
+  width: 392px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gis-space-2);
+  overflow-y: auto;
+  z-index: var(--gis-z-floating);
+  /* The dock does not block clicks outside the cards (empty area is transparent) */
+  pointer-events: none;
+}

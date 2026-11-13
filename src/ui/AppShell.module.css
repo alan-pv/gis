@@ -1,0 +1,41 @@
+.shell {
+  display: grid;
+  grid-template-columns: var(--gis-rail-w) 1fr;
+  grid-template-rows: auto auto auto 1fr;
+  grid-template-areas:
+    "menubar menubar"
+    "banners banners"
+    "rail    toolbar"
+    "rail    stage";
+  min-height: 100svh;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--gis-canvas-bg);
+  font-family: var(--gis-font-sans);
+  color: var(--gis-text);
+}
+
+.menubar { grid-area: menubar; }
+.toolbar { grid-area: toolbar; }
+.banners { grid-area: banners; }
+
+.rail {
+  grid-area: rail;
+  width: var(--gis-rail-w);
+  overflow-y: auto;
+  background: var(--gis-surface);
+  border-right: 1px solid var(--gis-border);
+  box-sizing: border-box;
+}
+
+.stage {
+  grid-area: stage;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: var(--gis-space-4);
+  background: var(--gis-canvas-bg);
+  min-width: 0;
+}
+

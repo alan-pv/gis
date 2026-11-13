@@ -1,0 +1,85 @@
+[
+  {
+    "utterance": "today I'm gonna talk to you about the water cycle and what that has to do with those pictures with the uh the thing is I'm gonna show you how the cycle of life starts like it's a chain where everything keeps going around and around coming back around to the same place",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "titulo_1", "object": "texto", "text": "The Water Cycle", "role": "titulo" }
+      ]
+    }
+  },
+  {
+    "utterance": "okay so keeping in mind like how it starts so with the water it starts with our friend the sun when the sun heats up it burns a lot it gets real hot like we said so of course that goes off to the sea to the water the sea right",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "sol_1", "object": "concepto", "label": "Sun" },
+        { "op": "add", "id": "mar_1", "object": "concepto", "label": "Sea" }
+      ]
+    }
+  },
+  {
+    "utterance": "this water from the sea when it gets so so hot from our dear sun well the gas in the uh part nation the states arizona the gas part evaporates and goes up up up toward the gas",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "nube_1", "object": "concepto", "label": "Cloud" },
+        { "op": "connect", "id": "flecha_1", "from": "mar_1", "to": "nube_1", "style": "arrow" }
+      ]
+    }
+  },
+  {
+    "utterance": "in the process where the sun heats up the sea and the little vapor goes up up toward the clouds it's called like I'm telling you evapor ration",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "label", "ref": "flecha_1", "text": "evaporation" }
+      ]
+    }
+  },
+  {
+    "utterance": "remember the sun heats up the water from the sea from the oceans and that little vapor goes up toward the clouds what happens here up in the sky",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "highlight", "refs": ["sol_1", "mar_1", "flecha_1"] }
+      ]
+    }
+  },
+  {
+    "utterance": "the clouds form 7 the clouds form with this water gas our clouds form that process is called condensation remember the process of the clouds forming is called condensation it's uh joining together these molecules that went up are joining together to form clouds",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "label", "ref": "nube_1", "text": "**condensation**" }
+      ]
+    }
+  },
+  {
+    "utterance": "these clouds keep joining together keep joining together they get real real loaded loaded up with water until the little raindrops that have formed start to fall down to the earth",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "add", "id": "lluvia_1", "object": "concepto", "label": "Rain" }
+      ]
+    }
+  },
+  {
+    "utterance": "that process I'm drawing that rain that's falling is called precipitation it falls back down to the sea or to the earth and it starts all over again",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "connect", "id": "flecha_2", "from": "lluvia_1", "to": "mar_1", "style": "arrow", "label": "precipitation" }
+      ]
+    }
+  },
+  {
+    "utterance": "so the process we've seen today that includes evaporation condensation and precipitation makes up the water cycle",
+    "envelope": {
+      "schema_version": "1.0",
+      "operations": [
+        { "op": "highlight", "refs": ["flecha_1", "nube_1", "flecha_2"] }
+      ]
+    }
+  }
+]

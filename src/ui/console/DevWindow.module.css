@@ -1,0 +1,66 @@
+.window {
+  background: var(--gis-surface-raised);
+  border: 1px solid var(--gis-border);
+  border-radius: var(--gis-radius-md);
+  box-shadow: var(--gis-shadow-lg);
+  /* pointer-events:auto so clicks on the card are not swallowed by the dock */
+  pointer-events: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--gis-space-2) var(--gis-space-3);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--gis-font-sans);
+  color: var(--gis-text);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.header:hover {
+  background: var(--gis-hover);
+}
+
+.header:focus-visible {
+  outline: 2px solid var(--gis-accent);
+  outline-offset: -2px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--gis-space-2);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gis-text-muted);
+}
+
+.title {
+  font-size: var(--gis-text-sm);
+  font-weight: 600;
+  color: var(--gis-text);
+}
+
+.chevron {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gis-text-muted);
+}
+
+.body {
+  padding: var(--gis-space-3);
+  max-height: 480px;
+  overflow-y: auto;
+  border-top: 1px solid var(--gis-border);
+  box-sizing: border-box;
+}
