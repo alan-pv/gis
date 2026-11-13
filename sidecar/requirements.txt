@@ -1,0 +1,9 @@
+# Direct dependencies of the sidecar (sidecar/server.py), pinned to the versions
+# the Laya checkpoint was validated with. scripts/setup.sh installs torch first
+# (CPU build when there is no NVIDIA GPU), then this file. The unit tests need
+# none of these: they run with plain `python3`.
+torch==2.14.0
+laya==0.3.20
+transformers==5.17.0
+safetensors==0.8.0
+numpy==2.5.3
