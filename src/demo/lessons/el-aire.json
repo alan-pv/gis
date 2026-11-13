@@ -1,0 +1,1064 @@
+{
+  "id": "el-aire",
+  "tema": "Air: it takes up space, it has weight, and we need it",
+  "sesgo": "mixto",
+  "objetivo": "That the student recognizes that air is matter even though we cannot see it: it takes up space, it has weight and living things need it.",
+  "hatsumon": "What is inside a balloon that looks empty?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Please take your seats. Today I brought something in this bag; who wants to guess?",
+      "utterance_coloquial": "Okay, good morning everybody, uh, sit down please, sit down. So, I brought, ehm, something in my bag today, anybody wanna guess?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "A balloon! Very good, Sofia. It looks empty, doesn't it?",
+      "utterance_coloquial": "Yes! A ballon, very good Sofia. It looks, like, totally empty, right?",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "What is inside a balloon that nobody has blown up yet?",
+      "utterance_coloquial": "So what's, what is inside a balloon that, that nobody has blown up yet?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Nothing, says Diego. Hmm, let's see if that is true.",
+      "utterance_coloquial": "Nothing, Diego says. Hmm, okay, let's see if, if that's true.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Now I will blow into it. Watch what happens to the balloon.",
+      "utterance_coloquial": "Okay now I'm gonna blow, ehm, into it. Watch the ballon, what happens.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "It gets bigger, doesn't it? The balloon is growing as I blow.",
+      "utterance_coloquial": "It gets bigger, right? See, it's, it's getting big while I blow, blow, blow.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Air takes up space",
+            "role": "subtitulo",
+            "group": "espacio"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "A balloon gets bigger as we blow into it",
+            "role": "cuerpo",
+            "group": "espacio"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Something went inside the balloon. Something we cannot see, but it was there.",
+      "utterance_coloquial": "Something went in, eh, something we cannot see but it was in there.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "A balloon gets bigger as we blow into it, because something invisible fills the inside"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "That invisible something is the air around us.",
+      "utterance_coloquial": "That invisible thing, that's the air, the air around us, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "A balloon gets bigger as we blow into it, because something invisible fills the inside, the **air** around us"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Valeria, can you stop moving the chairs, please?",
+      "utterance_coloquial": "Valeria, hey, can you stop, ehm, moving the chair please?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "So the air around us is real, even if our eyes do not catch it.",
+      "utterance_coloquial": "So the air, the air around us, is real, even if the eyes don't catch it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Air",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Let me tie the balloon. Notice how it keeps its round shape.",
+      "utterance_coloquial": "Let me tie it, tie the ballon. See it keeps the round, the round shape.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Balloon",
+            "group": "espacio"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Now another one. An empty bottle upside down in a bowl of water.",
+      "utterance_coloquial": "Now another one, look, this empty bottle upside down, in the bowl with water.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Bottle",
+            "group": "espacio"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "air inside"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The water does not go into the bottle. Why not? Because there is already air inside, and two things cannot be in the same place.",
+      "utterance_coloquial": "The water doesn't go in the bottle. Why, why not? Because ehm there's air inside already, and, and two things can't be in the same place.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "**Air** takes up space, so the water cannot enter the bottle. Two things cannot be in the same place.",
+            "role": "cuerpo",
+            "group": "espacio"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "A bicycle tire works the same way: it is full of air.",
+      "utterance_coloquial": "A bike tire, it's the same, it's full of, of air, the tire.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Tire",
+            "group": "espacio"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "same as"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Wait, I have a question: does air weigh anything? Some of you say no, some say yes. Let's find out.",
+      "utterance_coloquial": "Wait wait, I have a question. Does the air weigh something? Some say no, some say yes, okay, let's, uh, let's find out.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Two balloons hang from the ends of a stick, and the stick stays level.",
+      "utterance_coloquial": "So two ballons, on the ends of a stick, hanging, and the stick stays, like, straight.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Weighing air",
+            "role": "subtitulo",
+            "group": "peso"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Empty balloon",
+            "group": "peso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_6",
+            "to": "concepto_1_4",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "One balloon is empty and the other one is full of air.",
+      "utterance_coloquial": "One is empty, the other one is, is full of air.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Full balloon",
+            "group": "peso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "texto_1_6",
+            "to": "concepto_1_5",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Now we wait quietly. The side with the full balloon goes down.",
+      "utterance_coloquial": "Okay now quiet, let's wait. And, the side with the full one goes down, goes down!",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "The balloon full of air pulls its end of the stick down.",
+            "role": "cuerpo",
+            "group": "peso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "So the air inside has weight, even if it is a very small weight.",
+      "utterance_coloquial": "So the air in there has, has weight, tiny weight but it has.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_7",
+            "set": {
+              "text": "The balloon full of air pulls its end of the stick down. The **air** inside has weight, though very little."
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_5",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "heavier than"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Good. Let me say it again so everyone catches it.",
+      "utterance_coloquial": "Good, good. Let me say it again so everybody gets it.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7",
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Who has a question? Yes, Mateo asks if we can feel air on our skin. Great question.",
+      "utterance_coloquial": "Anyone got a question? Yes Mateo, he asks if we feel it, the air, in the skin. Great question.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Yes, we feel it when it moves. Moving air is wind.",
+      "utterance_coloquial": "Yes we feel it when it moves. Moving air, we call it, uh, the wind.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Moving air",
+            "role": "subtitulo",
+            "group": "viento"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Air that moves is called **wind**",
+            "role": "cuerpo",
+            "group": "viento"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Wind",
+            "group": "viento"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "texto_1_8",
+            "to": "concepto_1_6",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Wind pushes sails, kites and the leaves of trees.",
+      "utterance_coloquial": "Wind pushes the sails, the kites, leaves, you know, the trees.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Kite",
+            "group": "viento"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "pushes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Even in a closed room like ours, there is air all around us.",
+      "utterance_coloquial": "Even in a closed room, like this one, there's, there's air all around.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "There is air all around us, even in a closed room",
+            "role": "cuerpo",
+            "group": "viento"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Okay, enough about kites. Take out your notebooks.",
+      "utterance_coloquial": "Okay okay, enough kites, take out the notebooks now, notebooks.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Now think about yourselves. What do you do all day without noticing? Breathing, exactly.",
+      "utterance_coloquial": "Now think of you. What do you do all day, all day and don't even notice? Breathing, yes, exactly.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "We breathe air, and the air goes to our lungs.",
+      "utterance_coloquial": "We breathe the air, the air goes to the longs, to our lungs.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Why we need air",
+            "role": "subtitulo",
+            "group": "necesidad"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "People and animals **breathe** air through the nose or mouth",
+            "role": "cuerpo",
+            "group": "necesidad"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Person",
+            "group": "necesidad"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Lungs",
+            "group": "necesidad"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "texto_1_11",
+            "to": "concepto_1_8",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "breathes with"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Inside the air there is a gas that our body needs, called oxygen.",
+      "utterance_coloquial": "In the air there's a gas that our body needs, it's called, ehm, oxy gin, oxygen.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Oxygen",
+            "group": "necesidad"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_10",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "needed by"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Most of the air is nitrogen, and a little more than a fifth is oxygen.",
+      "utterance_coloquial": "Most is nitro, nitrogen, and a little more than a fifth is oxygen.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "**Nitrogen**, about 78%\n**Oxygen** (O₂), about 21%\nOther gases, about 1%",
+            "role": "lista",
+            "group": "necesidad"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Fish also need oxygen; they take it from the water with their gills.",
+      "utterance_coloquial": "Fish need oxygen too, ehm, they take it from the water with the, the gills.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Fish",
+            "group": "necesidad"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_11",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "takes from water"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Plants also take in air. Do you remember what they do with it?",
+      "utterance_coloquial": "Plants too, plants take in air too. You remember what they do with it?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "They take in a gas from the air, carbon dioxide, to make their food.",
+      "utterance_coloquial": "They take one gas of the air, the carbon dioxide, for, to make their food.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Plant",
+            "group": "necesidad"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "texto_1_11",
+            "to": "concepto_1_12",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Now a candle. If I cover it with a glass, what happens?",
+      "utterance_coloquial": "Okay, a candle now. If I cover it with a glass, what's gonna happen?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "The flame goes out after a few seconds, because without air a fire cannot keep burning.",
+      "utterance_coloquial": "The flame goes off, after, like, some seconds, because with no air, the fire, it can't keep burning.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Candle",
+            "group": "necesidad"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "texto_1_11",
+            "to": "concepto_1_13",
+            "style": "arrow"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "A flame needs **oxygen** from the air",
+            "role": "cuerpo",
+            "group": "necesidad"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Under the glass the oxygen gets used up and the flame dies.",
+      "utterance_coloquial": "Under the glass the oxygen, ehm, it gets used up and the flame dies.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "A flame needs **oxygen** from the air to keep burning, and under a glass it is used up."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Wait, who is talking in the back? Okay, thank you.",
+      "utterance_coloquial": "Wait, who's talking back there? Okay, okay, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Let me say that again: no air, no flame.",
+      "utterance_coloquial": "Let me, let me say that again, no air, no flame.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_13",
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "So air takes up space, it has weight, and living things need it.",
+      "utterance_coloquial": "So air takes space, has weight, and we, living things, need it.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5",
+              "texto_1_7",
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Who can remember where we saw each of those three ideas?",
+      "utterance_coloquial": "Who remembers, ehm, where we saw each one of the three?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "The bottle showed space, the two balloons showed weight, breathing showed need.",
+      "utterance_coloquial": "The bottle for space, the two balloons for weight, breathing for the need.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_2",
+              "concepto_1_5",
+              "concepto_1_8"
+            ]
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Air is matter",
+            "role": "subtitulo",
+            "group": "cuidado"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Air is invisible but it is **matter**",
+            "role": "cuerpo",
+            "group": "cuidado"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_15",
+            "from": "texto_1_2",
+            "to": "texto_1_16",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_16",
+            "from": "texto_1_6",
+            "to": "texto_1_16",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_17",
+            "from": "texto_1_11",
+            "to": "texto_1_16",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "It takes up space and it has weight, just like water or a stone.",
+      "utterance_coloquial": "It takes space and has weight, same as water or, or a stone.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "Air is invisible but it is **matter**: it takes up space and has weight, like water or a stone."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Dirty air hurts us, because smoke from cars and factories makes it unhealthy.",
+      "utterance_coloquial": "Dirty air, it hurts us, the, ehm, smoke of the cars and factories makes it unhealthy.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Smoke from cars and factories makes the air dirty",
+            "role": "cuerpo",
+            "group": "cuidado"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 42,
+      "utterance_formal": "So we have to take care of the air we breathe.",
+      "utterance_coloquial": "So we have to, to take care of the air we breathe, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "Smoke from cars and factories makes the air dirty, so we must take care of the **air** we breathe."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Your homework is to find three things at home that need air.",
+      "utterance_coloquial": "Homework, okay, find three things at home that need air, three.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "At home",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Find three things around the house that need **air** to work.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Tomorrow we will share the lists, so bring them.",
+      "utterance_coloquial": "Tomorrow we share the lists, so, bring them, okay?",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_21",
+            "set": {
+              "text": "Find three things around the house that need **air** to work. Tomorrow we will share the lists with the class."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Good work today. Now line up for recess.",
+      "utterance_coloquial": "Good job today guys. Now, uh, line up for recess, line up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

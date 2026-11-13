@@ -1,0 +1,1080 @@
+{
+  "id": "ecosistemas",
+  "tema": "Ecosystems and their components",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student understands that an ecosystem is the set of living things (biotic factors) and the physical environment (abiotic factors) that interact in a place, distinguishes terrestrial and aquatic ecosystems, recognizes the roles of producers, consumers, and decomposers, and values the balance of the ecosystem.",
+  "hatsumon": "What does a fish need to live, besides water?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Last weekend I sat by a pond for a whole hour just watching what was going on around it.",
+      "utterance_coloquial": "Alright, morning everybody. So, last weekend I sat by a pond for like a whole hour, just watching what was going on around it.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebooks; today we'll look at several kinds of ecosystems.",
+      "utterance_coloquial": "Take out your notebooks; today we're gonna look at a few kinds of ecosystems.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about a fish: besides water, what else does it need in order to live?",
+      "utterance_coloquial": "Think about a fish: besides water, what else's it need to live?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Hold on to your answer, because we'll answer it properly at the end.",
+      "utterance_coloquial": "Hold on to your answer, we'll answer it properly at the end.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "In any place in nature, many living things live together; they aren't alone.",
+      "utterance_coloquial": "In any place in nature, many living things live together; they aren't alone.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "What is an ecosystem?",
+            "role": "subtitulo",
+            "group": "ecosistema"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Many living things live **together** in nature, not alone.",
+            "role": "cuerpo",
+            "group": "ecosistema"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "We call that set of living things together with the place where they live an ecosystem.",
+      "utterance_coloquial": "We call that set of living things, plus the place where they live, an ecosystem.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Ecosystems",
+            "role": "titulo"
+          },
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Many living things live **together** in nature, not alone. Living things together with the place where they live form an **ecosystem**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The word comes from eco, which means house: an ecosystem is like your house.",
+      "utterance_coloquial": "The word comes from eco, which means house: an ecosystem is like your little house.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Think of a pond: there are fish, plants, water, rocks, and also the sun.",
+      "utterance_coloquial": "Think of a p-pond: there are fish, plants, water, rocks, and also the sun.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Many living things live **together** in nature, not alone. Living things together with the place where they live form an **ecosystem**. An example is a pond with fish, plants, water, and sun."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Pond",
+            "group": "ecosistema"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Everything in an ecosystem can be split into two: what has life and what doesn't.",
+      "utterance_coloquial": "Everything in an ecosystem can be split into two: what has life and what doesn't.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Two kinds of factors",
+            "role": "subtitulo",
+            "group": "factores"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Everything in an ecosystem has **life** or does not.",
+            "role": "cuerpo",
+            "group": "factores"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Each of those two groups has its own name. Let's start with the first.",
+      "utterance_coloquial": "Each of those two groups has its own name. Let's start with the first.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "We call living things biotic factors: plants, animals, fungi.",
+      "utterance_coloquial": "We call living things biotic factors: plants, animals, fungi.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Everything in an ecosystem has **life** or does not. Living things are called **biotic** factors."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "That includes plants, animals, and fungi. Make me the list.",
+      "utterance_coloquial": "That includes plants, animals, and fungi. Make me a little list.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "plants\nanimals\nfungi",
+            "role": "lista",
+            "group": "factores"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Notice that you're included here too, because you're living things.",
+      "utterance_coloquial": "Notice that you're included here too, because you're living things.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "We call the environment without life abiotic factors: what doesn't live but is still needed.",
+      "utterance_coloquial": "We call the environment without life abiotic factors: what doesn't live but is still needed.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "The environment without life is made of abiotic factors, which are still needed.",
+            "role": "cuerpo",
+            "group": "factores"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "That includes water, air, light, soil, and temperature.",
+      "utterance_coloquial": "That includes water, air, light, soil, and tempera ture.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "water\nair\nlight\nsoil\ntemperature",
+            "role": "lista",
+            "group": "factores"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Without these, no living thing could survive. Think about it for a moment.",
+      "utterance_coloquial": "Without these, no living thing could survive. Think about it for a sec.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "So we have two groups: the factors with life and the ones without life.",
+      "utterance_coloquial": "So we have two groups: the factors with life and the ones without life.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_11",
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Back to the fish: it needs water, but also dissolved air and light.",
+      "utterance_coloquial": "Back to the fish: it needs water, but also dissolved air and light.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "A fish needs water, air, and light",
+            "role": "cuerpo",
+            "group": "factores"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Within an ecosystem, every living thing plays a role based on how it gets its food.",
+      "utterance_coloquial": "Within an ecosystem, every living thing plays a role based on how it gets its food.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Who produces and who eats",
+            "role": "subtitulo",
+            "group": "roles"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Every living thing has a **role**, depending on how it gets its food",
+            "role": "cuerpo",
+            "group": "roles"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Plants make their own food: that's why they're the producers.",
+      "utterance_coloquial": "Plants make their own food: that's why they're the producers.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "Every living thing has a **role**, depending on how it gets its food: plants make their own food, so they are **producers**."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Plants",
+            "group": "roles"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Animals don't make it themselves; they eat plants or other animals: they're consumers.",
+      "utterance_coloquial": "Animals don't make it themselves; they eat plants or other animals: they're consumers.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Animals eat plants or other animals, so they are **consumers**.",
+            "role": "cuerpo",
+            "group": "roles"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Animals",
+            "group": "roles"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "eaten by"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "And fungi and bacteria break down what dies: they're the decomposers.",
+      "utterance_coloquial": "And fungi and bac teria break down what dies: they're the de composers.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Fungi and bacteria break down what dies, so they are **decomposers**",
+            "role": "cuerpo",
+            "group": "roles"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Decomposers are nature's recyclers, nothing more, nothing less.",
+      "utterance_coloquial": "Decomposers are nature's recyclers, nothing more, nothing less.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "Fungi and bacteria break down what dies, so they are **decomposers**, nature's recyclers."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Fungi",
+            "group": "roles"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "when they die"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "That's how energy keeps moving: the sun gives it to the plant, the plant to the animal.",
+      "utterance_coloquial": "That's how energy keeps moving: the sun gives it to the plant, the plant to the animal.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "sol_1_1",
+            "object": "concepto",
+            "label": "sun",
+            "group": "roles"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "sol_1_1",
+            "to": "texto_1_17",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_17",
+            "to": "texto_1_19",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "sol_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "That path the energy follows, from one living thing to the next, is called a food chain.",
+      "utterance_coloquial": "That path the energy follows, from one livin' thing to the next, is called a food chain.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_2",
+            "text": "food chain"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Look at the three roles we wrote down: producers, consumers, and decomposers.",
+      "utterance_coloquial": "Look at the three roles we wrote down: producers, consumers, and decomposers.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_17",
+              "texto_1_19"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Not all ecosystems are the same; there are two big kinds.",
+      "utterance_coloquial": "Not all ecosystems are the same; there are two big kinds.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Types of ecosystems",
+            "role": "subtitulo",
+            "group": "tipos"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "There are **terrestrial** and **aquatic** ones",
+            "role": "cuerpo",
+            "group": "tipos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "On dry land we have the forest, the desert, and the jungle.",
+      "utterance_coloquial": "On dry land we have the forest, the de sert, and the jungle.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "forest\ndesert\njungle",
+            "role": "lista",
+            "group": "tipos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "The desert is also an ecosystem, even though it has little water.",
+      "utterance_coloquial": "The desert is also an ecosystem, even though it has just a little water.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "And in the water we have the river, the lake, and the sea.",
+      "utterance_coloquial": "And in the water we have the river, the lake, and the sea.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "river\nlake\nsea",
+            "role": "lista",
+            "group": "tipos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Let's look at a land ecosystem: some trees, with the sun giving them energy.",
+      "utterance_coloquial": "Let's look at a land ecosystem: some trees, with the sun giving them energy.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "arbol_1_1",
+            "object": "concepto",
+            "label": "forest",
+            "group": "tipos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "sol_1_1",
+            "to": "arbol_1_1",
+            "style": "arrow",
+            "label": "gives energy"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_21",
+            "to": "arbol_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "The sun is a factor without life, but without it plants wouldn't grow.",
+      "utterance_coloquial": "The sun is a factor without life, but without it plants wouldn't grow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "And now a water one: the sea, with the fish that live in it.",
+      "utterance_coloquial": "And now a water one: the sea, with the fish that live in it.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "mar_1_1",
+            "object": "concepto",
+            "label": "sea",
+            "group": "tipos"
+          },
+          {
+            "op": "add",
+            "id": "pez_1_1",
+            "object": "concepto",
+            "label": "fish",
+            "group": "tipos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "mar_1_1",
+            "to": "pez_1_1",
+            "style": "arrow",
+            "label": "lives in"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_21",
+            "to": "mar_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Notice the types we already have: the land ones and the water ones.",
+      "utterance_coloquial": "Notice the types we already have: the land ones and the water ones.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_21"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Something really important: every part of the ecosystem depends on the others.",
+      "utterance_coloquial": "Something super important: every part of the ecosystem depends on the others.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Balance",
+            "role": "subtitulo",
+            "group": "equilibrio"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "If one part is missing, everything is **affected**",
+            "role": "cuerpo",
+            "group": "equilibrio"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "If the pond dries up, the fish and plants die.",
+      "utterance_coloquial": "If the pond dries up, the fish and plants die.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "If one part is missing, everything is **affected**, like when the pond dries up and fish and plants die"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Everything's connected; that's why an ecosystem is so delicate.",
+      "utterance_coloquial": "Everything's hooked together; that's why an ecosystem is so delicate.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "That's why we have to take care of them: don't litter, don't pollute the water or the air.",
+      "utterance_coloquial": "That's why we have to take care of them: don't litter, don't conta minate the water or the air.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "Take care of it: don't **pollute** or litter",
+            "role": "cuerpo",
+            "group": "equilibrio"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Let's remember what an ecosystem is, since that's today's main idea.",
+      "utterance_coloquial": "Let's remember what an ecosystem is, since that's today's main idea.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Rest your hand for a moment and then we'll close with the important part.",
+      "utterance_coloquial": "Rest your little hand for a sec and then we'll close with the important part.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Hold on to today's big idea, the one that sums everything up.",
+      "utterance_coloquial": "Hold on to today's big ol' idea, the one that sums everything up.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "An ecosystem is living things and their environment, interacting.",
+            "role": "cuerpo",
+            "group": "equilibrio"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 41,
+      "utterance_formal": "And with the two kinds of factors: the ones with life and the ones without.",
+      "utterance_coloquial": "And with the two kinds of factors: the ones with life and the ones without.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_30",
+            "set": {
+              "text": "An ecosystem is living things and their environment, interacting. The factors are biotic, with life, and abiotic, without."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is ecosystem.",
+      "utterance_coloquial": "And today's big ol' word, the one you shouldn't forget, is ecosystem.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_30",
+            "set": {
+              "text": "An ecosystem is living things and their environment, interacting. The factors are biotic, with life, and abiotic, without. The key word is **ecosystem**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Let's go over the two kinds of factors again, since that's what tripped us up the most.",
+      "utterance_coloquial": "Let's go over the two kinds of factors again, since that's what tripped us up the most.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_11",
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Very good, I can see it's clear. Nice work.",
+      "utterance_coloquial": "Very good, I can see it's super clear. Nice work.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "For homework, draw an ecosystem and point out three factors with life and three without.",
+      "utterance_coloquial": "For homework, draw an ecosystem and point out three factors with life and three without.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_33",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_34",
+            "object": "texto",
+            "text": "Draw an ecosystem with 3 biotic and 3 abiotic factors.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "And explain to me what would happen to that ecosystem if we took away the water.",
+      "utterance_coloquial": "And explain to me what would happen to that eco system if we took away the water.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_34",
+            "set": {
+              "text": "Draw an ecosystem with 3 biotic and 3 abiotic factors. Then explain what would happen if the water were taken away."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "And with all this, we can now answer what a fish needs to live: water, air, light, and the other living things around it.",
+      "utterance_coloquial": "And with all this, we can now answer what a fish needs to live: water, air, light, and the other livin' things around it.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "A fish needs water, air, and light, and also the other living things around it."
+            }
+          },
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "That's all for today. Put your things away and see you tomorrow.",
+      "utterance_coloquial": "That's it for today. Put your stuff away and see you tomorrow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

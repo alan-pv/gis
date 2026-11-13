@@ -1,0 +1,1046 @@
+{
+  "id": "vertebrados-invertebrados",
+  "tema": "Vertebrates and invertebrates",
+  "sesgo": "mixto",
+  "objetivo": "That the student recognizes that animals fall into two families depending on whether they have a backbone, names examples of each, and understands that size does not decide it and that many invertebrates protect their bodies with a shell or a hard outer cover.",
+  "hatsumon": "Does every animal have bones?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Please sit down and put your bags under the desks.",
+      "utterance_coloquial": "Okay, good morning, good morning, um, sit down please, bags under the desks, Mateo, your bag, yes.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "I brought something to show you today, and I need a volunteer to help me.",
+      "utterance_coloquial": "So, uh, I brought something today, and I need a, a volunteer. Who wants to... yeah, Luis, come up here.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Luis, take it out of the bag. What is it? A shell, yes, a snail shell. Luis says it is a snail shell.",
+      "utterance_coloquial": "Take it out, Luis, don't be shy. What is it? A shell? A snail shell, right, Luis says it's a snail shell.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Here is my question: does a snail have bones inside its body, like you and me?",
+      "utterance_coloquial": "So my question is, um, does the snail have bones inside, like you and me, or no?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Some of you say yes and some say no. Ana says the snail has no bones, and Pedro says it does.",
+      "utterance_coloquial": "Okay, okay, one at a time. Ana says no bones, Pedro says yes, it has, um, some bones.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Let's see: some animals have bones inside their bodies, and other animals have none at all.",
+      "utterance_coloquial": "Well, the thing is, some animals have bones inside their body and others, uh, none, nothing at all.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Vertebrates",
+            "role": "subtitulo",
+            "group": "vert"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Some animals have **bones** inside their bodies and others have none.",
+            "role": "cuerpo",
+            "group": "vert"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Pedro, you wanted to say something about your dog. A dog does have bones, yes, we all agree on that.",
+      "utterance_coloquial": "Pedro, yes, your dog, the, the one that, no, no, we're not doing the dog's name now. The dog has bones, yes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Some animals have **bones** inside their bodies and others have none. A dog, for example, has bones."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Think of a dog, a fish or a bird: inside there is a long chain of small bones that goes from the head to the tail.",
+      "utterance_coloquial": "A dog, a fish, a bird, they all have, like, a long chain of little bones inside that goes from the head down to the tail.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Some animals have **bones** inside their bodies and others have none. A dog, for example, has bones. In a fish or a bird, a chain of small bones runs from head to tail"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Every animal in the world belongs to one of two big families, and that chain of bones, the backbone, decides which one.",
+      "utterance_coloquial": "Every animal in the world is in one of two big families, and that chain, the back bone, the spine, decides which, uh, which one.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Vertebrates and Invertebrates",
+            "role": "titulo"
+          },
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Some animals have **bones** inside their bodies and others have none. A dog, for example, has bones. In a fish or a bird, a chain of small bones runs from head to tail, called the **backbone**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Everybody reach behind and touch your back. Can you feel the bumps?",
+      "utterance_coloquial": "Everybody touch your back, come on, reach, can you feel those bumps? Sofia, stop laughing.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Those bumps are small bones, and each one is called a vertebra.",
+      "utterance_coloquial": "Those bumps are, uh, little bones, and each one is a, a vurtebra, one vertebra, many vertebrae.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Some animals have **bones** inside their bodies and others have none. A dog, for example, has bones. In a fish or a bird, a chain of small bones runs from head to tail, called the **backbone**. Each bump on our back is a small bone called a **vertebra**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Animals with a backbone are called vertebrates; we are vertebrates too.",
+      "utterance_coloquial": "The animals with a backbone are called, um, vertebrates, ver-te-brates, and yes, we are vertebrates too.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Backbone",
+            "group": "vert"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_3",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "have"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The backbone holds the whole body up, and it also protects very important nerves that run inside it.",
+      "utterance_coloquial": "The backbone holds the whole body up, right, and it also protects, uh, the nerves, the important nerves inside it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "The backbone holds the body up and protects important **nerves** inside.",
+            "role": "cuerpo",
+            "group": "vert"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Fish are vertebrates, and frogs too, even though a frog's skin is soft and slimy.",
+      "utterance_coloquial": "Fish are vertebrates, and frogs too, even if the skin is all, you know, soft and slimy, yuck.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Fish",
+            "group": "vert"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Frog",
+            "group": "vert"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "has"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Diego asks about snakes. Yes, Diego, a snake is a very long backbone with a head and a tail.",
+      "utterance_coloquial": "Diego asks, um, what about snakes. Yes, Diego, a snake is basically a super long backbone with a head and a tail.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "A snake is mostly a very long backbone with a head and a tail.",
+            "role": "cuerpo",
+            "group": "vert"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Birds have a backbone, cats have a backbone, and so do people.",
+      "utterance_coloquial": "Birds have one, cats have one, and, uh, so do people, so do we, all of us.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Bird",
+            "group": "vert"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Cat",
+            "group": "vert"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "People",
+            "group": "vert"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "has"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "has"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_6",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "They look very different on the outside, but all of them share the same chain of bones inside.",
+      "utterance_coloquial": "They look super different outside, no, but all of them, um, share the same chain of bones inside.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Vertebrates look very different outside but share the same **chain of bones** inside.",
+            "role": "cuerpo",
+            "group": "vert"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "A whale lives in the sea, but it is a vertebrate, with a backbone inside its huge body.",
+      "utterance_coloquial": "A whale lives in the sea, but, uh, it's a vertebrate, it has a back bone inside that huge body, yes.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Whale",
+            "group": "vert"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_7",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Quiet please, Mateo, that is not a toy. Hold on, let me finish this idea first.",
+      "utterance_coloquial": "Mateo, that's not a toy, put it away. Wait, wait, let me finish this one idea first, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "So, to remember: vertebrates are the animals with a backbone, a chain of bones from head to tail.",
+      "utterance_coloquial": "So, uh, to remember: vertebrates, animals with a backbone, a chain of bones from the head to the tail.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3",
+              "concepto_1_1",
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Who can tell me one vertebrate? Fish, bird, cat, yes. Good: fish, bird, cat.",
+      "utterance_coloquial": "Who gives me one vertebrate? Fish, yes, bird, yes, cat, okay, fish, bird and cat, good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "But look at the snail again: no backbone at all. Most animals on Earth are like the snail.",
+      "utterance_coloquial": "But the snail, right? No back bone, nothing. And, uh, most animals on earth are like the snail, most of them.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Invertebrates",
+            "role": "subtitulo",
+            "group": "inv"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Most animals on Earth have no backbone at all",
+            "role": "cuerpo",
+            "group": "inv"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Animals without a backbone are called invertebrates; the little word in means without.",
+      "utterance_coloquial": "Animals without a backbone are called in vertebrates, 'in' meaning without, like, uh, in-vertebrates.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Most animals on Earth have no backbone at all, and they are called **invertebrates**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "The snail is an invertebrate: a soft body with a shell on the outside.",
+      "utterance_coloquial": "The snail is an invertebrate, right, the body is soft and then the, uh, the shell outside.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Snail",
+            "group": "inv"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_8",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "A hard shell outside protects the soft body of the snail, and that is why the snail can hide.",
+      "utterance_coloquial": "The hard shell outside protects the soft body, and that's why the snail can, like, hide inside.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "A hard **shell** outside protects the soft body.",
+            "role": "cuerpo",
+            "group": "inv"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Jellyfish are invertebrates, and so are earthworms: soft all over, with no shell.",
+      "utterance_coloquial": "Jelly fish are invertebrates, and earthworms too, soft all over, no shell, nothing.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Jellyfish",
+            "group": "inv"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Earthworm",
+            "group": "inv"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_9",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_10",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Worms and jellyfish are completely soft; they do not have a shell to hide in.",
+      "utterance_coloquial": "The worms and the jellyfish are totally soft, they don't have a shell to, to hide in.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Worms and jellyfish are completely **soft**, with no shell.",
+            "role": "cuerpo",
+            "group": "inv"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Do all invertebrates look like soft blobs? No. Wait for the next ones.",
+      "utterance_coloquial": "Do all the invertebrates look like soft blobs? No, no, wait for the next ones, you'll see.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Crabs, spiders and butterflies are invertebrates too, but their bodies are hard on the outside.",
+      "utterance_coloquial": "Crabs, spiders and, uh, butterflies are invertebrates too, but the body is hard on the outside.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Crab",
+            "group": "inv"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Spider",
+            "group": "inv"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Butterfly",
+            "group": "inv"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_11",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_12",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "concepto_1_13",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "These animals have a hard cover on the outside instead of bones inside; it is called an exoskeleton.",
+      "utterance_coloquial": "They have like a hard cover outside, instead of bones inside, um, an exo skeleton, that's the word.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Crabs, spiders and insects have a hard cover outside called an **exoskeleton**",
+            "role": "cuerpo",
+            "group": "inv"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Count the legs: insects have six and spiders have eight.",
+      "utterance_coloquial": "Count the legs, come on, insects have six, spiders eight, six and eight, don't mix them.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "Crabs, spiders and insects have a hard cover outside called an **exoskeleton**. Insects have 6 legs and spiders have 8."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "So the snail, the worm, the jellyfish and the crab: none of them has a backbone.",
+      "utterance_coloquial": "So, the snail, the worm, the jelly fish, the crab, uh, none of them has a backbone, none.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_8",
+              "concepto_1_8",
+              "concepto_1_10",
+              "concepto_1_9",
+              "concepto_1_11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Who is lost? Raise your hand. Okay, good. Now let's play a game.",
+      "utterance_coloquial": "Who's lost? Hands up. No one? Okay, good, good. Now we play a game, a quick one.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "I say an animal; you stand up if it has a backbone and stay seated if it does not.",
+      "utterance_coloquial": "I say an animal, you stand up if it has a backbone, you stay sitting if it doesn't, got it?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Eagle: standing. Butterfly: sitting. Carlos, stand up, the eagle has a backbone.",
+      "utterance_coloquial": "Eagle, standing, good. Butterfly, sitting. Carlos, stand up, the eagle has a back bone, come on.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Many people think big animals have bones and small ones do not, but the giant squid is enormous and has no backbone, while a tiny mouse has one.",
+      "utterance_coloquial": "Lot of people think, like, big animals have bones and small ones don't, but the giant squid is huge and has no backbone, and a tiny mouse does.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Telling them apart",
+            "role": "subtitulo",
+            "group": "tell"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "A **giant squid** is enormous with no backbone, and a tiny mouse has one.",
+            "role": "cuerpo",
+            "group": "tell"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "The giant squid can grow enormous, and it is an invertebrate.",
+      "utterance_coloquial": "The giant squid can get enormous, right, and it's an invertebrate, no backbone.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_14",
+            "object": "concepto",
+            "label": "Giant squid",
+            "group": "tell"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "concepto_1_14",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "An octopus has no bones either, and it is one of the cleverest invertebrates.",
+      "utterance_coloquial": "An octopus has no bones either, uh, and it's like one of the smartest invertebrates there is.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_15",
+            "object": "concepto",
+            "label": "Octopus",
+            "group": "tell"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_15",
+            "from": "concepto_1_15",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "An ant is tiny and it is an invertebrate too, with its hard cover outside.",
+      "utterance_coloquial": "An ant is tiny, right, tiny, and it's an invertebrate too, the hard cover outside and all.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_16",
+            "object": "concepto",
+            "label": "Ant",
+            "group": "tell"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_16",
+            "from": "concepto_1_16",
+            "to": "texto_1_8",
+            "style": "arrow",
+            "label": "is one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "A quick test for any animal: does it have a backbone? If yes, vertebrate; if no, invertebrate.",
+      "utterance_coloquial": "A quick test for any animal, okay: does it have a backbone? If yes, vertebrate. If not, invertebrate.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Ask: does the animal have a **backbone**?\nIf yes, it is a **vertebrate**\nIf no, it is an **invertebrate**",
+            "role": "enumeracion",
+            "group": "tell"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Explain the test to the person next to you. You have two minutes.",
+      "utterance_coloquial": "Explain the test to your partner, the person next to you, two minutes, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "So Luis's snail: backbone or no backbone? No backbone, so it is an invertebrate. And Pedro's dog is a vertebrate.",
+      "utterance_coloquial": "So Luis's snail, backbone or no backbone? No back bone, so an invertebrate. And Pedro's dog, vertebrate, yes.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "A snail has no backbone, so it is an **invertebrate**. A dog has one, so it is a **vertebrate**.",
+            "role": "cuerpo",
+            "group": "tell"
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Two families again: with a backbone and without a backbone.",
+      "utterance_coloquial": "Two families again, okay: with a backbone and, uh, without a backbone.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3",
+              "texto_1_8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For tomorrow, find an animal at home or on the street and tell me which family it belongs to.",
+      "utterance_coloquial": "For tomorrow, find an animal at home or in the street and tell me, uh, which family it belongs to.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Find an animal at home or on the street. Decide which family it belongs to.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Any questions? Ana asks whether a vertebrate can lose its backbone. No, it cannot.",
+      "utterance_coloquial": "Questions? Ana asks if a vertebrate can lose its back bone. No, no, it can't, it stays for life.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "There is the bell. Leave your notebooks on my desk and go out in a line.",
+      "utterance_coloquial": "There's the bell, okay. Notebooks on my desk and out in a line, a line, Mateo.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

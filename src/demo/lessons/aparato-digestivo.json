@@ -1,0 +1,1120 @@
+{
+  "id": "aparato-digestivo",
+  "tema": "The digestive system",
+  "sesgo": "mixto",
+  "objetivo": "For the student to describe the path food takes through the digestive system and the function of its main organs (mouth, esophagus, stomach, small intestine, and large intestine).",
+  "hatsumon": "What happens to food after you swallow it?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to find out what happens to food once it enters our body.",
+      "utterance_coloquial": "Today we're going to find out what happens to food once it enters our body.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Digestive System",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebooks and leave some room — we're going to follow the whole path.",
+      "utterance_coloquial": "Take out your notebooks and leave me some room, okay, 'cause we're gonna follow the whole path.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about this: when you swallow a bite of food, where does it go and what happens to it next?",
+      "utterance_coloquial": "Okay, think about it: when you swallow a bite, where does it go and what happens to it after that?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Has anyone's stomach ever growled from hunger? That's part of this too.",
+      "utterance_coloquial": "Has anyone's stomach ever growled from hunger?... yeah, that's part of this too.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "When we eat, the body doesn't use food just as it is: first it has to break it down.",
+      "utterance_coloquial": "When we eat, the body doesn't just use food as-is: it has to break it down first.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Digestion",
+            "role": "subtitulo",
+            "group": "def"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The body **breaks down** food to make use of it.",
+            "role": "cuerpo",
+            "group": "def"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "The job of breaking down food is done by the digestive system.",
+      "utterance_coloquial": "That job of breaking down food, that's done by the digestive system.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "The body **breaks down** food to make use of it. The **digestive system**, a set of organs, does this job."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Digesting is exactly that: breaking food down into very small pieces.",
+      "utterance_coloquial": "Digesting is just that: breaking food down into teeny tiny little pieces.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "The body **breaks down** food to make use of it. The **digestive system**, a set of organs, does this job. Digesting means breaking food into very small pieces."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Let's picture our body here, facing us, so we can locate each organ.",
+      "utterance_coloquial": "Let's picture our body here, facing us, so we can find each organ.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "persona_1_1",
+            "object": "concepto",
+            "label": "body",
+            "group": "def"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "The digestive system is like a very long tube that runs through the whole body.",
+      "utterance_coloquial": "The digestive system is like one long ol' tube that runs through the whole body.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The digestive system is like a very long tube running through the whole body.",
+            "role": "cuerpo",
+            "group": "def"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_2",
+            "to": "persona_1_1",
+            "style": "arrow",
+            "label": "is in the body"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "We're going to follow that tube from top to bottom, without skipping anything.",
+      "utterance_coloquial": "We're going to follow that tube from top to bottom, without skipping anything.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "The food's journey starts in the mouth.",
+      "utterance_coloquial": "The food's journey starts in the mouth.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Mouth and esophagus",
+            "role": "subtitulo",
+            "group": "boca"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "The food's journey begins in the **mouth**.",
+            "role": "cuerpo",
+            "group": "boca"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "In the mouth, the teeth grind food into smaller pieces.",
+      "utterance_coloquial": "In the mouth, the teeth grind food into smaller little pieces.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "The food's journey begins in the **mouth**. The teeth grind food into smaller pieces."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "And saliva softens it and moistens it so we can swallow it.",
+      "utterance_coloquial": "And sa liva softens it and gets it wet so we can swallow it.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "The food's journey begins in the **mouth**. The teeth grind food into smaller pieces. **Saliva** softens the food so we can swallow it."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Mouth",
+            "group": "boca"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_7",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "That's why I always tell you to chew slowly: that's where it all begins.",
+      "utterance_coloquial": "That's why I always tell you guys to chew nice and slow: that's where it all starts.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "**Chewing** slowly helps, because digestion starts here.",
+            "role": "cuerpo",
+            "group": "boca"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "After you swallow, food goes down a tube called the esophagus.",
+      "utterance_coloquial": "After you swallow, the food goes down a tube called the e sophagus.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "After swallowing, food goes down a **tube** called the esophagus, which carries it to the stomach.",
+            "role": "cuerpo",
+            "group": "boca"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Esophagus",
+            "group": "boca"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "swallowed"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 15,
+      "utterance_formal": "The esophagus pushes it downward, even if we're upside down.",
+      "utterance_coloquial": "The e sophagus pushes it on down, even if we're upside down, right?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "The esophagus pushes the food downward, even if we are upside down.",
+            "role": "cuerpo",
+            "group": "boca"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "The tube empties into the stomach, a pouch that receives everything we ate.",
+      "utterance_coloquial": "The tube empties out into the sto mach, a pouch that receives everything we ate.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "The stomach",
+            "role": "subtitulo",
+            "group": "estomago"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "The tube empties into the **stomach**, a pouch that receives everything we ate.",
+            "role": "cuerpo",
+            "group": "estomago"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_2",
+            "to": "texto_1_13",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "That squeezing push that moves the food along is called peristalsis.",
+      "utterance_coloquial": "That squeezing push that moves the food along is called peristal sis.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_3",
+            "text": "peristalsis"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Here it is, roughly at belly height.",
+      "utterance_coloquial": "Here it is, roughly around tummy height.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "estomago_1_1",
+            "object": "concepto",
+            "label": "stomach",
+            "group": "estomago"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_13",
+            "to": "estomago_1_1",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_2",
+            "to": "estomago_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "In the stomach, very strong juices break food down until it becomes a mushy paste.",
+      "utterance_coloquial": "In the sto mach, real strong juices break the food down till it's like mushy paste.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Strong **juices** break food down until it becomes a mushy paste.",
+            "role": "cuerpo",
+            "group": "estomago"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "It sounds gross, but it's exactly what the body needs to keep going.",
+      "utterance_coloquial": "Sounds gross, but it's exactly what the body needs to keep on going.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Strong **juices** break food down until it becomes a mushy paste. Gross as it sounds, the body needs it to keep going."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "So far we've covered three parts: the mouth, the esophagus, and the stomach.",
+      "utterance_coloquial": "So far we got three parts: the mouth, the e sophagus, and the sto mach.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7",
+              "concepto_1_2",
+              "texto_1_13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "From there the paste moves into the small intestine, a very long, coiled-up tube.",
+      "utterance_coloquial": "From there the mush moves into the small in testine, a real long tube all coiled up.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "The intestines",
+            "role": "subtitulo",
+            "group": "int"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "From the stomach, the paste moves into the **small intestine**, a very long, coiled-up tube.",
+            "role": "cuerpo",
+            "group": "int"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "texto_1_13",
+            "to": "texto_1_16",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Nutrients are the good part of food, and from here they pass into the blood.",
+      "utterance_coloquial": "New trients are the good part of the food, and from here they pass into the blood.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "From the stomach, the paste moves into the **small intestine**, a very long, coiled-up tube. **Nutrients** are absorbed here and pass into the blood."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Small intestine",
+            "group": "int"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "estomago_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Blood",
+            "group": "int"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "nutrients"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Blood carries those nutrients to the whole body. That's why we eat.",
+      "utterance_coloquial": "Blood carries those nutrients to the whole body. That's why we eat.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "**Blood** carries the nutrients to the whole body.",
+            "role": "cuerpo",
+            "group": "int"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "What's not useful keeps going straight to the large intestine.",
+      "utterance_coloquial": "What's no good just keeps on going to the large in testine.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "**Blood** carries the nutrients to the whole body. What is not useful goes on to the **large intestine**."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Large intestine",
+            "group": "int"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_16",
+            "from": "concepto_1_3",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "what is left"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "That's where what later gets expelled when we go to the bathroom is formed.",
+      "utterance_coloquial": "That's where what later gets pushed out when we go to the bathroom gets formed.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "The large intestine collects what the body doesn't use and forms the **waste** that gets expelled.",
+            "role": "cuerpo",
+            "group": "int"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Don't laugh, it's about as natural as it gets.",
+      "utterance_coloquial": "Don't laugh, it's about as natural as it gets, right?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Now let's put the whole path together: food enters through the mouth and goes down the esophagus.",
+      "utterance_coloquial": "Now let's put the whole path together: food goes in through the mouth and down the e sophagus.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7",
+              "texto_1_11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "From the esophagus it reaches the stomach, where it turns into mush.",
+      "utterance_coloquial": "From the e sophagus it gets to the sto mach, where it turns to mush.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "From the stomach it moves to the small intestine, which keeps the good stuff.",
+      "utterance_coloquial": "From the sto mach it moves to the small in testine, which keeps the good stuff.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_16"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "And it ends in the large intestine, which collects the waste.",
+      "utterance_coloquial": "And it ends up in the large in testine, which collects the waste.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "See how food makes a whole journey without ever going back?",
+      "utterance_coloquial": "See how the food makes this whole trip and never goes back?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Look at the row of arrows: mouth, stomach, and intestine, one after another.",
+      "utterance_coloquial": "Check out the row of little arrows: mouth, sto mach, and in testine, one after the other.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7",
+              "texto_1_13",
+              "texto_1_16"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Each organ hands the food to the next one, always in the same order.",
+      "utterance_coloquial": "Each organ hands the food over to the next one, always in the same order, see?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Let's remember where it all starts and where it goes down from there.",
+      "utterance_coloquial": "Let's remember where it all starts and where it goes down from there.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Now for the most important part: what's the point of all this work?",
+      "utterance_coloquial": "Now here's the important part: what's the point of all this work?",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Why it matters",
+            "role": "subtitulo",
+            "group": "imp"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Digestion gives the body **energy** and nutrients from food.",
+            "role": "cuerpo",
+            "group": "imp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Without digestion, even if we ate, the body wouldn't have energy.",
+      "utterance_coloquial": "Without di gestion, even if we ate, the body wouldn't have any energy.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Without **digestion**, the body wouldn't have energy.",
+            "role": "cuerpo",
+            "group": "imp"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Let's remember what it's for: to give us energy and to make use of what we eat.",
+      "utterance_coloquial": "Let's remember what it's for: to give us energy and to make use of what we eat.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_23",
+              "texto_1_24"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Rest your hand for a moment. Are we good? Great.",
+      "utterance_coloquial": "Rest your hand a sec. We good?... alright, great.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "And since it's so important, we need to take care of it with some habits.",
+      "utterance_coloquial": "And since it's so important, we gotta take care of it with some hab its.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Chew slowly\nEat fruits and vegetables\nDrink water",
+            "role": "lista",
+            "group": "imp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Simple things, but they help your stomach a whole lot.",
+      "utterance_coloquial": "Simple stuff, but it helps your tummy a ton.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Simple habits help your **stomach** a lot.",
+            "role": "cuerpo",
+            "group": "imp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "So you don't forget, hold on to this: food travels through five organs in order.",
+      "utterance_coloquial": "So you don't forget, hold on to this: food travels through five organs in order.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "Food travels through 5 **organs** in order.",
+            "role": "cuerpo",
+            "group": "imp"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 43,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is digestion.",
+      "utterance_coloquial": "And today's biggest word, the one you shouldn't forget, is di gestion.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_28",
+            "set": {
+              "text": "Food travels through 5 **organs** in order. The key word is **digestion**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Remember what the digestive system is: the set of organs that digest food.",
+      "utterance_coloquial": "Remember what the digestive system is: the set of organs that digest food.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "For homework, draw the path of food with arrows, in order.",
+      "utterance_coloquial": "For homework, draw me the path of food with little arrows, in order.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_31",
+            "object": "texto",
+            "text": "Draw the path of food using arrows, in order.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "And explain to me, in your own words, what the stomach does with food.",
+      "utterance_coloquial": "And explain to me, in your own words, what the sto mach does with the food.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_31",
+            "set": {
+              "text": "Draw the path of food using arrows, in order. Then explain what the stomach does with food."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "And with that we answered the question we started class with.",
+      "utterance_coloquial": "And with that we already answered the question we kicked off class with.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_28"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "That's all for today. Pack up your things and I'll see you tomorrow.",
+      "utterance_coloquial": "That's it for today. Pack up your stuff and I'll see you tomorrow, take care.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "id": "circuitos-electricos",
+  "tema": "Simple electric circuits: battery, wire, bulb, switch",
+  "sesgo": "mixto",
+  "objetivo": "That the student understands that a bulb lights when battery, wires and bulb form a closed path, that a switch opens or closes it, that metals conduct and plastic insulates, and that wall outlets are dangerous.",
+  "hatsumon": "How can we make a bulb light up?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Settle down, please. We are about to start. Ana, listen.",
+      "utterance_coloquial": "Okay, settle down, settle down please, we're about to start. Ana, Ana, listen.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Last night the lights went out on my whole street for about an hour. Did that happen to you too?",
+      "utterance_coloquial": "So last night the lights went out in my whole street, for like an hour. Did, did that happen to anybody else? Yeah?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "It was so dark I could not find my flashlight. Ruben says his dad found a candle. A candle, right.",
+      "utterance_coloquial": "It was so dark I couldn't find my flashlight, ha. Ruben says his dad found a candle. A candle, yes, good one.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Imagine a flashlight without its battery: it will not light. So how can we make a bulb light up?",
+      "utterance_coloquial": "Imagine a flashlight with no battery inside. It won't light, right? So... how can we make a bulb light up?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Do not answer yet. Talk to your partner for a moment.",
+      "utterance_coloquial": "Don't answer yet, eh, talk to your partner, a minute.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Some of you said a battery. A bulb, of course. And a wire, said Laura. Good, a wire.",
+      "utterance_coloquial": "So some said a battery. A bulb, obviously. And a wire, Laura said. Yes, a wire, good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "With a battery, wires and a bulb we can build what is called a circuit.",
+      "utterance_coloquial": "So with a battery, some wires and a bulb we can build what's called a sir quit, a circuit.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Simple electric circuits",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "What we need",
+            "role": "subtitulo",
+            "group": "need"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "A simple **circuit** needs a battery, wires and a bulb",
+            "role": "cuerpo",
+            "group": "need"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "And a switch, to turn it on and off, like the one in your room.",
+      "utterance_coloquial": "And a switch, to turn it on and off, like in your bedroom.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "A simple **circuit** needs a battery, wires and a bulb, and a switch to turn it on and off."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Let us look at each one. Take the tray from your table, and be careful: the bulbs are glass.",
+      "utterance_coloquial": "Let's look at each one. Grab the tray from your table, careful, careful, the bulbs are glass.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The battery gives energy to the circuit.",
+      "utterance_coloquial": "The battery is what gives the energy, um, to the whole circuit.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "The **battery** gives energy to the circuit",
+            "role": "cuerpo",
+            "group": "need"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Every battery has two ends: the plus and the minus.",
+      "utterance_coloquial": "Every battery has two ends, the plus and the minus.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "The **battery** gives energy to the circuit, and it has two ends, marked + and −."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "This is the battery, the one in your hand.",
+      "utterance_coloquial": "This one, the one you have in your hand, that's the battery.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Battery",
+            "group": "need"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Jorge, do not put the battery in your mouth. No, no, no.",
+      "utterance_coloquial": "Jorge, don't put the battery in your mouth. No no no no.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "The wires carry the electricity from the battery to the bulb.",
+      "utterance_coloquial": "The wires carry the electricity from the battery to the, to the bulb.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Wires carry electricity from the battery to the bulb",
+            "role": "cuerpo",
+            "group": "need"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Inside the wire there is metal; copper, usually.",
+      "utterance_coloquial": "Inside the wire there's metal, copper, usually, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Wires carry electricity from the battery to the bulb, and they are made of **metal**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Here is the wire, connected to the battery.",
+      "utterance_coloquial": "And here's the wire, you connect it to the battery.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Wire",
+            "group": "need"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "energy"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "The bulb has a very thin filament inside that glows when electricity goes through it.",
+      "utterance_coloquial": "The bulb has a really thin fill a meant, filament, inside, and it glows when the electricity goes through.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "The bulb and the switch",
+            "role": "subtitulo",
+            "group": "bul"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "The bulb has a thin **filament** that glows when electricity passes through it",
+            "role": "cuerpo",
+            "group": "bul"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "The bulb needs two contacts to work: the metal side and the tip at the bottom.",
+      "utterance_coloquial": "The bulb needs two contacts to work, the metal on the side and the little tip at the bottom.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "The bulb has a thin **filament** that glows when electricity passes through it, and it needs two **contacts** to work."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "The wire carries the electricity to the bulb.",
+      "utterance_coloquial": "So the wire takes the electricity to the bulb.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Bulb",
+            "group": "bul"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "carries"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Can you see the thin little wire inside? Come closer and look. Thin as a hair, yes.",
+      "utterance_coloquial": "Can you see the thin little wire inside? Come look, come. Thin like a hair, yes.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "And the switch opens or closes the path of the electricity.",
+      "utterance_coloquial": "And the switch, it opens or closes the path for the electricity.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "A **switch** opens or closes the path of the electricity",
+            "role": "cuerpo",
+            "group": "bul"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "The electricity goes from the bulb to the switch.",
+      "utterance_coloquial": "The electricity goes from the bulb to the switch.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Switch",
+            "group": "bul"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "passes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "And from the switch it must go all the way back to the battery, like a loop.",
+      "utterance_coloquial": "And then from the switch it has to go all the way back to the battery, like a loop.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "back to battery"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "A loop, a circle: circuit means circle. Say it with me: circuit.",
+      "utterance_coloquial": "A loop, a circle. Circuit, circle. Say it with me, circuit. Good.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "A circuit is a loop: the word means circle",
+            "role": "cuerpo",
+            "group": "bul"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Now build it. Battery, bulb and wires, in your groups. Ten minutes.",
+      "utterance_coloquial": "Now you build it. Battery, bulb, wires, in your groups. Ten minutes, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Tomas, your bulb does not light? Check the wires; are they loose? Tighten them.",
+      "utterance_coloquial": "Tomas, yours doesn't light? Check the wires, are they loose? Tighter, tighter.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "When everything is connected, electricity flows all around and the bulb lights up.",
+      "utterance_coloquial": "When everything's connected, the electricity flows all around and then the bulb lights up.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Closed and open circuits",
+            "role": "subtitulo",
+            "group": "clo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "When the path is closed, electricity **flows** and the bulb lights up.",
+            "role": "cuerpo",
+            "group": "clo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Camila's is lit! Look at that.",
+      "utterance_coloquial": "Camila's is on! Look at that, look!",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Bulb on",
+            "group": "clo"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "closed"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Who else got it? Table three has it too. Great.",
+      "utterance_coloquial": "Who else got it? Table three, yes, table three has it too. Great.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Everything connected, the electricity flows and the bulb lights.",
+      "utterance_coloquial": "Everything connected, electricity flows, bulb lights. That's the idea.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "If we break the path anywhere, the electricity stops and the bulb goes out.",
+      "utterance_coloquial": "But if you break the path anywhere, the electricity stops and the bulb goes out.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "If the path is broken, the electricity stops and the bulb goes out",
+            "role": "cuerpo",
+            "group": "clo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "That is called an open circuit.",
+      "utterance_coloquial": "And that is what we call an open circuit.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "If the path is broken, the electricity stops and the bulb goes out, and that is called an **open** circuit."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "The bulb goes out.",
+      "utterance_coloquial": "The bulb goes out, see?",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Bulb off",
+            "group": "clo"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_4",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "open"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Try it: pull out one wire. Out, right? Put it back. On. Out. On.",
+      "utterance_coloquial": "Try it, pull out one wire. Out, right? Put it back, on. Out, on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "So with a closed circuit the bulb is on, and with an open one it is off.",
+      "utterance_coloquial": "So closed circuit, lit; open circuit, out.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_5",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Some materials let electricity pass through and others do not. Metals do; they are called conductors.",
+      "utterance_coloquial": "Some materials let the electricity pass and others don't. Metals do, we call them conductors.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Conductors and insulators",
+            "role": "subtitulo",
+            "group": "con"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Metals let electricity pass, so they are **conductors**.",
+            "role": "cuerpo",
+            "group": "con"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Plastic, rubber and wood do not let it through; those are insulators.",
+      "utterance_coloquial": "Plastic, rubber, wood, they don't let it through. Those are in solators, insulators.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Metals let electricity pass, so they are **conductors**. Plastic, rubber and wood do not, so they are **insulators**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "That is why the wire is metal inside.",
+      "utterance_coloquial": "That's why the wire is metal on the inside.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Metal",
+            "group": "con"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_2",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "made of"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "And that is why wires have a plastic cover: so we do not get a shock.",
+      "utterance_coloquial": "And that's why wires have a plastic cover, so we don't get a shock.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Plastic cover",
+            "group": "con"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_2",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "covered with"
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Try an eraser instead of a wire. Does it light? No. Rubber.",
+      "utterance_coloquial": "Try an eraser instead of the wire. Does it light? No. Rubber, right.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "An eraser is rubber, so the bulb does not light",
+            "role": "cuerpo",
+            "group": "con"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Now a coin, and a key. They light it. Metal.",
+      "utterance_coloquial": "Now with a coin, and a key! They light it! Metal, see?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "An eraser is rubber, so the bulb does not light, while a coin and a key are metal and make it light."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "At home, never play with wall outlets; they carry much more electricity than our small batteries.",
+      "utterance_coloquial": "At home, never, ever play with the wall outlets, they carry way more electricity than our little batteries.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Safety",
+            "role": "subtitulo",
+            "group": "saf"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Never play with wall **outlets**, since they carry much more electricity than a battery.",
+            "role": "cuerpo",
+            "group": "saf"
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "It can really hurt you.",
+      "utterance_coloquial": "It can really hurt you, really.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "Never play with wall **outlets**, since they carry much more electricity than a battery. A shock can really hurt you."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "A cousin of mine got a shock once. Never again. Okay.",
+      "utterance_coloquial": "My cousin got a shock once, never again. Okay, moving on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "So the circuit needs a battery, wires, a bulb and a switch.",
+      "utterance_coloquial": "So the circuit needs a battery, wires, a bulb and the switch.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_2",
+              "concepto_1_3",
+              "concepto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "So, back to our question: a bulb lights when the battery, wires and bulb make a closed path.",
+      "utterance_coloquial": "So, going back to our question, how do we light a bulb? Battery, wires and bulb in a closed path.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "A bulb lights when the battery, wires and bulb form a **closed** path.",
+            "role": "cuerpo",
+            "group": "clo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "Luis asks if the bulb lights with two batteries. Brighter, yes; we will see it next class.",
+      "utterance_coloquial": "Luis asks if it lights with two batteries. Brighter, yes, brighter, next class.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "For homework, list three things at home that use batteries. And bring the list tomorrow.",
+      "utterance_coloquial": "For homework, make a list of three things at home that use batteries. And bring the list tomorrow.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "List three things at home that use **batteries**. Bring the list to class.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "Great work today. Pack your things.",
+      "utterance_coloquial": "Great job today. Pack up, pack your things.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

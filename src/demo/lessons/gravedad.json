@@ -1,0 +1,977 @@
+{
+  "id": "gravedad",
+  "tema": "Gravity: why things fall, weight",
+  "sesgo": "mixto",
+  "objetivo": "That the student understands that gravity is the force that pulls objects toward the Earth, that it makes things fall and gives them weight, that it is weaker on the Moon, and that it also keeps the Moon around the Earth.",
+  "hatsumon": "Why do things always fall down and never up?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everybody. Please sit down and be quiet.",
+      "utterance_coloquial": "Okay, good morning everybody, sit down please, uh, quiet, quiet please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Today we are going to talk about gravity.",
+      "utterance_coloquial": "So today, uh, we're gonna talk about, about gravi ty, gravity.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Watch this. I let go of my pen. What happened?",
+      "utterance_coloquial": "Okay watch, I let go of my pen. What happened, what happened?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "It fell, yes. And if I throw it up, it also comes back down.",
+      "utterance_coloquial": "It fell, yes Diego. And if I throw it up, it comes back down too, always.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Gravity",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Why things fall",
+            "role": "subtitulo",
+            "group": "que"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Whatever we let go of falls, and whatever we throw up comes back down",
+            "role": "cuerpo",
+            "group": "que"
+          }
+        ]
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Why do things always fall down and never up?",
+      "utterance_coloquial": "Why do the things always fall down, and, and never up?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Think about it for a moment. We will answer it in a bit.",
+      "utterance_coloquial": "Think about that for a second. We'll answer it, uh, in a bit.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "There is a force that pulls everything toward the Earth.",
+      "utterance_coloquial": "There's a force, a force that pulls everything toward the Earth, toward the ground.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Whatever we let go of falls, and whatever we throw up comes back down. Gravity is a force that pulls objects toward the Earth"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "A force is a push or a pull. We cannot see it, but we see what it does.",
+      "utterance_coloquial": "A force is a push, or a pull. We can't see it, we see what it does.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Whatever we let go of falls, and whatever we throw up comes back down. Gravity is a force that pulls objects toward the Earth. A **force** is a push or a pull."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "The Earth pulls the pen, the ball, you and me.",
+      "utterance_coloquial": "The earth pulls the pen, the ball, you, me, everything.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Earth",
+            "group": "que"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Pen",
+            "group": "que"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "pulls"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "An apple falls from a tree for the same reason.",
+      "utterance_coloquial": "An apple that falls from a tree, same reason, same.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Apple",
+            "group": "que"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "pulls"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Yes, Camila, the story of Newton and the apple. Hold that thought.",
+      "utterance_coloquial": "Yes Camila, the story of, eh, new ton and the apple, yeah, hold on to that.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Isaac Newton explained gravity more than three hundred years ago.",
+      "utterance_coloquial": "Isaac Newton, he explained gravity like, more than three hundred years ago.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Isaac Newton explained gravity more than 300 years ago.",
+            "role": "cuerpo",
+            "group": "que"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Does gravity pull only on the things close to the ground?",
+      "utterance_coloquial": "Does gravity pull only things that are, that are close to the ground?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "No. It pulls things on top of mountains and also in an airplane.",
+      "utterance_coloquial": "No, no. It pulls the things on top of a mountain, in a plane too.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Falling objects",
+            "role": "subtitulo",
+            "group": "caida"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Gravity pulls on mountaintops and in airplanes too",
+            "role": "cuerpo",
+            "group": "caida"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "A child who jumps always comes back down, in Mexico or in Japan.",
+      "utterance_coloquial": "A kid that jumps, always comes back down, in Mexico, in Japan, anywhere.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Gravity pulls on mountaintops and in airplanes too, in Mexico or in Japan."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Now an experiment. Which falls faster, a book or a sheet of paper?",
+      "utterance_coloquial": "Now an experiment. Which one falls faster, a book, or a, a sheet of paper?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Most of you say the book. Let's see.",
+      "utterance_coloquial": "Most of you say the book, okay. Let's see.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Book",
+            "group": "caida"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Paper sheet",
+            "group": "caida"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "texto_1_7",
+            "to": "concepto_1_4",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_7",
+            "to": "concepto_1_5",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "The book falls first. But now I crumple the paper into a ball.",
+      "utterance_coloquial": "The book lands first. But now I, I crum pull the paper into a ball.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "A book falls faster than a flat sheet of paper",
+            "role": "cuerpo",
+            "group": "caida"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Now they land at the same time! Why?",
+      "utterance_coloquial": "Now they land at the same time, the same! Why, why?",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "A book falls faster than a flat sheet of paper, but a crumpled ball of paper lands with it"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "The air pushes against the flat paper and slows it down.",
+      "utterance_coloquial": "The air, ehm, pushes the flat paper and slows it, slows it down.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "A book falls faster than a flat sheet of paper, but a crumpled ball of paper lands with it, because the **air** slows the flat paper down"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Without air, a feather and a hammer fall together. Astronauts showed it on the Moon.",
+      "utterance_coloquial": "Without air a, a fether and a hamer fall together, the astronauts showed it on the Moon.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "A book falls faster than a flat sheet of paper, but a crumpled ball of paper lands with it, because the **air** slows the flat paper down. Without air, all objects fall at the same speed."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Camila, please stop talking to Luis, thank you.",
+      "utterance_coloquial": "Camila, please, ehm, stop talking to Luis, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "So heavy and light things fall equally when air does not get in the way.",
+      "utterance_coloquial": "So heavy things and light things, they fall the same when there's no air in the way.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "A book falls faster than a flat sheet of paper, but a crumpled ball of paper lands with it, because the **air** slows the flat paper down. Without air, all objects fall at the same speed. Heavy and light things fall the same when air does not get in the way."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Now another idea: weight. What is weight?",
+      "utterance_coloquial": "Okay now another idea, weight. What is, what's weight?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Weight is how hard gravity pulls on an object.",
+      "utterance_coloquial": "Weight is how hard the gravity pulls an object, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Weight",
+            "role": "subtitulo",
+            "group": "peso"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "**Weight** is how hard gravity pulls on an object",
+            "role": "cuerpo",
+            "group": "peso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "We measure it with a scale; a heavy object is pulled harder.",
+      "utterance_coloquial": "We measure it with a scale, ehm, a heavy object gets pulled harder.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Scale",
+            "group": "peso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "texto_1_10",
+            "to": "concepto_1_6",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "A heavier object is pulled harder, so it weighs more.",
+      "utterance_coloquial": "A heavier object gets pulled harder, so it weighs, weighs more.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "A heavier object is pulled harder, so it weighs more",
+            "role": "cuerpo",
+            "group": "peso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Do you think you would weigh the same on the Moon?",
+      "utterance_coloquial": "Do you think you'd weigh the same on the, on the Moon?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "No. The Moon is smaller, so its gravity is about one sixth of the Earth's.",
+      "utterance_coloquial": "No. The Moon is smaller, so the gravity is like one sixth, one sixth of Earth's.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Moon",
+            "group": "peso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_7",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "weaker gravity than"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "On the Moon gravity is about ⅙ of the Earth's, so things weigh less",
+            "role": "cuerpo",
+            "group": "peso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "That is why astronauts take such big jumps on the Moon.",
+      "utterance_coloquial": "That's why the astro nauts take such big jumps there, big jumps.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Astronaut",
+            "group": "peso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_8",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "jumps high on"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Wow, Mateo, that was a very good question about Jupiter. Next class.",
+      "utterance_coloquial": "Wow Mateo, very good question about Jupi ter, but, but that's for next class.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "But a person's amount of matter stays the same; only the pull changes.",
+      "utterance_coloquial": "But the amount of stuff in you stays the same, only the pull changes.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "The body itself stays the same; only the pull changes.",
+            "role": "cuerpo",
+            "group": "peso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Gravity does something else, too: it keeps things in orbit.",
+      "utterance_coloquial": "Gravity does one more thing, uh, it keeps things going around, in orbit.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Going around",
+            "role": "subtitulo",
+            "group": "orbita"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Gravity keeps the Moon moving around the Earth",
+            "role": "cuerpo",
+            "group": "orbita"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "The Moon goes around the Earth because gravity holds it.",
+      "utterance_coloquial": "The moon goes around the Earth because the gravity, it holds it, it keeps the or bit.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_15",
+            "to": "concepto_1_7",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "And the Earth goes around the Sun for the same reason.",
+      "utterance_coloquial": "And the Earth goes around the Sun, same reason, the same.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "Gravity keeps the Moon moving around the Earth, and keeps the Earth around the **Sun**."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "orbita"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_1",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "goes around"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "The gravity of the Sun holds all the planets, not only the Earth.",
+      "utterance_coloquial": "The gravity of the Sun, it holds all the plan ets, not only Earth.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "The Sun holds all the **planets** with its gravity.",
+            "role": "cuerpo",
+            "group": "orbita"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Rain, snow and leaves also fall because of gravity.",
+      "utterance_coloquial": "Rain, snow, even the leaves, they also fall because of gravity, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Rain, snow and leaves fall because of **gravity**.",
+            "role": "cuerpo",
+            "group": "que"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Water from a cloud falls as rain, and the Earth pulls it down.",
+      "utterance_coloquial": "The water in a cloud falls like rain, the Earth pulls it down, down.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Rain",
+            "group": "que"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_1",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "pulls"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Alright, now we come back to the question at the start.",
+      "utterance_coloquial": "Alright, so, now we go back to the question at the start.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Why do things fall down and never up?",
+      "utterance_coloquial": "Why do things fall, fall down and never up?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Because the Earth pulls everything toward itself.",
+      "utterance_coloquial": "Because the Earth pulls everything, everything to itself.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "concepto_1_1"
+            ]
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Things fall because the Earth pulls them with **gravity**.",
+            "role": "cuerpo",
+            "group": "que"
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Quick review: what do we call how hard gravity pulls an object?",
+      "utterance_coloquial": "Quick review, eh, how do we call how hard gravity pulls on an object?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Weight, yes. And where is it smaller? On the Moon.",
+      "utterance_coloquial": "Weight, yes. And where is it, is it smaller? On the Moon, yes.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_11",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For homework, drop two different objects at home and tell us what happens.",
+      "utterance_coloquial": "Homework, uh, drop two different things at home and tell us what happens.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "At home",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Drop two different objects at home and observe how they fall. Tell us what happens.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Good job today, class. You may go to recess.",
+      "utterance_coloquial": "Good job today class. Okay, you can go to recess, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

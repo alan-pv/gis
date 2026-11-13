@@ -1,0 +1,1026 @@
+{
+  "id": "fases-de-la-luna",
+  "tema": "The phases of the Moon",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student understands that the Moon shines by reflecting sunlight, that half of it is always lit, and that the shapes we see (phases) depend on where the Moon is in its trip around the Earth, repeating about every month.",
+  "hatsumon": "Why is the Moon sometimes round and sometimes thin like a banana?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Please take your seats.",
+      "utterance_coloquial": "Okay, good morning everybody, um, sit down please, sit down, Luis, you too.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Who saw the Moon last night? Raise your hand.",
+      "utterance_coloquial": "Who, who saw the Moon last night? Hands up, hands up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Marta saw it, and she says it looked like a banana. A banana, yes.",
+      "utterance_coloquial": "Marta saw it. She says it was like a, a banana. A banana, ha ha. Okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "And a week before, someone said it was completely round, like a big plate. So why does it change?",
+      "utterance_coloquial": "And, and last week somebody told me it was totally round, like a big plate. So... why does it change like that? Why round, why banana?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Do not answer yet. Think about it, and we will find out together.",
+      "utterance_coloquial": "Don't tell me yet, eh, think about it first, we'll find out together.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Let us start with something basic. The Moon is not a lamp; it does not make light by itself.",
+      "utterance_coloquial": "Let's start with something basic. The Moon is not like a lamp, it doesn't make, um, light by itself.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Moonlight",
+            "role": "subtitulo",
+            "group": "luz"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The Moon makes no light of its own",
+            "role": "cuerpo",
+            "group": "luz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "It only reflects the light that comes from the Sun.",
+      "utterance_coloquial": "It just, uh, reflects the light that comes from the Sun, that's all.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "The Moon makes no light of its own, it only **reflects** sunlight"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "The Sun shines on the Moon, and the light bounces back to us.",
+      "utterance_coloquial": "So the Sun shines on the Moon and that light bounces, bounces back to us.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "luz"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Moon",
+            "group": "luz"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "shines on"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Like a mirror with a flashlight. Has anyone played that? Right, same idea.",
+      "utterance_coloquial": "Like a mirror and a flashlight. Did you ever play with that? Yeah? Same idea, same idea.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Now, the Moon is going around the Earth, and that is what makes it look different from night to night.",
+      "utterance_coloquial": "Now, the Moon is going around the Earth, always, and that's why it looks different, like, every night.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Phases of the Moon",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Around the Earth",
+            "role": "subtitulo",
+            "group": "mov"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "The Moon travels around the Earth",
+            "role": "cuerpo",
+            "group": "mov"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "One full trip around takes about a month, about 29 days.",
+      "utterance_coloquial": "One full trip takes about, about a month, around twenty-nine days.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "The Moon travels around the Earth, and one full trip takes about **29 days**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "The Earth stays in the middle and the Moon goes around it.",
+      "utterance_coloquial": "The Earth stays here in the middle and the Moon goes around it, around and around.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Earth",
+            "group": "mov"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "goes around"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "A month, yes. The word month comes from the word moon, that is no accident.",
+      "utterance_coloquial": "A month! Yes, the word month comes from moon, that's, that's no accident.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "The word month comes from the word moon, which is no accident",
+            "role": "cuerpo",
+            "group": "mov"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Pedro, sit down, please.",
+      "utterance_coloquial": "Pedro. Pedro, sit down please. Thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The Sun always lights up half of the Moon.",
+      "utterance_coloquial": "The Sun is always, always lighting half of the Moon.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "The Sun always lights half of the Moon",
+            "role": "cuerpo",
+            "group": "luz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "But from Earth we see a different part of that lit half each night.",
+      "utterance_coloquial": "But from here, from the Earth, we see a different part of that lit half every night, ya?",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "The Sun always lights half of the Moon, but from Earth we see a different part of the **lit half** each night"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "So half of it always has sunlight, always.",
+      "utterance_coloquial": "So half of it always has sunlight, always, always.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Those different shapes we see have a name.",
+      "utterance_coloquial": "Those different shapes that we see, they have a name.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Phases",
+            "role": "subtitulo",
+            "group": "fases"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "The different shapes of the Moon are called **phases**",
+            "role": "cuerpo",
+            "group": "fases"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "When we cannot see it at all, it is called a new Moon.",
+      "utterance_coloquial": "When we can't see it at all, nothing, that's the new Moon.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "New Moon",
+            "group": "fases"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "A few days later a thin sliver appears: a crescent.",
+      "utterance_coloquial": "A few days later a thin little sliver shows up, a crescent, a cres-cent.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Crescent",
+            "group": "fases"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "days later"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Crescent. Say it with me: crescent. Good.",
+      "utterance_coloquial": "Crescent. Say it with me. Crescent. Good, good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "About a week after the new Moon, we see half a circle.",
+      "utterance_coloquial": "About a week after the new Moon we see, like, half a circle.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "First quarter",
+            "group": "fases"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "about 7 days"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "It is called a quarter because the Moon has finished a quarter of its trip, not because we see a quarter.",
+      "utterance_coloquial": "It's called a quarter because it did a quarter of its trip around, not because we see a quarter. Eh, that's confusing, I know.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "A **quarter** Moon has gone a quarter of the way around the Earth",
+            "role": "cuerpo",
+            "group": "fases"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Then it keeps growing and it is almost round: that is gibbous.",
+      "utterance_coloquial": "Then it keeps growing, almost round, and that's gibbus, gibbous.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Gibbous",
+            "group": "fases"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "growing"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "And finally it is completely round: a full Moon.",
+      "utterance_coloquial": "And finally, completely round. The full Moon.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Full Moon",
+            "group": "fases"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "growing"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "What happens after the full Moon? Does it stay like that? Ana says it goes back. Yes, it gets smaller.",
+      "utterance_coloquial": "And after the full Moon? Does it stay like that forever? Ana says it goes back. Yes, Ana, it gets smaller again.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "After the full Moon it shrinks again, with a quarter on the other side, and then we are back at the start.",
+      "utterance_coloquial": "After the full Moon it shrinks again, a quarter again but on the other side, and then, boom, back to the start.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Last quarter",
+            "group": "fases"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "shrinking"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_9",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "back to start"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "When it is getting bigger we say waxing, and when it is getting smaller, waning.",
+      "utterance_coloquial": "When it's getting bigger we say waxing, when it's getting smaller, waning.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "While it grows it is **waxing**, and while it shrinks it is **waning**",
+            "role": "cuerpo",
+            "group": "fases"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Waxing is growing. Waning is shrinking.",
+      "utterance_coloquial": "Waxing, growing. Waning, shrinking. Okay? Waxing, waning.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "So many names, I know. Do not panic, we will practice them.",
+      "utterance_coloquial": "So many names, I know, I know. Don't panic, we'll practice them.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "And then it all starts over, again and again, every month.",
+      "utterance_coloquial": "And then it all starts again, again and again, every single month.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "The phases repeat in the same order, a **cycle** of about 29 days",
+            "role": "cuerpo",
+            "group": "fases"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 31,
+      "utterance_formal": "My grandmother says she plants by the Moon. A nice story, but let us stick to what we know.",
+      "utterance_coloquial": "Ah, my grandmother plants by the Moon, she says. Nice story, nice, but let's stick with what we know, ha.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Some people think the Earth's shadow covers the Moon, but that is not what makes the phases.",
+      "utterance_coloquial": "Some people think the shadow of the Earth covers the Moon. No, no, that's not what makes the phases.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Why the phases happen",
+            "role": "subtitulo",
+            "group": "causa"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "The phases are not caused by the shadow of the Earth",
+            "role": "cuerpo",
+            "group": "causa"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "The Earth's shadow does fall on the Moon sometimes, but that is an eclipse and it is rare.",
+      "utterance_coloquial": "The Earth's shadow does fall on the Moon sometimes, but that's an eclipse, and those are rare.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "The phases are not caused by the shadow of the Earth, which falls on the Moon only in an **eclipse**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Who has seen an eclipse? Nobody? They are rare.",
+      "utterance_coloquial": "Who's seen an eclipse? Anybody? No? Yeah, they're rare.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "What changes is where the Moon is and how we see its lit half from here.",
+      "utterance_coloquial": "What changes is where the Moon is, and how much of its lit half we, um, see from here.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "We see more or less of the **lit half** depending on where the Moon is",
+            "role": "cuerpo",
+            "group": "causa"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 36,
+      "utterance_formal": "The Moon itself never changes shape.",
+      "utterance_coloquial": "The Moon itself, it never changes shape, never.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "We see more or less of the **lit half** depending on where the Moon is, so the Moon itself never changes shape"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "At new Moon the lit half faces away from us, so we cannot see it.",
+      "utterance_coloquial": "At new Moon the lit half faces away from us, that's why we can't see anything.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "At new Moon the lit half faces away from the Earth, so we cannot see it",
+            "role": "cuerpo",
+            "group": "causa"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 38,
+      "utterance_formal": "And it rises and sets with the Sun, so it is up in the daytime sky.",
+      "utterance_coloquial": "And it rises and sets with the Sun, so it's up there in the daytime, we just can't see it.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "At new Moon the lit half faces away from the Earth, so we cannot see it, and it is up in the daytime sky"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "A full Moon rises when the Sun sets and stays up all night.",
+      "utterance_coloquial": "A full Moon comes up when the Sun goes down and stays up all, all night.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "A full Moon rises when the Sun sets, and it sets when the Sun rises",
+            "role": "cuerpo",
+            "group": "causa"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Going back: it takes about a month to go around the Earth.",
+      "utterance_coloquial": "Going back a bit: it takes about a month to go all the way around the Earth.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Teacher, does the Moon spin? Great question; we will leave it for another day.",
+      "utterance_coloquial": "Teacher, does the Moon spin? Ooh, good question, good, but let's leave it for another day.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "For homework, look at the sky for a week at the same time each night and see what shape you find.",
+      "utterance_coloquial": "For homework, look up at the sky for a week, same time every night, and see what shape you find.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Moon diary",
+            "role": "subtitulo",
+            "group": "dia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Observe the Moon each night and note its **shape**",
+            "role": "cuerpo",
+            "group": "dia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Always at the same time, so you can compare.",
+      "utterance_coloquial": "Always the same time, so you can compare them, okay?",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_24",
+            "set": {
+              "text": "Observe the Moon each night and note its **shape**, always at the same time"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Ask your parents to help, and do not go out alone at night.",
+      "utterance_coloquial": "And ask your parents to help you, eh, and nobody goes out alone at night.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_24",
+            "set": {
+              "text": "Observe the Moon each night and note its **shape**, always at the same time. Ask your parents to help, and do not go out alone at night"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "So, back to our question: we see different amounts of the lit half as the Moon goes around the Earth.",
+      "utterance_coloquial": "So, going back to our question, what do you say? We see more or less of the lit half as the Moon goes around.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "The phases come from how much of the **lit half** we see as the Moon goes around the Earth",
+            "role": "cuerpo",
+            "group": "causa"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 46,
+      "utterance_formal": "Let us go through them once more: new, crescent, quarter, gibbous, full, and a quarter again.",
+      "utterance_coloquial": "One more time: new, crescent, quarter, gibbous, full, and the other quarter.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_4",
+              "concepto_1_5",
+              "concepto_1_6",
+              "concepto_1_7",
+              "concepto_1_8",
+              "concepto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "Great work today. Pack your things.",
+      "utterance_coloquial": "Great work today, great. Pack your things, the bell's about to ring.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

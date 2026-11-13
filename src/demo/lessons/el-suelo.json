@@ -1,0 +1,1112 @@
+{
+  "id": "el-suelo",
+  "tema": "Soil, its layers and why it matters",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student understands that soil is a mixture of tiny rock pieces and the remains of living things, that it forms very slowly, that it has layers, and that plants and animals depend on it and need it protected from erosion.",
+  "hatsumon": "Why do plants grow in the ground and not on the pavement?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Please sit down and get settled.",
+      "utterance_coloquial": "Okay, good morning everyone, uh, please sit down, sit down, let's get settled.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "This morning I took something from the school garden. Can anyone guess what is in this jar?",
+      "utterance_coloquial": "So, this morning I, I went to the garden and I brought something. Who can guess what's in the jar?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Some of you say dirt. That is a good start, but scientists have a better word for it.",
+      "utterance_coloquial": "Dirt, yeah, some of you said dirt. Mm, okay, it's a start, but, hmm, there's a better word.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Think about it: why do plants grow in the garden but not on the sidewalk?",
+      "utterance_coloquial": "Think about it, eh, why do plants grow in the garden and not, you know, on the sidewalk?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Let's look closely. I'm pouring some onto a sheet of paper. What do you see?",
+      "utterance_coloquial": "Let's look close. I'm gonna pour a little on the paper, the paper, what do you see?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Yes, tiny pieces of rock, and also dry leaves and thin roots.",
+      "utterance_coloquial": "Yeah, little, little pieces of rock, and, uh, dry leaves, and thin roots, see them?",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "What soil is made of",
+            "role": "subtitulo",
+            "group": "made"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The jar holds tiny pieces of **rock**, dry leaves and thin roots",
+            "role": "cuerpo",
+            "group": "made"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Careful, please do not taste it, Mateo. Hands clean afterwards.",
+      "utterance_coloquial": "Mateo, no, no, don't taste it! Hands, wash them after, okay?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "This mixture, with all those pieces together, is what we call soil.",
+      "utterance_coloquial": "So this mixture, all this together, this is what we call soil.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Soil",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Besides rock, soil has the remains of dead plants and animals mixed in.",
+      "utterance_coloquial": "And besides the rock, soil has, mm, remains of dead plants and animals, all mixed in.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "The jar holds tiny pieces of **rock**, dry leaves and thin roots, mixed with remains of dead plants and animals"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "That dark, crumbly part that comes from rotten leaves is called humus.",
+      "utterance_coloquial": "That dark crumbly part, from rotten leaves, that's called hue-mus.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "The jar holds tiny pieces of **rock**, dry leaves and thin roots, mixed with remains of dead plants and animals, whose dark crumbly part is **humus**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Humus, humus. Say it with me.",
+      "utterance_coloquial": "Humus, humus, say it with me, come on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Where do the tiny pieces of rock come from? Think of a big rock outside.",
+      "utterance_coloquial": "Where does the, the rock part come from? Think of a, a big rock out in the yard.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Big rock",
+            "group": "made"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Wind, rain and ice hit the rock for years, and little by little it cracks.",
+      "utterance_coloquial": "Wind and rain and ice keep hitting the rock for years and years and it cracks, little by little.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Wind, rain and ice crack big **rocks** for years",
+            "role": "cuerpo",
+            "group": "made"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Eventually the big rock breaks into tiny grains.",
+      "utterance_coloquial": "So at some point the big rock breaks into, like, tiny grains.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "Wind, rain and ice crack big **rocks** for years, until they break into tiny grains."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Tiny grains",
+            "group": "made"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "breaks into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Meanwhile, dead leaves fall on the ground and rot.",
+      "utterance_coloquial": "And meanwhile, hmm, dead leaves fall on the ground and they rot.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Dead leaves",
+            "group": "made"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "When they rot, they turn into humus.",
+      "utterance_coloquial": "And when they rot, the leaves, they turn into, uh, humus.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Humus",
+            "group": "made"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "rot into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Does anyone know what makes leaves rot? Tiny living things. We'll come back to them.",
+      "utterance_coloquial": "Anybody know what makes leaves rot? Little tiny living things, we're gonna, we'll come back to that.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Grains and humus end up mixed together, and that mix is soil.",
+      "utterance_coloquial": "Then the grains and the humus end up mixed up together, and that mix, that's the soil.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Soil",
+            "group": "made"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_2",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "mix"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "mix"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "And it is slow: about one hundred years to make a single centimeter of soil.",
+      "utterance_coloquial": "And it's so slow, eh, like a hundred years to make one centimeter of soil, one!",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Making just 1 cm of **soil** takes about 100 years",
+            "role": "cuerpo",
+            "group": "made"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "A hundred years! Your great-grandparents were young when this centimeter started.",
+      "utterance_coloquial": "A hundred years! Your, your great-grandparents were kids when that centimeter started, imagine.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Now suppose we dug a very deep hole in the garden. What would we find?",
+      "utterance_coloquial": "Now if we dig a really deep hole in the garden, what do we find, down there?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Layers of soil",
+            "role": "subtitulo",
+            "group": "layers"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "At the top, the soil is dark, soft and full of roots and worms.",
+      "utterance_coloquial": "Right at the top the soil is dark, soft, lots of roots and worms, you see?",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Dark, soft **topsoil** on top holds roots, worms and humus",
+            "role": "cuerpo",
+            "group": "layers"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Topsoil",
+            "group": "layers"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Under it, the soil is lighter, harder and has more clay, with little life.",
+      "utterance_coloquial": "Underneath it's lighter, harder, it has more clay, almost no life in there.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Lighter, harder **subsoil** has more clay and little life",
+            "role": "cuerpo",
+            "group": "layers"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Subsoil",
+            "group": "layers"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "above"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Below everything there is solid rock that has not broken up.",
+      "utterance_coloquial": "And way below everything, solid rock, the rock that hasn't broken up yet.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Solid **bedrock** lies below, unbroken",
+            "role": "cuerpo",
+            "group": "layers"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Bedrock",
+            "group": "layers"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "above"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "So from the top: topsoil, subsoil and bedrock. Which one has the most life?",
+      "utterance_coloquial": "From the top, top soil, subsoil, bed rock. Which one has the most life, who knows?",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Topsoil, exactly. You said it, Valeria: roots and worms live up there.",
+      "utterance_coloquial": "Top soil, yes, Valeria said it, that's where roots and worms live.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Let's go through the layers again, from the top.",
+      "utterance_coloquial": "Okay, the layers again, from the top, from the top.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_6",
+              "concepto_1_7",
+              "concepto_1_8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Now, not all soils are the same. Some are sandy and some are sticky.",
+      "utterance_coloquial": "Now, not all soils are the same, eh, some are sandy and some are, like, sticky.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Types of soil",
+            "role": "subtitulo",
+            "group": "types"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Sand has big grains and water drains through it fast. Clay has tiny grains and holds water.",
+      "utterance_coloquial": "Sand has big grains and the water runs right through, and clay, clay has tiny tiny grains and it holds water.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "**sand**: big grains, water drains fast\n**clay**: tiny grains, holds water",
+            "role": "lista",
+            "group": "types"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Who has played with wet clay? It sticks to your hands, right?",
+      "utterance_coloquial": "Who's played with wet clay? It sticks to your hands, right? Yeah, yeah.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "A mix of both is called loam, and plants love it.",
+      "utterance_coloquial": "A mix of the two, that's called loan, and plants love it.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "A balanced mix called **loam** is best for growing plants",
+            "role": "cuerpo",
+            "group": "types"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Loam holds water, but it still drains well. That is why gardeners love it.",
+      "utterance_coloquial": "Loam holds the water but it still drains well, that is why gardeners love it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "A balanced mix called **loam** is best for growing plants, since it holds water yet drains well."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Okay, loam is the winner. Let's move to why soil matters.",
+      "utterance_coloquial": "Okay, loam wins. Let's, let's move on to why soil matters.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Plants anchor their roots in the soil and take water and nutrients from it.",
+      "utterance_coloquial": "Plants hold on with their rutes in the soil and they take water and, and nutrients from it.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Why soil matters",
+            "role": "subtitulo",
+            "group": "matters"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Plant",
+            "group": "matters"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_5",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "nutrients"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Earthworms, ants and beetles also live in it.",
+      "utterance_coloquial": "Earthworms and ants and beetles, they all live in it too.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Earthworm",
+            "group": "matters"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_5",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "home"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Hold on, who just said spiders? Yes, some spiders too. Back to your seat.",
+      "utterance_coloquial": "Wait, who said spiders? Yes, some spiders too, okay, Dani, back to your seat.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Rainwater seeps through the soil and comes out cleaner.",
+      "utterance_coloquial": "And rainwater goes through the soil and comes out cleaner on the other side.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Rainwater",
+            "group": "matters"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_11",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "filtered"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "And the food we eat comes from plants that grew in soil.",
+      "utterance_coloquial": "And, uh, the food we eat, almost all of it, comes from plants that grew in soil.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Plants growing in soil give us most of our **food**",
+            "role": "cuerpo",
+            "group": "matters"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Think about your lunch: rice, beans, tortillas. All of it began in soil.",
+      "utterance_coloquial": "Think of your lunch, rice, beans, tortillas, all of it started in the soil.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "Plants growing in soil give us most of our **food**, such as rice, beans and corn."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Rain, however, can also take soil away when the ground is bare.",
+      "utterance_coloquial": "But rain can also carry the soil away when the ground is bare, so, careful.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Losing soil",
+            "role": "subtitulo",
+            "group": "erosion"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Rain",
+            "group": "erosion"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "When wind and water carry away the top layer, we call it erosion.",
+      "utterance_coloquial": "When the wind and the water carry the top layer away, that's called a rosion.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Erosion",
+            "group": "erosion"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_12",
+            "to": "concepto_1_13",
+            "style": "arrow",
+            "label": "causes"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_13",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "carries away"
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Roots grip the soil and keep it in place.",
+      "utterance_coloquial": "Roots grab the soil and they keep it, you know, in its place.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_14",
+            "object": "concepto",
+            "label": "Roots",
+            "group": "erosion"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_14",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "hold"
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "That is why cutting down trees and leaving the ground bare is risky.",
+      "utterance_coloquial": "That's why, mm, cutting down all the trees and leaving the ground bare is risky.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Bare ground loses its **topsoil** to wind and rain, while roots hold it.",
+            "role": "cuerpo",
+            "group": "erosion"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Farmers plant trees and grass on bare fields to stop it. Smart, right?",
+      "utterance_coloquial": "Farmers plant trees and grass on, on the bare fields to stop it, smart, right?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Bare ground loses its **topsoil** to wind and rain, while roots hold it. So farmers plant trees and grass to protect it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Did everyone get that? The roots hold the soil.",
+      "utterance_coloquial": "Did everybody get that? Roots, holding the soil, the roots.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_14",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Erosion again: what carries away the top layer? Wind and water.",
+      "utterance_coloquial": "Erosion, again, what carries away the top layer? Wind and water, right.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "So, back to our question about the sidewalk.",
+      "utterance_coloquial": "So, back to our question, the sidewalk one, remember?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "The sidewalk has no soil, so roots can't hold on or find water.",
+      "utterance_coloquial": "On the sidewalk there's no soil, so the roots can't hold on or find water.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "The sidewalk has no soil, so roots cannot hold on or find water.",
+            "role": "cuerpo",
+            "group": "matters"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 48,
+      "utterance_formal": "Plants grow in soil because it holds their roots and gives them water and nutrients.",
+      "utterance_coloquial": "Plants grow in soil because it holds the roots, and gives water and nutrients, that's the answer.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "The sidewalk has no soil, so roots cannot hold on or find water. Plants grow in soil because it holds their roots and gives them **water** and **nutrients**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 49,
+      "utterance_formal": "Good. Pencils down for a second, listen.",
+      "utterance_coloquial": "Good, good. Pencils down for a sec, listen to me.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 50,
+      "utterance_formal": "For tomorrow, each of you will bring a handful of soil from home, in a small bag.",
+      "utterance_coloquial": "For tomorrow, everybody brings a handful of soil from home, in a little bag, okay?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Bring from home",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Bring a handful of soil from home in a small bag.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 51,
+      "utterance_formal": "Soil from a garden, not from a flowerpot with store-bought stuff, please.",
+      "utterance_coloquial": "From a garden, not from, uh, a flowerpot with the store stuff, please.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_22",
+            "set": {
+              "text": "Bring a handful of soil from home in a small bag. Take it from a garden, not from a flowerpot with store-bought soil."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 52,
+      "utterance_formal": "Alright, that's it. Line up for recess, slowly.",
+      "utterance_coloquial": "Alright, that's it, line up for recess, slowly, slowly.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

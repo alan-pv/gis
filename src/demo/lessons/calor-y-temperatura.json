@@ -1,0 +1,1027 @@
+{
+  "id": "calor-y-temperatura",
+  "tema": "Heat and temperature",
+  "sesgo": "mixto",
+  "objetivo": "That the student distinguishes temperature (how hot or cold something is, measured with a thermometer) from heat (energy that moves from hot to cold), and explains why a hot drink cools down.",
+  "hatsumon": "Why does a hot drink get cold if we leave it on the desk?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Please take a seat and open your notebooks.",
+      "utterance_coloquial": "Okay, good morning, everybody, uh, sit down please, open your notebooks.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "I brought two cups today. One has hot water from the kettle and the other has water from the refrigerator.",
+      "utterance_coloquial": "So, I brought two cups today, eh. One's got hot water from the kettle and the other one, water from the fridge.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Sofia, would you come up and touch both cups? Carefully, please.",
+      "utterance_coloquial": "Sofia, can you come up and, and touch both cups? Careful, eh.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Here's something I wonder about: if I leave my coffee on the desk, why is it cold when I come back?",
+      "utterance_coloquial": "Here's what I wonder: if I leave my coffee on the desk, how come it's cold when I come back?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Sofia says one cup is hot and the other is cold.",
+      "utterance_coloquial": "Sofia says one cup is hot and the other one is, is cold. Right.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Hot and cold",
+            "role": "subtitulo",
+            "group": "feel"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "One cup holds hot water and the other holds cold water.",
+            "role": "cuerpo",
+            "group": "feel"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Daniel, did you say your hands feel cold in winter? That's a good example. We'll come back to it.",
+      "utterance_coloquial": "Daniel, you said your hands feel cold in the winter? Good example, we'll get back to that.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Our senses can tell hot from cold, but they're not very reliable. Put one hand in warm water and the other in cold, then both in lukewarm water, and the lukewarm water feels different to each hand.",
+      "utterance_coloquial": "Our hands can tell hot from cold, but, but they fool us, eh. Hand in warm water, the other in cold, then both in lukewarm and the lukewarm feels different to each one.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "One cup holds hot water and the other holds cold water. Our hands can be fooled: the same lukewarm water feels hot to one hand and cold to the other."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Temperature and heat are not the same thing, even though we use the words as if they were.",
+      "utterance_coloquial": "Temperature and heat are not the, the same thing, even though we mix them up all the time.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Heat and Temperature",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "So we need a better way to measure how hot something is.",
+      "utterance_coloquial": "So we need a better way to, to measure how hot something is.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Temperature",
+            "role": "subtitulo",
+            "group": "temp"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "We need a better way to measure how hot something is.",
+            "role": "cuerpo",
+            "group": "temp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Temperature tells us how hot or cold something is.",
+      "utterance_coloquial": "Temperature is how hot or how cold something is, okay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_7",
+            "set": {
+              "text": "We need a better way to measure how hot something is. **Temperature** tells how hot or cold something is."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "It is measured with a thermometer, which has a thin tube with a liquid inside.",
+      "utterance_coloquial": "We measure it with a ther mom e ter, that thing with a thin tube and a liquid inside.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_7",
+            "set": {
+              "text": "We need a better way to measure how hot something is. **Temperature** tells how hot or cold something is. A **thermometer** measures it."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Thermometer",
+            "group": "temp"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_6",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Has anyone seen one at home? Yes, Marco, the one your mom uses when you have a fever.",
+      "utterance_coloquial": "Anybody seen one at home? Yes, Marco, the one your mom uses when you've got a fever.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "When the thermometer gets warm, the liquid inside rises in the tube, and when it cools, the liquid goes down.",
+      "utterance_coloquial": "When the thermometer warms up, the liquid goes up the tube, and when it cools off, it goes back down.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "The liquid in a thermometer rises when it warms and drops when it cools.",
+            "role": "cuerpo",
+            "group": "temp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "The numbers are in degrees Celsius. Water freezes at 0 degrees and boils at 100 degrees.",
+      "utterance_coloquial": "The numbers are degrees Celsius. Water freezes at zero degrees and boils at a hundred.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "0 °C: water freezes\n37 °C: human body\n100 °C: water boils",
+            "role": "enumeracion",
+            "group": "temp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "A body temperature of 38 degrees or more means a fever.",
+      "utterance_coloquial": "So thirty eight degrees or more, that's a fever, eh.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "A body temperature of 38 °C or more is a **fever**.",
+            "role": "cuerpo",
+            "group": "temp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Okay, who remembers what a thermometer measures? Raise your hand.",
+      "utterance_coloquial": "Okay, who remembers what a ther mo meter measures? Hands up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Right, temperature, how hot or cold something is.",
+      "utterance_coloquial": "Right, temperature, how hot or cold something is.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Now let's talk about heat. Heat is energy.",
+      "utterance_coloquial": "Now let's talk about heat. Heat is a, an energy.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Heat",
+            "role": "subtitulo",
+            "group": "heat"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "**Heat** is energy that moves from one thing to another.",
+            "role": "cuerpo",
+            "group": "heat"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Think of a cup of hot tea on a cold day. The tea gives energy to the air around it.",
+      "utterance_coloquial": "Think about a hot tea on a cold day. The tea gives its energy to the air around, okay.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Hot tea",
+            "group": "heat"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Cold air",
+            "group": "heat"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "heat moves"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Heat always travels from the hotter thing to the colder thing, never the other way around.",
+      "utterance_coloquial": "Heat always goes from the hotter thing to the colder thing, never the other way around.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Heat always travels from the hotter thing to the colder one.",
+            "role": "cuerpo",
+            "group": "heat"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Speaking of soup, the cafeteria soup yesterday was not the best I ever had.",
+      "utterance_coloquial": "Speaking of soup, the cafeteria soup yesterday, eh, not the best I ever had, haha.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "When you hold an ice cube, your hand is warmer than the ice, so heat goes from your hand into the ice.",
+      "utterance_coloquial": "When you hold an ice cube, your hand's warmer than the ice, so the heat goes from your hand to the ice.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Warm hand",
+            "group": "heat"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Ice cube",
+            "group": "heat"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "heat moves"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "So the ice doesn't give coldness to your hand; your hand gives heat to the ice.",
+      "utterance_coloquial": "So the ice isn't giving you cold; your hand's giving heat to the ice.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "The ice does not give coldness to the hand: the hand gives **heat** to the ice.",
+            "role": "cuerpo",
+            "group": "heat"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "And as the ice receives heat, it melts and becomes liquid water.",
+      "utterance_coloquial": "And as the ice gets that heat, it melts, becomes liquid water.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Liquid water",
+            "group": "heat"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "melts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Ice is a solid and water is a liquid, so heat made the ice change its state.",
+      "utterance_coloquial": "Ice is a solid, water's a liquid, so the heat made the ice change state.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Heat makes ice change from solid to liquid, called **melting**.",
+            "role": "cuerpo",
+            "group": "heat"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Hold on, somebody's phone is ringing. Whose is it? Put it away, please.",
+      "utterance_coloquial": "Hold on, somebody's phone is ringing. Whose is it? Put it away, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Back to the lesson. So the warm hand loses heat and the ice gains heat.",
+      "utterance_coloquial": "Okay, back to it. So the warm hand loses heat and the ice gains heat.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "Heat makes ice change from solid to liquid, called **melting**. The warm hand loses heat and the ice gains it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Does everything pass heat at the same speed? Let's find out with spoons.",
+      "utterance_coloquial": "Does everything pass heat at the same speed? Let's see, with the, the spoons.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "I have a metal spoon, a wooden spoon, and a plastic spoon, and all three are standing in a bowl of hot soup.",
+      "utterance_coloquial": "I've got a metal spoon, a wood spoon and a plastic one, all three sitting in a bowl of hot soup.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Good and poor conductors",
+            "role": "subtitulo",
+            "group": "cond"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Metals such as steel and copper carry **heat** fast.",
+            "role": "cuerpo",
+            "group": "cond"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "After a minute, which handle would you touch first? Not the metal one, right?",
+      "utterance_coloquial": "After a minute, which handle would you touch first? Not the metal, right?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "Metals such as steel and copper carry **heat** fast. A metal handle gets too hot to touch after a minute."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "The metal handle gets hot quickly, but wood and plastic stay almost the same.",
+      "utterance_coloquial": "The metal handle heats up fast, but the wood and the plastic hardly change.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Wood and plastic carry heat slowly, so they are **insulators**.",
+            "role": "cuerpo",
+            "group": "cond"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 31,
+      "utterance_formal": "That's why pot handles are made of plastic or wood, and the pot itself is made of metal.",
+      "utterance_coloquial": "That's why pot handles are plastic or wood, and the pot, metal.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Metal pot",
+            "group": "cond"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Plastic handle",
+            "group": "cond"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "joined to"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_15",
+            "to": "concepto_1_7",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "A thermos works the same way: it slows down heat leaving the hot soup so it stays warm longer.",
+      "utterance_coloquial": "A thermos is the same idea: it slows down the heat leaving the hot soup so it stays warm longer.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "A **thermos** keeps soup hot because it slows down heat leaving it.",
+            "role": "cuerpo",
+            "group": "cond"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "What does heat do to things? It can melt ice, warm water, and make a thermometer rise.",
+      "utterance_coloquial": "What does heat do to things? It melts the ice, warms the water, makes the ther mo meter go up.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "Heat makes ice change from solid to liquid, called **melting**. The warm hand loses heat and the ice gains it. Heat can also warm water and make a thermometer rise."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "When something loses heat, the opposite happens: water freezes and the temperature goes down.",
+      "utterance_coloquial": "When something loses heat, the opposite: water freezes, the temperature goes down.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "Heat makes ice change from solid to liquid, called **melting**. The warm hand loses heat and the ice gains it. Heat can also warm water and make a thermometer rise. When heat is lost, water freezes and the temperature drops."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "The water in the first cup is the hot one, so its temperature is high; the second one has a low temperature.",
+      "utterance_coloquial": "The first cup's water is the hot one, so its temperature's high; the second has a low temperature.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "If I put both cups next to each other, what will happen to the hot water? Say it together.",
+      "utterance_coloquial": "If I put both cups together, what happens to the hot water? Say it with me.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "It gives heat to the cold water, so one cools down and the other warms up, until both reach the same temperature.",
+      "utterance_coloquial": "It gives heat to the cold water, one cools, the other warms up, until they reach the same temperature.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Reaching the same temperature",
+            "role": "subtitulo",
+            "group": "eq"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "The hot water gives **heat** to the cold water until both have the same temperature.",
+            "role": "cuerpo",
+            "group": "eq"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Hot cup",
+            "group": "eq"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Cold cup",
+            "group": "eq"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_9",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "heat moves"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "And what about my coffee on the desk, the one from the beginning?",
+      "utterance_coloquial": "And what about my coffee on the desk, the one from the start?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "The coffee is warmer than the room, so it gives heat to the air, and little by little it cools down to room temperature.",
+      "utterance_coloquial": "The coffee's hotter than the room, so it gives heat to the air, and little by little it cools off to room temperature.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "The drink is warmer than the room, so it gives heat to the air until it reaches **room temperature**.",
+            "role": "cuerpo",
+            "group": "eq"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Coffee",
+            "group": "eq"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Room air",
+            "group": "eq"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_11",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "heat moves"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "So the cup isn't losing cold; it's losing heat.",
+      "utterance_coloquial": "So the cup isn't losing cold, eh. It's losing heat.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Let's recap: heat travels from hot to cold, and the thermometer measures the temperature.",
+      "utterance_coloquial": "Okay, recap: heat goes from hot to cold, and the thermometer tells the temperature.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12",
+              "concepto_1_1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Remember the numbers: 0 degrees, 37 degrees, and 100 degrees.",
+      "utterance_coloquial": "Remember the numbers: zero, thirty seven, a hundred.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For tomorrow, measure the temperature of a glass of water at home in the morning and in the afternoon.",
+      "utterance_coloquial": "For tomorrow, measure a glass of water at home, in the morning and then in the afternoon.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "home"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Measure the temperature of a glass of water in the morning and in the afternoon.",
+            "role": "cuerpo",
+            "group": "home"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Compare both numbers and tell me which one was higher and why you think so.",
+      "utterance_coloquial": "Compare the two numbers and tell me which was higher and why you think so.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "Measure the temperature of a glass of water in the morning and in the afternoon. Compare which number is higher."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Good. Line up quietly for recess.",
+      "utterance_coloquial": "Good. Line up quietly for recess.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

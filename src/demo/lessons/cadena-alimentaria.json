@@ -1,0 +1,772 @@
+{
+  "id": "cadena-alimentaria",
+  "tema": "The food chain",
+  "sesgo": "texto-primero",
+  "objetivo": "For the student to identify producers, consumers, and decomposers, and understand that energy flows from the Sun to all living things along a chain.",
+  "hatsumon": "Where do living things get the energy they need to live?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Today we're going to study the food chain.",
+      "utterance_coloquial": "Alright, morning everybody… heads up, today we're looking at the food chain.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Food Chain",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "And keep this question in mind for the whole class: where do living things get their energy to live?",
+      "utterance_coloquial": "And hang on to this question all class long: where do living things get their en ergy to live?",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Take out your notebooks and put today's date, please. I'll wait for you.",
+      "utterance_coloquial": "Take out your notebooks and put the date, go on… I'll wait a sec.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Let's start with what you already know. What does every living thing need in order to live? Exactly: energy.",
+      "utterance_coloquial": "Okay, from what you already know: what does every living thing need to live?… that's right, en ergy.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Energy",
+            "role": "subtitulo",
+            "group": "energia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "All living things need **energy**.",
+            "role": "cuerpo",
+            "group": "energia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "And where does all that energy come from? From the Sun.",
+      "utterance_coloquial": "And where does all that energy come from?… from the Sun, guys.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "sol_1_4",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "energia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "The Sun is the source of all the energy for living things.",
+      "utterance_coloquial": "The Sun, our little Sun, is the source of all the energy for living things.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The Sun is the source of all **energy**.",
+            "role": "cuerpo",
+            "group": "energia"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "texto_1_5",
+            "to": "sol_1_4",
+            "style": "arrow",
+            "label": "is the source"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Does everyone have it? Great, let's continue.",
+      "utterance_coloquial": "Everybody got it? Yes or no?… okay, moving on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "The food chain shows who eats whom. That is its definition.",
+      "utterance_coloquial": "The food chain shows who eats whom, plain and simple. That's the definition.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The Sun is the source of all **energy**. A **food chain** shows who eats whom."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Living things are grouped into three. The first group, are the producers: they make their own food.",
+      "utterance_coloquial": "Living things are grouped into three. The first one, the producers: they make their own food.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Producers",
+            "role": "subtitulo",
+            "group": "col_prod"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Producers make their own food",
+            "role": "cuerpo",
+            "group": "col_prod"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "And how do they make it? Through photosynthesis. That's how producers make their own food.",
+      "utterance_coloquial": "And how do they do it?… through photo synthesis. That's how the producers do it.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Producers make their own food through **photosynthesis**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "For example, grass, trees, and plants are producers. Make a list.",
+      "utterance_coloquial": "For example grass, trees, plants are producers… make me a little list.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "grass\ntrees\nplants",
+            "role": "lista",
+            "group": "col_prod"
+          },
+          {
+            "op": "add",
+            "id": "arbol_1_26",
+            "object": "concepto",
+            "label": "tree",
+            "group": "col_prod"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_7",
+            "to": "arbol_1_26",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Did you all copy down the producers? Perfect.",
+      "utterance_coloquial": "Did you copy down the producers?… alright, very good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The second group, are the consumers: they don't make their own food, they eat other living things.",
+      "utterance_coloquial": "The second group, the consumers: these guys don't make anything, they eat other living things.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Consumers",
+            "role": "subtitulo",
+            "group": "col_cons"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Consumers eat **other living things**, since they don't make their own food.",
+            "role": "cuerpo",
+            "group": "col_cons"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_7",
+            "to": "texto_1_11",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "And there are three types of consumers: primary consumers eat plants, secondary consumers eat animals, and tertiary consumers eat everything. Number them.",
+      "utterance_coloquial": "And there's three types of con sumers: primary ones eat plants, secondary ones eat animals, and tertiary ones eat everything. Number them.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Primary: eat plants\nSecondary: eat animals\nTertiary: eat everything",
+            "role": "enumeracion",
+            "group": "col_cons"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Examples of consumers: the rabbit, the frog, and the eagle. Another list.",
+      "utterance_coloquial": "Examples of consumers: the rabbit, the frog, the eagle… another little list.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "rabbit\nfrog\neagle",
+            "role": "lista",
+            "group": "col_cons"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "I'll repeat in case you didn't catch it: producers and consumers. Are we good?",
+      "utterance_coloquial": "Let me repeat real quick in case you didn't catch it: producers and consumers… we good, or should I wait?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "We're missing the third group: the decomposers, which break down the remains of plants and animals.",
+      "utterance_coloquial": "We still need the third group: the de composers, which break down the remains of plants and animals.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Decomposers",
+            "role": "subtitulo",
+            "group": "col_desc"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Decomposers break down the **remains** of plants and animals.",
+            "role": "cuerpo",
+            "group": "col_desc"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "texto_1_11",
+            "to": "texto_1_15",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Fungi, bacteria, and worms are decomposers. List them.",
+      "utterance_coloquial": "Fungi, bacteria, worms, those are decomposers… your little list.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "fungi\nbacteria\nworms",
+            "role": "lista",
+            "group": "col_desc"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "And very important: decomposers return nutrients to the soil so plants can grow again.",
+      "utterance_coloquial": "And listen up, this is important: decomposers put the new trients back in the soil so the plants can grow again.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Decomposers return **nutrients** to the soil so plants can grow again.",
+            "role": "cuerpo",
+            "group": "col_desc"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Soil",
+            "group": "col_desc"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "texto_1_15",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "feeds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_5",
+            "to": "arbol_1_26",
+            "style": "arrow",
+            "label": "helps grow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Any questions so far? No? Let's continue.",
+      "utterance_coloquial": "Any questions so far?… no? Alright, moving on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Now let's build an example chain: the grass gets eaten by the rabbit.",
+      "utterance_coloquial": "Now we're gonna build a little example chain: the grass gets eaten by the rabbit.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "An example chain",
+            "role": "subtitulo",
+            "group": "cadena"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "Grass is eaten by the **rabbit**.",
+            "role": "cuerpo",
+            "group": "cadena"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Grass",
+            "group": "cadena"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Rabbit",
+            "group": "cadena"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "gets eaten by"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "And the rabbit gets eaten by the fox. Another arrow.",
+      "utterance_coloquial": "And the rabbit, by who?… the fox eats it. Another little arrow.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Fox",
+            "group": "cadena"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "gets eaten by"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "And when the fox dies, fungi decompose it. I'll close the chain with another arrow.",
+      "utterance_coloquial": "And when the fox dies, fungi break it down. I'll close the chain with another arrow.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Fungi",
+            "group": "cadena"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "decompose"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "And it all starts with energy from the Sun, which reaches the grass.",
+      "utterance_coloquial": "And it all starts with energy from the Sun, which gets to the grass.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "sol_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "See how it all connects, from the Sun to the fungi? And that first step, the grass using the Sun's energy to make its food, is what we call photosynthesis.",
+      "utterance_coloquial": "See how it all connects, from the Sun all the way to the fungi?… and that first step, the grass using the Sun's energy to make its food, that's what we call pho to synthesis.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_4",
+            "text": "photosynthesis"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_29",
+            "object": "texto",
+            "text": "Energy passes from the Sun through the grass all the way to the fungi.",
+            "role": "cuerpo",
+            "group": "cadena"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Look at the three key words from class: producers, consumers, and decomposers.",
+      "utterance_coloquial": "Take a good look at today's three key words: producers, consumers, and decomposers.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7",
+              "texto_1_11",
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "In summary, energy travels like this: from the Sun to the producers, then the consumers, then the decomposers.",
+      "utterance_coloquial": "In summary, energy goes like this: from the Sun to the producers, then the consumers, then the decomposers.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "sol_1_4",
+              "texto_1_7",
+              "texto_1_11",
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Let's remember what each group does: producers make, consumers eat, and decomposers recycle.",
+      "utterance_coloquial": "Let's remember what everybody does: producers make, consumers eat, decomposers recycle.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_8",
+              "texto_1_12",
+              "texto_1_16"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "I'll repeat it one more time so you don't forget: producers, consumers, decomposers.",
+      "utterance_coloquial": "I'll say it again real quick so you don't forget: producers, consumers, decomposers.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "And let's go back to our question from the start.",
+      "utterance_coloquial": "And let's go back to our question from the start.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Who can tell me where living things get their energy? Exactly, from the Sun.",
+      "utterance_coloquial": "Who can tell me where living things get their energy from?… that's right, from the Sun.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "So, the conclusion: energy flows from the Sun to all living things through the food chain.",
+      "utterance_coloquial": "So, the conclusion: energy flows from the Sun to all living things through the food chain.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_29",
+            "set": {
+              "text": "Energy passes from the Sun through the grass all the way to the fungi. **Energy** flows from the Sun to all living things through the food chain."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "That's all for today, pack up your things.",
+      "utterance_coloquial": "And that's it for today, pack up your stuff.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

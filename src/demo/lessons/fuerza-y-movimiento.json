@@ -1,0 +1,992 @@
+{
+  "id": "fuerza-y-movimiento",
+  "tema": "Force and motion",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student recognizes that a force is a push or a pull, that forces can move, stop, or change the direction of objects, and that gravity and friction are forces that act every day.",
+  "hatsumon": "Why does a ball rolling on the floor eventually stop on its own?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to study why things move and why they stop.",
+      "utterance_coloquial": "Today we're going to study why things move and why they stop.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Get out your notebook; today we're going to make several drawings with arrows.",
+      "utterance_coloquial": "Get out your notebook; today we're gonna make a bunch of drawings with arrows.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about this: why does a ball rolling on the floor eventually stop on its own?",
+      "utterance_coloquial": "Okay, think about it: why does a ball rolling on the floor just stop by itself?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Hold on to your answer; we'll answer it properly at the end.",
+      "utterance_coloquial": "Hold on to your answer; we'll answer it properly at the end.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Nothing moves by itself: something has to push it or pull it.",
+      "utterance_coloquial": "Nothing moves by itself: something has to push it or pull it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Force and Motion",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Force",
+            "role": "subtitulo",
+            "group": "fuerza"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Nothing moves by itself: something has to push it or pull it",
+            "role": "cuerpo",
+            "group": "fuerza"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "We call that push or pull that moves things a force.",
+      "utterance_coloquial": "So that push or pull that moves things? We call it force.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "Nothing moves by itself: something has to push it or pull it, and that push or pull is called a **force**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "We don't always see the force, but we do see what it does.",
+      "utterance_coloquial": "We don't always see the force, but we do see what it does.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "Nothing moves by itself: something has to push it or pull it, and that push or pull is called a **force**. We don't always see a force, only what it does."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "The first way to apply force is pushing: we move the object away from us.",
+      "utterance_coloquial": "The first way to apply force is pushing: we move the object away from us.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "Nothing moves by itself: something has to push it or pull it, and that push or pull is called a **force**. We don't always see a force, only what it does. **Pushing** moves an object away from us."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Watch: a boy pushes a box to move it forward.",
+      "utterance_coloquial": "Check it out: a kid pushes a box to move it forward.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "persona_1_1",
+            "object": "concepto",
+            "label": "boy",
+            "group": "fuerza"
+          },
+          {
+            "op": "add",
+            "id": "rectangulo_1_1",
+            "object": "concepto",
+            "label": "box",
+            "group": "fuerza"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "persona_1_1",
+            "to": "rectangulo_1_1",
+            "style": "arrow",
+            "label": "pushes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The box moves away from him, in the direction of the push.",
+      "utterance_coloquial": "The box moves away from him, in whatever direction he pushed it.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "The other way is pulling: we bring the object toward us.",
+      "utterance_coloquial": "The other way is pulling: we bring the object toward us.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "**Pulling** brings an object toward us",
+            "role": "cuerpo",
+            "group": "fuerza"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Now the same boy pulls a little cart toward him.",
+      "utterance_coloquial": "Now the same boy pulls a little cart toward him.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "rectangulo_1_2",
+            "object": "concepto",
+            "label": "cart",
+            "group": "fuerza"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "persona_1_1",
+            "to": "rectangulo_1_2",
+            "style": "arrow",
+            "label": "pulls"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Push and pull: they're both forces, they just go in opposite directions.",
+      "utterance_coloquial": "Push and pull: they're both forces, they just go opposite ways from each other.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Push and pull are both forces, but they act in opposite directions.",
+            "role": "cuerpo",
+            "group": "fuerza"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "So now we have the two ways to apply force: push and pull.",
+      "utterance_coloquial": "So now we have the two ways to apply force: push and pull.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5",
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Now, what does a force do to an object? It can do three things.",
+      "utterance_coloquial": "Now, what does a force do to an object? It can do three things.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Effects of a force",
+            "role": "subtitulo",
+            "group": "efectos"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "A **force** can do three things to an object",
+            "role": "cuerpo",
+            "group": "efectos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "A force does three things: it moves what's still, stops what's moving, changes the direction.",
+      "utterance_coloquial": "A force does three things: it moves what's still, stops what's moving, changes the direction.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Moves what's still\nStops what's moving\nChanges the direction",
+            "role": "lista",
+            "group": "efectos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "If you kick a ball that's sitting still, the force sets it moving.",
+      "utterance_coloquial": "If you hit a ball that's sitting still, the force sets it moving.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_1",
+            "object": "concepto",
+            "label": "ball",
+            "group": "efectos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "texto_1_10",
+            "to": "circulo_1_1",
+            "style": "arrow",
+            "label": "starts moving"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Haven't you seen a ball start rolling the second you touch it?",
+      "utterance_coloquial": "Haven't you seen a ball start rolling the second you touch it?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "And if it hits a wall, the wall pushes back with a force and stops it.",
+      "utterance_coloquial": "And if it hits a wall, the wall pushes back with a force and stops it.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "rectangulo_1_3",
+            "object": "concepto",
+            "label": "wall",
+            "group": "efectos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "circulo_1_1",
+            "to": "rectangulo_1_3",
+            "style": "arrow",
+            "label": "stops"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "And a force can also change the shape of something soft, like clay.",
+      "utterance_coloquial": "And a force can also change the shape of something soft, like clay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "A force can also change the **shape** of something soft, like clay.",
+            "role": "cuerpo",
+            "group": "efectos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Pay attention to the three things a force can do, that's the important part.",
+      "utterance_coloquial": "Pay attention to the three things a force can do, that's the important part.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "There's a force that's acting all the time without us seeing it: gravity.",
+      "utterance_coloquial": "There's a force that's acting all the time without us seeing it: gravity.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Gravity",
+            "role": "subtitulo",
+            "group": "gravedad"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "A force that **pulls** everything down",
+            "role": "cuerpo",
+            "group": "gravedad"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "If you let go of an apple, gravity pulls it and it falls to the ground.",
+      "utterance_coloquial": "If you let go of an apple, gravity pulls it down and it falls to the ground.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_2",
+            "object": "concepto",
+            "label": "apple",
+            "group": "gravedad"
+          },
+          {
+            "op": "add",
+            "id": "linea_1_1",
+            "object": "concepto",
+            "label": "ground",
+            "group": "gravedad"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "circulo_1_2",
+            "to": "linea_1_1",
+            "style": "arrow",
+            "label": "falls"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_14",
+            "to": "circulo_1_2",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Because of gravity, things don't just stay floating in the air.",
+      "utterance_coloquial": "Because of gravity, things don't just stay floating in the air.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Because of gravity, things don't just stay floating in the air",
+            "role": "cuerpo",
+            "group": "gravedad"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Has your pencil ever fallen? Well, that was gravity.",
+      "utterance_coloquial": "Ever had your pencil just drop on you? Yeah, that was gravity.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "Because of gravity, things don't just stay floating in the air, like a pencil that falls off the desk."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "So far we've got push, pull, gravity... take a look at those forces.",
+      "utterance_coloquial": "So far we've got push, pull, gravity... check out those forces.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5",
+              "texto_1_9",
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "There's one left that answers our question: friction, which slows down movement.",
+      "utterance_coloquial": "There's one left that answers our question: friction, which slows down movement.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Friction",
+            "role": "subtitulo",
+            "group": "friccion"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "A force that **slows down** movement",
+            "role": "cuerpo",
+            "group": "friccion"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "It shows up when two surfaces rub against each other, like the ball against the floor.",
+      "utterance_coloquial": "It shows up when two sur faces rub against each other, like the ball against the floor.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "A force that **slows down** movement, and it shows up when two surfaces rub against each other."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "floor",
+            "group": "friccion"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "circulo_1_1",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "rubs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Watch a marble going down a ramp: friction slows it down little by little.",
+      "utterance_coloquial": "Watch a marble going down a ramp: fric tion slows it down little by little.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "triangulo_1_1",
+            "object": "concepto",
+            "label": "ramp",
+            "group": "friccion"
+          },
+          {
+            "op": "add",
+            "id": "circulo_1_3",
+            "object": "concepto",
+            "label": "marble",
+            "group": "friccion"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_17",
+            "to": "circulo_1_3",
+            "style": "arrow",
+            "label": "slows it down"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "triangulo_1_1",
+            "to": "circulo_1_3",
+            "style": "arrow",
+            "label": "rolls down"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "The rougher the surface, the more friction it makes.",
+      "utterance_coloquial": "The rougher the sur face, the more friction it makes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "The rougher the surface, the more **friction** it makes",
+            "role": "cuerpo",
+            "group": "friccion"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "And that's how we answer it: the ball that rolls stops because of friction with the floor.",
+      "utterance_coloquial": "And that's how we answer it: the ball that rolls stops because of friction with the floor.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "The rougher the surface, the more **friction** it makes, so the ball that rolls stops because of friction with the floor"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Go back and look at the question from the beginning: it's already answered.",
+      "utterance_coloquial": "Go back and look at the question from the beginning: it's already answered.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_19"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Without friction, everything would slide forever, like on ice.",
+      "utterance_coloquial": "Without friction, everything would slide forever, like on ice.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "The rougher the surface, the more **friction** it makes, so the ball that rolls stops because of friction with the floor, and without friction everything would slide forever."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "That's why we slip on ice: there's almost no friction.",
+      "utterance_coloquial": "That's why we slip on ice: there's almost no friction.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Hold on to today's big idea, the one that sums everything up.",
+      "utterance_coloquial": "Hold on to that big idea for today, the one that wraps it all up.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "A **force** is a push or a pull",
+            "role": "cuerpo",
+            "group": "fuerza"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 35,
+      "utterance_formal": "And with what it does: it moves, stops, or changes the direction of objects.",
+      "utterance_coloquial": "And with what it does: it moves, stops, or changes the direction of objects.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "A **force** is a push or a pull, which can move, stop, or redirect objects."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is force.",
+      "utterance_coloquial": "And today's big word, the one you shouldn't forget, is force.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "A **force** is a push or a pull, which can move, stop, or redirect objects. The key word is **force**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Remember what a force is: a push or a pull.",
+      "utterance_coloquial": "Remember what a force is: a push or a pull.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Rest your hand for a moment and then we'll wrap up.",
+      "utterance_coloquial": "Give your hand a little break and then we'll wrap up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Take one last look at the four forces we drew today.",
+      "utterance_coloquial": "Take one last look at the four forces we drew today.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5",
+              "texto_1_9",
+              "texto_1_15",
+              "texto_1_18"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Does everyone have their arrows drawn? Perfect.",
+      "utterance_coloquial": "Does everyone have their little arrows drawn? Alright, perfect.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "For homework, write down three things that push and three that pull in your day.",
+      "utterance_coloquial": "Okay so for homework, write down three things that push and three that pull in your day.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Write 3 things you push and 3 things you pull.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "And explain to me why a bike gradually slows down when you stop pedaling.",
+      "utterance_coloquial": "And explain to me why a bike gradually slows down when you stop pedaling.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "Write 3 things you push and 3 things you pull. Then explain why a bike slows down when you stop pedaling."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Very good, I can see that's clear. Excellent work.",
+      "utterance_coloquial": "Alright, I can see that's super clear. Excellent work.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "That's all for today. Put your things away and we'll see each other tomorrow.",
+      "utterance_coloquial": "That's it for today. Put your stuff away and I'll see you all tomorrow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

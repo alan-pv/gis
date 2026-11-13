@@ -1,0 +1,1032 @@
+{
+  "id": "luz-y-sombra",
+  "tema": "Light and shadow",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student recognizes sources of light, understands that light travels in a straight line, understands that a shadow forms when an opaque object blocks the light, and notices that the size of the shadow changes depending on the position of the source.",
+  "hatsumon": "Why is your shadow long in the afternoon and short at noon?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning. Come over to the window for a second: do you see that dark shape on the floor, the one that moves when I move?",
+      "utterance_coloquial": "Okay, good morning. Come over to the window a sec: you see that dark shape on the floor? The one that moves when I move?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Back to your seats now, and get out your notebook.",
+      "utterance_coloquial": "Okay, back to your seats now, get your notebook out.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about this: why is your shadow long in the afternoon and short at noon?",
+      "utterance_coloquial": "Okay, think about it: why is your shadow long in the afternoon and short at noon?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Hold on to your answer; we'll answer it at the end.",
+      "utterance_coloquial": "Hold on to your answer; we'll answer it at the end.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "To be able to see anything, we first need light.",
+      "utterance_coloquial": "To be able to see anything, we first need light.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Light sources",
+            "role": "subtitulo",
+            "group": "fuentes"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "To see we need **light**",
+            "role": "cuerpo",
+            "group": "fuentes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Light comes from certain places we call light sources.",
+      "utterance_coloquial": "Light comes from certain places we call light sources.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "To see we need **light**. Light comes from places called **light sources**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The biggest light source we have is the Sun.",
+      "utterance_coloquial": "The biggest light source we have is the Sun.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "sol_1_1",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "fuentes"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_4",
+            "to": "sol_1_1",
+            "style": "arrow",
+            "label": "source"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "But there's more: fire, a lamp, a candle... they all give off light.",
+      "utterance_coloquial": "But there's more: fire, a lamp, a candle... they all give off light.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "fire\na lamp\na candle",
+            "role": "lista",
+            "group": "fuentes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Here's a lamp, which is also a light source.",
+      "utterance_coloquial": "Here's a lamb, which is also a light source.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "lampara_1_1",
+            "object": "concepto",
+            "label": "lamp",
+            "group": "fuentes"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_4",
+            "to": "lampara_1_1",
+            "style": "arrow",
+            "label": "source"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The Moon doesn't count: it doesn't make its own light, it only reflects the Sun's.",
+      "utterance_coloquial": "The Moon doesn't count: it doesn't make its own light, it only reflects the Sun's.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The Moon is not a light source: it only reflects the Sun's light.",
+            "role": "cuerpo",
+            "group": "fuentes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Something important about light: it always travels in a straight line.",
+      "utterance_coloquial": "Something important about light: it always travels in a straight line.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Light and Shadow",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Light travels in a straight line",
+            "role": "subtitulo",
+            "group": "viaja"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Light leaves the source and goes **straight**",
+            "role": "cuerpo",
+            "group": "viaja"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Light leaves the Sun along straight lines, never curved.",
+      "utterance_coloquial": "Light leaves the Sun along straight lines, never crooked.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "linea_1_1",
+            "object": "concepto",
+            "label": "Line",
+            "group": "viaja"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "sol_1_1",
+            "to": "linea_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Those straight lines that come out of the Sun are called rays.",
+      "utterance_coloquial": "Those straight lines that come out of the Sun are called rays, ok?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "linea_1_1",
+            "text": "rays"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "That's why we can't see behind a wall: light doesn't bend around it.",
+      "utterance_coloquial": "That's why we can't see behind a wall: light doesn't bend around it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "We can't see behind a wall because light doesn't bend around it.",
+            "role": "cuerpo",
+            "group": "viaja"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "So far we've covered where light comes from and how it travels.",
+      "utterance_coloquial": "So far we've covered where light comes from and how it travels.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "texto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Now then, shadow: it forms when an object blocks the path of light.",
+      "utterance_coloquial": "Now then, shadow: it forms when an object blocks the path of light.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "What is a shadow?",
+            "role": "subtitulo",
+            "group": "sombra"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "**Shadow** forms when an object **blocks** the light",
+            "role": "cuerpo",
+            "group": "sombra"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "If you stand in the sun, your body blocks the light and your shadow is left behind you.",
+      "utterance_coloquial": "If you stand in the sun, your body blocks the light and your shadow is left behind you.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "persona_1_1",
+            "object": "concepto",
+            "label": "kid",
+            "group": "sombra"
+          },
+          {
+            "op": "add",
+            "id": "rectangulo_1_1",
+            "object": "concepto",
+            "label": "shadow",
+            "group": "sombra"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "persona_1_1",
+            "to": "rectangulo_1_1",
+            "style": "arrow",
+            "label": "shadow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "sol_1_1",
+            "to": "persona_1_1",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_9",
+            "to": "persona_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Notice that the shadow comes out on the opposite side from the light.",
+      "utterance_coloquial": "Notice that the shadow comes out on the op posite side from the light.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "The shadow comes out on the opposite side from the light.",
+            "role": "cuerpo",
+            "group": "sombra"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Same with a tree: its shadow falls on the opposite side from the Sun.",
+      "utterance_coloquial": "Same with a tree: its shadow falls on the opposite side from the Sun.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "arbol_1_1",
+            "object": "concepto",
+            "label": "tree",
+            "group": "sombra"
+          },
+          {
+            "op": "add",
+            "id": "rectangulo_1_2",
+            "object": "concepto",
+            "label": "the tree's shadow",
+            "group": "sombra"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "arbol_1_1",
+            "to": "rectangulo_1_2",
+            "style": "arrow",
+            "label": "shadow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "sol_1_1",
+            "to": "arbol_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Have you noticed your shadow always copies you? Wherever you go, it goes with you.",
+      "utterance_coloquial": "Have you noticed your shadow always copies you? Wherever you go, it goes with you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Pay close attention to how a shadow forms, that's the central idea.",
+      "utterance_coloquial": "Pay close attention to how a shadow forms, that's the central idea.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Now, a shadow isn't always the same size: its size changes.",
+      "utterance_coloquial": "Now, a shadow isn't always the same size: its size changes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "The size of the shadow",
+            "role": "subtitulo",
+            "group": "tamaño"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Shadow **size** changes depending on where the light is",
+            "role": "cuerpo",
+            "group": "tamaño"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "At noon the Sun is way up high, and the shadow stays short.",
+      "utterance_coloquial": "At noon the Sun is way up high, and the shadow stays short.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "Shadow **size** changes depending on where the light is: at noon the Sun is up high, so the shadow is short"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "In the afternoon the Sun looks low, and the shadow stretches out long.",
+      "utterance_coloquial": "In the after noon the Sun looks low, and the shadow stretches out long.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "Shadow **size** changes depending on where the light is: at noon the Sun is up high, so the shadow is short; in the afternoon the Sun is low, so the shadow is long."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "long shadow",
+            "group": "tamaño"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "texto_1_12",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Look at a pole at noon: it barely has a short little shadow underneath.",
+      "utterance_coloquial": "Look at a pole at noon: it barely has a short little shadow underneath.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "triangulo_1_1",
+            "object": "concepto",
+            "label": "pole",
+            "group": "tamaño"
+          },
+          {
+            "op": "add",
+            "id": "rectangulo_1_3",
+            "object": "concepto",
+            "label": "short shadow",
+            "group": "tamaño"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "triangulo_1_1",
+            "to": "rectangulo_1_3",
+            "style": "arrow",
+            "label": "noon"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Can you imagine why sometimes your shadow is taller than you?",
+      "utterance_coloquial": "Can you imagine why sometimes your shadow is taller than you?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "So, your shadow is long in the afternoon because the Sun is low.",
+      "utterance_coloquial": "So, your shadow is long in the afternoon because the Sun is low.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Your shadow is long in the **afternoon** because the Sun is low.",
+            "role": "cuerpo",
+            "group": "tamaño"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Go back and look at the question from the beginning: it's already answered.",
+      "utterance_coloquial": "Go back and look at the question from the beginning: it's already answered.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_16"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "One more thing: not all materials make shadows the same way.",
+      "utterance_coloquial": "One more thing: not all materials make shadows the same way.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "It depends on whether the material lets light through or not.",
+      "utterance_coloquial": "It depends on whether the material lets light through or not.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Not everything makes the same shadow",
+            "role": "subtitulo",
+            "group": "materiales"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Shadow depends on the **material**",
+            "role": "cuerpo",
+            "group": "materiales"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Opaque materials don't let light through and they make a dark shadow.",
+      "utterance_coloquial": "The o paque materials don't let light through and they make a dark shadow.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Shadow depends on the **material**: **opaque** materials don't let light through, so they make a dark shadow"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Transparent materials, like glass, let the light through, almost all of it.",
+      "utterance_coloquial": "The trans parent materials, like glass, let the light through, almost all of it.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Shadow depends on the **material**: **opaque** materials don't let light through, so they make a dark shadow; **transparent** materials, like glass, let the light through."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Look at a sheet of glass: light passes through it and it barely makes a shadow.",
+      "utterance_coloquial": "Look at a sheet of glass: light passes through it and it barely makes a shadow.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "rectangulo_1_4",
+            "object": "concepto",
+            "label": "glass",
+            "group": "materiales"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_17",
+            "to": "rectangulo_1_4",
+            "style": "arrow",
+            "label": "lets light through"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "That's why glass windows let us see the yard, light and all.",
+      "utterance_coloquial": "That's why glass windows let us see the yard, light and all.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Glass windows let us see the yard, light and all.",
+            "role": "cuerpo",
+            "group": "materiales"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Notice what decides whether something makes a shadow or not: the material.",
+      "utterance_coloquial": "Notice what decides whether something makes a shadow or not: the material.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_17"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Hold on to today's big idea, the one that sums everything up.",
+      "utterance_coloquial": "Hold on to that big idea for today, the one that wraps it all up.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Light travels in straight lines, so an object in its way leaves a shadow.",
+            "role": "cuerpo",
+            "group": "materiales"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 36,
+      "utterance_formal": "And with that: a shadow forms when an opaque object blocks the light.",
+      "utterance_coloquial": "And with that: a shadow forms when an opaque object blocks the light.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_22",
+            "set": {
+              "text": "Light travels in straight lines, so an object in its way leaves a shadow. A shadow forms when an **opaque** object blocks the light."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is shadow.",
+      "utterance_coloquial": "And today's big word, the one you shouldn't forget, is shadow.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_22",
+            "set": {
+              "text": "Light travels in straight lines, so an object in its way leaves a shadow. A shadow forms when an **opaque** object blocks the light. The key word is **shadow**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Remember how light travels: always in a straight line.",
+      "utterance_coloquial": "Remember how light travels: always in a straight line.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Rest your hand for a moment and then we'll wrap up.",
+      "utterance_coloquial": "Rest your hand for a moment and then we'll wrap up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Take one last look at the parts we studied today.",
+      "utterance_coloquial": "Take one last look at the parts we studied today.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "texto_1_9",
+              "texto_1_12",
+              "texto_1_17"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Does everyone have their drawings with shadows? Perfect.",
+      "utterance_coloquial": "Does everyone have their drawings with shadows? Alright, perfect.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "For homework, go out and measure your shadow in the morning and in the afternoon.",
+      "utterance_coloquial": "For homework, go out and measure your shadow in the morning and in the afternoon.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Measure your shadow in the morning and in the afternoon.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "And draw an object with its shadow and the light source that causes it.",
+      "utterance_coloquial": "And draw an object with its shadow and the light source that causes it.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "Measure your shadow in the morning and in the afternoon. Then draw an object with its shadow and its light source."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Very good, I can see that's clear. Excellent work.",
+      "utterance_coloquial": "Alright, I can see that's super clear. Excellent work.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "That's all for today. Put your things away and we'll see each other tomorrow.",
+      "utterance_coloquial": "That's it for today. Put your stuff away and I'll see you all tomorrow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1049 @@
+{
+  "id": "seres-vivos",
+  "tema": "Living things and their kingdoms",
+  "sesgo": "texto-primero",
+  "objetivo": "For students to recognize the characteristics of living things (they are born, grow, feed, reproduce, and die) and classify them into the major kingdoms: animal, plant, fungi, and microorganisms.",
+  "hatsumon": "What do a dog, a tree, and you have in common?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to bring some order to nature: we're going to study living things.",
+      "utterance_coloquial": "Today we're going to bring some order to nature: we're going to study living things.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebooks, because today we're going to make several lists and classifications.",
+      "utterance_coloquial": "Take out your notebooks, because today we're going to make several lists and classifications.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about something: what do a dog, a tree, and you yourselves have in common?",
+      "utterance_coloquial": "Okay, think about it: what do a dog, a tree, and you yourselves have in common?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "They seem very different, right? A dog runs and a tree doesn't even move.",
+      "utterance_coloquial": "They look pretty different, right? A dog runs and a tree doesn't even move.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "In nature there are things that have life and things that don't.",
+      "utterance_coloquial": "In nature there are things that have life and things that don't.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Living Things",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "What is a living thing?",
+            "role": "subtitulo",
+            "group": "life"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "There are things with **life** and things without life.",
+            "role": "cuerpo",
+            "group": "life"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "The ones that have life we call living things: everything that is born, grows, and dies.",
+      "utterance_coloquial": "The ones that have life we call living things: everything that is born, grows, and dies.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "There are things with **life** and things without life. Living things are everything that is born, grows, and dies."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Sounds simple, but there's more detail to it. Let's look at it closely.",
+      "utterance_coloquial": "Sounds simple, but there's more to it. Let's look at it closely.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Every living thing does five things throughout its life: it is born, grows, feeds, reproduces and dies.",
+      "utterance_coloquial": "Every living thing does five little things throughout its life: it's born, grows, feeds, reproduces and dies.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Is born\nGrows\nFeeds\nReproduces\nDies",
+            "role": "enumeracion",
+            "group": "life"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Notice that a dog, a tree, and you all meet all five: that's why all three are alive.",
+      "utterance_coloquial": "Notice that a dog, a tree, and you all meet all five: that's why all three are alive.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Every living thing does all five.",
+            "role": "cuerpo",
+            "group": "life"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Reproducing means having children or offspring, so life can go on.",
+      "utterance_coloquial": "Re producing means having children or offspring, so life can go on.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Every living thing does all five. Reproducing means having offspring, so life can go on."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Now let's compare them to things without life. A rock, for example, doesn't get born or grow.",
+      "utterance_coloquial": "Now let's compare them to things without life. A rock, for example, doesn't get born or grow.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "rock",
+            "group": "life"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "A rock isn't born and doesn't grow, so it has no **life**",
+            "role": "cuerpo",
+            "group": "life"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "A dog, on the other hand, does: it's born, eats, grows, and has offspring.",
+      "utterance_coloquial": "A dog, on the other hand, does: it's born, eats, grows, and has offspring.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "A rock isn't born and doesn't grow, so it has no **life**. A dog, on the other hand, is born, eats, grows, and has offspring."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Can you see the difference? That's the important part.",
+      "utterance_coloquial": "Did you catch the difference? That's the important part.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Let's remember what a living thing is and what it does.",
+      "utterance_coloquial": "Let's remember what a living thing is and what it does.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "texto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Now then, living things are extremely numerous and varied, so we group them into kingdoms.",
+      "utterance_coloquial": "Now then, living things are a ton and super varied, so we group them into kingdoms.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "The animal kingdom",
+            "role": "subtitulo",
+            "group": "animal"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Living things are grouped into **kingdoms**",
+            "role": "cuerpo",
+            "group": "animal"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "A kingdom is a large group of living things that are similar to each other. Let's start with the first one.",
+      "utterance_coloquial": "A kingdom is a large group of living things that are similar to each other. Let's start with the first one.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "Living things are grouped into **kingdoms**, large groups of similar living things."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "The animal kingdom: these are the ones that move on their own and eat other living things.",
+      "utterance_coloquial": "The animal kingdom: these are the ones that move on their own and eat other living things.",
+      "case_tags": [
+        "mixto",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "Living things are grouped into **kingdoms**, large groups of similar living things. **Animals** move on their own and eat other living things."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "For example: the dog, the eagle, the fish, and the ant. Make a list.",
+      "utterance_coloquial": "For example: the dog, the eagle, the fish, and the a nt. Make me a little list.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "dog\neagle\nfish\nant",
+            "role": "lista",
+            "group": "animal"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "And to help us remember, here's an example dog.",
+      "utterance_coloquial": "And to help us remember, here's a little example dog.",
+      "case_tags": [
+        "mixto",
+        "miss-placeholder"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "perro_1_1",
+            "object": "concepto",
+            "label": "dog",
+            "group": "animal"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_12",
+            "to": "perro_1_1",
+            "style": "arrow",
+            "label": "for example"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "We, human beings, are also part of the animal kingdom.",
+      "utterance_coloquial": "We, human beings, are also part of the animal kingdom, you know.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "persona_1_1",
+            "object": "concepto",
+            "label": "human",
+            "group": "animal"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The second one is the plant kingdom: they make their own food and don't move from their spot.",
+      "utterance_coloquial": "The second one is the plant kingdom: they make their own food and don't move from their spot.",
+      "case_tags": [
+        "mixto",
+        "color-fill",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Plant kingdom",
+            "role": "subtitulo",
+            "group": "plantas"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Plants make their own **food** and don't move.",
+            "role": "cuerpo",
+            "group": "plantas"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "For example: the tree, the rose, grass, and the fern. Another list.",
+      "utterance_coloquial": "For example: the tree, the rose, grass, and the fern. Another little list.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "tree\nrose\ngrass\nfern",
+            "role": "lista",
+            "group": "plantas"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "And an example of this is a plant.",
+      "utterance_coloquial": "And an example of this is a little plant.",
+      "case_tags": [
+        "mixto",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "arbol_1_1",
+            "object": "concepto",
+            "label": "plant",
+            "group": "plantas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_17",
+            "to": "arbol_1_1",
+            "style": "arrow",
+            "label": "for example"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Did you all copy down the first two kingdoms? Very good.",
+      "utterance_coloquial": "Did you all copy down the first two kingdoms?… alright, very good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Let's remember: we have the animal kingdom and the plant kingdom.",
+      "utterance_coloquial": "Let's remember: we've got the animal kingdom and the plant kingdom.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12",
+              "texto_1_17"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "The third one surprises a lot of people: the fungi kingdom. They're not plants or animals.",
+      "utterance_coloquial": "The third one surprises a lot of people: the fungi kingdom. They're not plants or animals.",
+      "case_tags": [
+        "mixto",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Fungi and microbes",
+            "role": "subtitulo",
+            "group": "hongos"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "**Fungi** are neither plants nor animals.",
+            "role": "cuerpo",
+            "group": "hongos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "For example: mushrooms, bread mold, and yeast. Your list.",
+      "utterance_coloquial": "For example: mush rooms, bread mold, and ye ast. Your little list.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "mushroom\nmold\nyeast",
+            "role": "lista",
+            "group": "hongos"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "mushroom",
+            "group": "hongos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_20",
+            "to": "concepto_1_2",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Did you know the green mold on bread is a fungus? Yep.",
+      "utterance_coloquial": "Did you know the green mold on bread is a fungus? Yep, it is.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "And there's one more kingdom with the smallest living things of all: microorganisms.",
+      "utterance_coloquial": "And there's one more kingdom with the smallest living things of all: micro organisms.",
+      "case_tags": [
+        "mixto",
+        "color-fill",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Microorganisms are so small you can't see them without a **microscope**.",
+            "role": "cuerpo",
+            "group": "hongos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "This includes bacteria and other microbes that live everywhere.",
+      "utterance_coloquial": "This includes bac teria and other microbes that live everywhere.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "bacteria\nmicrobe",
+            "role": "lista",
+            "group": "hongos"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "bacteria",
+            "group": "hongos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_20",
+            "to": "concepto_1_3",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Even though we don't see them, they're even on our hands. That's why we wash them.",
+      "utterance_coloquial": "Even though we don't see them, they're even on our hands. That's why we wash them.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Microbes are even on our hands, and that is why we wash them.",
+            "role": "cuerpo",
+            "group": "hongos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Some microbes help us and others cause diseases.",
+      "utterance_coloquial": "Some microbes help us and others cause diseases.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "Microbes are even on our hands, and that is why we wash them. Some microbes help us, others cause **diseases**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Notice the four kingdoms we have written down.",
+      "utterance_coloquial": "Notice the four kingdoms we've got written down.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12",
+              "texto_1_17",
+              "texto_1_20"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Do you have all four? Perfect, let's start wrapping up.",
+      "utterance_coloquial": "Do you have all four yet? Perfect, let's start wrapping up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "So there are four big kingdoms of living things, clearly.",
+      "utterance_coloquial": "So there are four big kingdoms of living things, nice and clear.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "The four kingdoms",
+            "role": "subtitulo",
+            "group": "cuatro"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "There are four big kingdoms of living things.",
+            "role": "cuerpo",
+            "group": "cuatro"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Now think: what's the point of going through the trouble of classifying them?",
+      "utterance_coloquial": "Now think: what's the point of going through the trouble of classi fying them?",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_30",
+            "set": {
+              "text": "There are four big kingdoms of living things. Grouping them helps us study and **protect** them."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "And all of them, from the biggest to the smallest, are important for nature.",
+      "utterance_coloquial": "And all of them, from the biggest to the tiniest, are important for nature.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_30",
+            "set": {
+              "text": "There are four big kingdoms of living things. Grouping them helps us study and **protect** them. All of them are important for nature."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Let's remember why we classify them: to study and protect them better.",
+      "utterance_coloquial": "Let's remember why we classify them: to study and protect them better.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_30"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Rest your hand for a moment. Are we good? Very good.",
+      "utterance_coloquial": "Give your hand a little rest. Are we good?… alright, very good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "So you don't forget, hold on to the two big ideas from today.",
+      "utterance_coloquial": "So you don't forget, hold on to the two big ideas from today.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_32",
+            "object": "texto",
+            "text": "A living thing is born, grows, feeds, reproduces, and dies.",
+            "role": "cuerpo",
+            "group": "cuatro"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "And the second one: living things are grouped into animal, plant, fungi, and microbes.",
+      "utterance_coloquial": "And the second one: living things are grouped into animal, plant, fungi, and microbes.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_32",
+            "set": {
+              "text": "A living thing is born, grows, feeds, reproduces, and dies. Living things are grouped into animal, plant, fungi, and microbe kingdoms."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is kingdom.",
+      "utterance_coloquial": "And today's big word, the one you shouldn't forget, is kingdom.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_32",
+            "set": {
+              "text": "A living thing is born, grows, feeds, reproduces, and dies. Living things are grouped into animal, plant, fungi, and microbe kingdoms. The key word is **kingdom**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Remember what a living thing is: everything that is born, grows, and dies.",
+      "utterance_coloquial": "Remember what a living thing is: everything that is born, grows, and dies.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Very good, I can see it's clear. Excellent work.",
+      "utterance_coloquial": "Very good, I can see it's super clear. Excellent work, everyone.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "For homework, choose five living things and say which kingdom each one belongs to.",
+      "utterance_coloquial": "For homework, choose five living things and say which kingdom each one goes in.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_35",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_36",
+            "object": "texto",
+            "text": "Classify five living things into their kingdom.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "And explain to me, in your own words, what makes a living thing alive.",
+      "utterance_coloquial": "And explain to me, in your own words, what makes a living thing alive.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_36",
+            "set": {
+              "text": "Classify five living things into their kingdom. Explain what makes a living thing alive."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "And with that we answered the question we started the class with.",
+      "utterance_coloquial": "And with that we already answered the question we kicked off the class with.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "They all do the same five things: a dog, a tree, and you are born, grow, feed, reproduce, and die.",
+      "utterance_coloquial": "They all do the same five things, see: a dog, a tree, and you, all born, grow, feed, reproduce, and die.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_39",
+            "object": "texto",
+            "text": "A dog, a tree, and you are all born, grow, feed, reproduce, and die.",
+            "role": "cuerpo",
+            "group": "life"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 48,
+      "utterance_formal": "That's all for today. Pack up your things and see you tomorrow.",
+      "utterance_coloquial": "That's all for today. Pack up your things and see you tomorrow, take care.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

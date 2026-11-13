@@ -1,0 +1,438 @@
+{
+  "id": "estados-materia",
+  "tema": "The states of matter",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student distinguishes the three states of matter (solid, liquid, gas) by their shape and volume, and understands that the change of state depends on how closely the particles are bound together.",
+  "hatsumon": "Why can water be ice, water, and also steam?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Pay attention: today we're going to study something that's everywhere, the states of matter.",
+      "utterance_coloquial": "Alright guys, heads up… today we're gonna look at something that's everywhere: the states of matter.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The States of Matter",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Keep this question in mind for the whole class: why can water be ice, water, and also steam?",
+      "utterance_coloquial": "And keep this question in your head the whole class: why can water be ice, water, and also steam?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Who can tell me what matter is? Exactly: everything that takes up space and has weight. It comes in three forms: solid, liquid and gas.",
+      "utterance_coloquial": "Who can tell me what matter is?… that's it: everything that takes up space and has weight. It comes in three forms for us: solid, liquid, gas.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Matter",
+            "role": "subtitulo",
+            "group": "materia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Matter is everything that takes up **space** and has weight.",
+            "role": "cuerpo",
+            "group": "materia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "solid\nliquid\ngas",
+            "role": "lista",
+            "group": "materia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "The first form is solid: it has a fixed shape, like a rock or your desk.",
+      "utterance_coloquial": "The first one, solid, has a fixed shape: a rock, your desk.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Solid",
+            "role": "subtitulo",
+            "group": "solido"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "A solid keeps a fixed **shape** and a fixed volume. A rock or a desk is a solid.",
+            "role": "cuerpo",
+            "group": "solido"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Rock",
+            "group": "solido"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_5",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Did you all get that down? Very good, let's continue.",
+      "utterance_coloquial": "Did you copy it down? Yes or no?… okay, let's keep going.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "The second is liquid: it doesn't have its own shape, it takes that of the container, like water or soda.",
+      "utterance_coloquial": "The second, liquid: it doesn't have its own shape, it takes on the container's. Water, soda.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Liquid",
+            "role": "subtitulo",
+            "group": "liquido"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "A liquid takes the shape of its **container**. Water and soda are liquids.",
+            "role": "cuerpo",
+            "group": "liquido"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Water",
+            "group": "liquido"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_7",
+            "to": "concepto_1_2",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "And gas: it has no fixed shape or size, it expands and fills everything, like air or steam.",
+      "utterance_coloquial": "And gas: it has no fixed shape or size, it expands and fills everything. Air, steam.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Gas",
+            "role": "subtitulo",
+            "group": "gas"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "A gas has no fixed shape or **volume**, so it fills everything. Air and steam are gases.",
+            "role": "cuerpo",
+            "group": "gas"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Air",
+            "group": "gas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "texto_1_9",
+            "to": "concepto_1_3",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "So, solid has a fixed shape, liquid takes the shape of its container, and gas fills everything.",
+      "utterance_coloquial": "So, solid, fixed shape; liquid, takes the shape; gas, fills everything.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5",
+              "texto_1_7",
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Now the important part: what changes from one state to another is how close together the particles are.",
+      "utterance_coloquial": "Heads up, this is the important part: what changes from one state to another is how close together the particles are.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Changes of state",
+            "role": "subtitulo",
+            "group": "cambios"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "What changes from one state to another is how tightly packed the **particles** are.",
+            "role": "cuerpo",
+            "group": "cambios"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Particles",
+            "group": "cambios"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_11",
+            "to": "concepto_1_4",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "And look how they connect: ice melts and becomes liquid, and if we boil it, it turns into steam. It's the same water.",
+      "utterance_coloquial": "And look how they connect: ice melts and it's liquid, and if we boil it, it turns into steam. It's the same water.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Ice melts into liquid water, and boiling that water turns it into steam.",
+            "role": "cuerpo",
+            "group": "cambios"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Ice",
+            "group": "cambios"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Steam",
+            "group": "cambios"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "texto_1_5",
+            "to": "texto_1_7",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_7",
+            "to": "texto_1_9",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_5",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "melts"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_2",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "boils"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "That first change, from solid to liquid, has a name: melting.",
+      "utterance_coloquial": "That first change, solid to liquid… it has a name: melting.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_5",
+            "text": "melting"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "And when a liquid turns into gas, like the water in the pot, that's called evaporation.",
+      "utterance_coloquial": "And when the liquid goes to gas, like the water in the pot, that's called eva-poration.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_6",
+            "text": "evaporation"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Is this making sense? Any questions? Alright.",
+      "utterance_coloquial": "Is this making sense? Any questions?… no, right? Alright.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "And the answer to the question we asked at the start: water can be all three depending on the heat.",
+      "utterance_coloquial": "And the answer to what we asked up top: water can be all three depending on the heat.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Water is ice, liquid, or steam depending on the **heat**, because heat changes how close its particles are.",
+            "role": "cuerpo",
+            "group": "cambios"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "So that's how we answered the question from the start, and the heat is what changes the state.",
+      "utterance_coloquial": "So that's how we answered the question from the start. That's it for today.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

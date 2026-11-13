@@ -1,0 +1,718 @@
+{
+  "id": "grupos-alimentos",
+  "tema": "The food groups (the Healthy Plate)",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student classifies foods into the three groups of the Healthy Plate and recognizes the importance of combining them.",
+  "hatsumon": "What does my body need to stay healthy?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Today we're going to study the food groups, what we know as the Healthy Plate.",
+      "utterance_coloquial": "Okay, good morning, good morning. Today we've got the food groups, it's called the Healthy Plate.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "And hold on to this question for the whole class: what does my body need to stay healthy?",
+      "utterance_coloquial": "And keep this question in mind for the whole class: what does my buddy need to stay healthy?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Take out your notebook and write today's date, please. I'll wait for you.",
+      "utterance_coloquial": "Get your notebooks out, put today's date on it. I'll wait, no rush.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Let's start with what you already know. Food gives us energy and nutrients to live.",
+      "utterance_coloquial": "Let's start with what you all already know. Food gives us energy and nutrients so we can live.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Healthy Plate",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Why we eat",
+            "role": "subtitulo",
+            "group": "por"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Food gives us energy and **nutrients** to live.",
+            "role": "cuerpo",
+            "group": "por"
+          }
+        ]
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Okay, tell me, what did you have for breakfast before coming to school today?",
+      "utterance_coloquial": "Alright, tell me, what did you eat for breakfast before heading to school today?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Notice something important: all those foods can be sorted into three groups.",
+      "utterance_coloquial": "Notice something real important: all those foods just sort into three groos.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Food gives us energy and **nutrients** to live. All foods sort into 3 **groups**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The first group is fruits and vegetables.",
+      "utterance_coloquial": "The first little group is fruits and vegetables.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Fruits and vegetables",
+            "role": "subtitulo",
+            "group": "col_vf"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "These give us vitamins and fiber, which protect us from getting sick.",
+      "utterance_coloquial": "These give us vitamins and fiber, which keep us from getting sick.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "**Vitamins** and **fiber** protect us from getting sick",
+            "role": "cuerpo",
+            "group": "col_vf"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Some examples: lettuce, carrot, apple, and orange.",
+      "utterance_coloquial": "Some examples: lettuce, carrit, apple, and orange.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "lettuce\ncarrot\napple\norange",
+            "role": "lista",
+            "group": "col_vf"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "You all know these examples, right? Very good.",
+      "utterance_coloquial": "You all know these examples, don't you? Alright, good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "The second group is grains.",
+      "utterance_coloquial": "The second group is grains, right.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Grains",
+            "role": "subtitulo",
+            "group": "col_cer"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Grains are what give us energy to play and learn.",
+      "utterance_coloquial": "Grains are what give us the energy to play and to learn.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Grains give us **energy** to play and learn",
+            "role": "cuerpo",
+            "group": "col_cer"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Examples of grains: tortilla, bread, rice, and oats.",
+      "utterance_coloquial": "Examples of grains: tortilla, bred, ryce, and oats.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "tortilla\nbread\nrice\noats",
+            "role": "lista",
+            "group": "col_cer"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "In Mexico, these foods can't be missing from the table.",
+      "utterance_coloquial": "Here in Mexico, these can't be missing from the table, right?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "In Mexico, grains can't be missing from the table.",
+            "role": "cuerpo",
+            "group": "col_cer"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The third group is legumes and animal-based foods.",
+      "utterance_coloquial": "The third group is legumes and animal-based foods.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Legumes and\nanimal-based foods",
+            "role": "subtitulo",
+            "group": "col_prot"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "These foods help us grow, because they have protein.",
+      "utterance_coloquial": "These help us grow, because they've got protein.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "**Protein** helps us grow",
+            "role": "cuerpo",
+            "group": "col_prot"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Examples: beans, lentils, egg, and chicken.",
+      "utterance_coloquial": "Examples: beans, lentils, aig, and chiken.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "beans\nlentils\negg\nchicken",
+            "role": "lista",
+            "group": "col_prot"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Let's review. Think about the three groups we already have.",
+      "utterance_coloquial": "Okay, let's review. Think about the three groups we've already got.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5",
+              "texto_1_8",
+              "texto_1_11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Repeat after me, out loud, the three groups.",
+      "utterance_coloquial": "Repeat after me, nice and loud, the three little groups.",
+      "case_tags": [
+        "no-op",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Now, a few tips for putting together a healthy plate.",
+      "utterance_coloquial": "Alright, now some tips for putting together a healthy plate.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Tips for a healthy plate",
+            "role": "subtitulo",
+            "group": "reco"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The first one: drink plain water, between 6 and 8 glasses a day, instead of soda.",
+      "utterance_coloquial": "First one: drink plain water, like 6 to 8 glasses a day, and not so much soda.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Drink 6 to 8 glasses of **water** a day",
+            "role": "cuerpo",
+            "group": "reco"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "water",
+            "group": "reco"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "texto_1_16",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "The second one: combine legumes with grains; together they make a complete protein.",
+      "utterance_coloquial": "Second one, and this is key: combine legumes with grains, because together they make a complete protein.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Combine legumes with grains: together they make a complete **protein**.",
+            "role": "cuerpo",
+            "group": "reco"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_13",
+            "to": "texto_1_10",
+            "style": "arrow",
+            "label": "combine them"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "legumes",
+            "group": "reco"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "grains",
+            "group": "reco"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "complete protein",
+            "group": "reco"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_2",
+            "to": "concepto_1_4",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Imagine your plate as a circle and divide it: half for fruits and vegetables.",
+      "utterance_coloquial": "Picture your plate as a circle, okay?, and split it: half for fruits and vegetables.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_1",
+            "object": "concepto",
+            "label": "my plate",
+            "group": "reco"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Half of the plate is **fruits** and vegetables.",
+            "role": "cuerpo",
+            "group": "reco"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_5",
+            "to": "circulo_1_1",
+            "style": "arrow",
+            "label": "half"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Is this making sense? Good, I can see that it is.",
+      "utterance_coloquial": "Is it making sense or not? Alright, I can see it is, good.",
+      "case_tags": [
+        "no-op",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Let's close with three steps for putting together a healthy plate.",
+      "utterance_coloquial": "Let's wrap up with three little steps for putting together a healthy plate.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Include the 3 groups\nMore fruits and vegetables\nDrink water",
+            "role": "enumeracion",
+            "group": "reco"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "texto_1_18",
+            "to": "circulo_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Look again at the examples of each group we wrote down.",
+      "utterance_coloquial": "Look again at the examples for each group we jotted down there.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7",
+              "texto_1_10",
+              "texto_1_13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "To help you remember, think of an apple as an example from the fruit group.",
+      "utterance_coloquial": "And so you remember, think of an apple, from the fruit group.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "manzana_1_1",
+            "object": "concepto",
+            "label": "apple",
+            "group": "col_vf"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_5",
+            "to": "manzana_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Put everything away carefully, please, we're almost done.",
+      "utterance_coloquial": "Put everything away nice and careful, we're almost done.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "For homework, draw your own Healthy Plate with one example from each group.",
+      "utterance_coloquial": "For homework, draw me your own Healthy Plate with one example from each groop.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Draw your own Healthy Plate. Include one example from each group.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Before you go, remember the question we started with.",
+      "utterance_coloquial": "Before you head out, remember the question we started with.",
+      "case_tags": [
+        "no-op",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "So a healthy body needs a bit of every group, lots of fruits and vegetables, and plain water.",
+      "utterance_coloquial": "So a healthy body needs, like, a bit of every group, lots of fruits and veggies, and plain water.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "A healthy body needs a bit of **every group**, more fruits and vegetables, and plain water.",
+            "role": "cuerpo",
+            "group": "reco"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Very good, that's all for today. See you tomorrow.",
+      "utterance_coloquial": "Alright, that's it for today. See you tomorrow, take care.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

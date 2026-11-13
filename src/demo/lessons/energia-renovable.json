@@ -1,0 +1,1006 @@
+{
+  "id": "energia-renovable",
+  "tema": "Energy sources: renewable (sun, wind, water) and non-renewable",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student identifies where the energy we use comes from, tells renewable sources (sun, wind, water) from non-renewable ones (oil, coal, natural gas) and understands why we should save energy.",
+  "hatsumon": "Where does the energy we use every day come from?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, class. Settle down, please.",
+      "utterance_coloquial": "Okay, good morning class, uh, settle down please, settle down.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Everyone look at the light on the ceiling. What would happen if the power went out right now?",
+      "utterance_coloquial": "Everybody look at the, the light on the ceiling. What if the power goes off, right now?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "No light, no fans, no projector, exactly. Camila, hands down, please.",
+      "utterance_coloquial": "No light, no fans, no projector, yes exactly. Camila, hand down please, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "So, where does the electricity in our school come from?",
+      "utterance_coloquial": "So, uh, where does the electricity in, in our school come from?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Someone says the wall. Well, the wall is only the last step.",
+      "utterance_coloquial": "Somebody said the wall, haha. Well the wall is just the, the last step.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Think about a power plant, a big factory that makes electricity.",
+      "utterance_coloquial": "Think of a power plant, a big, ehm, factory that makes the electricity.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Every power plant needs something that gives it energy.",
+      "utterance_coloquial": "Each power plant, it needs something that gives it, gives it energy.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "We call those things sources of energy.",
+      "utterance_coloquial": "Those things, we call them sources of energy, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Energy sources",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Raise your hand if you know one source of energy.",
+      "utterance_coloquial": "Raise your hand if you know one, one source of energy.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The sun, yes. Anything else? Wind, good. Those never run out.",
+      "utterance_coloquial": "The sun, yes. Anything else?… wind, good. Those ones never run out, right?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Sources that never run out",
+            "role": "subtitulo",
+            "group": "renovable"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Some sources are never used up because nature replaces them",
+            "role": "cuerpo",
+            "group": "renovable"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Those are the sources we call renewable: the sun, the wind and moving water, because nature replaces them all the time.",
+      "utterance_coloquial": "Those are the ones we call re-newable: the sun, the wind, moving water, because nature puts them back all the time.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Some sources are never used up because nature replaces them, so we call them **renewable**: the sun, the wind and moving water."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "The sun shines every day, and its light can become electricity for a power plant.",
+      "utterance_coloquial": "The sun shines every day, and its light can become electricity, even for a power plant.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "renovable"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Solar panel",
+            "group": "renovable"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Power plant",
+            "group": "renovable"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "light becomes electricity"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "powers"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Panels on a roof catch sunlight and make electricity.",
+      "utterance_coloquial": "The panels on the roof, they catch the sun light and, and make electricity.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "**Solar** panels on a roof catch sunlight and make electricity",
+            "role": "cuerpo",
+            "group": "renovable"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "What happens at night? Good question, Valeria.",
+      "utterance_coloquial": "What happens at night? Good question Valeria, very good question.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "At night the sun is not there, but the next day it comes back.",
+      "utterance_coloquial": "At night the sun isn't there but it comes back the next day, always.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "**Solar** panels on a roof catch sunlight and make electricity, and at night the sun is gone but returns the next day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Now the wind. Moving air can push big blades.",
+      "utterance_coloquial": "Now the wind. The air that moves can push, ehm, big blades, big.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Wind",
+            "group": "renovable"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Wind turbine",
+            "group": "renovable"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "turns"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_6",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "makes electricity for"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "A wind turbine looks like a giant fan, but it works the other way around.",
+      "utterance_coloquial": "The wind turbine looks like a giant fan, but it works the, the opposite way.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "A wind turbine works like a giant fan in reverse",
+            "role": "cuerpo",
+            "group": "renovable"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Energy from the wind is called wind power.",
+      "utterance_coloquial": "The energy from the wind, that's called, uh, wind power, wind power.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_5",
+            "text": "wind power"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "And water: a river that falls from a height moves a turbine.",
+      "utterance_coloquial": "And water, a river falling from up high, it moves a turbine, a turbine.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "River",
+            "group": "renovable"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Dam",
+            "group": "renovable"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "is held by"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_8",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "water turns turbines in"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "A dam holds the water and lets it fall through the turbines.",
+      "utterance_coloquial": "The dam holds the water, the dam, and lets it fall through the turbines.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "A dam holds the water and lets it fall through turbines",
+            "role": "cuerpo",
+            "group": "renovable"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Electricity made from falling water is called hydroelectric.",
+      "utterance_coloquial": "Electricity from the falling water is called, ehm, hydro electric, hydroelectric.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_8",
+            "text": "hydroelectric"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Wait, why is this a river and not a lake? Never mind, let's move on.",
+      "utterance_coloquial": "Wait, why is it a river and not a lake? Never mind, never mind, let's keep going.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Let me say it again: sun, wind and water do not run out.",
+      "utterance_coloquial": "Let me say that, uh, again: sun, wind and water, they don't run out.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_3",
+              "concepto_1_5",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Now let's look at the other type of sources.",
+      "utterance_coloquial": "Okay now let's look at the, the other kind of sources.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Sources that run out",
+            "role": "subtitulo",
+            "group": "norenovable"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "**Non-renewable** sources take millions of years to form",
+            "role": "cuerpo",
+            "group": "norenovable"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Oil, coal and natural gas come from living things buried for millions of years.",
+      "utterance_coloquial": "Oil, coal and natural gas, they come from living things buried, buried for millions of years, and, nat ural gas.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "**Non-renewable** sources take millions of years to form, like oil, coal and natural gas"
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Oil",
+            "group": "norenovable"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Coal",
+            "group": "norenovable"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Natural gas",
+            "group": "norenovable"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "texto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_8",
+            "to": "concepto_1_10",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_8",
+            "to": "concepto_1_11",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Together they are called fossil fuels.",
+      "utterance_coloquial": "Together they're called, uh, fos sil fuels, fossil fuels.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Together they are called **fossil fuels**",
+            "role": "cuerpo",
+            "group": "norenovable"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Mateo asks if they are ever made again. Not in a time that matters to us.",
+      "utterance_coloquial": "Mateo asks if they're ever made again… no, not in a time that matters to us.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "Together they are called **fossil fuels**, and they are not made again in a time that matters to us."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Burning them heats water, and the steam turns the turbines.",
+      "utterance_coloquial": "Burning them heats up water, the steam, it turns the turbines.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "Together they are called **fossil fuels**, and they are not made again in a time that matters to us. Burning them heats water, and the steam turns the turbines."
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_9",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "burned in"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "concepto_1_10",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "burned in"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "But there is a problem: once they are used, they are gone.",
+      "utterance_coloquial": "But here's the problem: once you use them, they're gone.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Once they are used, they are gone",
+            "role": "cuerpo",
+            "group": "norenovable"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Burning them also makes smoke that pollutes the air.",
+      "utterance_coloquial": "And burning them makes smoke too, that pol lutes the air, the air.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Once they are used, they are gone, and burning them makes smoke that causes **pollution**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Renewable sources make very little smoke.",
+      "utterance_coloquial": "The renewable ones make very, very little smoke, almost none.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Once they are used, they are gone, and burning them makes smoke that causes **pollution**, while **renewable** sources make very little smoke"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "So many countries are using more of the sun, the wind and the water.",
+      "utterance_coloquial": "So many countries now use more sun, wind and water, more and more.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Once they are used, they are gone, and burning them makes smoke that causes **pollution**, while **renewable** sources make very little smoke, so many countries are changing to new sources"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Let me compare them. Which ones never run out?",
+      "utterance_coloquial": "Let me compare, ehm, them. Which ones never run out?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Renewable ones. And which ones run out? The non-renewable ones.",
+      "utterance_coloquial": "The renewable ones, yes. And which ones run out?… the non-renewable ones.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Renewable sources never run out, while non-renewable ones do.",
+            "role": "cuerpo",
+            "group": "norenovable"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Right, non-renewable. Oil, coal and gas.",
+      "utterance_coloquial": "Right, non renewable. Oil, coal and the gas.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Everyone can help by saving energy at home.",
+      "utterance_coloquial": "And we all can help by saving energy at home, all of us.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Saving energy",
+            "role": "subtitulo",
+            "group": "ahorro"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Turn off lights and unplug devices when nobody is using them",
+            "role": "cuerpo",
+            "group": "ahorro"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "A light bulb that stays on in an empty room wastes energy.",
+      "utterance_coloquial": "A light bulb on in an empty room, it's wasting energy, wasting.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "Turn off lights and unplug devices when nobody is using them, because a bulb left on in an empty room wastes **energy**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Walking or riding a bike instead of going by car also saves fuel.",
+      "utterance_coloquial": "Walking or riding a bike, instead of the car, it also saves fuel, you know.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "Turn off lights and unplug devices when nobody is using them, because a bulb left on in an empty room wastes **energy**. Walking or riding a bike instead of using the car saves **fuel**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Who is going to remember this at home? I see only half of you.",
+      "utterance_coloquial": "Who's gonna remember this at home? I see only like half of you, come on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Think of one way your family could save electricity. Carlos says: wash clothes only when the machine is full.",
+      "utterance_coloquial": "Think of one way your family could save electricity… yes, Carlos: wash clothes only when the machine is full.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "Turn off lights and unplug devices when nobody is using them, because a bulb left on in an empty room wastes **energy**. Walking or riding a bike instead of using the car saves **fuel**. At home, wash clothes only when the machine is full."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Good ideas. Let me go back to our first question.",
+      "utterance_coloquial": "Good ideas, good. Let me go back to the, the first question.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Back to our first question, energy comes from renewable sources like **sun**, wind and water, and from non-renewable ones like oil, coal and gas.",
+            "role": "cuerpo",
+            "group": "ahorro"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 41,
+      "utterance_formal": "What do you remember about each group?",
+      "utterance_coloquial": "So what do you remember about each, each group?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Sun, wind and water are renewable; oil, coal and gas are not.",
+      "utterance_coloquial": "Sun, wind, water are renewable, oil, coal and gas are not, no.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3",
+              "texto_1_8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For homework, find out where the electricity of your town comes from, and bring the answer next class.",
+      "utterance_coloquial": "For homework, find out where your town's electricity comes from, and bring the answer next class.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Find out where the electricity of our town comes from. Bring the answer to the next class.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Nice work today. Please line up for the break.",
+      "utterance_coloquial": "Nice work today guys. Please line up, line up for the break.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

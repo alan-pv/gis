@@ -1,0 +1,1074 @@
+{
+  "id": "polinizacion",
+  "tema": "Flowers and pollination",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student identifies the parts of a flower that make pollen and seeds, explains how bees and other animals carry pollen from flower to flower, and relates pollination to the formation of fruits and seeds.",
+  "hatsumon": "How does a flower become a fruit with seeds inside?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everybody. Sit down, please, and let's get started.",
+      "utterance_coloquial": "Okay, good morning, everybody, sit down, please, and, let's get started.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Today we'll talk about flowers and the animals that visit them, especially one that makes honey.",
+      "utterance_coloquial": "Today we're gonna talk about flowers and the animals that visit them, one that makes honey, especially.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Who has seen a bee visiting flowers in the school garden? Many of you.",
+      "utterance_coloquial": "Who's seen a bee visiting flowers in the school garden? Wow, lots of you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Who likes honey? Everybody. Okay, we'll get to the honey in a moment.",
+      "utterance_coloquial": "Who likes honey? Everybody, yeah. Okay, we'll get to the honey in a sec.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Here is something to think about: a flower is pretty, but a pear or an apple has seeds. How does one become the other?",
+      "utterance_coloquial": "Here's what to think about: a flower's pretty, but an apple has seeds. How does one become the other, eh?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Keep that question in mind. Marta, please close the window, the wind is blowing the papers.",
+      "utterance_coloquial": "Keep that question in mind. Marta, close the window please, the wind's blowing the papers around.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Let's look at the flower first. In the middle there is a part that looks like a little bottle.",
+      "utterance_coloquial": "Let's look at the flower first. In the middle there's a part like a little bottle, see.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Flowers and Pollination",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Parts of a flower",
+            "role": "subtitulo",
+            "group": "parts"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "The **pistil** is in the center and holds the part that becomes seeds",
+            "role": "cuerpo",
+            "group": "parts"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Flower",
+            "group": "parts"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Pistil",
+            "group": "parts"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Around the pistil there are thin stalks with a yellow dust on top.",
+      "utterance_coloquial": "Around the pistil there are thin little stalks with yellow dust on top.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Stamen",
+            "group": "parts"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Pollen",
+            "group": "parts"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "has"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "That yellow dust is pollen, and the stalks are called stamens.",
+      "utterance_coloquial": "That yellow dust is pol len and the stalks are called stay mens.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The **stamens** make pollen, a fine yellow dust",
+            "role": "cuerpo",
+            "group": "parts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Yes, Tomas, if you touch it your finger gets yellow. Don't sneeze on it though.",
+      "utterance_coloquial": "Yes, Tomas, you touch it and your finger turns yellow. Don't sneeze on it, eh.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The **stamens** make pollen, a fine yellow dust. If you touch it, your finger turns yellow."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "The big colored leaves of the flower are the petals; they protect the inner parts.",
+      "utterance_coloquial": "The big colorful leaves of the flower are the petals; they protect what's inside.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Petals",
+            "group": "parts"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_1",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "has"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "The petals are the big colored leaves that protect the inner parts",
+            "role": "cuerpo",
+            "group": "parts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "But why do flowers have such strong colors and smells?",
+      "utterance_coloquial": "But why do flowers have such strong colors and smells, huh?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Exactly, Lucia, to attract animals. Flowers also hold a sweet liquid called nectar.",
+      "utterance_coloquial": "Exactly, Lucia, to get animals' attention. And flowers have a sweet liquid, nectar.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Attracting animals",
+            "role": "subtitulo",
+            "group": "att"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Bright petals and a sweet smell attract animals looking for **nectar**",
+            "role": "cuerpo",
+            "group": "att"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Nectar",
+            "group": "att"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_1",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "holds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Bees drink the nectar, which is their food, and they also collect some pollen to feed their babies.",
+      "utterance_coloquial": "Bees drink the nectar, that's their food, and they also collect pollen to feed the baby bees.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Bee",
+            "group": "att"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "feeds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Bees turn the nectar into honey inside the hive, and that's the honey you eat on your bread.",
+      "utterance_coloquial": "The bees turn that nectar into honey in the hive, the honey you put on your bread, right.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Bees turn nectar into **honey** and store it in the hive",
+            "role": "cuerpo",
+            "group": "att"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Careful, careful, a bee only stings if it feels in danger. Don't wave your arms around, Sebastian.",
+      "utterance_coloquial": "Careful, careful, a bee only stings if it feels in danger. Don't wave your arms, Sebastian.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "When a bee lands on a flower, pollen sticks to the tiny hairs on its body.",
+      "utterance_coloquial": "When the bee lands on a flower, pollen sticks to the tiny hairs on its body, you know.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Pollen sticks to the hairs on a bee's body",
+            "role": "cuerpo",
+            "group": "att"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Then the bee flies to another flower of the same kind, and some of that pollen rubs off on its pistil.",
+      "utterance_coloquial": "Then it flies to another flower of the same kind and some of the pollen rubs off on the pis til.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Pollen sticks to the hairs on a bee's body, and when the bee visits another flower of the same kind, some rubs off on its pistil, called **pollination**."
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_7",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "carries pollen to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Raise your hand if you can say that new word. Pollination. Very good.",
+      "utterance_coloquial": "Hands up if you can say that new word. Pol li na tion. Very good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Why do bees buzz? Good question, Elena, but let's leave it for later, I don't want to lose track.",
+      "utterance_coloquial": "Why do bees buzz? Good question, Elena, but let's leave it for later, I don't wanna lose track.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Why would it matter that it's a flower of the same kind? Only pollen from the same kind of plant works.",
+      "utterance_coloquial": "Why would it matter if it's the same kind of flower? Only pollen from the same kind of plant works, see.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Pollen sticks to the hairs on a bee's body, and when the bee visits another flower of the same kind, some rubs off on its pistil, called **pollination**. Only pollen from the same kind of plant works."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Bees aren't the only helpers. Butterflies, hummingbirds, bats, and even the wind move pollen.",
+      "utterance_coloquial": "Bees aren't the only helpers. Butterflies, hummingbirds, bats, even the wind carries pollen.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "butterflies\nhummingbirds\nbats\nwind",
+            "role": "lista",
+            "group": "att"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Grass doesn't have showy flowers; the wind does the job, and that's why some people sneeze a lot in spring.",
+      "utterance_coloquial": "Grass has no showy flowers, the wind does the job, and that's why some people sneeze so much in spring.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_29",
+            "object": "texto",
+            "text": "Grass has no showy flowers, so the wind does the job",
+            "role": "cuerpo",
+            "group": "att"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Wind",
+            "group": "att"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Grass flower",
+            "group": "att"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "pollinates"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Did you know that many fruits we eat exist because of pollinators? Apples, almonds, melons and coffee, for example.",
+      "utterance_coloquial": "Did you know lots of the fruits we eat exist thanks to pollinators? Apples, melons, even coffee.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Many fruits we eat, like apples, melons and coffee, need pollinators to grow",
+            "role": "cuerpo",
+            "group": "att"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Okay, so pollen lands on the pistil. What happens then?",
+      "utterance_coloquial": "Okay, so the pollen lands on the pistil. What happens next?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Inside the pistil there's a swollen part at the bottom called the ovary, and inside the ovary are tiny eggs.",
+      "utterance_coloquial": "Inside the pistil there's a swollen part at the bottom, the ovary, and inside are tiny eggs, right.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Inside the pistil",
+            "role": "subtitulo",
+            "group": "ov"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "The **ovary** is at the bottom of the pistil and holds tiny eggs",
+            "role": "cuerpo",
+            "group": "ov"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Ovary",
+            "group": "ov"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_2",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "The pollen joins with those tiny eggs, and this is how seeds begin to form.",
+      "utterance_coloquial": "The pollen joins with those little eggs, and that's how the seeds start to form.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "Pollen joins with the tiny eggs, and this is how **seeds** begin to form",
+            "role": "cuerpo",
+            "group": "ov"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Seed",
+            "group": "ov"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_4",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "joins"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_10",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "grows into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Then the petals wither and fall off, and the ovary grows bigger and bigger.",
+      "utterance_coloquial": "Then the petals dry up and fall off and the ovary keeps getting bigger and bigger.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "The petals fall off and the ovary grows into a **fruit**",
+            "role": "cuerpo",
+            "group": "ov"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "That's the apple, the pear, the tomato. And the seeds are inside.",
+      "utterance_coloquial": "That's the apple, the pear, the tomato. And the seeds are inside, yes.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Fruit",
+            "group": "ov"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_10",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "becomes"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "concepto_1_12",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "holds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Yes, Daniela, a tomato is a fruit because it grows from a flower and has seeds. Great question.",
+      "utterance_coloquial": "Yes, Daniela, a tomato's a fruit because it comes from a flower and has seeds. Great question.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_31",
+            "object": "texto",
+            "text": "A tomato is a fruit because it grows from a flower and has seeds",
+            "role": "cuerpo",
+            "group": "ov"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Who remembers what the stamens make? Say it out loud.",
+      "utterance_coloquial": "Who remembers what the stamens make? Say it out loud.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Right, pollen. And who carries it to another flower?",
+      "utterance_coloquial": "Right, pollen. And who carries it to the other flower?",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_3",
+              "concepto_1_4",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "So in a flower the pollen is made in the stamen and must arrive at the pistil.",
+      "utterance_coloquial": "So in a flower, pollen's made in the stamen and has to get to the pistil.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Seeds need to travel too, so new plants can grow far from the parent plant.",
+      "utterance_coloquial": "Seeds have to travel too, so new plants can grow far from the mother plant.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Seeds travel too, so new plants can grow far from the parent plant",
+            "role": "cuerpo",
+            "group": "ov"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "New plant",
+            "group": "ov"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "concepto_1_11",
+            "to": "concepto_1_13",
+            "style": "arrow",
+            "label": "grows into"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 34,
+      "utterance_formal": "A squirrel buries nuts and forgets some, and those can sprout, and a bird eats berries and drops the seeds far away.",
+      "utterance_coloquial": "A squirrel buries nuts and forgets a few, those sprout, and a bird eats berries and drops the seeds far away.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "A bird that eats berries drops the seeds far away",
+            "role": "cuerpo",
+            "group": "ov"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Seeds can also travel on the wind, in the water, or stuck to an animal's fur.",
+      "utterance_coloquial": "Seeds can also travel on the wind, in the water, or stuck to an animal's fur, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "by wind\nby water\nstuck to animal fur",
+            "role": "lista",
+            "group": "ov"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Let's go back to the beginning and the flower in our first question.",
+      "utterance_coloquial": "Let's go back to the beginning, the flower from our first question.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "The flower becomes a fruit because a pollinator carries pollen to the pistil and seeds form inside.",
+      "utterance_coloquial": "A flower becomes a fruit because a pollinator carries pollen to the pistil and seeds form inside.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "A pollinator carries **pollen** to the pistil, and then seeds form inside the fruit",
+            "role": "cuerpo",
+            "group": "ov"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Now, why is it important to take care of bees? Because without them many fruits would not grow.",
+      "utterance_coloquial": "Now, why do we have to take care of bees? Because without them lots of fruits wouldn't grow.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Caring for bees",
+            "role": "subtitulo",
+            "group": "care"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Without bees many fruits and vegetables would not grow.",
+            "role": "cuerpo",
+            "group": "care"
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Gardens with many flowers and no poison sprays help bees live. Please don't kill them when you see them.",
+      "utterance_coloquial": "Gardens with lots of flowers and no poison sprays help bees live. Please don't kill them when you see them.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_25",
+            "set": {
+              "text": "Without bees many fruits and vegetables would not grow. We should plant flowers and avoid poison sprays."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Let us go over everything again: the flower, the bee, the pollen, the fruit with the seed, and the new plant.",
+      "utterance_coloquial": "Let us go over everything again: the flower, the bee, the pollen, the fruit with its seed and the new plant.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_7",
+              "concepto_1_4",
+              "concepto_1_12",
+              "concepto_1_13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "And the big thing to remember is that bees help flowers make seeds while looking for food.",
+      "utterance_coloquial": "And the big thing to remember is bees help flowers make seeds while looking for food.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Open your notebooks for homework: observe a flower and count its petals and stamens.",
+      "utterance_coloquial": "For homework, open your notebooks: look at a flower and count its petals and stamens, okay.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "home"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Observe a real flower and count its petals and stamens.",
+            "role": "cuerpo",
+            "group": "home"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "If you can, look for a bee or another animal on it and see what it does for five minutes.",
+      "utterance_coloquial": "If you can, look for a bee or another animal on it and see what it does for five minutes.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "Observe a real flower and count its petals and stamens. Watch what an animal does on it for 5 minutes."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Good. Line up for recess, and walk, please, nobody runs.",
+      "utterance_coloquial": "Good. Line up for recess, and walk, please, nobody runs.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

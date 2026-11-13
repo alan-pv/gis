@@ -1,0 +1,1131 @@
+{
+  "id": "propiedades-de-materiales",
+  "tema": "The properties of materials",
+  "sesgo": "texto-primero",
+  "objetivo": "For students to recognize that objects are made of materials and that each material has properties (hardness, flexibility, transparency, waterproofing, and conduction) that determine what it's used for.",
+  "hatsumon": "Why are windows made of glass and not wood or metal?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to notice something we almost never think about: what things are made of.",
+      "utterance_coloquial": "Today we're going to notice something we almost never think about: what things are made of.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebook and pencil, because today we're going to make several lists.",
+      "utterance_coloquial": "Take out your notebook and pencil, because today we're going to make a bunch of lists.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about something: why are windows made of glass and not wood or metal?",
+      "utterance_coloquial": "Okay, think about it: why are windows made of glass and not wood or metal?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "It seems like an easy question, but there's more to it. Let's take it step by step.",
+      "utterance_coloquial": "Seems like an easy question, but there's more to it. Let's take it step by step.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Everything around us is made of something: the table, the chair, your notebook.",
+      "utterance_coloquial": "Everything around us is made of something: the table, the chair, your notebook.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Properties of Materials",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "What is a material?",
+            "role": "subtitulo",
+            "group": "material"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Every object is made of something",
+            "role": "cuerpo",
+            "group": "material"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "What things are made of, we call material.",
+      "utterance_coloquial": "What things are made of — we call that material.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Every object is made of something, and what it is made of is called a **material**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "One thing can have several materials, like this window with its frame.",
+      "utterance_coloquial": "One thing can have several materials, like this window with its frame.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Every object is made of something, and what it is made of is called a **material**. One thing can have several materials, like a window with its frame."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Notice: the table is made of wood, the window of glass, and the spoon of metal.",
+      "utterance_coloquial": "Notice: the table is made of wo od, the win dow of glass, and the spoon of metal.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Table: made of wood\nWindow: made of glass\nSpoon: made of metal",
+            "role": "lista",
+            "group": "material"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "table",
+            "group": "material"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "wood",
+            "group": "material"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "made of"
+          },
+          {
+            "op": "add",
+            "id": "cuchara_1_1",
+            "object": "concepto",
+            "label": "spoon",
+            "group": "material"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "metal",
+            "group": "material"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "cuchara_1_1",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "made of"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "And each material is different because it has its own characteristics, its properties.",
+      "utterance_coloquial": "And each material is different because it has its own characteristics, its properties.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Hardness and flexibility",
+            "role": "subtitulo",
+            "group": "dur"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Each material has **properties** that set it apart",
+            "role": "cuerpo",
+            "group": "dur"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "A property is something we can observe or measure in the material. Let's start with the first one.",
+      "utterance_coloquial": "A property is something we can observe or measure in the material. Let's start with the first one.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Each material has **properties** that set it apart, things we can observe or measure."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "The first one is hardness: some materials resist without breaking or scratching.",
+      "utterance_coloquial": "The first one is hardness: some materials resist without breaking or scratching.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Each material has **properties** that set it apart, things we can observe or measure. **Hardness** means resisting impact without breaking or scratching."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "For example, diamond, stone, and steel are very hard.",
+      "utterance_coloquial": "For example, diamond, stone, and steel are super hard.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "diamond\nstone\nsteel",
+            "role": "lista",
+            "group": "dur"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Diamond is so hard it can even scratch glass, did you know that?",
+      "utterance_coloquial": "Diamond is so hard it can even scratch glass, did you know that?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Diamond is so hard that it can even scratch glass",
+            "role": "cuerpo",
+            "group": "dur"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Another property is flexibility: materials that bend without breaking.",
+      "utterance_coloquial": "Another property is flexibility: materials that bend without breaking.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "Diamond is so hard that it can even scratch glass. Another property is **flexibility**: materials that bend without breaking."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Like rubber, plastic, and wire, which you can bend and they won't snap.",
+      "utterance_coloquial": "Like rubber, plas tic, and wire, which you can bend and they won't snap.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "rubber\nplastic\nwire",
+            "role": "lista",
+            "group": "dur"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "What else can you think of that's flexible? Take a moment.",
+      "utterance_coloquial": "What else can you think of that's flexible? Think about it for a sec.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "So far we have two properties: hardness and flexibility.",
+      "utterance_coloquial": "So far we've got two properties: hardness and flexibility.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_8",
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Now, some materials do this: they let light pass through — we call them transparent.",
+      "utterance_coloquial": "Now, some materials do this: they let light pass through — we call them transparent.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Transparency and waterproofing",
+            "role": "subtitulo",
+            "group": "trans"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "**Transparent** materials let light pass through",
+            "role": "cuerpo",
+            "group": "trans"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Glass, clean water, and mica let you see through them.",
+      "utterance_coloquial": "Glass, clean water, and mica let you see to the other side.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "glass\nwater\nmica",
+            "role": "lista",
+            "group": "trans"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "A window is nothing more than a sheet of glass that lets you see to the other side.",
+      "utterance_coloquial": "A window is nothing more than a sheet of glass that lets you see to the other side.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_50",
+            "object": "texto",
+            "text": "A window is a sheet of glass that lets you see to the other side",
+            "role": "cuerpo",
+            "group": "trans"
+          },
+          {
+            "op": "add",
+            "id": "rectangulo_1_1",
+            "object": "concepto",
+            "label": "glass",
+            "group": "trans"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "window",
+            "group": "trans"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_15",
+            "to": "rectangulo_1_1",
+            "style": "arrow",
+            "label": "for example"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_1",
+            "to": "rectangulo_1_1",
+            "style": "arrow",
+            "label": "made of"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "That's why we can see the yard without having to open the window.",
+      "utterance_coloquial": "That's why we can see the yard without having to open the window.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_51",
+            "object": "texto",
+            "text": "We can see the yard without having to open the window",
+            "role": "cuerpo",
+            "group": "trans"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "There are others too: they don't let water through — we say they're waterproof.",
+      "utterance_coloquial": "There are others too: they don't let water through — we say they're wa terproof.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_51",
+            "set": {
+              "text": "We can see the yard without having to open the window. **Waterproof** materials don't let water through."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Plastic, rubber, and metal don't get wet on the inside.",
+      "utterance_coloquial": "Plastic, rubber, and metal don't get wet on the inside.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "plastic\nrubber\nmetal",
+            "role": "lista",
+            "group": "trans"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "That's why rain boots and raincoats are made of rubber.",
+      "utterance_coloquial": "That's why rain boots and raincoats are made of rubber.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "rain boots",
+            "group": "trans"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_15",
+            "to": "concepto_1_6",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Notice how many different properties we already have written down.",
+      "utterance_coloquial": "Notice how many different properties we've got written down already.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_8",
+              "texto_1_12",
+              "texto_1_16",
+              "texto_1_51"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "There's one very important one missing: some materials do this — they let heat and electricity pass through.",
+      "utterance_coloquial": "There's one very important one missing: some materials do this — they let heat and electricity pass through.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Conduction",
+            "role": "subtitulo",
+            "group": "cond"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "**Conductors** let heat and electricity pass through",
+            "role": "cuerpo",
+            "group": "cond"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Metals like copper, iron, and aluminum conduct very well.",
+      "utterance_coloquial": "Metals like copper, iron, and alu minum conduct super well.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "copper\niron\naluminum",
+            "role": "lista",
+            "group": "cond"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "You bring heat close on one side and it reaches the other: that's conducting.",
+      "utterance_coloquial": "You bring heat close on one side and it reaches the other: that's conducting.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Metal **conducts** heat: bring heat close on one side and it reaches the other",
+            "role": "cuerpo",
+            "group": "cond"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Think of a metal spoon inside hot soup: the handle gets hot too.",
+      "utterance_coloquial": "Think of a metal spoon inside hot soup: the handle gets hot too.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_21",
+            "to": "cuchara_1_1",
+            "style": "arrow",
+            "label": "conducts the heat"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "hot soup",
+            "group": "cond"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_5",
+            "to": "cuchara_1_1",
+            "style": "arrow",
+            "label": "heats"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Who hasn't burned their hand on a spoon like that?",
+      "utterance_coloquial": "Who hasn't burned their hand on a spoon like that?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "And the opposite: wood and plastic barely let heat through.",
+      "utterance_coloquial": "And the opposite: wood and plastic barely let heat through.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Wood and plastic barely **conduct** heat",
+            "role": "cuerpo",
+            "group": "cond"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "So metal lets heat through and wood stops it.",
+      "utterance_coloquial": "So metal lets heat through and wood stops it.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_21"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "That's why frying pans have plastic or wooden handles, so we don't burn ourselves.",
+      "utterance_coloquial": "That's why frying pans have plastic or wooden handles, so we don't burn ourselves.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_25",
+            "set": {
+              "text": "Wood and plastic barely **conduct** heat, which is why frying pans have plastic or wooden handles."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Let's go over the five properties we have written down so far.",
+      "utterance_coloquial": "Let's go over the five properties we have written down so far.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_8",
+              "texto_1_12",
+              "texto_1_16",
+              "texto_1_51",
+              "texto_1_22"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Now, with all this, we can understand why we choose each material.",
+      "utterance_coloquial": "Now, with all this, we can understand why we choose each material.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "The property decides the use",
+            "role": "subtitulo",
+            "group": "uso"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "We choose the **material** based on what we need",
+            "role": "cuerpo",
+            "group": "uso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "In the window we need to see through, so we use a transparent material.",
+      "utterance_coloquial": "In the win dow we need to see through, so we use a trans parent material.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "We choose the **material** based on what we need, so a window needs to see through and uses glass"
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "texto_1_27",
+            "to": "texto_1_15",
+            "style": "arrow",
+            "label": "needs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Can you imagine a metal window? We wouldn't see a single thing.",
+      "utterance_coloquial": "Can you imagine a metal window? We wouldn't see a single thing.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "And pots are made of metal because we need the heat to reach the food.",
+      "utterance_coloquial": "And pots are made of metal because we need the heat to reach the food.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "We choose the **material** based on what we need, so a window needs to see through and uses glass; a pot needs the heat to reach the food, so it is made of metal."
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_27",
+            "to": "texto_1_21",
+            "style": "arrow",
+            "label": "needs"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "pot",
+            "group": "uso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_7",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "made of"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Go back to the question we started with: now we can answer it.",
+      "utterance_coloquial": "Go back to the question we started with: now we can answer it.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_16"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "So windows are made of glass because glass is transparent and lets us see through to the other side.",
+      "utterance_coloquial": "So windows are made of glass 'cause glass is trans parent and lets us see through to the other side.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_38",
+            "object": "texto",
+            "text": "Glass is **transparent**, so we see through windows",
+            "role": "cuerpo",
+            "group": "uso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Give your hand a break and then we'll wrap up with the important part.",
+      "utterance_coloquial": "Give your hand a little break and then we'll wrap up with the important part.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Hold on to the big idea for today, the one that sums everything up.",
+      "utterance_coloquial": "Hold on to the big idea for today, the one that sums it all up.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_38",
+            "set": {
+              "text": "Glass is **transparent**, so we see through windows. Every material has **properties** that decide its **use**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "And the list of the five properties we studied.",
+      "utterance_coloquial": "And the list of the five properties we studied.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_32",
+            "object": "texto",
+            "text": "hardness\nflexibility\ntransparency\nwaterproofing\nconduction",
+            "role": "lista",
+            "group": "uso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is property.",
+      "utterance_coloquial": "And today's big word, the one you shouldn't forget, is property.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_33",
+            "object": "texto",
+            "text": "The key word of this lesson is **property**",
+            "role": "cuerpo",
+            "group": "uso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Remember what a material is: what an object is made of.",
+      "utterance_coloquial": "Remember what a material is: what an object is made of.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Very good, I can see it's clear. Excellent work.",
+      "utterance_coloquial": "Very good, I can see it's super clear. Excellent work.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "For homework, pick three objects from your room and say what material they're made of.",
+      "utterance_coloquial": "For homework, pick three objects from your room and say what material they're made of.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_34",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_35",
+            "object": "texto",
+            "text": "Write down 3 objects and their material.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "And explain to me what property makes that material good for that job.",
+      "utterance_coloquial": "And explain to me what pro perty makes that material good for that job.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_35",
+            "set": {
+              "text": "Write down 3 objects and their material. Explain what property makes that material good for that job."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "That's all for today. Pack up your things and see you tomorrow.",
+      "utterance_coloquial": "That's all for today. Pack up your things and see you tomorrow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

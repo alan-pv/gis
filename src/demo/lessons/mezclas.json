@@ -1,0 +1,1046 @@
+{
+  "id": "mezclas",
+  "tema": "Mixtures and how to separate them",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student recognizes that a mixture keeps its materials, and chooses a way to separate them (sieving, filtering, magnet, evaporation) according to the properties of the parts.",
+  "hatsumon": "How can we get the salt back out of salty water?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Quiet, please. Take your seats. Today we're going to talk about mixtures.",
+      "utterance_coloquial": "Okay, quiet please, take your seats, eh. Today we're going to talk about, about mixtures.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Who had breakfast this morning? Raise your hand. Good.",
+      "utterance_coloquial": "Who had breakfast this morning? Hands up. Good, good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Some of you had cereal with milk, and others had a fruit salad.",
+      "utterance_coloquial": "Some of you had cereal with milk, and others a fruit salad, right.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Here is the question I want you to keep in mind for the whole class: if I drop salt into water and stir, how could I ever get the salt back?",
+      "utterance_coloquial": "Here's the question to keep in your head the whole class: if I put salt in water and stir, how do I get the salt back, eh?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Don't shout the answer. We'll find it step by step.",
+      "utterance_coloquial": "Don't shout the answer, don't. We'll find it little by little.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "When we put two or more materials together and each one stays the same, we have a mixture.",
+      "utterance_coloquial": "When you put two or more materials together and each one stays what it is, that's a mixture, okay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Mixtures",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "What a mixture is",
+            "role": "subtitulo",
+            "group": "mix"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Two or more materials put together make a **mixture**",
+            "role": "cuerpo",
+            "group": "mix"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The cereal doesn't turn into milk and the milk doesn't turn into cereal; the parts stay as they were.",
+      "utterance_coloquial": "The cereal doesn't become milk, the milk doesn't become cereal, they stay what they were.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Two or more materials put together make a **mixture**, and each one keeps its own properties."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Lemonade is a mixture, and so is a fruit salad, and so is sand with water.",
+      "utterance_coloquial": "Lemonade's a mixture, a fruit salad too, and sand with water also, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "fruit salad\nlemonade\nsand and water",
+            "role": "lista",
+            "group": "mix"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Is the air a mixture? Think about it. Yes, Ana, it has oxygen and other gases.",
+      "utterance_coloquial": "Is the air a mixture? Think. Yes, Ana, oxygen and other gases, very good.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_31",
+            "object": "texto",
+            "text": "Air is a mixture too, made of oxygen and other gases",
+            "role": "cuerpo",
+            "group": "mix"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Some mixtures let us see every part, like a salad. In others, like lemonade, we can't tell the parts apart.",
+      "utterance_coloquial": "In some mixtures you see every part, like the salad. In others, like lemonade, you can't tell the parts, you know.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_31",
+            "set": {
+              "text": "Air is a mixture too, made of oxygen and other gases. In some mixtures, like a salad, we see every part, but in lemonade we cannot tell them apart."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Now, sometimes we want the parts back, so we need a way to separate them.",
+      "utterance_coloquial": "Now, sometimes we want the parts back, so we need a, a way to separate them.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Separating mixtures",
+            "role": "subtitulo",
+            "group": "sep"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "The way to separate a mixture depends on the **properties** of its parts",
+            "role": "cuerpo",
+            "group": "sep"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Let's start with a bucket of sand mixed with small stones.",
+      "utterance_coloquial": "Let's start with a bucket of sand with little stones in it.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Sand and gravel",
+            "group": "sep"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_7",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "What could we use here? The stones are big and the sand grains are tiny.",
+      "utterance_coloquial": "What could we use here? The stones are big, the grains of sand are tiny, so...",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_32",
+            "object": "texto",
+            "text": "The stones are big and the sand grains are tiny",
+            "role": "cuerpo",
+            "group": "sep"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "A sieve, exactly, like the one in the kitchen for flour.",
+      "utterance_coloquial": "A sieve, right, like the one in the kitchen for the flour.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_32",
+            "set": {
+              "text": "The stones are big and the sand grains are tiny. A **sieve** has holes: small pieces fall through and big ones stay on top."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Sieve",
+            "group": "sep"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The sand falls through and the stones stay inside.",
+      "utterance_coloquial": "The sand falls through, the stones stay up in the sieve.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Sand",
+            "group": "sep"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Gravel",
+            "group": "sep"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "falls through"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_2",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "stays on top"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Sieving works when the pieces have different sizes.",
+      "utterance_coloquial": "It works when the pieces are different sizes, okay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Sieving works when the parts have different **sizes**",
+            "role": "cuerpo",
+            "group": "sep"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Let me tell you something funny. My grandmother used to sieve flour to find the lumps.",
+      "utterance_coloquial": "Funny thing, my grandma used to sift the flour to, to get the lumps out.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "What about a glass of muddy water? Could we use the sieve?",
+      "utterance_coloquial": "What about a glass of muddy water, eh? Could we use the sieve?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "No, the mud is too fine and passes right through the holes, so we need something with even smaller holes.",
+      "utterance_coloquial": "No, the mud's too fine, goes right through, so we need something with tinier holes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Sieving works when the parts have different **sizes**. But fine mud passes through the holes, so we need smaller ones."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Coffee makers use a paper for this. It lets the liquid pass and traps the solid pieces.",
+      "utterance_coloquial": "Coffee makers use a paper for that. The liquid passes and the solid bits get trapped.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Sieving works when the parts have different **sizes**. But fine mud passes through the holes, so we need smaller ones. A **filter** lets liquid pass through and traps solid pieces."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Muddy water",
+            "group": "sep"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Filter paper",
+            "group": "sep"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Clean water",
+            "group": "sep"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "poured through"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "passes through"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The mud stays on the paper and the water that comes out is clearer.",
+      "utterance_coloquial": "The mud stays on the paper and the water coming out is clearer, see.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "The mud stays on the paper, while the water that comes out is clearer",
+            "role": "cuerpo",
+            "group": "sep"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "So who remembers which mixtures a sieve separates and which ones a filter separates?",
+      "utterance_coloquial": "So who remembers what the sieve separates and what the filter separates?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Yes, the sieve for solids of different sizes and the filter for a solid in a liquid.",
+      "utterance_coloquial": "Yes, the sieve for different sizes, the filter for a solid in a liquid.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_2",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Now I have a bag with sand and iron nails, all mixed together. Marcos, bring me the magnet from my desk.",
+      "utterance_coloquial": "Now I've got a bag of sand and iron nails, all mixed up. Marcos, bring me the magnet from my desk, the, the red one.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "The magnet pulls the nails and leaves the sand.",
+      "utterance_coloquial": "The magnet grabs the nails and leaves the sand behind.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Magnet",
+            "role": "subtitulo",
+            "group": "mag"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "A **magnet** attracts iron objects but not sand or plastic.",
+            "role": "cuerpo",
+            "group": "mag"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Sand and nails",
+            "group": "mag"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Magnet",
+            "group": "mag"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Iron nails",
+            "group": "mag"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "passed over"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_9",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "attracts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Would it work with sand and plastic buttons? No, because plastic isn't attracted.",
+      "utterance_coloquial": "Would it work with sand and plastic buttons? No, plastic doesn't stick, nope.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_33",
+            "object": "texto",
+            "text": "Plastic buttons are not attracted by the magnet, so they stay with the sand",
+            "role": "cuerpo",
+            "group": "mag"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Only things made of iron, or steel, are attracted.",
+      "utterance_coloquial": "Only things made of iron, or steel, get attracted.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_33",
+            "set": {
+              "text": "Plastic buttons are not attracted by the magnet, so they stay with the sand, because only **iron** and steel are attracted."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Now the hardest one, the question we began with: salt dissolved in water.",
+      "utterance_coloquial": "Now the hard one, the question we started with: salt dissolved in water.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Stir two spoons of salt into half a cup of water and the salt vanishes. Is it gone?",
+      "utterance_coloquial": "Two spoons of salt in half a cup of water, you stir, and the salt vanishes. Is it gone?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "No, it's still there, mixed so finely that we can't see it. We say it's dissolved.",
+      "utterance_coloquial": "No, it's still there, so finely mixed you can't see it. We say it's dis solved.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Salt in water",
+            "role": "subtitulo",
+            "group": "dis"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Salt can **dissolve** in water: 2 spoons of salt in ½ cup of water.",
+            "role": "cuerpo",
+            "group": "dis"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Salt water",
+            "group": "dis"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Would a filter work? Think. The salt is dissolved, so it passes through the paper along with the water.",
+      "utterance_coloquial": "Would a filter work? Think. The salt's dissolved, so it goes through the paper with the water.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "A filter does not catch **dissolved** salt because it passes through with the water",
+            "role": "cuerpo",
+            "group": "dis"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Hey, hey, Luis, quit tapping the desk. Thank you.",
+      "utterance_coloquial": "Hey, hey, Luis, stop tapping the desk. Thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "What leaves when water gets warm? The water goes up into the air as vapor and the salt can't go with it.",
+      "utterance_coloquial": "What leaves when water gets warm? The water goes up into the air as vapor, and the salt can't go with it.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "A filter does not catch **dissolved** salt because it passes through with the water. When water **evaporates** it becomes vapor and leaves the salt behind."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "If we leave a plate of salt water in the sun, after a few days the plate is dry and white.",
+      "utterance_coloquial": "If we leave a plate of salt water in the sun, in a few days the plate's dry and white.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "dis"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Salt",
+            "group": "dis"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_11",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "left under"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_12",
+            "to": "concepto_1_13",
+            "style": "arrow",
+            "label": "leaves behind"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "That's how people make salt from the sea, in big shallow ponds.",
+      "utterance_coloquial": "That's how they make salt from the sea, in big flat ponds, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Sea salt is made by letting seawater evaporate in shallow ponds",
+            "role": "cuerpo",
+            "group": "dis"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Who knows why the pond has to be shallow? Yes, so more water is exposed to the air and the sun.",
+      "utterance_coloquial": "Who knows why the pond is shallow? Yes, so more water touches the air and the sun.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_23",
+            "set": {
+              "text": "Sea salt is made by letting seawater evaporate in shallow ponds, so more water touches the air and the sun."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Okay, let's put the four methods together. Which method for which mixture?",
+      "utterance_coloquial": "Okay, let's put the four methods together. Which one for which mixture?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Different sizes, a sieve. A solid in a liquid, a filter. Iron objects, a magnet. A dissolved solid, evaporation.",
+      "utterance_coloquial": "Different sizes, a sieve. Solid in a liquid, filter. Iron things, magnet. Dissolved solid, evaporation, right.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Different sizes: sieve\nSolid in a liquid: filter\nIron objects: magnet\nDissolved solid: evaporation",
+            "role": "enumeracion",
+            "group": "dis"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "So the method depends on the property that is different in each part.",
+      "utterance_coloquial": "So the method depends on what's different about each part.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Each method uses a **property** that is different in the parts",
+            "role": "cuerpo",
+            "group": "dis"
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Let's see if you remember: what do we do with salty water?",
+      "utterance_coloquial": "Let's see if you remember: what do we do with salty water?",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_20"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Back to our question: how do we get the salt back? We let the water evaporate and the salt stays.",
+      "utterance_coloquial": "Back to our question: how do we get the salt back? We let the water evaporate and the salt's left.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "Each method uses a **property** that is different in the parts. To get the salt back, let the water **evaporate** and the salt is left."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Look at the whole board: from sand and gravel to salt water, every mixture has its own way.",
+      "utterance_coloquial": "Look at the whole board: sand and gravel, muddy water, nails, salt water, each one has its way.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_5",
+              "concepto_1_8",
+              "concepto_1_11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "And the most important idea today is that mixing doesn't change the parts, so we can separate them again.",
+      "utterance_coloquial": "And the big idea today is that mixing doesn't change the parts, so we can separate them again.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For tomorrow, look for mixtures in your kitchen and think how you would separate them.",
+      "utterance_coloquial": "For tomorrow, find mixtures in your kitchen and think how you'd separate them.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_29",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "home"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "Find two mixtures at home and decide how to separate them.",
+            "role": "cuerpo",
+            "group": "home"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Ask an adult for help if you need heat or anything sharp. No matches by yourselves.",
+      "utterance_coloquial": "Ask an adult if you need heat or something sharp. No matches by yourselves, eh.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_30",
+            "set": {
+              "text": "Find two mixtures at home and decide how to separate them. Ask an adult for help if you need heat or anything sharp."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Okay, that's it. Pack up your notebooks and line up at the door.",
+      "utterance_coloquial": "Okay, that's it. Pack up your notebooks and line up at the door.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

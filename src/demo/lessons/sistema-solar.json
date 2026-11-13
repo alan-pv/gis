@@ -1,0 +1,1047 @@
+{
+  "id": "sistema-solar",
+  "tema": "The solar system",
+  "sesgo": "ilustrativo",
+  "objetivo": "For students to recognize that the Sun is a star around which eight planets orbit due to gravity, distinguish rocky planets from gas planets, and understand why Earth is special.",
+  "hatsumon": "When you look at the night sky, what's up there, so far away?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to travel without leaving our classroom: we're going to learn about the solar system.",
+      "utterance_coloquial": "Alright everyone, today we're going to travel without leaving this room: we're going to learn about the solar system.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebooks and leave yourselves plenty of room, because there's a lot to see today.",
+      "utterance_coloquial": "Take out your notebooks and leave yourselves a good chunk of room, 'cause there's a ton to see today.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about something: when you look at the night sky, what's up there, so far away from us?",
+      "utterance_coloquial": "Okay, think about it: when you look at the night sky, what's up there, so far away?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Who has seen the stars from their house? Yes, in the countryside you can see tons of them.",
+      "utterance_coloquial": "Who's seen the stars from their house?… yeah, out in the countryside you can see a ton of them.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Everything we see up there — the Sun, the Earth, the planets — forms one big family.",
+      "utterance_coloquial": "Everything we see up there, the Sun, the Earth, the pla nets, forms one big family.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Solar System",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "The Sun and its family",
+            "role": "subtitulo",
+            "group": "sol"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The Sun, the Earth, and the planets form one big family in **space**.",
+            "role": "cuerpo",
+            "group": "sol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "At the center of it all is a huge star: the Sun.",
+      "utterance_coloquial": "Right smack in the center of it all is a huge star: the Sun.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "sol_1_1",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "sol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The Sun is a star: a huge ball of burning gas.",
+      "utterance_coloquial": "The Sun is a star: a huge ball of burning gas.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The Sun is a **star**, a ball of burning **gas**",
+            "role": "cuerpo",
+            "group": "sol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_4",
+            "to": "sol_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Its surface is about five thousand five hundred degrees; nothing like the heat here.",
+      "utterance_coloquial": "Its surface is about five thousand five hundred degrees, okay?… nothing like the heat around here.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The Sun is a **star**, a ball of burning **gas**, and its surface is about 5,500°C."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Can you imagine that heat? Not even all our summers put together.",
+      "utterance_coloquial": "Can you imagine that heat? Not even if you put all our summers together.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The Sun is so big that its gravity pulls on everything else and keeps it spinning around it.",
+      "utterance_coloquial": "The Sun is so huge that its gra vity pulls on everything else and keeps it spinning around it.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The Sun is a **star**, a ball of burning **gas**, and its surface is about 5,500°C. Its **gravity** keeps everything spinning around it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "And eight planets orbit around the Sun.",
+      "utterance_coloquial": "And eight pla nets orbit around the Sun.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "The planets",
+            "role": "subtitulo",
+            "group": "planetas"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Eight planets **orbit** the Sun",
+            "role": "cuerpo",
+            "group": "planetas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "texto_1_8",
+            "to": "texto_1_4",
+            "style": "arrow",
+            "label": "orbit"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Eight, not one more. They used to count nine, but we'll talk about that another day.",
+      "utterance_coloquial": "Eight, not one more. They used to say nine, but I'll tell you about that another day.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Eight planets **orbit** the Sun, and there are exactly eight of them"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The first four, the closest to the Sun, are small and made of hard rock.",
+      "utterance_coloquial": "The first four, the closest to the Sun, are small and made of hard rock.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Eight planets **orbit** the Sun, and there are exactly eight of them. The first four, the closest to the Sun, are small and made of hard **rock**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "There are four: Mercury, Venus, Earth, and Mars. Make me a list.",
+      "utterance_coloquial": "There are four: Mer cury, Venus, Earth, and Mars. Make me a little list.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Mercury\nVenus\nEarth\nMars",
+            "role": "lista",
+            "group": "planetas"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Mercury",
+            "group": "planetas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "sol_1_1",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "orbits"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The third of those four is ours: Earth.",
+      "utterance_coloquial": "The third of those four is ours: Earth.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_1",
+            "object": "concepto",
+            "label": "Earth",
+            "group": "planetas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "sol_1_1",
+            "to": "circulo_1_1",
+            "style": "arrow",
+            "label": "orbits"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "We'll leave that one noted down because its moment comes up later.",
+      "utterance_coloquial": "We'll leave that one noted down because its moment comes up later.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "The other four, the farthest away, are huge and made of gas.",
+      "utterance_coloquial": "The other four, way farther out, are huge and made of gas.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "The other four, the farthest away, are huge and made of **gas**.",
+            "role": "cuerpo",
+            "group": "planetas"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "These are Jupiter, Saturn, Uranus, and Neptune. Another list.",
+      "utterance_coloquial": "These are Jupiter, Saturn, Uranus, and Nep tune. Another little list.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Jupiter\nSaturn\nUranus\nNeptune",
+            "role": "lista",
+            "group": "planetas"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Neptune",
+            "group": "planetas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "sol_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "orbits"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "The biggest one of all, by a huge margin, is Jupiter.",
+      "utterance_coloquial": "The biggest one of all, by a mile, is Jupiter.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_2",
+            "object": "concepto",
+            "label": "Jupiter",
+            "group": "planetas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "sol_1_1",
+            "to": "circulo_1_2",
+            "style": "arrow",
+            "label": "orbits"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "And next comes Saturn, the one with the rings, which is the prettiest of them all.",
+      "utterance_coloquial": "And next comes Saturn, the one with the rings, which is the prettiest of them all.",
+      "case_tags": [
+        "ilustrativo",
+        "miss-placeholder"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "saturno_1_1",
+            "object": "concepto",
+            "label": "Saturn",
+            "group": "planetas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "sol_1_1",
+            "to": "saturno_1_1",
+            "style": "arrow",
+            "label": "orbits"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Have you noticed how all of them, without exception, orbit the Sun?",
+      "utterance_coloquial": "Have you noticed how all of them, every single one, orbit the Sun?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "All the planets orbit the Sun.",
+            "role": "cuerpo",
+            "group": "planetas"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "So we have two families of planets: some made of rock and others made of gas.",
+      "utterance_coloquial": "So we have two families of planets: some made of rock and others made of gas.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9",
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Now let's go back to Earth, because our planet has something no other one has.",
+      "utterance_coloquial": "Now let's go back to Earth, because our planet has something no other one has.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Our planet: Earth",
+            "role": "subtitulo",
+            "group": "tierra"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Earth is the only planet with **life** that we know of",
+            "role": "cuerpo",
+            "group": "tierra"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "texto_1_16",
+            "to": "circulo_1_1",
+            "style": "arrow",
+            "label": "is this one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "It has water, it has air to breathe, and it's not too hot or too cold.",
+      "utterance_coloquial": "It has water, it has air to breathe, and it's not too hot or too cold.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "Earth is the only planet with **life** that we know of, because it has **water**, air to breathe, and just the right temperature."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "That's why, as far as we know, it's the only place where there are living things.",
+      "utterance_coloquial": "That's why, as far as we know, it's the only place where there are living things.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "Earth is the only planet with **life** that we know of, because it has **water**, air to breathe, and just the right temperature. That is why it is the only place we know with living things."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "And Earth isn't alone: it has the Moon orbiting it.",
+      "utterance_coloquial": "And Earth's not alone: it's got the Moon going around it.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_3",
+            "object": "concepto",
+            "label": "Moon",
+            "group": "tierra"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "circulo_1_1",
+            "to": "circulo_1_3",
+            "style": "arrow",
+            "label": "orbits"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "The Moon is its satellite: a body that orbits a planet.",
+      "utterance_coloquial": "The Moon is its sate llite: a body that orbits a planet.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "The Moon is Earth's natural **satellite**, a body that orbits a planet.",
+            "role": "cuerpo",
+            "group": "tierra"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Have you ever seen it full and really big? It's the same one from the drawing.",
+      "utterance_coloquial": "Haven't you ever seen it full and huge? It's the same one from the drawing.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Let's put the eight planets in order, starting from the closest to the Sun. Number them.",
+      "utterance_coloquial": "Let's put the eight planets in order, from the closest to the Sun on out. With numbers.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "The order from the Sun",
+            "role": "subtitulo",
+            "group": "orden"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Mercury\nVenus\nEarth\nMars\nJupiter\nSaturn\nUranus\nNeptune",
+            "role": "enumeracion",
+            "group": "orden"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Repeat it with me out loud, that way it sticks better.",
+      "utterance_coloquial": "Repeat it with me out loud, that way it sticks better.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "And notice something: the farther a planet is from the Sun, the colder it is.",
+      "utterance_coloquial": "And notice something: the farther a planet is from the Sun, the colder it gets.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "The farther a planet is from the Sun, the **colder** it is.",
+            "role": "cuerpo",
+            "group": "orden"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Look at the drawing: the Sun at the center, Earth and giant Jupiter going around.",
+      "utterance_coloquial": "Check out the drawing: the Sun at the center, Earth and giant old Jupiter going around.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "sol_1_1",
+              "circulo_1_1",
+              "circulo_1_2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Any questions about the planets before we move on? Ask with confidence.",
+      "utterance_coloquial": "Any questions about the planets before we move on? Ask away, no worries.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Now let's think about why all of this matters to us down here.",
+      "utterance_coloquial": "Now let's think about why all of this matters to us down here.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Why does it matter to us?",
+            "role": "subtitulo",
+            "group": "importancia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "The Sun gives us **light** and **heat** every day",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "And here's the most important part of the class: without the Sun there would be no life on Earth.",
+      "utterance_coloquial": "And here's the biggest part of the class: without the Sun there would be no life on Earth.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_24",
+            "set": {
+              "text": "The Sun gives us **light** and **heat** every day. Without the Sun there would be no life on Earth."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Think about it: the light, the heat, the plants, the food… it all starts with the Sun.",
+      "utterance_coloquial": "Think about it: the light, the heat, the plants, the food… all of it starts with the Sun.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "And everything stays in place thanks to the Sun's gravity.",
+      "utterance_coloquial": "And everything stays in place thanks to the Sun's gra vity.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_24",
+            "set": {
+              "text": "The Sun gives us **light** and **heat** every day. Without the Sun there would be no life on Earth. Its **gravity** keeps the planets in place."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Let's remember the key point: the Sun gives us light and heat, and without it there'd be no life.",
+      "utterance_coloquial": "Let's remember the key point: the Sun gives us light and heat, and without it there'd be no life.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_24"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "We're doing great. Stretch a little and let's move on to the wrap-up.",
+      "utterance_coloquial": "We're doing awesome. Stretch a bit and let's move on to the wrap-up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "So you don't forget, hold on to this: one star and eight planets.",
+      "utterance_coloquial": "So you don't forget, hold on to this: one star and eight planets.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "The solar system has one **star** and eight planets orbiting it.",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "And the whole family of objects we studied has a name.",
+      "utterance_coloquial": "And the whole family of objects we studied has a name.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_28",
+            "set": {
+              "text": "The solar system has one **star** and eight planets orbiting it. The whole family of objects we studied is called the **solar system**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Remember well the two families of planets we saw.",
+      "utterance_coloquial": "Remember well the two families of planets we saw.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9",
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "And which is the only one with life? Exactly, ours.",
+      "utterance_coloquial": "And which one is the only one with life?… that's right, ours.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_17"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Very good, I can see it's clear. Excellent work.",
+      "utterance_coloquial": "Very good, I can see it's super clear. Excellent work, everyone.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "For homework, draw the Sun in the center and the eight planets in order.",
+      "utterance_coloquial": "For homework, draw me the Sun in the center and the eight planets in order.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_31",
+            "object": "texto",
+            "text": "Draw the Sun and the eight planets in order.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "And write for me, in your own words, why Earth does have life.",
+      "utterance_coloquial": "And write for me, in your own words, why Earth does have life.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_31",
+            "set": {
+              "text": "Draw the Sun and the eight planets in order. Explain why Earth has life."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "And with that we answered the question we started class with.",
+      "utterance_coloquial": "And with that we already answered the question we kicked off class with.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "That's all for today. Pack up your things and see you tomorrow.",
+      "utterance_coloquial": "That's all for today. Pack up your things and see you tomorrow, take care.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1017 @@
+{
+  "id": "dia-y-noche",
+  "tema": "Day and night and the phases of the Moon",
+  "sesgo": "ilustrativo",
+  "objetivo": "For the student to explain that day and night are caused by the rotation of Earth as it is lit by the Sun, and that the Moon changes phase because it reflects sunlight while we see it from different angles.",
+  "hatsumon": "Why are there days with light and nights with darkness, and why does the Moon change shape?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Before we begin, tell me: how did you know it was time to get up today?",
+      "utterance_coloquial": "Alright, morning everybody… so, tell me, how'd you know it was time to get up today?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebooks and leave me some room, we're going to look at the sky.",
+      "utterance_coloquial": "Take out your notebooks and leave me some room, we're gonna look at the whole sky.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about this: why are there days with light and nights with darkness?",
+      "utterance_coloquial": "Okay, think about it: why are there days with light and dark nights?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Has anyone gotten up early and watched the Sun rise? It's one of the most beautiful things.",
+      "utterance_coloquial": "Who's gotten up early and watched the Sun come up?... it's about as pretty as it gets.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Every day the Sun seems to rise on one side and set on the other.",
+      "utterance_coloquial": "Every day the Sun seems to rise on one side and disap pear on the other.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Day and Night",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "The Sun's light",
+            "role": "subtitulo",
+            "group": "luz"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The Sun **rises** and **sets** every day",
+            "role": "cuerpo",
+            "group": "luz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Let's start with the one that gives all the light: the Sun.",
+      "utterance_coloquial": "Let's start with the one that gives all the light: the Sun.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "sol_1_1",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "luz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "And here, off to the side, our planet: Earth.",
+      "utterance_coloquial": "And right here, just off to the side, our planet: Earth.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_1",
+            "object": "concepto",
+            "label": "Earth",
+            "group": "luz"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "sol_1_1",
+            "to": "circulo_1_1",
+            "style": "arrow",
+            "label": "illuminates"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Notice a key detail: the Sun can only light up half of Earth at a time.",
+      "utterance_coloquial": "Check out this key detail: the Sun only lights up half of Earth at a time.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_4",
+            "to": "sol_1_1",
+            "style": "arrow",
+            "label": "comes from the Sun"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Only **half** of Earth is lit at a time",
+            "role": "cuerpo",
+            "group": "luz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Can you imagine lighting up a ball with a lamp? Only one side gets lit.",
+      "utterance_coloquial": "Can you picture lighting up a ball with a lamp? Only one side gets lit.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Well, that's exactly what happens: the side of Earth that gets light has day.",
+      "utterance_coloquial": "Well that's exactly what happens: the side of Earth that gets the light, that's day.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "Only **half** of Earth is lit at a time, so the lit-up side has **day**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "And the side that's left in shadow, without light, has night.",
+      "utterance_coloquial": "And the side that's left in shadow, without light, has night.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "Only **half** of Earth is lit at a time, so the lit-up side has **day** and the side in shadow has **night**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "But if that were all, one side would have day forever. And that's not how it is, right?",
+      "utterance_coloquial": "But if that was all there was to it, one side would have day forever. And that's not how it is, right?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "What's happening is that Earth doesn't just sit still: it spins on its own axis, like a top.",
+      "utterance_coloquial": "What's happening is that Earth doesn't just sit still: it spins on its own axis, like a top.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Earth spins",
+            "role": "subtitulo",
+            "group": "rotacion"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Spins on its own **axis** like a top",
+            "role": "cuerpo",
+            "group": "rotacion"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_9",
+            "to": "circulo_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "That spin on its own axis is called rotation.",
+      "utterance_coloquial": "That spin on its own axis, they call it ro tation.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_8",
+            "text": "rotation"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "As it keeps spinning, the side that had light moves into shadow, and that's how day and night take turns.",
+      "utterance_coloquial": "As it keeps spinning, the side that had light moves into shadow, and that's how day and night take turns.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "Spins on its own **axis** like a top, so day and night take turns"
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "texto_1_9",
+            "to": "texto_1_4",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Give that idea a moment, it's the key to the whole lesson.",
+      "utterance_coloquial": "Give that idea a little moment, it's the key to the whole lesson.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "And how long does it take Earth to make one complete turn? A whole day: twenty-four hours.",
+      "utterance_coloquial": "And how long does it take Earth to go all the way around? One whole day: twen ty-four hours.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "Spins on its own **axis** like a top, so day and night take turns. One full spin takes 24 hours."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "That's why a day lasts exactly as long as it does: no more, no less.",
+      "utterance_coloquial": "That's why a day lasts exactly as long as it does: no more, no less.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Let's remember the two ideas: one side with day and the other with night, and Earth spinning.",
+      "utterance_coloquial": "Let's remember the two ideas: one side with day and the other with night, and Earth spinning.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5",
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "A fun fact: when it's day here, it's night on the other side of the world.",
+      "utterance_coloquial": "A fun fact: when it's day here, it's night on the other side of the world.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "When it's day here, it's night on the other side",
+            "role": "cuerpo",
+            "group": "rotacion"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Okay, that was the first mystery. Let's move to the second one: the Moon.",
+      "utterance_coloquial": "Alright, that was mystery number one. Let's get to the second one: the Moon.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "At night, when the Sun isn't out, we often see the Moon.",
+      "utterance_coloquial": "At night, when the Sun isn't out, we often see the Moon.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "The Moon",
+            "role": "subtitulo",
+            "group": "luna"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "At night we see the Moon in the sky",
+            "role": "cuerpo",
+            "group": "luna"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "But watch out for this: the Moon doesn't have its own light. The Sun illuminates it too.",
+      "utterance_coloquial": "But careful with this one: the Moon doesn't have its own light. The Sun illumi nates it too.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_2",
+            "object": "concepto",
+            "label": "Moon",
+            "group": "luna"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "sol_1_1",
+            "to": "circulo_1_2",
+            "style": "arrow",
+            "label": "illuminates"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "What we see shining is the Sun's light bouncing off the Moon.",
+      "utterance_coloquial": "What we see shining is the Sun's light, re flected off the Moon.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "The Moon shines because it **reflects** the Sun's light",
+            "role": "cuerpo",
+            "group": "luna"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Doesn't it seem like it shines all on its own? Well no, it's the Sun's light.",
+      "utterance_coloquial": "Kinda seems like it shines all by itself, huh? Nope, it's the Sun's light.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "The Moon shines because it **reflects** the Sun's light, not because it has light of its own."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "And since we see it from different angles, the Moon seems to change shape.",
+      "utterance_coloquial": "And since we see it from different angles, the Moon seems to change shape.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "We see it change shape every week",
+            "role": "cuerpo",
+            "group": "luna"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Sometimes we don't see it at all: that's the New Moon.",
+      "utterance_coloquial": "Sometimes we don't see it at all: that's the New Moon.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_3",
+            "object": "concepto",
+            "label": "New Moon",
+            "group": "luna"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "A few days later you see a little sliver, like a fingernail: that's the Waxing Crescent.",
+      "utterance_coloquial": "A few days later you see a little sliver, like a fingernail: that's the Waxing Cres cent.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_4",
+            "object": "concepto",
+            "label": "Waxing Crescent",
+            "group": "luna"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "circulo_1_3",
+            "to": "circulo_1_4",
+            "style": "arrow",
+            "label": "changes to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Then we see it complete and round: that's the Full Moon.",
+      "utterance_coloquial": "Then we see it nice and round and com plete: that's the Full Moon.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_5",
+            "object": "concepto",
+            "label": "Full Moon",
+            "group": "luna"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "circulo_1_4",
+            "to": "circulo_1_5",
+            "style": "arrow",
+            "label": "changes to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "And then it starts shrinking, getting small again: the Waning Crescent.",
+      "utterance_coloquial": "And then it starts shrink ing, gets small again: the Wan ing Crescent.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_6",
+            "object": "concepto",
+            "label": "Waning Crescent",
+            "group": "luna"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "circulo_1_5",
+            "to": "circulo_1_6",
+            "style": "arrow",
+            "label": "changes to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "And from there it starts over again with the New Moon. It's a cycle that never stops.",
+      "utterance_coloquial": "And from there it starts over again with the New Moon. It's a cycle that never stops.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "circulo_1_6",
+            "to": "circulo_1_3",
+            "style": "arrow",
+            "label": "starts over"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "The **phases** repeat in a **cycle**",
+            "role": "cuerpo",
+            "group": "luna"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "See how the arrows go all the way around and come back to the New Moon?",
+      "utterance_coloquial": "See how the arrows go all the way around and come back to the New Moon?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "That whole cycle of phases takes about twenty-eight days, almost a month.",
+      "utterance_coloquial": "That whole cycle of phases takes like twen ty-eight days, almost a month.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "The **phases** repeat in a **cycle**. The cycle lasts about 28 days."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Look at the four shapes of the Moon we drew.",
+      "utterance_coloquial": "Look at the four shapes of the Moon we drew.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "circulo_1_3",
+              "circulo_1_4",
+              "circulo_1_5",
+              "circulo_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Let's remember what all that stuff that happens to the Moon is called.",
+      "utterance_coloquial": "Let's remember what all that stuff that happens to the Moon is called.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_19"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Now think: what's it good for, knowing all this in everyday life?",
+      "utterance_coloquial": "Now think about it: what's it good for, knowing all this stuff day to day?",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "What's it good for?",
+            "role": "subtitulo",
+            "group": "importancia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Day and night tell us when to sleep and when to wake up",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "All living things, plants and animals, follow that rhythm of day and night.",
+      "utterance_coloquial": "All living things, plants and animals, follow that rhythm of day and night.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_23",
+            "set": {
+              "text": "Day and night tell us when to sleep and when to wake up, and living things follow that **rhythm**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Let's remember what it's good for: it tells us when to sleep and when to wake up.",
+      "utterance_coloquial": "Let's remember what it's good for: it tells us when to sleep and when to wake up.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_23"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Rest your hand for a moment. Are we good? Perfect.",
+      "utterance_coloquial": "Rest your hand a bit. We good?... alright, perfect.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "So you don't forget, hold on to today's two big ideas.",
+      "utterance_coloquial": "So you don't forget, hold on to today's two really big ideas.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Earth spins: that's why there's day and night.",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "And the second one: the Moon changes phase because the Sun lights it up.",
+      "utterance_coloquial": "And the second one: the Moon changes phase because the Sun lights it up.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "Earth spins: that's why there's day and night. The Moon changes **phase** because the Sun lights it up."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is rotation.",
+      "utterance_coloquial": "And today's biggest word, the one you shouldn't forget, is ro tation.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "Earth spins: that's why there's day and night. The Moon changes **phase** because the Sun lights it up. The key word is **rotation**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Remember what rotation is: the spin of Earth on its own axis.",
+      "utterance_coloquial": "Remember what rotation is: the spin of Earth on its own axis.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_10"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Very good, I can see it's super clear. Excellent work.",
+      "utterance_coloquial": "Very good, I can see it's crystal clear. Excellent work, everyone.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "For homework, draw the four phases of the Moon in order, with arrows.",
+      "utterance_coloquial": "For homework, draw me the four phases of the Moon in order, with little arrows.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_29",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "Draw the phases of the Moon in order, with arrows.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "And explain to me, in your own words, why there's day and night.",
+      "utterance_coloquial": "And explain to me, in your own same words, why there's day and night.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_30",
+            "set": {
+              "text": "Draw the phases of the Moon in order, with arrows. Then explain, in your own words, why there is day and night."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "And with that we answered the question we started class with.",
+      "utterance_coloquial": "And with that we already answered the question we kicked off class with.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "That's all for today. Pack up your things and I'll see you tomorrow.",
+      "utterance_coloquial": "That's it for today. Pack up your stuff and I'll see you tomorrow, take care.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,969 @@
+{
+  "id": "flotacion",
+  "tema": "Floating and sinking",
+  "sesgo": "mixto",
+  "objetivo": "That the student recognizes that some objects float and others sink in water, understands that it depends on whether the object is lighter or heavier than the water, and discovers that shape also matters (a metal ship floats because of its hollow shape).",
+  "hatsumon": "Why does a metal ship float but a nail sinks?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to play with water: we'll see what stays on top and what sinks to the bottom.",
+      "utterance_coloquial": "Today we're going to play with water: we'll see what stays on top and what sinks to the bottom.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Floating and Sinking",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebooks; today we're going to make two lists and several drawings.",
+      "utterance_coloquial": "Take out your notebooks; today we're going to make two lists and several drawings.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about this: why does a metal ship float, but a nail made of the same metal sinks?",
+      "utterance_coloquial": "Okay, think about it: why does a metal ship float, but a nail made of the same metal sinks?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Hold on to your answer; we'll answer it properly at the end.",
+      "utterance_coloquial": "Hold on to your answer; we'll answer it properly at the end.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "When we drop things into the water, some stay on top and others sink to the bottom.",
+      "utterance_coloquial": "When we drop things into the water, some stay on top and others sink to the bottom.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Float and sink",
+            "role": "subtitulo",
+            "group": "def"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "In water some things stay on top and others sink to the bottom",
+            "role": "cuerpo",
+            "group": "def"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "We call staying on top floating; going to the bottom, sinking.",
+      "utterance_coloquial": "We call staying on top floating; going to the bottom, sinking.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "In water some things stay on top and others sink to the bottom. To **float** is to stay on top; to **sink** is to go to the bottom"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Imagine a bucket with water; that's where we'll do our testing.",
+      "utterance_coloquial": "Imagine a bucket with water; that's where we'll do our testing.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "mar_1_1",
+            "object": "concepto",
+            "label": "water",
+            "group": "def"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_4",
+            "to": "mar_1_1",
+            "style": "arrow",
+            "label": "the water"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Let's start with what floats. What do you think would stay on top?",
+      "utterance_coloquial": "Let's start with what floats. What do you think would stay on top?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Light objects stay floating on top of the water.",
+      "utterance_coloquial": "Light objects stay floating on top of the water.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "What floats?",
+            "role": "subtitulo",
+            "group": "flota"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "**Light** objects stay on top",
+            "role": "cuerpo",
+            "group": "flota"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "A cork, for example, floats on the surface.",
+      "utterance_coloquial": "A cork, for example, floats right on top of the water.",
+      "case_tags": [
+        "mixto",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_1",
+            "object": "concepto",
+            "label": "cork",
+            "group": "flota"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "circulo_1_1",
+            "to": "mar_1_1",
+            "style": "arrow",
+            "label": "floats"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Wood also floats, along with a dry leaf and a balloon. Make the list.",
+      "utterance_coloquial": "Wood also floats, along with a dry leaf and a balloon. Make the little list.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "cork\nwood\nleaf\nballoon",
+            "role": "lista",
+            "group": "flota"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "A piece of wood, even a big one, floats.",
+      "utterance_coloquial": "A piece of wood, even a real big one, floats.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "rectangulo_1_1",
+            "object": "concepto",
+            "label": "wood",
+            "group": "flota"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "rectangulo_1_1",
+            "to": "mar_1_1",
+            "style": "arrow",
+            "label": "floats"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Notice that size isn't what decides it: the wood is big and it still floats.",
+      "utterance_coloquial": "Notice that size isn't what decides it: the wood is big and it still floats.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Size does not decide it: a big piece of wood still floats",
+            "role": "cuerpo",
+            "group": "flota"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Now the opposite: heavy objects go straight to the bottom.",
+      "utterance_coloquial": "Now the opposite: heavy objects go straight to the bottom.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "What sinks?",
+            "role": "subtitulo",
+            "group": "hunde"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "**Heavy** objects sink to the bottom",
+            "role": "cuerpo",
+            "group": "hunde"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "A metal nail goes straight down to the bottom.",
+      "utterance_coloquial": "A metal nail goes strai ght down to the bottom.",
+      "case_tags": [
+        "mixto",
+        "color-fill",
+        "miss-placeholder",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "clavo_1_1",
+            "object": "concepto",
+            "label": "nail",
+            "group": "hunde"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "clavo_1_1",
+            "to": "mar_1_1",
+            "style": "arrow",
+            "label": "sinks"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "A rock, a coin, and a key also sink. Your list.",
+      "utterance_coloquial": "A rock, a c-coin, and a key also sink. Your little list.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "nail\nrock\ncoin\nkey",
+            "role": "lista",
+            "group": "hunde"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "A small rock also sinks super fast, even though it's little.",
+      "utterance_coloquial": "A small rock also sinks super fast, even though it's tiny.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_2",
+            "object": "concepto",
+            "label": "rock",
+            "group": "hunde"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "circulo_1_2",
+            "to": "mar_1_1",
+            "style": "arrow",
+            "label": "sinks"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "See that? Neither size nor bigness decides it. So what does decide it?",
+      "utterance_coloquial": "See that? Neither size nor bigness decides it. So what does decide it?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "Size does not decide it either: a small rock sinks very fast",
+            "role": "cuerpo",
+            "group": "hunde"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Now we have both lists: what floats and what sinks.",
+      "utterance_coloquial": "Now we have both lists: what floats and what sinks.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_6",
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "What decides it is the weight compared to the water.",
+      "utterance_coloquial": "What decides it is the weight compared to the water.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "What does it depend on?",
+            "role": "subtitulo",
+            "group": "depende"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "On whether the object is **lighter** or **heavier** than the water",
+            "role": "cuerpo",
+            "group": "depende"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "An object that's lighter than the water floats.",
+      "utterance_coloquial": "An object that's lighter than the water floats.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "On whether the object is **lighter** or **heavier** than the water, so an object that is lighter than the water floats"
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "texto_1_13",
+            "to": "texto_1_6",
+            "style": "arrow",
+            "label": "floats"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "And an object that's heavier than the water sinks.",
+      "utterance_coloquial": "And an object that's heavier than the water sinks.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "On whether the object is **lighter** or **heavier** than the water, so an object that is lighter than the water floats, and an object that is heavier than the water sinks"
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_13",
+            "to": "texto_1_9",
+            "style": "arrow",
+            "label": "sinks"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "That's why the cork, so light, stays on top with no effort.",
+      "utterance_coloquial": "That's why the cork, so light, stays on top with no effort.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "On whether the object is **lighter** or **heavier** than the water, so an object that is lighter than the water floats, and an object that is heavier than the water sinks. A cork is so light that it stays on top"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Notice what decides whether something floats or sinks, because that's the key.",
+      "utterance_coloquial": "Notice what decides whether something floats or sinks, because that's the key.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "But there's one more trick: the shape of the object also decides.",
+      "utterance_coloquial": "But there's one more trick: the shape of the object also decides.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "The same material can float or sink depending on its **shape**",
+            "role": "cuerpo",
+            "group": "depende"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Metal shaped into a ball sinks, but that same metal shaped into a ship floats.",
+      "utterance_coloquial": "Metal shaped into a ball sinks, but that same metal shaped into a ship floats.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "The same material can float or sink depending on its **shape**, and metal shaped like a ball sinks, but shaped like a ship it floats"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Look at the ship: it's made of heavy metal and it still floats.",
+      "utterance_coloquial": "Look at the ship: it's made of heavy metal and it still floats.",
+      "case_tags": [
+        "mixto",
+        "color-fill",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "rectangulo_1_2",
+            "object": "concepto",
+            "label": "ship",
+            "group": "depende"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "rectangulo_1_2",
+            "to": "mar_1_1",
+            "style": "arrow",
+            "label": "floats"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_12",
+            "to": "rectangulo_1_2",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Isn't it weird that something so heavy stays on top?",
+      "utterance_coloquial": "Isn't it weird that something so heavy stays on top?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "And that's the answer: the ship floats because of its hollow shape; the nail, solid, sinks.",
+      "utterance_coloquial": "And that's the answer: the ship floats because of its hollow shape; the nail, so lid, sinks.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_29",
+            "object": "texto",
+            "text": "The ship floats because of its hollow shape, while the solid nail sinks",
+            "role": "cuerpo",
+            "group": "depende"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Look back at the question from the beginning: it's already been answered.",
+      "utterance_coloquial": "Look back at the question from the beginning: it's already been answered.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_17"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "The ship traps air inside, and that's why it doesn't sink.",
+      "utterance_coloquial": "The ship traps air inside, and that's why it doesn't sink.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "That trapped air is what keeps it light overall.",
+      "utterance_coloquial": "That trapped air is what keeps it light overall.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "The ship traps **air** and that's why it doesn't sink",
+            "role": "cuerpo",
+            "group": "depende"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Air",
+            "group": "depende"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "rectangulo_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "traps"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Hold on to today's big idea, the one that sums everything up.",
+      "utterance_coloquial": "Hold on to today's big ol' idea, the one that sums everything up.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "In water, some things float and others sink",
+            "role": "cuerpo",
+            "group": "depende"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "And with that: it depends on the material and the shape of the object.",
+      "utterance_coloquial": "And with that: it depends on the material and the shape of the object.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_22",
+            "set": {
+              "text": "In water, some things float and others sink, depending on the **material** and the **shape** of the object"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is float.",
+      "utterance_coloquial": "And today's big ol' word, the one you shouldn't forget, is float.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "The key word is **float**",
+            "role": "cuerpo",
+            "group": "depende"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Remember what floating is and what sinking is.",
+      "utterance_coloquial": "Remember what floating is and what sinking is.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Rest your hand for a moment and then we'll close.",
+      "utterance_coloquial": "Rest your little hand for a sec and then we'll close.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Take one last look at the four parts we studied today.",
+      "utterance_coloquial": "Take one last look at the four parts we studied today.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "texto_1_6",
+              "texto_1_9",
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Does everyone have their two lists and their drawings? Perfect.",
+      "utterance_coloquial": "Does everyone have their two lists and their drawings? Alright, perfect.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "For homework, test five objects and write down if they float or sink.",
+      "utterance_coloquial": "For homework, y'all test five objects and write down if they float or sink.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Test 5 objects in water: do they float or sink?",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "And explain to me why a metal ship manages to float.",
+      "utterance_coloquial": "And explain to me why a metal ship manages to float.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "Test 5 objects in water: do they float or sink? Explain why a metal ship floats"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Very good, I can see it's clear. Excellent work.",
+      "utterance_coloquial": "Very good, I can see it's super clear. Excellent work.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "That's all for today. Put your things away and see you tomorrow.",
+      "utterance_coloquial": "That's it for today. Put your stuff away and see you tomorrow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "And don't play with water in the classroom, okay? Only at home.",
+      "utterance_coloquial": "And don't play with water in the classroom, okay? Only at home.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

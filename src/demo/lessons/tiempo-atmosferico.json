@@ -1,0 +1,1056 @@
+{
+  "id": "tiempo-atmosferico",
+  "tema": "Weather: temperature, wind, clouds and rain, and how we measure it",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student describes the weather through temperature, wind, clouds and rain, knows the instrument that measures each one (thermometer, wind vane and anemometer, rain gauge) and can keep a simple weather record.",
+  "hatsumon": "What is the weather like today, and how do we know?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning. Come in quickly, the rain is still coming down.",
+      "utterance_coloquial": "Good morning, come in, come in quick, it's still raining out there.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Who came with an umbrella? Hang it on the hook by the door, please.",
+      "utterance_coloquial": "Who came with an umbrella? Hang it on the hook, by the door, please, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Interesting. Valeria is wearing a jacket, Tomás has a cap, and I'm in short sleeves. Why are we dressed so differently?",
+      "utterance_coloquial": "Interesting, Valeria's got a jaket, Tomás has a cap, and I'm in short sleeves, mm. Why are we dressed so different?",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Because Valeria feels cold and I feel warm. What else did you notice on the way here?",
+      "utterance_coloquial": "Because Valeria's cold and I'm warm, right? What else did you notice on the way, coming here?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "The wind was strong and the sky was gray with big clouds. Exactly.",
+      "utterance_coloquial": "Yeah, strong wind, the sky all gray, big clouds, exactly.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Look out the window for a minute and tell me what you see, in your own words.",
+      "utterance_coloquial": "Look out the win dow a minute, and tell me what you see, in, in your own words.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "All the things you listed, the cold, the wind, the clouds and the rain, together make up the weather.",
+      "utterance_coloquial": "So all that you said, the cold, the wind, the clouds, the rain, all together, that's the weather.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Weather changes. It can be sunny in the morning and stormy in the afternoon.",
+      "utterance_coloquial": "And it changes, you know, sunny in the morning and then stormy by the afternoon.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Let's take them one at a time. First, how warm or cold the air is.",
+      "utterance_coloquial": "Let's go one at a time. First, how warm or how cold the air is.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Weather",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Temperature",
+            "role": "subtitulo",
+            "group": "temp"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Temperature tells how hot or cold the air is.",
+            "role": "cuerpo",
+            "group": "temp"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "temp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The sun warms the air, and some days it warms it a lot more than others.",
+      "utterance_coloquial": "The sun warms up the air, and some days it warms it way more than others.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Temperature",
+            "group": "temp"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "warms the air"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "We measure it in degrees Celsius, with a thermometer.",
+      "utterance_coloquial": "We measure it in degrees Celsius, with a termometer, a thermometer.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Thermometer",
+            "group": "temp"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_3",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "measures"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The **thermometer** reads degrees Celsius (°C)",
+            "role": "cuerpo",
+            "group": "temp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Who has seen a thermometer at the doctor's office? Same idea, different numbers.",
+      "utterance_coloquial": "Who's seen a thermometer at the doctor's? Same idea, but different numbers, yeah.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Water freezes at zero degrees, and a hot day is above thirty.",
+      "utterance_coloquial": "Water freezes at zero degrees, and a hot day, a really hot day, is above thirty.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The **thermometer** reads degrees Celsius (°C), where water freezes at 0 °C and a hot day is above 30 °C."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "So if the thermometer says five degrees, do we need a jacket? Yes, Lupita, thank you.",
+      "utterance_coloquial": "So if it says five degrees, do we need a jacket? Yes, Lupita, thanks.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The **thermometer** reads degrees Celsius (°C), where water freezes at 0 °C and a hot day is above 30 °C. At 5 °C we need a jacket."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Second thing: the wind. Wind is air that moves.",
+      "utterance_coloquial": "Second, the whind. The wind is air, air that moves.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Wind",
+            "role": "subtitulo",
+            "group": "wind"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Wind is air that moves.",
+            "role": "cuerpo",
+            "group": "wind"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Wind",
+            "group": "wind"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Wind blows from one direction, and a wind vane points to where it comes from.",
+      "utterance_coloquial": "The wind comes from a direction, and the wind vane points to where it comes from, see, the arrow on the roof.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Wind vane",
+            "group": "wind"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_5",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "shows direction"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "To know how fast it blows, we use an anemometer, with little spinning cups.",
+      "utterance_coloquial": "And to know how fast it blows we use an, an anemo-meter, with little cups that spin.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Anemometer",
+            "group": "wind"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_6",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "measures speed"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "The faster the cups spin, the stronger the wind.",
+      "utterance_coloquial": "The faster the cups spin, the stronger the wind, simple.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "The **anemometer** spins faster in stronger wind",
+            "role": "cuerpo",
+            "group": "wind"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Wind can be a gentle breeze or a storm, and a cold wind makes us feel even colder.",
+      "utterance_coloquial": "Wind can be a gentle breeze or a storm, mm, and a cold wind makes you feel even colder.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_7",
+            "set": {
+              "text": "The **anemometer** spins faster in stronger wind, and cold wind makes us feel even colder."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Now the clouds. Look up: not all of them are alike.",
+      "utterance_coloquial": "Now the clouds. Look up, not all of them are alike, eh.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Clouds and rain",
+            "role": "subtitulo",
+            "group": "clouds"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Not all **clouds** in the sky are alike.",
+            "role": "cuerpo",
+            "group": "clouds"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Cloud",
+            "group": "clouds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Clouds are made of tiny drops of water, so small that they float in the air.",
+      "utterance_coloquial": "Clouds are made of tiny drops of water, so tiny they float in the air.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "**Clouds** are made of tiny drops of water floating in the air",
+            "role": "cuerpo",
+            "group": "clouds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Don't believe the cotton story. You can't sit on a cloud, Mateo, sorry.",
+      "utterance_coloquial": "Not cotton, Mateo, you can't sit on a cloud, sorry, sorry.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "**Clouds** are made of tiny drops of water floating in the air. They are not made of cotton, so nobody can sit on one."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "The puffy white ones with flat bottoms are cumulus, and they usually come with fair weather.",
+      "utterance_coloquial": "The puffy white ones, flat on the bottom, those are cumulus, usually good weather.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Cumulus",
+            "group": "clouds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "puffy"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "A gray blanket covering the whole sky is stratus.",
+      "utterance_coloquial": "A gray blanket all over the sky, that's stratus.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Stratus",
+            "group": "clouds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_7",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "flat layer"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "The thin, wispy ones very high up are cirrus.",
+      "utterance_coloquial": "And the thin wispy ones, way up high, those are cirrus, see-russ.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Cirrus",
+            "group": "clouds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_7",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "thin and high"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "And the dark, tall ones that bring storms are cumulonimbus.",
+      "utterance_coloquial": "And the dark, tall ones, that bring the storms, cumulo nimbus.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Cumulonimbus",
+            "group": "clouds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_7",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "storm cloud"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Which one do we have outside right now? Right, the gray blanket.",
+      "utterance_coloquial": "Which one do we have outside right now? Yep, the gray blanket, stratus.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "When the drops inside a cloud grow heavy, they fall. That is rain.",
+      "utterance_coloquial": "When the drops inside the cloud get heavy, they fall down, and that's rain.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Rain",
+            "group": "clouds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_11",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "brings heavy"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "When the drops inside a cloud grow heavy, they fall as **rain**.",
+            "role": "cuerpo",
+            "group": "clouds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "To know how much rain fell, we use a rain gauge, a tall tube that collects it.",
+      "utterance_coloquial": "To know how much rain fell we use a rain gauge, a tall tube that catches it.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Rain gauge",
+            "group": "clouds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_13",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "measures"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "We read it in millimeters, from the lines on the tube.",
+      "utterance_coloquial": "We read it in millimeters, from the little lines on the tube.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "The **rain gauge** shows the rainfall in mm",
+            "role": "cuerpo",
+            "group": "clouds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Ten millimeters of rain is a lot for one afternoon. The streets will be flooded.",
+      "utterance_coloquial": "Ten millimeters is a lot for one afternoon, you'll see the streets all flooded.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "The **rain gauge** shows the rainfall in mm, and 10 mm is a lot for one afternoon."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Somebody asked if clouds ever run out of water. We'll see that another day, I promise.",
+      "utterance_coloquial": "Somebody asked if clouds ever run out of water, hmm, we'll see that another day, I promise.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Okay, hands down. We have four things now: temperature, wind, clouds and rain.",
+      "utterance_coloquial": "Okay, hands down. We've got four things now, temperature, wind, clouds and rain.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_2",
+              "concepto_1_4",
+              "concepto_1_7",
+              "concepto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Scientists called meteorologists measure all of them every day, with these same instruments.",
+      "utterance_coloquial": "Scientists called meteorologists, mini-orologists, measure all of them every day, with the same instruments.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Predicting the weather",
+            "role": "subtitulo",
+            "group": "fore"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Meteorologists measure all of these every day with their instruments",
+            "role": "cuerpo",
+            "group": "fore"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Then, they predict what tomorrow will be like. We call that a forecast.",
+      "utterance_coloquial": "And then they predict what tomorrow will be like, that's, that's called a forecast.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "Meteorologists measure all of these every day with their instruments, and then they predict tomorrow's weather, called a **forecast**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Tomorrow's forecast says more rain, so you should all bring the umbrella again.",
+      "utterance_coloquial": "The forecast for tomorrow says more rain, so, umbrellas again, everybody.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "Meteorologists measure all of these every day with their instruments, and then they predict tomorrow's weather, called a **forecast**. Tomorrow's forecast says more rain."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "We can do it too: every morning, we read the thermometer, check the wind vane, look at the clouds and empty the rain gauge.",
+      "utterance_coloquial": "We can do it too, every morning, we read the thermometer, check the wind vane, look at the clouds and empty the rain gauge.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Read the thermometer\nCheck the wind vane\nLook at the clouds\nEmpty the rain gauge",
+            "role": "enumeracion",
+            "group": "fore"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Pablo, you take the thermometer tomorrow, and Ana, the rain gauge. We'll do a schedule.",
+      "utterance_coloquial": "Pablo, you've got the thermometer tomorrow, and Ana, the rain gauge, we'll make a schedule.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "A diary like this, after a few weeks, shows how the weather changes.",
+      "utterance_coloquial": "A diary like this one, after a few weeks, shows you how the weather changes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "After a few weeks, a **diary** shows patterns in the weather.",
+            "role": "cuerpo",
+            "group": "fore"
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Forecasts warn people about storms so they can get ready.",
+      "utterance_coloquial": "Forecasts warn people about storms, so everyone can get ready, you know.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "After a few weeks, a **diary** shows patterns in the weather. Forecasts warn people about storms so they can get ready."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "We could even see whether it rains more in some months than in others.",
+      "utterance_coloquial": "We could even see if it rains more in some months than others, mm.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "After a few weeks, a **diary** shows patterns in the weather. Forecasts warn people about storms so they can get ready. We could even see whether it rains more in some months than in others."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Sofia says her phone shows twenty-two degrees. Phones get that number from instruments too, somewhere.",
+      "utterance_coloquial": "Sofia says her phone says twenty-two degrees. Yeah, phones get the number from instruments too, somewhere.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Let's go over the instruments one more time, each with what it measures.",
+      "utterance_coloquial": "Let's go over the instruments one more time, each one with what it measures.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_3",
+              "concepto_1_5",
+              "concepto_1_6",
+              "concepto_1_13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Now, back to our question about today.",
+      "utterance_coloquial": "Now, going back to the question about today.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Today the weather is cold, windy and rainy, with gray stratus clouds.",
+      "utterance_coloquial": "Today it's cold, windy and rainy, with stratus clouds, all gray.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Today the weather is cold, windy and rainy, with gray **stratus** clouds.",
+            "role": "cuerpo",
+            "group": "fore"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 45,
+      "utterance_formal": "And we know it because of the instruments, thermometer, wind vane, anemometer and rain gauge.",
+      "utterance_coloquial": "And we know it thanks to the instruments, thermometer, wind vane, anemometer and rain gauge.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Today the weather is cold, windy and rainy, with gray **stratus** clouds. We know it because of our instruments: thermometer, wind vane, anemometer and rain gauge."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "Question: why do we say weather changes? Yes, because yesterday it was sunny.",
+      "utterance_coloquial": "Question, why do we say the weather changes? Yes, because yesterday it was sunny, right.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "For tomorrow, observe the sky at home and describe the clouds you see.",
+      "utterance_coloquial": "For tomorrow, look at the sky at home and describe the clouds you see, okay?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Observe the sky at home. Describe the clouds you see.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "Okay, take your umbrellas. Be careful on the wet stairs, don't run.",
+      "utterance_coloquial": "Okay, get your umbrellas, careful on the wet stairs, don't run!",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1020 @@
+{
+  "id": "reciclaje",
+  "tema": "Reduce, reuse, recycle",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student explains what reducing, reusing and recycling mean, gives examples of each, and understands how these habits reduce waste and take care of the environment.",
+  "hatsumon": "What can we do with all the trash we make every day?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning. Come in, please, and leave your backpacks by the wall.",
+      "utterance_coloquial": "Good morning, okay, come in, come in, leave your backpacks by the wall.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Today I brought something strange. It's a bag with the things from our classroom wastebasket from yesterday.",
+      "utterance_coloquial": "So, today I brought something weird, eh. A bag with the stuff from our classroom wastebasket from yesterday.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "No, don't touch it, Pablo. I'll take things out one at a time.",
+      "utterance_coloquial": "No, don't touch it, Pablo. I'll take stuff out one at a time, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "This is a sheet of paper with a single line written on it. Is it trash? Should it be thrown away?",
+      "utterance_coloquial": "Okay, this is a paper with, with just one line written on it. Is it trash? Should it be thrown away?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Some of you say yes and some say no. And here's a plastic bottle, an apple core, and a juice box.",
+      "utterance_coloquial": "Some of you say yes, some say no. And here's a plastic bottle, an apple core and a juice box, see.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Every one of us makes trash every day, and all of it has to go somewhere.",
+      "utterance_coloquial": "Every one of us makes trash every single day, and all of it has to go somewhere.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Where does it go after the truck takes it? Yes, Camila, to a big dump, a landfill.",
+      "utterance_coloquial": "Where does it go after the truck takes it? Yes, Camila, to a big dump, a lan fill.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Too much trash",
+            "role": "subtitulo",
+            "group": "prob"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Trash goes to big dumps called **landfills**, and they keep growing",
+            "role": "cuerpo",
+            "group": "prob"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "And the trash doesn't just disappear: a plastic bottle can take hundreds of years to break down.",
+      "utterance_coloquial": "And the trash doesn't just disappear, eh: a plastic bottle takes hundreds of years to break down.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Trash goes to big dumps called **landfills**, and they keep growing. A plastic bottle takes hundreds of years to break down."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "But there are three things we can do before throwing something away: use less, use it again, or turn it into something new.",
+      "utterance_coloquial": "But there are three things we can do before throwing something out: use less, use it again, or make something new from it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Reduce, Reuse, Recycle",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Let's take them one by one. The first is to use less.",
+      "utterance_coloquial": "Let's go one by one. The first one is using less.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Reduce",
+            "role": "subtitulo",
+            "group": "red"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "To **reduce** is to make less trash by using only what we need",
+            "role": "cuerpo",
+            "group": "red"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Who has a paper cup at home that you throw out after one use? Okay, a few of you.",
+      "utterance_coloquial": "Who's got those paper cups at home that you toss after one use? Okay, a few of you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "If we bring our own water bottle every day, we don't need a new plastic bottle every day.",
+      "utterance_coloquial": "If we bring our own water bottle every day, we don't need a new plastic bottle every day, right.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "To **reduce** is to make less trash by using only what we need, for example by bringing our own water bottle."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "It's also good to carry a cloth bag to the market instead of getting a new plastic bag every time.",
+      "utterance_coloquial": "It's also good to carry a cloth bag to the market, not take a new plastic bag every time.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Reusable bottle",
+            "group": "red"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Cloth bag",
+            "group": "red"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_5",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_5",
+            "to": "concepto_1_2",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Isabel, you're laughing. Tell the whole class what's funny.",
+      "utterance_coloquial": "Isabel, you're laughing. Tell everyone what's so funny, go on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Her little brother uses so many napkins that the napkin pile is higher than his plate. Okay, okay, that's a good example of using more than we need.",
+      "utterance_coloquial": "Her little brother uses so many napkins the pile's higher than his plate. Okay, okay, good example of using more than you need.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Taking only the napkins we need is also a way to reduce trash",
+            "role": "cuerpo",
+            "group": "red"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "The second thing is to use something again instead of throwing it away.",
+      "utterance_coloquial": "The second one is to use something again instead of throwing it out.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Reuse",
+            "role": "subtitulo",
+            "group": "reuse"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "To **reuse** is to use an object again, in the same way or in a new way",
+            "role": "cuerpo",
+            "group": "reuse"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "A glass jar can hold pencils, and an old T-shirt can become a cleaning rag.",
+      "utterance_coloquial": "A glass jar can hold pencils, and an old T shirt turns into a cleaning rag, you know.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "glass jar as a pencil holder\nold T-shirt as a rag\nused paper as scratch paper",
+            "role": "lista",
+            "group": "reuse"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "What do you reuse at home? Raise your hand if your family uses the margarine tub for leftovers.",
+      "utterance_coloquial": "What do you reuse at home? Hands up if your family keeps the margarine tub for leftovers.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "A margarine tub can keep leftovers",
+            "role": "cuerpo",
+            "group": "reuse"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Lucas says they plant flowers in old tires. Wow, that's something new for me.",
+      "utterance_coloquial": "Lucas says they plant flowers in old tires. Wow, that's new for me.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "A margarine tub can keep leftovers, and old tires can become planters for flowers."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "The first sheet I showed you, the one with only a line, can be used on the back for drawing or notes.",
+      "utterance_coloquial": "The first sheet I showed you, the one with one line, you can use the back for drawing or notes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "A margarine tub can keep leftovers, and old tires can become planters for flowers. A sheet written on one side can still be used on the back."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "So that sheet wasn't trash after all.",
+      "utterance_coloquial": "So that sheet wasn't trash after all, eh.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Now the third thing, and probably the one you've heard the most: recycling.",
+      "utterance_coloquial": "Now the third one, the one you've probably heard the most: re cy cling.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Recycle",
+            "role": "subtitulo",
+            "group": "rec"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "To **recycle** is to turn old materials into new products",
+            "role": "cuerpo",
+            "group": "rec"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Think about a plastic bottle. In a recycling plant it is cleaned, ground into small pieces, and melted.",
+      "utterance_coloquial": "Think about a plastic bottle. At a recycling plant they clean it, grind it into little pieces and melt it.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Plastic bottle",
+            "group": "rec"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Recycling plant",
+            "group": "rec"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "New plastic items",
+            "group": "rec"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "taken to"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "The melted plastic can become a bench, a bucket, or a new bottle.",
+      "utterance_coloquial": "The melted plastic can turn into a bench, a bucket or even a new bottle.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Melted plastic can become a bench, a bucket or a new bottle",
+            "role": "cuerpo",
+            "group": "rec"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Paper is also recycled: old paper is soaked in water to make a soft mush called pulp, and then it's pressed flat into new sheets.",
+      "utterance_coloquial": "Paper's recycled too: old paper is soaked in water into a soft mush called pulp, and then pressed flat into new sheets.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Old paper",
+            "group": "rec"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Pulp",
+            "group": "rec"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "New paper",
+            "group": "rec"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "soaked in water"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "pressed into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Does anyone know where the paper at home comes from? Yes, Valeria, from trees.",
+      "utterance_coloquial": "Does anyone know where paper comes from? Yes, Valeria, from trees.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Paper is made from trees",
+            "role": "cuerpo",
+            "group": "rec"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Right, so each time we recycle paper we need to cut fewer trees.",
+      "utterance_coloquial": "Right, so every time we recycle paper we cut down fewer trees.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Paper is made from trees, so each time we recycle it fewer trees are cut down."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Glass can be recycled too, again and again, without losing its quality.",
+      "utterance_coloquial": "Glass can be recycled too, again and again, and it doesn't lose quality.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Paper is made from trees, so each time we recycle it fewer trees are cut down. **Glass** can be melted and made into new glass again and again."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Metal cans are melted too, and the metal is used to make new cans.",
+      "utterance_coloquial": "Metal cans, too, they get melted and the metal makes new cans, yes.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Paper is made from trees, so each time we recycle it fewer trees are cut down. **Glass** can be melted and made into new glass again and again. Metal cans are melted to make new cans."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "For this we need to separate our trash into groups: paper, plastic, glass, metal, and food scraps.",
+      "utterance_coloquial": "For that we have to sort our trash into groups: paper, plastic, glass, metal and food scraps.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "paper\nplastic\nglass\nmetal\nfood scraps",
+            "role": "lista",
+            "group": "rec"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Wait, wait. I heard somebody say that the apple core goes with the plastic. Who said that? Thank you for being honest.",
+      "utterance_coloquial": "Wait, wait. I heard somebody say the apple core goes with the plastic. Who said that? Thanks for being honest.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "The apple core is organic waste. It rots and turns into compost, a rich soil for plants.",
+      "utterance_coloquial": "The apple core's organic, it rots and becomes compost, a rich soil for plants.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Apple core",
+            "group": "rec"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Compost",
+            "group": "rec"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Plant",
+            "group": "rec"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_9",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "rots into"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_10",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "feeds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "That's a recycling too, a natural one.",
+      "utterance_coloquial": "That's recycling too, a natural kind.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Food scraps become **compost**, which helps plants grow.",
+            "role": "cuerpo",
+            "group": "rec"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "So how many things have we named so far? Three, exactly. Say them with me.",
+      "utterance_coloquial": "So how many have we named so far? Three, yeah. Say them with me.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Reduce, reuse, and recycle.",
+      "utterance_coloquial": "Reduce, reuse, and, and recycle.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_6",
+              "texto_1_9",
+              "texto_1_13"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Which one is best? The first one, because the best trash is the trash we never make.",
+      "utterance_coloquial": "Which one's best? The first, because the best trash is the one we never make.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Which comes first",
+            "role": "subtitulo",
+            "group": "best"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "The best order is to **reduce** first, then reuse, and recycle last",
+            "role": "cuerpo",
+            "group": "best"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Why does this matter for the planet? Fewer things in landfills, less pollution, less water and energy used to make new things.",
+      "utterance_coloquial": "Why does this matter for the planet? Fewer things in landfills, less pollution, less water and energy to make new stuff.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Less trash in landfills\nLess pollution\nLess water and energy used",
+            "role": "lista",
+            "group": "best"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Raise your hand if your family has already done one of these things this week.",
+      "utterance_coloquial": "Raise your hand if your family's already done one of these this week.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Okay, quite a few. That makes me happy, truly.",
+      "utterance_coloquial": "Okay, quite a few. That makes me real happy.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "So let's go back to the first question: what can we do with our trash?",
+      "utterance_coloquial": "So let's go back to the first question: what can we do with our trash?",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "We use less of it, we use things more than once, and we turn the rest into something new.",
+      "utterance_coloquial": "We use less of it, we use things more than once, and we turn the rest into something new.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "We can **reduce** what we use, **reuse** what we have and **recycle** the rest.",
+            "role": "cuerpo",
+            "group": "best"
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Think about the bottle: the bottle goes to the plant, and the plant makes something new.",
+      "utterance_coloquial": "Think about the bottle: the bottle goes to the plant, and the plant makes something new.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_3",
+              "concepto_1_4",
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "And the paper does the same: old paper becomes pulp, and pulp becomes new paper.",
+      "utterance_coloquial": "And the paper does the same: old paper becomes pulp, pulp becomes new paper.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_6",
+              "concepto_1_7",
+              "concepto_1_8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For tomorrow, think of one thing you can reduce, one you can reuse, and one you can recycle at home.",
+      "utterance_coloquial": "For tomorrow, think of one thing to reduce, one to reuse, one to recycle at home, okay.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "home"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Find one thing to reduce, one to reuse and one to recycle at home.",
+            "role": "cuerpo",
+            "group": "home"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Write them down in your notebook and share them with your family.",
+      "utterance_coloquial": "Put them in your notebook and tell your family.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_26",
+            "set": {
+              "text": "Find one thing to reduce, one to reuse and one to recycle at home. Share them with your family."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Now all together, please, let's pick up the paper on the floor and put it in the right bin.",
+      "utterance_coloquial": "Now all together, let's pick up the paper from the floor and put it in the right bin.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

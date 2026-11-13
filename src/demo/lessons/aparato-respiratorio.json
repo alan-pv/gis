@@ -1,0 +1,1049 @@
+{
+  "id": "aparato-respiratorio",
+  "tema": "The respiratory system",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student follows the path of the air through the respiratory system (nose, throat, trachea, bronchi, lungs and alveoli), explains how oxygen reaches the blood and carbon dioxide leaves, understands the role of the diaphragm, and names habits that protect the lungs.",
+  "hatsumon": "Why can we not hold our breath for long?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Let's do a little experiment before we open the books: everybody take a deep breath and hold it. No cheating.",
+      "utterance_coloquial": "Okay, good morning, good morning, um, before we open the books, a little experiment: everybody take a deep breath and hold it. No cheating, Mateo.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Time is up. Who gave up first? Mateo, after about twenty seconds. All right, now breathe normally.",
+      "utterance_coloquial": "Okay, okay, time, breathe. Who gave up first? Mateo, like twenty seconds, ha, okay, breathe normally everybody.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Why can't we hold our breath for very long? What does the body need?",
+      "utterance_coloquial": "Why can't we hold our breath for very long, hm? What, what does the body need?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Because we need air, says Ana. Because we get dizzy, says Luis. Both are good answers.",
+      "utterance_coloquial": "Because we need air, says Ana. And, uh, because we get dizzy, says Luis. Okay, both good answers.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Our body needs air all the time, and that is why we cannot stop breathing for long.",
+      "utterance_coloquial": "Our body needs air all the time, all the time, so we can't stop breathing for long, no.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Sofia asks whether plants breathe too. Good question, Sofia, but today we are talking about us.",
+      "utterance_coloquial": "Sofia asks if plants breathe too. Good question, Sofia, really, but today we're talking about us, about people.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The organs that bring air into the body and send it out again are called the respiratory system.",
+      "utterance_coloquial": "The organs that bring the air into the body and send it out again, together they're, uh, the respiratory system.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The Respiratory System",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Let's follow one breath of air from the outside. It comes in through the nose or through the mouth.",
+      "utterance_coloquial": "Let's follow one breath of air, from the outside, okay. It comes in through the nose, or through the mouth.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Path of the air",
+            "role": "subtitulo",
+            "group": "path"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Air enters the body through the **nose** or the mouth.",
+            "role": "cuerpo",
+            "group": "path"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Most of the time the air goes in through the nose.",
+      "utterance_coloquial": "Most of the time the air goes in through the nose, yes, the nose.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Air",
+            "group": "path"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Nose",
+            "group": "path"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "enters"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Inside the nose there are tiny hairs and a sticky mucus that trap the dust.",
+      "utterance_coloquial": "Inside the nose there are tiny hairs and, uh, sticky mucus, the snot, that traps the dust.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Tiny hairs and sticky **mucus** in the nose trap dust.",
+            "role": "cuerpo",
+            "group": "path"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Yes, Mateo, that is what snot is for. It is useful, not funny. Okay, back to the air.",
+      "utterance_coloquial": "Yes, Mateo, that's what the snot is for, it's useful, it's not funny. Okay, okay, back to the air.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "Tiny hairs and sticky **mucus** in the nose trap dust. Mucus is useful, not just gross."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "From the nose the air goes down the throat and into the trachea.",
+      "utterance_coloquial": "From the nose the air goes down the throat and then into the track kia, the trachea.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Throat",
+            "group": "path"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Trachea",
+            "group": "path"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "leads to"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "leads to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The trachea is a tube, and you can feel its rings with your fingers on your neck. They keep it open.",
+      "utterance_coloquial": "The trachea is like a tube, and you can feel the rings with your fingers on your neck, they, uh, keep it open.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "The **trachea**, or windpipe, is a tube held open by rings.",
+            "role": "cuerpo",
+            "group": "path"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Touch the front of your neck, very gently. Do you feel the ridges? Don't squeeze, Diego.",
+      "utterance_coloquial": "Touch the front of your neck, gently, gently. Feel the ridges? Don't squeeze, Diego, gently I said.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "At the bottom, the trachea splits into two tubes, one for each lung.",
+      "utterance_coloquial": "At the bottom the trachea splits into two tubes, bron kai, one for each lung.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Bronchi",
+            "group": "path"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Lungs",
+            "group": "path"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "splits into"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "lead to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Those two tubes are called the bronchi, and each one goes to a lung.",
+      "utterance_coloquial": "Those two tubes are called, um, the bronchi, and each one goes to one lung.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "The trachea splits into two **bronchi**, one for each lung.",
+            "role": "cuerpo",
+            "group": "path"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "So the air goes in through the nose, down the throat and the trachea, then through the bronchi to the lungs.",
+      "utterance_coloquial": "So, uh, the air goes in through the nose, down the throat and the trachea, then the bronchi, and the lungs.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_2",
+              "concepto_1_3"
+            ]
+          },
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_4",
+              "concepto_1_5",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Who can say it again in order? Valeria: nose, throat, trachea, lungs. She forgot the bronchi, but very good.",
+      "utterance_coloquial": "Who can say it in order? Valeria says nose, throat, trachea, lungs, she forgot the bronchi, but very good, very good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "The lungs are two soft organs, a bit like sponges, inside the chest behind the ribs.",
+      "utterance_coloquial": "The lungs are two soft organs, kind of like sponges, inside the chest, behind the ribs.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "In the lungs",
+            "role": "subtitulo",
+            "group": "lungs"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "The **lungs** are two soft, spongy organs inside the chest.",
+            "role": "cuerpo",
+            "group": "lungs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "At the end of the tubes there are tiny air sacs, like little balloons, called alveoli.",
+      "utterance_coloquial": "At the end of the tubes there are tiny air sacs, like little balloons, called al vee oh lie, alveoli.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Alveoli",
+            "group": "lungs"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_5",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "end in"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The oxygen passes through the very thin walls into the blood.",
+      "utterance_coloquial": "The oxygen passes through the very thin walls, so thin, into the blood.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Oxygen passes through the thin walls of the **alveoli** into the blood.",
+            "role": "cuerpo",
+            "group": "lungs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "And the blood carries it to every part of the body.",
+      "utterance_coloquial": "And the blood carries it to every part of the body, every single part.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Oxygen passes through the thin walls of the **alveoli** into the blood. The blood carries it to every part of the body."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "So the oxygen from the air goes into the blood.",
+      "utterance_coloquial": "So the ox ee gen from the air goes into the blood, got it?",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Oxygen",
+            "group": "lungs"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Blood",
+            "group": "lungs"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "passes into"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "release"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "I know it is a lot. Sit down, Mateo. Camila asks why her chest hurts when she runs. Good question, we will see it soon.",
+      "utterance_coloquial": "I know, it's a lot. Sit down, Mateo. Camila asks why her chest hurts when she runs, good question, we'll see it in a bit.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "And what does the body do with the oxygen? It uses it to get energy from the food we eat.",
+      "utterance_coloquial": "And what does the body do with the oxygen, hm? It uses it to get energy from the food we eat.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "The body uses **oxygen** to get energy from food.",
+            "role": "cuerpo",
+            "group": "lungs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "The body also makes a waste gas, carbon dioxide, and the blood carries it back to the lungs.",
+      "utterance_coloquial": "The body also makes a waste gas, uh, carbon dioxide, and the blood brings it back to the lungs.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Carbon dioxide",
+            "group": "lungs"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_9",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "carries"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_10",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "returns to"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Blood brings **carbon dioxide**, CO₂, back to the lungs to leave the body.",
+            "role": "cuerpo",
+            "group": "lungs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Oxygen goes in; carbon dioxide goes out.",
+      "utterance_coloquial": "Oxygen goes in, carbon dioxide goes out, that's the exchange, in and out.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_8",
+              "concepto_1_10"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "What goes in and what goes out? Oxygen in, carbon dioxide out. Say it with me.",
+      "utterance_coloquial": "What goes in and what goes out? Oxygen in, carbon dioxide out. Say it with me, come on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "How does the air get in? There is a big muscle under the lungs, the diaphragm.",
+      "utterance_coloquial": "So how does the air get in? There's a big muscle under the lungs, the dye a fram, the diaphragm.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Breathing in and out",
+            "role": "subtitulo",
+            "group": "move"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "A muscle under the lungs, the **diaphragm**, moves up and down.",
+            "role": "cuerpo",
+            "group": "move"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "When it goes down, air comes in; when it goes up, air goes out.",
+      "utterance_coloquial": "When it goes down, air comes in, and when it goes up, uh, air goes out.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "A muscle under the lungs, the **diaphragm**, moves up and down. When it moves down, air comes in, and when it moves up, air goes out."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Breathing in is inhaling and breathing out is exhaling.",
+      "utterance_coloquial": "Breathing in is inhaling, breathing out is exhaling, in and out, in and out.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Diaphragm",
+            "group": "move"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Inhale",
+            "group": "move"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Exhale",
+            "group": "move"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_11",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "moves"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_12",
+            "to": "concepto_1_13",
+            "style": "arrow",
+            "label": "then"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Put a hand on your belly and breathe deeply. Feel it rise? Now put it on your chest.",
+      "utterance_coloquial": "Put a hand on your belly, breathe deep, feel it rise? Now the chest, same thing, okay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "The belly rises as you breathe in.",
+            "role": "cuerpo",
+            "group": "move"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "When we run, the body needs more oxygen, so we breathe faster. That is what Camila feels.",
+      "utterance_coloquial": "When we run the body needs more oxygen, so we breathe faster, faster, and that's what Camila feels in her chest.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_21",
+            "set": {
+              "text": "The belly rises as you breathe in. When we run, the body needs more **oxygen** and we breathe faster."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Who plays soccer? Mateo, you get tired quickly, don't you? I'm joking, I'm joking.",
+      "utterance_coloquial": "Who plays soccer? Mateo, you get tired real quick, no? Ha, I'm kidding, I'm kidding, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Cigarette smoke and dirty air damage the lungs, so it is best to breathe clean air.",
+      "utterance_coloquial": "Cigarette smoke and dirty air damage the lungs, so it's best to breathe clean air, always.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Healthy lungs",
+            "role": "subtitulo",
+            "group": "care"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Cigarette smoke and dirty air damage the **lungs**.",
+            "role": "cuerpo",
+            "group": "care"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Exercising and playing outside helps the lungs work better.",
+      "utterance_coloquial": "And exercising, playing outside, helps the lungs work better, so go out and play.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Cigarette smoke and dirty air damage the **lungs**. **Exercise** helps them work better."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "When you are sick, cough into your elbow and not into your neighbor.",
+      "utterance_coloquial": "When you're sick, cough into your elbow, not on your neighbor, please, Diego.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Cigarette smoke and dirty air damage the **lungs**. **Exercise** helps them work better. Coughing into the elbow keeps germs from spreading."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Smoke harms the lungs, while clean air helps to keep them healthy.",
+      "utterance_coloquial": "Smoke harms the lungs, uh, and clean air helps keep them healthy, yes.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_14",
+            "object": "concepto",
+            "label": "Smoke",
+            "group": "care"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_15",
+            "object": "concepto",
+            "label": "Clean air",
+            "group": "care"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "concepto_1_14",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "harms"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "concepto_1_15",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "protects"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Camila asks about fish. Fish use gills to breathe, which is different. We will leave that for another day.",
+      "utterance_coloquial": "Camila asks about fish. Fish breathe with gills, different, we'll leave that for another day, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "So why can't we hold our breath for long? Because the body needs oxygen all the time, and the lungs bring it in.",
+      "utterance_coloquial": "So why can't we hold our breath for long? Because the body needs ox ee gen all the time, and the lungs bring it in.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "The body needs **oxygen** all the time, and the lungs bring it in from the air.",
+            "role": "cuerpo",
+            "group": "lungs"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Nose, trachea, bronchi, lungs and alveoli: that is the route of the air.",
+      "utterance_coloquial": "Nose, trachea, bronchi, lungs, alveoli, there's the route of the air.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_2",
+              "concepto_1_4",
+              "concepto_1_5",
+              "concepto_1_6",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "In pairs, tell each other the route of the air. Raise your hand if you need help.",
+      "utterance_coloquial": "In pairs, tell each other the route of the air, from the nose, hand up if you need help.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Okay, time. I heard good explanations. Well done, everyone.",
+      "utterance_coloquial": "Okay, time, time. I heard some good explanations, well done, everybody.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For tomorrow, count how many times you breathe in one minute while resting, and bring the number.",
+      "utterance_coloquial": "For tomorrow, uh, count how many times you breathe in one minute while you rest, and bring me the number.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Take-home task",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Count how many times you breathe in one minute while resting. Bring the number tomorrow.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Valeria asks whether the lungs have muscles. No, they do not; the diaphragm moves them.",
+      "utterance_coloquial": "Valeria asks if the lungs have muscles. No, no, they don't, the diaphragm moves them.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_21",
+            "set": {
+              "text": "The belly rises as you breathe in. When we run, the body needs more **oxygen** and we breathe faster. The lungs have no muscles; the diaphragm moves them."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "There is the bell. Put your chairs up and go out in a line.",
+      "utterance_coloquial": "There's the bell, okay. Chairs up, chairs up, and out in a line, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

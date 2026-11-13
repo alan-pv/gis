@@ -1,0 +1,1071 @@
+{
+  "id": "el-sonido",
+  "tema": "Sound: vibrations, loud and soft, high and low",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student understands that sound is produced by vibrations that travel through matter to the ear, that the size of the vibration sets loud or soft, and that its speed sets high or low.",
+  "hatsumon": "What makes a sound, and why does it change?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Shh, quiet, everyone. Close your eyes and listen for ten seconds.",
+      "utterance_coloquial": "Shh, shh, quiet everybody. Close your eyes and just listen for, like, ten seconds.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Everything you just heard is sound, and that is what we are going to explore today.",
+      "utterance_coloquial": "Everything you just heard, all of that is sound, and that's what we're gonna explore today.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Sound",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Who can tell me what they heard? Marta heard traffic, Jose a bird, Pablo the fan. Traffic, a bird, the fan.",
+      "utterance_coloquial": "So what did you hear? Marta heard traffic. Jose, a bird. Pablo, the fan. Okay, traffic, a bird, the fan.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "What makes a sound? And why are some sounds loud, some soft, some high and some low?",
+      "utterance_coloquial": "So what makes a sound? And why are some loud and some soft, some high, some low?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Keep that in mind; we will answer it at the end. Open your notebooks.",
+      "utterance_coloquial": "Keep that in your head, we'll answer it at the end. Open your notebooks, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Sound is made when something vibrates, when it shakes back and forth very fast.",
+      "utterance_coloquial": "Sound is made when something vibrates, like, shakes back and forth super fast.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Where sound comes from",
+            "role": "subtitulo",
+            "group": "vib"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Sound is made when something **vibrates**, shaking back and forth very fast.",
+            "role": "cuerpo",
+            "group": "vib"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Put your hand on your throat and say mmm. Do you feel it? Yes?",
+      "utterance_coloquial": "Put your hand on your throat and say mmm. Do you feel that? Yes?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Your voice is your vocal cords vibrating.",
+      "utterance_coloquial": "That's your voice, your vocal cords, they're vibrating, yes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Sound is made when something **vibrates**, shaking back and forth very fast. Your voice is your **vocal cords** vibrating."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Take the rubber band, stretch it and pluck it. See the blur? It is vibrating.",
+      "utterance_coloquial": "Take the rubber band, stretch it, pluck it. See the blur? It's vibrating, see, and we hear a sound.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Rubber band",
+            "group": "vib"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Vibration",
+            "group": "vib"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "And that vibration is what we hear as sound.",
+      "utterance_coloquial": "And that vibration is what we hear as sound.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Sound",
+            "group": "vib"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "produces"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Ricardo, leave the rubber band alone, please; not on Laura's hair.",
+      "utterance_coloquial": "Ricardo, not on Laura's hair, please! Leave the rubber band alone.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "This drum has rice on top. Tap the drum and watch the rice jump: that is the vibration.",
+      "utterance_coloquial": "This drum has rice on top. Tap it, and watch the rice jump, jump! That's the vibration.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The vibration has to travel to reach our ears, and it does so through the air.",
+      "utterance_coloquial": "The vibration has to travel to get to our ears, and it does that through the air.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "How it travels",
+            "role": "subtitulo",
+            "group": "med"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Vibrations push the air, and sound travels as **waves**",
+            "role": "cuerpo",
+            "group": "med"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "It can also travel through water and through solid things.",
+      "utterance_coloquial": "It can also go through water, and, um, solid things too.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "Vibrations push the air, and sound travels as **waves**, and it can also travel through water and solids."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The vibration shakes the air around it.",
+      "utterance_coloquial": "The vibration shakes the air that's around it, like a little push.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Air",
+            "group": "med"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_2",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "shakes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Put your ear against the desk and tap on it with a finger. It sounds louder, right? Try it.",
+      "utterance_coloquial": "Put your ear on the desk and tap with a finger. It sounds louder, no? Try it, try it.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "So the sound travels through the air, through water and even through the desk.",
+      "utterance_coloquial": "So sound goes through the air, through water, even through the desk.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "When the waves reach the ear, the eardrum vibrates too.",
+      "utterance_coloquial": "When the waves get to our ear, the eardrum vibrates too, an ear drum.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Hearing",
+            "role": "subtitulo",
+            "group": "hea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Sound waves make the **eardrum** vibrate.",
+            "role": "cuerpo",
+            "group": "hea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "And the brain tells us what we are hearing.",
+      "utterance_coloquial": "And then the brain tells us what we're hearing, it figures it out.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Sound waves make the **eardrum** vibrate. The **brain** tells us what we hear."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "The waves from the air arrive at the ear.",
+      "utterance_coloquial": "So the waves from the air arrive at the ear.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Ear",
+            "group": "hea"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "waves arrive"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The ear sends a message to the brain.",
+      "utterance_coloquial": "And from the ear, a message goes to the brain.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Brain",
+            "group": "hea"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "message"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "A dog hears sounds we cannot hear, and a dolphin too. Yes, even higher ones.",
+      "utterance_coloquial": "A dog can hear sounds we can't, and dolphins too. Yeah, even higher sounds.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Now, loud and soft. A loud sound comes from a big vibration; a soft sound, from a small one.",
+      "utterance_coloquial": "Now, loud and soft. A loud sound comes from a big vibration, a soft sound from a small one.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Loud and soft",
+            "role": "subtitulo",
+            "group": "lou"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "A big vibration makes a **loud** sound, and a small vibration makes a **soft** sound.",
+            "role": "cuerpo",
+            "group": "lou"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "A big vibration makes a loud sound.",
+      "utterance_coloquial": "A big vibration, a loud sound. Big, loud.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Big vibration",
+            "group": "lou"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Loud sound",
+            "group": "lou"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_7",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Pluck the band gently: a small vibration and a soft sound.",
+      "utterance_coloquial": "Pluck the band gently, gently: small vibration, soft sound.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Small vibration",
+            "group": "lou"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Soft sound",
+            "group": "lou"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_9",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Pluck it hard, now softly. Hear the difference? Everyone try. Not so hard, Luis!",
+      "utterance_coloquial": "Pluck it hard, now soft. Hear the difference? Everybody try. Not so hard, Luis!",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "How loud a sound is gets measured in decibels, written dB.",
+      "utterance_coloquial": "How loud a sound is, we measure that in decibels, dB.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Loudness is measured in **decibels**, written dB.",
+            "role": "cuerpo",
+            "group": "lou"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Very loud sounds can hurt your ears, so do not turn your headphones all the way up.",
+      "utterance_coloquial": "Very loud sounds can hurt your ears, so don't turn your headphones all the way up, okay?",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Loudness is measured in **decibels**, written dB. Very loud sounds can damage your **hearing**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Keep the headphone volume low.",
+      "utterance_coloquial": "So keep the volume low, low.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Loudness is measured in **decibels**, written dB. Very loud sounds can damage your **hearing**. So keep the volume of headphones low."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "My brother plays his music so loud I swear he will go deaf, ha. Joking aside, be careful.",
+      "utterance_coloquial": "My brother plays his music so loud I swear he's going deaf, ha. No, but seriously, careful.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Now high and low. How high or low a sound is, that is called pitch.",
+      "utterance_coloquial": "Now high and low. How high or low a sound is, that's called pitch.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "High and low",
+            "role": "subtitulo",
+            "group": "pit"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "**Pitch** is how high or low a sound is",
+            "role": "cuerpo",
+            "group": "pit"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "It depends on how fast the thing vibrates.",
+      "utterance_coloquial": "And it depends on how fast the thing is vibrating.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "**Pitch** is how high or low a sound is, and it depends on how fast the thing vibrates."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "A fast vibration gives a high sound, like a whistle.",
+      "utterance_coloquial": "A fast vibration gives a high sound, like a whistle, a little whistle.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Fast vibration",
+            "group": "pit"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "High sound",
+            "group": "pit"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_11",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "A slow vibration gives a low sound, like a big drum.",
+      "utterance_coloquial": "A slow vibration gives a low sound, like a big drum.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Slow vibration",
+            "group": "pit"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_14",
+            "object": "concepto",
+            "label": "Low sound",
+            "group": "pit"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_13",
+            "to": "concepto_1_14",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Who can sing a high note? Sit down, Pablo, that is not a note, that is a scream.",
+      "utterance_coloquial": "Who can sing a high note? Pablo, sit down, that's not a note, that's a scream, ha.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "On a guitar, the thin strings sound high and the thick strings sound low.",
+      "utterance_coloquial": "On a guitar, the thin strings are high and the thick strings are low.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Thin **strings** sound higher and thick strings sound lower",
+            "role": "cuerpo",
+            "group": "pit"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "A tighter rubber band also sounds higher.",
+      "utterance_coloquial": "And if you pull the rubber band tighter, it sounds higher too.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "Thin **strings** sound higher and thick strings sound lower, and a tighter rubber band sounds higher."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Did you hear it? Tight is high, loose is low. Right.",
+      "utterance_coloquial": "Did you hear? Tight, high. Loose, low. Right?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "So fast vibrations give high sounds, and slow vibrations give low sounds.",
+      "utterance_coloquial": "So fast vibrations, high sounds. Slow vibrations, low sounds.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_11",
+              "concepto_1_12",
+              "concepto_1_13",
+              "concepto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "In space there is no air, so sound cannot travel there.",
+      "utterance_coloquial": "And in space there's no air, so there's no sound. None.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Sound needs matter to travel, so it cannot cross the **vacuum** of space",
+            "role": "cuerpo",
+            "group": "med"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Astronauts talk to each other by radio.",
+      "utterance_coloquial": "So astronauts talk to each other by radio.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Sound needs matter to travel, so it cannot cross the **vacuum** of space, and astronauts talk by radio."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "In the movies you hear explosions in space, but in real life there is no sound. Right?",
+      "utterance_coloquial": "In the movies, explosions in space, boom! But in real life, nothing. No sound. Right?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Sound can bounce off hard surfaces, and then we hear an echo.",
+      "utterance_coloquial": "Sound can also bounce off hard surfaces, and then we hear an echo, echo, echo.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Sound bounces off hard surfaces, and we hear an **echo**",
+            "role": "cuerpo",
+            "group": "med"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 43,
+      "utterance_formal": "An echo is easy to hear in a cave or between mountains.",
+      "utterance_coloquial": "You hear it a lot in a cave, or between mountains.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "Sound bounces off hard surfaces, and we hear an **echo**, for example in a cave or between mountains."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Who has shouted in a cave or a tunnel? Yes, Ana, in the tunnel near her house.",
+      "utterance_coloquial": "Who's shouted in a cave or a tunnel? Yes, Ana, in the tunnel by her house. Nice.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "So big vibrations make loud sounds, and small vibrations make soft sounds.",
+      "utterance_coloquial": "So, big vibrations, loud; small vibrations, soft.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_7",
+              "concepto_1_8",
+              "concepto_1_9",
+              "concepto_1_10"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "So, back to our question: what makes a sound? A vibration. Its size sets loud or soft, and its speed sets high or low.",
+      "utterance_coloquial": "So, back to our question. What makes a sound? A vibration! Big or small, fast or slow.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "A **vibration** makes sound; its size sets loudness and its speed sets pitch.",
+            "role": "cuerpo",
+            "group": "vib"
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "Why does my voice sound different on a recording? Good question; we will leave it for another day.",
+      "utterance_coloquial": "Teacher, why does my voice sound weird in a recording? Ooh, good question, another day, okay?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "For homework, find three sounds at home and say if each is high or low, loud or soft.",
+      "utterance_coloquial": "For homework, find three sounds at home and say if they're high or low, loud or soft.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Find three sounds at home. Say if each is high or low, loud or soft.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 49,
+      "utterance_formal": "Great work today. Pack your things.",
+      "utterance_coloquial": "Good work today. Pack your things, quickly, quickly.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

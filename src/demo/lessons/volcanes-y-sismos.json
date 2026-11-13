@@ -1,0 +1,993 @@
+{
+  "id": "volcanes-y-sismos",
+  "tema": "Volcanoes and earthquakes",
+  "sesgo": "mixto",
+  "objetivo": "That the student describes the layers of the Earth, explains that volcanoes erupt because of magma rising and that earthquakes happen when plates move, and knows how to protect themselves in an earthquake.",
+  "hatsumon": "Why does the ground shake and why do volcanoes erupt?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Come in and find your seats.",
+      "utterance_coloquial": "Good mor ning, everybody. Come in, find your seats, quickly.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Before we start, a question: did anyone feel something strange this morning?",
+      "utterance_coloquial": "So, before we start, a question. Did anybody feel, uh, something strange this morning?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Nobody? Not even a little shaking when you got out of bed? Okay, then I will do it myself.",
+      "utterance_coloquial": "Nobody? Not even a little shaking when you got out of bed? Okay, then I'll do it myself, look.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "What do you think makes the ground shake, and what makes a volcano erupt?",
+      "utterance_coloquial": "What do you think makes the ground shake, and what makes a vol cano erupt?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Yes, Diego says the volcano is angry. Ha, it can feel that way. Let us find out what really happens.",
+      "utterance_coloquial": "Yes, Diego says the volcano is angry, ha! It can seem like that. Let's find out what really happens.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Let us start by going inside the Earth. It has three main layers: the crust, the mantle and the core.",
+      "utterance_coloquial": "Let's start by going inside the Earth. It has three main layers: the crust, the man tle, and the core.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Layers of the Earth",
+            "role": "subtitulo",
+            "group": "lay"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The Earth has three main layers: the **crust**, the **mantle** and the **core**.",
+            "role": "cuerpo",
+            "group": "lay"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The crust is the outside layer, where we live. Under it is the mantle, and in the center is the core.",
+      "utterance_coloquial": "The crust is the outside layer, where we live. Under it, the mantle, and in the middle, the core.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "crust",
+            "group": "lay"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "mantle",
+            "group": "lay"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "core",
+            "group": "lay"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "above"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_2",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "above"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "The crust is thin, like the skin of an apple, and it is made of hard rock.",
+      "utterance_coloquial": "The crust is thin, like the skin of an apple, you know, and it's hard rock.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "We live on the crust, a thin layer of hard rock",
+            "role": "cuerpo",
+            "group": "lay"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Under the crust, the mantle is made of very hot rock.",
+      "utterance_coloquial": "Under the crust, uh, the mantle is made of really hot rock.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "We live on the crust, a thin layer of hard rock, over a mantle of very hot rock"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "And the core, in the center, is the hottest part of all.",
+      "utterance_coloquial": "And the core, in the center, is the hottest part of all, wow.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "We live on the crust, a thin layer of hard rock, over a mantle of very hot rock, and the core at the center is the hottest part."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Is the center of the Earth hot or cold? Hot, very hot, Elena. Good.",
+      "utterance_coloquial": "Is the center of the Earth hot or cold? Hot, very hot, Elena. Good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "That heat deep inside, and the crust that moves, explain two things we see: volcanoes and earthquakes.",
+      "utterance_coloquial": "That heat deep inside, and the crust that moves, explain two things we see: vol canoes, and earth quakes.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Volcanoes and Earthquakes",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Hands down. We will start with volcanoes.",
+      "utterance_coloquial": "Hands down, hands down. We start with volcanoes.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "In the mantle the rock is so hot that it melts, and the melted rock is called magma.",
+      "utterance_coloquial": "In the mantle, the rock is so hot it melts, and that melted rock is called mag ma.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Volcanoes",
+            "role": "subtitulo",
+            "group": "vol"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "In the mantle, rock is so hot that it melts into **magma**.",
+            "role": "cuerpo",
+            "group": "vol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_2",
+            "to": "texto_1_6",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The magma rises through cracks in the crust and finds a way out through a volcano.",
+      "utterance_coloquial": "The magma goes up through cracks in the crust and finds a way out, a volcano.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "magma",
+            "group": "vol"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "volcano",
+            "group": "vol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "rises"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Think of a shaken soda bottle, when you open it.",
+      "utterance_coloquial": "Think of a soda bottle you shook, and then you open it, ha.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "A volcano erupts like a shaken soda bottle when it is opened",
+            "role": "cuerpo",
+            "group": "vol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "When the magma comes out of the volcano, it is called lava.",
+      "utterance_coloquial": "When the magma comes out of the vol cano, it's called la va.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_21",
+            "set": {
+              "text": "A volcano erupts like a shaken soda bottle when it is opened, and magma that reaches the surface is called **lava**."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "lava",
+            "group": "vol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "erupts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Besides lava, a volcano can throw out ash and gas, like a huge cloud.",
+      "utterance_coloquial": "Besides lava, a volcano throws out ash and gas, like a huge cloud, uh huh.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "ash",
+            "group": "vol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_5",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "throws out"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Lava is hot enough to melt metal. Do not touch it, obviously. Ha.",
+      "utterance_coloquial": "Lava's hot enough to melt metal. Don't touch it, obviously, ha.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Lava is hot enough to melt metal.",
+            "role": "cuerpo",
+            "group": "vol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Magma, volcano, lava.",
+      "utterance_coloquial": "Magma, volcano, lava, right.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_4",
+              "concepto_1_5",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The melted rock under the ground, remember.",
+      "utterance_coloquial": "The melted rock under the ground, remember? That one.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Popocatepetl, here in Mexico, is an active volcano, which means it can still erupt.",
+      "utterance_coloquial": "Popo catepetl, here in Mexico, is an active volcano, which means it can still erupt.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Popocatepetl, in Mexico, is an **active volcano**",
+            "role": "cuerpo",
+            "group": "vol"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 22,
+      "utterance_formal": "At the top of a volcano there is an opening where the lava comes out: the crater.",
+      "utterance_coloquial": "At the top of a volcano there's an opening where the lava comes out, the cra ter.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Popocatepetl, in Mexico, is an **active volcano**, with an opening at the top called the **crater**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Can there be volcanoes under the sea? Yes, there are many. Good question, Pablo.",
+      "utterance_coloquial": "Can there be volcanoes under the sea? Yes, there are many! Good question, Pablo.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Popocatepetl, in Mexico, is an **active volcano**, with an opening at the top called the **crater**. Many volcanoes are also under the sea."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Who has seen it? In photos, from far away. Right. We are safe where we are.",
+      "utterance_coloquial": "Who has seen it? In photos, from far away. Right, we are safe, we're far from it.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Now earthquakes. The crust is not one piece: it is broken into huge pieces called plates, and they move very slowly.",
+      "utterance_coloquial": "Now, earth quakes. The crust isn't one piece, it's broken into huge pieces called plates, and they move, but very slowly.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Earthquakes",
+            "role": "subtitulo",
+            "group": "qua"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "The crust is broken into huge pieces called **plates**, which move very slowly.",
+            "role": "cuerpo",
+            "group": "qua"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_6",
+            "to": "texto_1_10",
+            "style": "arrow",
+            "label": "same cause"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Imagine giant puzzle pieces, floating a little on the mantle.",
+      "utterance_coloquial": "Imagine giant puzzle pieces, floating a little on the, the mantle.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "plates",
+            "group": "qua"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_8",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "float on"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Sometimes two plates push against each other or slide past each other. Use your hands, like this.",
+      "utterance_coloquial": "Sometimes two plates push against each other or slide past each other. Do it with your hands, like this.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Two plates can push against each other or slide past each other.",
+            "role": "cuerpo",
+            "group": "qua"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "When they get stuck and then suddenly slip, the ground shakes. That is an earthquake.",
+      "utterance_coloquial": "When they get stuck and then suddenly slip, the ground shakes. That's an earth quake.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "earthquake",
+            "group": "qua"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "slip"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Most earthquakes, and many volcanoes, happen near the edges of the plates.",
+      "utterance_coloquial": "Most earthquakes, and a lot of volcanoes, happen near the edges of the plates.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Many **earthquakes** and volcanoes occur near the edges of plates",
+            "role": "cuerpo",
+            "group": "qua"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Is Mexico near the edge of plates? Yes, that is why we feel earthquakes here.",
+      "utterance_coloquial": "Is Mexico near the edge of plates? Yes! That's why we feel earthquakes here, eh.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "Many **earthquakes** and volcanoes occur near the edges of plates, as in Mexico"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Scientists who study earthquakes measure them with an instrument called a seismograph.",
+      "utterance_coloquial": "Scientists who study earthquakes measure them with an in strument called a seismo graph.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "Many **earthquakes** and volcanoes occur near the edges of plates, as in Mexico, and a **seismograph** measures them."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Does anyone remember the last one? Many hands. Okay, calm down. Calm down, please.",
+      "utterance_coloquial": "Does anybody remember the last one? Wow, so many hands. Okay, calm down, calm down, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Plates, then earthquake.",
+      "utterance_coloquial": "Plates, and then, earthquake, yeah.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_8",
+              "concepto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "What do we do when the ground shakes? First, drop to the floor. Second, cover your head and neck. Third, hold on to something sturdy.",
+      "utterance_coloquial": "What do we do if the ground shakes? First, drop to the floor. Second, cover your head and neck. Third, hold on to something strong.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Staying safe",
+            "role": "subtitulo",
+            "group": "safe"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Drop to the floor\nCover your head and neck\nHold on to something sturdy",
+            "role": "enumeracion",
+            "group": "safe"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_10",
+            "to": "texto_1_13",
+            "style": "arrow",
+            "label": "be ready"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Let us practice: everyone under the desk, now! Great, very quick.",
+      "utterance_coloquial": "Let's practice: everybody under the desk, now! Great, very quick, come out.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Stay away from windows, shelves and anything that can fall.",
+      "utterance_coloquial": "Stay away from win dows, shelves, and anything that can fall on you.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Windows, shelves and heavy objects are **dangerous** during an earthquake.",
+            "role": "cuerpo",
+            "group": "safe"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "At home, each family needs a plan and a meeting place outside.",
+      "utterance_coloquial": "At home, every family needs a plan and a meeting place outside, okay.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Windows, shelves and heavy objects are **dangerous** during an earthquake. At home, each family needs a **plan** and a meeting place outside."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Drop, cover, hold on.",
+      "utterance_coloquial": "Drop, cover, hold on, right.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Does anyone have a question? Yes, can we predict earthquakes? No, not exactly, so we must be ready.",
+      "utterance_coloquial": "Any questions? Yes, can we predict earthquakes? Not exactly, no. So we have to be ready.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Windows, shelves and heavy objects are **dangerous** during an earthquake. At home, each family needs a **plan** and a meeting place outside. We cannot predict earthquakes exactly, so we must be ready."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "So, what is going on? Hot magma rises and makes volcanoes erupt, and moving plates make the ground shake.",
+      "utterance_coloquial": "So what's going on? Hot mag ma goes up and makes volcanoes erupt, and moving plates make the ground shake.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Hot **magma** makes volcanoes erupt, and moving **plates** make the ground shake.",
+            "role": "cuerpo",
+            "group": "qua"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Crust, mantle and core.",
+      "utterance_coloquial": "Crust, mantle, and core, uh huh.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_2",
+              "concepto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "For tomorrow, find out the name of one volcano in the world and where it is.",
+      "utterance_coloquial": "For tomorrow, find out the name of one volcano in the world, any one, and where it is.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Find the name of one **volcano** in the world. Find out where it is.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Put your things away, please. We are done.",
+      "utterance_coloquial": "Put your things away, please. We're done for today.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Thank you all. See you tomorrow.",
+      "utterance_coloquial": "Thanks, everybody. See you tomorrow!",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

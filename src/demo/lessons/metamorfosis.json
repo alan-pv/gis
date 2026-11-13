@@ -1,0 +1,1061 @@
+{
+  "id": "metamorfosis",
+  "tema": "The butterfly's life cycle (metamorphosis)",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student describes the four stages of a butterfly's metamorphosis (egg, caterpillar, chrysalis, and adult) and understands that they form a cycle that repeats.",
+  "hatsumon": "How does a caterpillar that crawls end up turning into a butterfly that flies?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Look what I found on a leaf in the garden this morning. Come closer, everyone, take a good look.",
+      "utterance_coloquial": "Okay, so, look what I found on a leaf in the garden this morning. Come on, come closer, take a good look.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Back to your seats now and get out your notebook; there's quite a bit to cover.",
+      "utterance_coloquial": "Okay, back to your seats, get your notebook out, there's quite a bit to cover.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about this: how does a caterpillar that crawls end up turning into a butterfly that flies?",
+      "utterance_coloquial": "Okay, think about it: how does a cater pillar that crawls end up being a butterfly that flies?",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Has anyone seen a caterpillar in the garden? Yes, the ones that climb up onto the leaves.",
+      "utterance_coloquial": "Who's seen a caterpillar in the garden?... the ones that climb up on the leaves.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Many animals aren't born with the shape they'll have as adults: they keep changing as they grow.",
+      "utterance_coloquial": "Many animals aren't born with the shape they'll have as adults: they keep changing as they grow.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Butterfly's Life Cycle",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Changing shape",
+            "role": "subtitulo",
+            "group": "def"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Some animals **change shape** as they grow",
+            "role": "cuerpo",
+            "group": "def"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "That huge change in shape is called metamorphosis.",
+      "utterance_coloquial": "That huge change in shape is called meta morphosis.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Some animals **change shape** as they grow, called **metamorphosis**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "In the butterfly this change happens in four stages. Let's go one by one.",
+      "utterance_coloquial": "In the butterfly this change happens in four stages. Let's go one by one.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "Some animals **change shape** as they grow, called **metamorphosis**. The butterfly goes through four stages."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "It all starts on a plant, on a leaf where a butterfly landed.",
+      "utterance_coloquial": "It all kicks off on a plant, on a little leaf where a butterfly landed.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "From egg to caterpillar",
+            "role": "subtitulo",
+            "group": "e1"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "A butterfly's life begins on the leaf of a plant",
+            "role": "cuerpo",
+            "group": "e1"
+          },
+          {
+            "op": "add",
+            "id": "arbol_1_1",
+            "object": "concepto",
+            "label": "plant",
+            "group": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "The first stage is the egg: the butterfly lays its eggs underneath the leaves.",
+      "utterance_coloquial": "The first stage is the egg: the butter fly lays its little eggs underneath the leaves.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The butterfly lays its **eggs** underneath the leaves",
+            "role": "cuerpo",
+            "group": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Here's the egg, stuck right to the leaf.",
+      "utterance_coloquial": "Here's the little egg, stuck right to the leaf.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "circulo_1_1",
+            "object": "concepto",
+            "label": "egg",
+            "group": "e1"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "arbol_1_1",
+            "to": "circulo_1_1",
+            "style": "arrow",
+            "label": "lays eggs"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_6",
+            "to": "circulo_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "They're so small you can barely see them, about the size of a pinhead.",
+      "utterance_coloquial": "They're so tiny you can barely see them, about the size of a little pinhead.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Eggs are so small you can barely see them, about the size of a pinhead",
+            "role": "cuerpo",
+            "group": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "After a few days, the second stage hatches from the egg: the caterpillar.",
+      "utterance_coloquial": "After a few days, the second stage comes out of the egg: the cater pillar.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Eggs are so small you can barely see them, about the size of a pinhead. After a few days a **caterpillar** hatches."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Here it is: a caterpillar that just came out of its egg.",
+      "utterance_coloquial": "Here it is: a little caterpillar that just came out of its egg.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "oruga_1_1",
+            "object": "concepto",
+            "label": "caterpillar",
+            "group": "e1"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "circulo_1_1",
+            "to": "oruga_1_1",
+            "style": "arrow",
+            "label": "hatches"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_6",
+            "to": "oruga_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "The caterpillar spends its time eating leaves nonstop, and that's why it grows so fast.",
+      "utterance_coloquial": "The caterpillar just eats and eats leaves nonstop, that's why it grows super fast.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "The caterpillar eats leaves nonstop and grows very fast",
+            "role": "cuerpo",
+            "group": "e1"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "It grows so much that its skin gets too small, and it sheds it several times.",
+      "utterance_coloquial": "It grows so much its skin gets too tight, and it sheds it several times.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "The caterpillar eats leaves nonstop and grows very fast, so it sheds its **skin** several times."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Can you imagine eating all day and just growing? Well, that's what the caterpillar does.",
+      "utterance_coloquial": "Can you imagine eating all day and just growing? Yeah, that's what the caterpillar does.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Once it's nice and big, the third stage arrives: the chrysalis.",
+      "utterance_coloquial": "Once it's nice and big, the third stage shows up: the chrys alis.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Chrysalis and butterfly",
+            "role": "subtitulo",
+            "group": "e3"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Once it is big, the caterpillar wraps itself up and forms a **chrysalis**",
+            "role": "cuerpo",
+            "group": "e3"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Here it is: the caterpillar hung itself from a branch and sealed itself in.",
+      "utterance_coloquial": "Here it is: the caterpillar hung itself from a little branch and sealed itself in.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "crisalida_1_1",
+            "object": "concepto",
+            "label": "chrysalis",
+            "group": "e3"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "oruga_1_1",
+            "to": "crisalida_1_1",
+            "style": "arrow",
+            "label": "transforms"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "texto_1_12",
+            "to": "crisalida_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "On the outside it looks like it's sleeping and totally still, but on the inside it's changing completely.",
+      "utterance_coloquial": "On the outside it looks like it's fast asleep and totally still, but on the inside it's changing completely.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "On the outside it looks asleep and totally still, but on the inside its whole body is transforming",
+            "role": "cuerpo",
+            "group": "e3"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "This part always amazes me. Give it a moment to copy it down.",
+      "utterance_coloquial": "This part always blows my mind. Give it a sec to copy it down.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "We've covered three stages: egg, caterpillar, and chrysalis. Review them.",
+      "utterance_coloquial": "We've covered three stages: egg, caterpillar, and chrys alis. Review them.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "circulo_1_1",
+              "oruga_1_1",
+              "crisalida_1_1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "And finally the fourth stage arrives, the most anticipated one: an adult butterfly comes out.",
+      "utterance_coloquial": "And finally the fourth stage arrives, the most anticipated one: an adult butterfly comes out.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "On the outside it looks asleep and totally still, but on the inside its whole body is transforming. Finally an adult **butterfly** comes out of the chrysalis."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Look how beautiful, with its colorful wings.",
+      "utterance_coloquial": "Look how beautiful, with its little colorful wings.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "mariposa_1_1",
+            "object": "concepto",
+            "label": "butterfly",
+            "group": "e3"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "crisalida_1_1",
+            "to": "mariposa_1_1",
+            "style": "arrow",
+            "label": "emerges"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "texto_1_12",
+            "to": "mariposa_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Now with its wings, the butterfly flies and goes from flower to flower looking for food.",
+      "utterance_coloquial": "Now with its wings, the butterfly flies and goes from flower to flower looking for food.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "With its wings, the butterfly flies from flower to flower looking for food",
+            "role": "cuerpo",
+            "group": "e3"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "flower",
+            "group": "e3"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "mariposa_1_1",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "feeds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Who would have imagined that chubby little caterpillar would end up flying?",
+      "utterance_coloquial": "Who would have imagined that chubby little caterpillar would end up flying?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "And here comes the important part: when the butterfly lays eggs, everything starts over again.",
+      "utterance_coloquial": "And here comes the good part: when the butterfly lays eggs, everything starts all over again.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "The cycle repeats",
+            "role": "subtitulo",
+            "group": "ciclo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "When the butterfly lays **eggs**, everything starts again",
+            "role": "cuerpo",
+            "group": "ciclo"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "mariposa_1_1",
+            "to": "circulo_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "That's why it's called a life cycle: it has no end, it always goes back to the beginning.",
+      "utterance_coloquial": "That's why it's called a life cycle: it has no end, it always goes back to the beginning.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_5",
+            "text": "life cycle"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "So there are four stages: egg, caterpillar, chrysalis, and butterfly.",
+      "utterance_coloquial": "So there are four stages: egg, caterpillar, chrys alis, and butter fly.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "circulo_1_1",
+              "oruga_1_1",
+              "crisalida_1_1",
+              "mariposa_1_1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Notice in the drawing how the arrows go all the way around and come back to the egg.",
+      "utterance_coloquial": "Notice in the drawing how the little arrows go all the way around and come back to the egg.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "circulo_1_1",
+              "oruga_1_1",
+              "crisalida_1_1",
+              "mariposa_1_1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Does everyone have it with their arrows? Very good.",
+      "utterance_coloquial": "Everyone got it with their little arrows? Yeah?... alright, very good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Now, how long does it take for all this to happen? Less than you think.",
+      "utterance_coloquial": "Now, how long does it take for all this? Less than you think.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "When the butterfly lays **eggs**, everything starts again. The whole cycle lasts a few **weeks**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "In many butterflies the whole cycle takes about a month.",
+      "utterance_coloquial": "In a lot of butterflies the whole cycle takes about a month, give or take.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "When the butterfly lays **eggs**, everything starts again. The whole cycle lasts a few **weeks**, about a month in many butterflies."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Really fast for everything that changes, don't you think?",
+      "utterance_coloquial": "Really fast for everything that changes, don't you think?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "And now think about what butterflies are good for out there, in the field.",
+      "utterance_coloquial": "And now think about what butterflies are good for out there, in the field.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Why are they important?",
+            "role": "subtitulo",
+            "group": "imp"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Butterflies help flowers produce fruit and seeds",
+            "role": "cuerpo",
+            "group": "imp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "By going from flower to flower, the butterfly carries pollen from one to another.",
+      "utterance_coloquial": "Going from flower to flower, the butterfly carries the pol len from one to another.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_25",
+            "set": {
+              "text": "Butterflies help flowers produce fruit and seeds, because they carry **pollen** from flower to flower."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "pollen",
+            "group": "imp"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_15",
+            "from": "mariposa_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "carries"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_16",
+            "from": "concepto_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "fertilizes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Without those helpers, many plants couldn't produce their fruit.",
+      "utterance_coloquial": "Without those helpers, many plants couldn't produce their fruit.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Without those helpers, many plants could not produce their fruit",
+            "role": "cuerpo",
+            "group": "imp"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Rest your hand for a moment. Are you doing okay? Perfect.",
+      "utterance_coloquial": "Give your hand a little break. You all doing okay?... good, perfect.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "And it's not just the butterfly that goes through metamorphosis; the frog, the fly, and the beetle do too.",
+      "utterance_coloquial": "And it's not just the butterfly that goes through metamorphosis; the frog, the fly, and the bee tle do too.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "frog\nfly\nbeetle",
+            "role": "lista",
+            "group": "def"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "We'll look at the frog calmly in another class; it has its own story too.",
+      "utterance_coloquial": "We'll take a good look at the frog in another class; it's got its own story too, you know?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "So you don't forget, hold on to what's essential from today: the caterpillar becomes a butterfly through four stages, in a cycle.",
+      "utterance_coloquial": "So you don't forget, hold on to what's essential from today: the caterpillar turns into a butterfly through four stages, in a cycle.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "A caterpillar becomes a butterfly through four stages, in a cycle",
+            "role": "cuerpo",
+            "group": "ciclo"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is metamorphosis.",
+      "utterance_coloquial": "And today's huge word, the one you shouldn't forget, is meta morphosis.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_30",
+            "set": {
+              "text": "A caterpillar becomes a butterfly through four stages, in a cycle. The key word is **metamorphosis**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Remember what that word means: the change in shape as you grow.",
+      "utterance_coloquial": "Remember what that word means: the change in shape as you grow.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Very good, I can see that's super clear. Excellent work.",
+      "utterance_coloquial": "Alright, I can see that's super clear. Excellent work, everyone.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For homework, draw the four stages with their arrows, in the shape of a cycle.",
+      "utterance_coloquial": "Okay so for homework, draw me the four stages with their little arrows, in the shape of a cycle.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_32",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_33",
+            "object": "texto",
+            "text": "Draw the four stages with their arrows, in the shape of a cycle.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "And explain to me in your own words what happens to the caterpillar inside the chrysalis.",
+      "utterance_coloquial": "And explain to me in your own words what happens to the caterpillar inside the chrys alis.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_33",
+            "set": {
+              "text": "Draw the four stages with their arrows, in the shape of a cycle. Explain in your own words what happens to the caterpillar inside the chrysalis."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "And with that we answered the question we started class with.",
+      "utterance_coloquial": "And with that we already answered the question we started class with.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_30"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "Next time you see a caterpillar, you'll know what it's going to become.",
+      "utterance_coloquial": "Next time you see a caterpillar, you'll know what it's going to become.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "That's all for today. Put your things away and we'll see each other tomorrow.",
+      "utterance_coloquial": "That's it for today. Put your stuff away and I'll see you all tomorrow, take care.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1096 @@
+{
+  "id": "partes-de-la-planta",
+  "tema": "The parts of a plant and their functions",
+  "sesgo": "texto-primero",
+  "objetivo": "For students to identify the parts of a plant (root, stem, leaves, flower, and fruit) and the function of each, and understand that they all work together to keep it alive.",
+  "hatsumon": "Why does a plant wilt if you cut off its root?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to take apart a plant in our minds to see what parts it's made of.",
+      "utterance_coloquial": "Today we're going to take apart a plant in our minds to see what parts it's made of.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Take out your notebooks; at the end you're going to work on a complete plant.",
+      "utterance_coloquial": "Take out your notebooks; at the end you're gonna work on a whole plant.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about something: why does a plant wilt if you cut off its root?",
+      "utterance_coloquial": "Okay, think about it: why does a plant wilt if you cut off its root?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Hold on to your answer; we'll come back and answer it properly at the end.",
+      "utterance_coloquial": "Hold on to your answer; we'll come back and answer it properly at the end.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "A plant is a living thing, and like every living thing, it has several parts.",
+      "utterance_coloquial": "A plant is a living thing, and like every living thing, it has several parts.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Parts of the Plant",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "A plant and its parts",
+            "role": "subtitulo",
+            "group": "planta"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "A plant is a living thing with several **parts**",
+            "role": "cuerpo",
+            "group": "planta"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Each part takes care of a different job for the plant.",
+      "utterance_coloquial": "Each part's got a different job for the plant.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "A plant is a living thing with several **parts**, and each part has a different job."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Job here means function: what each part is for.",
+      "utterance_coloquial": "Job here means function — what each part's for.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "A plant is a living thing with several **parts**, and each part has a different job. Job here means **function**: what each part is for."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "There are five main parts: the root, the stem, the leaves, the flower, and the fruit.",
+      "utterance_coloquial": "There are five main parts: the root, the stem, the leaves, the flower, and the fruit.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "root\nstem\nleaves\nflower\nfruit",
+            "role": "lista",
+            "group": "planta"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Let's go through them one by one and see what each part does.",
+      "utterance_coloquial": "Let's go through them one by one and see what each part does.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Let's start from the bottom: the root, which is almost always buried underground.",
+      "utterance_coloquial": "Let's start from the bottom: the root, which is almost always buried underground.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Root and stem",
+            "role": "subtitulo",
+            "group": "raiz"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "The **root** is usually buried underground",
+            "role": "cuerpo",
+            "group": "raiz"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "root",
+            "group": "raiz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Its main job is to soak up water and nutrients from the soil.",
+      "utterance_coloquial": "Its main job is to soak up water and nutrients from the soil.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "The root absorbs water and nutrients from the soil",
+            "role": "cuerpo",
+            "group": "raiz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "That's why the root grows downward, searching for water.",
+      "utterance_coloquial": "That's why the root grows down, looking for water.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "The root absorbs water and nutrients from the soil, so it grows downward searching for water."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "water",
+            "group": "raiz"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "absorbed"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Moving up a bit is the stem, which is like the trunk.",
+      "utterance_coloquial": "Moving up a bit is the stem, which is like the trunk.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "stem",
+            "group": "raiz"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "The stem **holds up** the plant and lifts it",
+            "role": "cuerpo",
+            "group": "raiz"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Also, inside the stem, water travels up from the root to the leaves.",
+      "utterance_coloquial": "Also, inside the stem, water travels up from the root to the lea ves.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "The stem **holds up** the plant and lifts it, and inside it water travels up from the root to the leaves."
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "water"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The stem is like the pipe and the pole of the plant at the same time.",
+      "utterance_coloquial": "The stem is like the pipe and the pole of the plant at the same time.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "The stem **holds up** the plant and lifts it, and inside it water travels up from the root to the leaves. The stem works like a pipe and a pole at once."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "So far we have two parts: the root and the stem.",
+      "utterance_coloquial": "So far we've got two parts: the root and the stem.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Up top are the leaves — they're green and flat.",
+      "utterance_coloquial": "Up top are the leaves — they're green and flat.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Leaves",
+            "role": "subtitulo",
+            "group": "hojas"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "The **leaves** are green and flat",
+            "role": "cuerpo",
+            "group": "hojas"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "leaves",
+            "group": "hojas"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Their job is the most important one: they make food using sunlight.",
+      "utterance_coloquial": "Their job is the most important one: they make food using sunlight.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Leaves make food using **sunlight**, the plant's most important job",
+            "role": "cuerpo",
+            "group": "hojas"
+          },
+          {
+            "op": "add",
+            "id": "sol_1_1",
+            "object": "concepto",
+            "label": "sun",
+            "group": "hojas"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "sol_1_1",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "light"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Let's look at the whole plant so we can point things out on it.",
+      "utterance_coloquial": "Let's look at the whole plant so we can point stuff out on it.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "arbol_1_1",
+            "object": "concepto",
+            "label": "plant",
+            "group": "planta"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_14",
+            "to": "arbol_1_1",
+            "style": "arrow",
+            "label": "leaves"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Notice that almost every plant has these parts? Even a little tree.",
+      "utterance_coloquial": "Notice that almost every plant has these parts? Even a little tree.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Notice the path of the water: it goes in through the root, up through the stem, and reaches the leaves.",
+      "utterance_coloquial": "Notice the path of the water: it goes in through the root, up through the stem, and reaches the lea ves.",
+      "case_tags": [
+        "mixto",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "water"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "By the way, that trip the water makes up through the plant, from the root to the leaves, is called transport.",
+      "utterance_coloquial": "By the way, that trip the water makes up through the plant, from the root to the leaves, is called transport, ok?",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "label",
+            "ref": "connect_1_9",
+            "text": "transport"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "That's why, along with the food they make, the leaves look so green.",
+      "utterance_coloquial": "That's why, along with the food they make, the leaves look so green.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Leaves make the plant look **green**",
+            "role": "cuerpo",
+            "group": "hojas"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "We're at three parts now; pay special attention to the job of the leaves.",
+      "utterance_coloquial": "We're at three parts now; pay special attention to the job of the leaves.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Now the prettiest part: the flower, the one that catches your eye.",
+      "utterance_coloquial": "Now the prettiest part: the flower, the one that catches your eye.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Flower and fruit",
+            "role": "subtitulo",
+            "group": "flor"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "The flower is the showy, colorful part",
+            "role": "cuerpo",
+            "group": "flor"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "And it's not just to look pretty: the fruit is born from the flower.",
+      "utterance_coloquial": "And it's not just to look pretty: the fruit is born from the flower.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "The flower is the showy, colorful part, and the **fruit** is born from it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "I'll leave you an example flower next to its part.",
+      "utterance_coloquial": "I'll leave you a little example flower next to its part.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "flor_1_1",
+            "object": "concepto",
+            "label": "flower",
+            "group": "flor"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_18",
+            "to": "flor_1_1",
+            "style": "arrow",
+            "label": "for example"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "That's why many flowers smell nice: to attract bees.",
+      "utterance_coloquial": "That's why many flowers smell nice: to attract bees.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Many flowers smell nice to attract bees",
+            "role": "cuerpo",
+            "group": "flor"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "And the last part is the fruit, which holds the seeds inside.",
+      "utterance_coloquial": "And the last part is the fruit, which holds the seeds inside.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "Many flowers smell nice to attract bees. The last part is the **fruit**, which holds the seeds inside."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "fruit",
+            "group": "flor"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "flor_1_1",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "becomes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "And from each seed a new plant can be born: that's how it starts all over again.",
+      "utterance_coloquial": "And from each se ed a new plant can be born: that's how it starts all over again.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "A new plant can be born from each **seed**",
+            "role": "cuerpo",
+            "group": "flor"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "seed",
+            "group": "flor"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "holds"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_6",
+            "to": "arbol_1_1",
+            "style": "arrow",
+            "label": "grows into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Have you ever eaten seeds without noticing? In watermelon, for example.",
+      "utterance_coloquial": "Have you ever eaten seeds without noticing? In watermelon, for example.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Notice the two parts that give new life: the flower and the fruit.",
+      "utterance_coloquial": "Notice the two parts that give new life: the flower and the fruit.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "flor_1_1",
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Now, here's the important part: no part works alone, they all help each other.",
+      "utterance_coloquial": "Now, here's the important part: no part works alone, they all help each other.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "They all work together",
+            "role": "subtitulo",
+            "group": "importancia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "If one part is **missing**, the plant gets sick",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Let's go back to the beginning: if you cut the root, the plant can no longer take in water and it wilts.",
+      "utterance_coloquial": "Let's go back to the beginning: if you cut the root, the plant can no longer take in water and it wilts.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_25",
+            "set": {
+              "text": "If one part is **missing**, the plant gets sick, so without its root the plant cannot take in water and it **wilts**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "A part that fails affects the whole plant, just like in our bodies.",
+      "utterance_coloquial": "A part that fails affects the whole plant, just like in our bodies.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_25",
+            "set": {
+              "text": "If one part is **missing**, the plant gets sick, so without its root the plant cannot take in water and it **wilts**. A part that fails affects the whole plant, just like in our bodies."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "That's why we need to take care of plants: don't pull them up or step on them.",
+      "utterance_coloquial": "That's why we need to take care of plants: don't pull them up or step on them.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Take care of plants: don't pull them up or step on them.",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Go back to the question from the beginning: now we can answer it.",
+      "utterance_coloquial": "Go back to the question from the beginning: now we can answer it.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_25"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Rest your hand for a moment and then we'll wrap up with the important part.",
+      "utterance_coloquial": "Give your hand a little rest and then we'll wrap up with the important part.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Hold on to the big idea for today, the one that sums everything up.",
+      "utterance_coloquial": "Hold on to the big idea for today, the one that sums it all up.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "Take care of plants: don't pull them up or step on them. A plant has **roots**, a stem, leaves, a flower and **fruit**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "And with that: each part has its function, and together they keep it alive.",
+      "utterance_coloquial": "And with that: each part has its func tion, and together they keep it alive.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "Take care of plants: don't pull them up or step on them. A plant has **roots**, a stem, leaves, a flower and **fruit**. Each part has its **function** and together they keep the plant alive."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is function.",
+      "utterance_coloquial": "And today's big word, the one you shouldn't forget, is function.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_27",
+            "set": {
+              "text": "Take care of plants: don't pull them up or step on them. A plant has **roots**, a stem, leaves, a flower and **fruit**. Each part has its **function** and together they keep the plant alive. The key word is **function**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Remember the main idea: all the parts together keep the plant alive.",
+      "utterance_coloquial": "Remember the main idea: all the parts together keep the plant alive.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Very good, I can see it's clear. Excellent work.",
+      "utterance_coloquial": "Very good, I can see it's super clear. Excellent work.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Take one last look at the five parts we studied today.",
+      "utterance_coloquial": "Take one last look at the five parts we studied today.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_3",
+              "concepto_1_4",
+              "flor_1_1",
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Do you all have them written down? Perfect.",
+      "utterance_coloquial": "Do you all have them written down? Alright, perfect.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "For homework, draw a plant and label its five parts.",
+      "utterance_coloquial": "For homework, draw a plant and label its five parts.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_32",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_33",
+            "object": "texto",
+            "text": "Draw a plant and label its 5 parts.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "And next to each part, write down what its function is.",
+      "utterance_coloquial": "And next to each part, write down what its func tion is.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_33",
+            "set": {
+              "text": "Draw a plant and label its 5 parts. Next to each part, write what its function is."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "That's all for today. Pack up your things and see you tomorrow.",
+      "utterance_coloquial": "That's all for today. Pack up your things and see you tomorrow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "And water your plant at home, if you have one; it'll come in handy tomorrow.",
+      "utterance_coloquial": "And water your little plant at home, if you have one; it'll come in handy tomorrow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

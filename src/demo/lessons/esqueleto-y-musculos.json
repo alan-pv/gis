@@ -1,0 +1,1128 @@
+{
+  "id": "esqueleto-y-musculos",
+  "tema": "Skeleton and muscles",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student names the functions of the skeleton (support, protection and movement), recognizes joints, understands that muscles work by pulling on bones through tendons and always in pairs, and links both with taking care of the body.",
+  "hatsumon": "What lets our body move?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, class. Please come in, sit down and open your science notebooks.",
+      "utterance_coloquial": "Okay, good morning, come in, come in, sit down please, uh, open your science notebooks, yes, the green ones.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Before we begin, everyone stand up and stretch your arms as high as you can. Now sit down again.",
+      "utterance_coloquial": "Before we start, everybody up, stretch, stretch your arms up, higher, okay, okay, sit down again, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Today we are going to look at something you are all using right now: the inside of your own body.",
+      "utterance_coloquial": "So today, um, we're going to look at something that you're all using right now, the inside of your own body.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Skeleton and Muscles",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "When you stood up just now, what made your body move?",
+      "utterance_coloquial": "When you stood up just now, what, what made your body move, hm? Think about it.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Legs, says Ana. Muscles, says Pedro. Bones, says Sofia. All three answers are good.",
+      "utterance_coloquial": "Legs, says Ana. Muscles, says Pedro, bones, says Sofia. Okay, all three are good answers, all three.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Two things work together to make the body move: bones and muscles.",
+      "utterance_coloquial": "Two things work together to make the body move, bones and, uh, muscles, the two together.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Skeleton",
+            "role": "subtitulo",
+            "group": "sk"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "**Bones** and **muscles** work together to move the body",
+            "role": "cuerpo",
+            "group": "sk"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Everybody press your hand on top of your head. What do you feel? Something hard. That is your skull.",
+      "utterance_coloquial": "Press your hand on your head, press, what do you feel? Hard, right? Something hard, that's your scull.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "All the bones of the body together make up the skeleton.",
+      "utterance_coloquial": "All the bones of the body together, all of them, make up the skel eton, the skeleton.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "**Bones** and **muscles** work together to move the body. All the bones of the body together make up the **skeleton**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "An adult has two hundred and six bones.",
+      "utterance_coloquial": "An adult has, uh, two hundred and six bones, 206, yes, that many.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "**Bones** and **muscles** work together to move the body. All the bones of the body together make up the **skeleton**. An adult has 206 bones"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Do babies have more bones or fewer? Think. Yes, Luis says more. Luis is right.",
+      "utterance_coloquial": "Do babies have more bones or fewer, more or fewer? Luis says more, yes, Luis is right, more.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Babies are born with more bones than adults, because some of them join together as we grow.",
+      "utterance_coloquial": "Babies are born with more bones than adults, and, um, some of them join together as we grow.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "**Bones** and **muscles** work together to move the body. All the bones of the body together make up the **skeleton**. An adult has 206 bones. Babies have more, because some bones join together as we grow"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Here are some you know: the skull in your head, the ribs in your chest and the spine down your back.",
+      "utterance_coloquial": "Here are some that you know, the skull in the head, the ribs in the chest and the spine, down the back.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Skull",
+            "group": "sk"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Ribs",
+            "group": "sk"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Spine",
+            "group": "sk"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "texto_1_4",
+            "style": "arrow",
+            "label": "part of"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_2",
+            "to": "texto_1_4",
+            "style": "arrow",
+            "label": "part of"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "texto_1_4",
+            "style": "arrow",
+            "label": "part of"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Feel your ribs and breathe in slowly. Do you notice them move a little?",
+      "utterance_coloquial": "Feel your ribs, put your hands on the sides, and breathe in slowly. Notice? They move a little.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Without a skeleton we would collapse like a bag of jelly: it holds us up and gives us our shape.",
+      "utterance_coloquial": "Without a skeleton we'd just, like, collapse like a bag of jelly. It holds us up, it gives us our shape.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "The skeleton **supports** the body and gives it shape",
+            "role": "cuerpo",
+            "group": "sk"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "The skeleton also protects what is soft and important inside: the skull covers the brain, and the ribs cover the heart and the lungs.",
+      "utterance_coloquial": "The skeleton also protects the soft stuff inside, the important stuff, the scull covers the brain, and the ribs cover the heart and the lungs.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "The skeleton **supports** the body and gives it shape, and it also protects what is soft inside: the skull covers the brain, and the ribs cover the heart and the lungs"
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Brain",
+            "group": "sk"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Heart",
+            "group": "sk"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Lungs",
+            "group": "sk"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_1",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "protects"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_2",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "protects"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_2",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "protects"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "That is why we wear a helmet on a bike: it adds protection for the skull.",
+      "utterance_coloquial": "That's why we wear a helmet on the bike, right, extra protection for the, the skull.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "A **helmet** adds protection for the skull on a bike",
+            "role": "cuerpo",
+            "group": "sk"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Mateo says he fell off his bike last week. Yes, Mateo, and you were wearing your helmet, which is why you are fine.",
+      "utterance_coloquial": "Mateo says he fell off his bike last week, yes, Mateo, and, uh, you had the helmet on, that's why you're okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "So, the skull keeps the brain safe, and the ribs keep the heart and the lungs safe.",
+      "utterance_coloquial": "So, uh, to remember, the skull keeps the brain safe, and the ribs keep the heart and lungs safe.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_4",
+              "concepto_1_2",
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Who has ever broken a bone? Rafa, your arm. And it was in a cast for a month. Wow.",
+      "utterance_coloquial": "Who's broken a bone? Rafa, your arm, yes, and a cast for a whole month, wow, wow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Where two bones meet there is a joint, and that is what lets us bend.",
+      "utterance_coloquial": "Where two bones meet, there's a, uh, a joint, and that's what lets us bend.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Joints",
+            "role": "subtitulo",
+            "group": "joints"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "A **joint** is the place where two bones meet, and it lets the body bend",
+            "role": "cuerpo",
+            "group": "joints"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The elbow, the knee and the shoulder are joints.",
+      "utterance_coloquial": "The elbow, the knee and the shoulder, those are all joints, yes, all of them.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Elbow",
+            "group": "joints"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Knee",
+            "group": "joints"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Shoulder",
+            "group": "joints"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_7",
+            "to": "texto_1_9",
+            "style": "arrow",
+            "label": "is one"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_8",
+            "to": "texto_1_9",
+            "style": "arrow",
+            "label": "is one"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_9",
+            "to": "texto_1_9",
+            "style": "arrow",
+            "label": "is one"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Bend your elbow. Now try to bend your forearm in the middle, halfway between the elbow and the wrist. It does not bend.",
+      "utterance_coloquial": "Bend your elbow, okay. Now try to bend the forearm in the middle, in the middle, no, it doesn't bend, right.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Bones do not bend: the forearm stays straight halfway between the elbow and the wrist",
+            "role": "cuerpo",
+            "group": "joints"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "The elbow and the knee bend only one way, like the hinge of a door, but the shoulder moves in many directions.",
+      "utterance_coloquial": "The elbow and the knee only bend one way, like the hinge of a door, but the shoulder goes, like, everywhere.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_23",
+            "set": {
+              "text": "Bones do not bend: the forearm stays straight halfway between the elbow and the wrist, and the elbow and the knee bend only one way, like a door **hinge**, while the shoulder moves in many directions"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Okay, are you following? Good. We have talked about bones; now the second part of our answer.",
+      "utterance_coloquial": "Okay, is everybody with me? Good. So we did the bones, and now, the second part of our answer.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Bones cannot move by themselves: muscles pull on them. The soft part of your upper arm is a muscle.",
+      "utterance_coloquial": "Bones can't move by themselves, right, muscles pull on them. This soft part of the upper arm, that's a muscle.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Muscles",
+            "role": "subtitulo",
+            "group": "musc"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "**Muscles** pull on the bones and make them move",
+            "role": "cuerpo",
+            "group": "musc"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "A muscle ends in a strong cord called a tendon, and the tendon is attached to the bone.",
+      "utterance_coloquial": "A muscle ends in a strong cord, a ten don, a tendon, and the tendon is attached to the bone.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Muscle",
+            "group": "musc"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Tendon",
+            "group": "musc"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Bone",
+            "group": "musc"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_10",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "ends in"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_11",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "pulls"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Touch the back of your ankle, above your heel. That hard cord is a tendon.",
+      "utterance_coloquial": "Touch the back of your ankle, above the heel, feel that hard cord? That's a tendon, yes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "The hard cord at the back of the ankle, above the heel, is a **tendon**",
+            "role": "cuerpo",
+            "group": "musc"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Here is the strange part: a muscle can only pull. It can never push.",
+      "utterance_coloquial": "Here's the funny part, okay, a muscle can only pull. It can't push, never, it can't push.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "A muscle can only **pull**, never push",
+            "role": "cuerpo",
+            "group": "musc"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 28,
+      "utterance_formal": "When it pulls, the muscle gets shorter and harder; we say that it contracts.",
+      "utterance_coloquial": "When it pulls, the muscle gets shorter and harder, we say it, uh, it contracts.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "A muscle can only **pull**, never push. To pull, it gets shorter and harder, which is called **contracting**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "And when it stops pulling, it relaxes and gets soft again.",
+      "utterance_coloquial": "And when it stops pulling, it relaxes, and it goes soft again, soft.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "A muscle can only **pull**, never push. To pull, it gets shorter and harder, which is called **contracting**. When it stops pulling, it relaxes"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "So, muscle, tendon, bone: the muscle pulls the tendon, and the tendon pulls the bone.",
+      "utterance_coloquial": "So, muscle, ten don, bone, the muscle pulls the tendon and the tendon pulls the bone, okay.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_10",
+              "concepto_1_11",
+              "concepto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "If muscles only pull, how does your arm go back down after it bends? Talk with your partner.",
+      "utterance_coloquial": "If muscles can only pull, how does the arm go back down after bending? Talk to your partner, quickly.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Muscles work in pairs: one pulls the bone one way and its partner pulls it back.",
+      "utterance_coloquial": "Muscles work in pairs, okay, one pulls the bone one way and its partner pulls it back the other way.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Working in pairs",
+            "role": "subtitulo",
+            "group": "pairs"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Muscles work in **pairs**: one pulls the bone one way and its partner pulls it back",
+            "role": "cuerpo",
+            "group": "pairs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "In your arm, the biceps is at the front and the triceps is at the back.",
+      "utterance_coloquial": "In your arm, the by seps is at the front and the try seps is at the back, biceps and triceps.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_13",
+            "object": "concepto",
+            "label": "Biceps",
+            "group": "pairs"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_14",
+            "object": "concepto",
+            "label": "Triceps",
+            "group": "pairs"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_13",
+            "to": "concepto_1_14",
+            "style": "double_arrow",
+            "label": "partners"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "When the biceps pulls, the arm bends; when the triceps pulls, the arm straightens.",
+      "utterance_coloquial": "When the biceps pulls, the arm bends, and when the triceps pulls, uh, the arm straightens out.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_15",
+            "object": "concepto",
+            "label": "Arm bends",
+            "group": "pairs"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_16",
+            "object": "concepto",
+            "label": "Arm straightens",
+            "group": "pairs"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "concepto_1_13",
+            "to": "concepto_1_15",
+            "style": "arrow",
+            "label": "contracts"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "concepto_1_14",
+            "to": "concepto_1_16",
+            "style": "arrow",
+            "label": "contracts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Everyone, bend your arm and touch the front of the upper arm. Now straighten it and touch the back.",
+      "utterance_coloquial": "Everybody bend the arm, touch the front of the upper arm, hard, right? Now straighten it, touch the back.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Muscles at the front and back of a limb take turns pulling, and that is how we walk, run and throw.",
+      "utterance_coloquial": "The muscles at the front and the back of a limb take turns pulling, and that's how we walk and run and throw.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Front and back muscles take turns pulling, so we can walk, run and throw",
+            "role": "cuerpo",
+            "group": "pairs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Mateo, we do not punch a classmate to check if the muscle is hard. Sit down.",
+      "utterance_coloquial": "Mateo, no, we don't punch a classmate to check if the muscle is hard, no. Sit, sit down.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "The heart is a muscle too, and it works all day and all night without resting.",
+      "utterance_coloquial": "The heart is a muscle too, you know, and it works all day and all night, it never rests.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "The **heart** is also a muscle and never rests",
+            "role": "cuerpo",
+            "group": "musc"
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "To keep bones strong we need foods with calcium, like milk and cheese.",
+      "utterance_coloquial": "To keep the bones strong, we need food with cal cium, like milk and cheese.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Taking care",
+            "role": "subtitulo",
+            "group": "care"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Foods with **calcium**, like milk and cheese, keep bones strong",
+            "role": "cuerpo",
+            "group": "care"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Moving, running and playing make muscles stronger.",
+      "utterance_coloquial": "And moving, running, playing, all that makes the muscles stronger, yes, so go out and play.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_20",
+            "set": {
+              "text": "Foods with **calcium**, like milk and cheese, keep bones strong. **Exercise** makes muscles stronger"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Sit up straight, Valeria. Slouching is hard on your back. Everybody, shoulders back.",
+      "utterance_coloquial": "Sit up straight, Valeria, slouching is hard on the back. Everybody, shoulders back, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "So milk helps the bones, and exercise helps the muscles.",
+      "utterance_coloquial": "So milk helps the bones, and, uh, exercise helps the muscles, there you go.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_17",
+            "object": "concepto",
+            "label": "Milk",
+            "group": "care"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_18",
+            "object": "concepto",
+            "label": "Exercise",
+            "group": "care"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_15",
+            "from": "concepto_1_17",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "strengthens"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_16",
+            "from": "concepto_1_18",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "strengthens"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "So what let us stand up and stretch at the beginning? Muscles pulling on bones.",
+      "utterance_coloquial": "So, what let us stand up and stretch at the start? Muscles, pulling on the bones, that's it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Bones give support and muscles pull on them, so together they let us move",
+            "role": "cuerpo",
+            "group": "care"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Skeleton, joints and muscles: that is the team that moves us.",
+      "utterance_coloquial": "Skeleton, joints and muscles, that's the team, the whole team that moves us.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "texto_1_9",
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "For tomorrow, find three joints in your own body and tell me how each one moves.",
+      "utterance_coloquial": "For tomorrow, uh, find three joints in your own body and tell me how each one moves.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_22",
+            "set": {
+              "text": "Bones give support and muscles pull on them, so together they let us move. Tomorrow, find three joints and say how each one moves"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "Any questions? Ana asks whether the heart has bones. No, it does not; it is only muscle.",
+      "utterance_coloquial": "Any questions? Ana asks if the heart has bones. No, no bones, it's just muscle, only muscle.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "The **heart** is also a muscle and never rests; it has no bones, only muscle"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "There is the bell. Leave your notebooks open on the desk and go out in a line.",
+      "utterance_coloquial": "There's the bell, okay, notebooks open on the desk, and out in a line, a line, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

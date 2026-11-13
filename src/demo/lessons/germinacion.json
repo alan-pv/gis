@@ -1,0 +1,1001 @@
+{
+  "id": "germinacion",
+  "tema": "From seed to plant: germination and what a seed needs",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student recognizes the parts of a seed, understands that a seed needs water, air and warmth to germinate, and can put the stages from seed to young plant in order.",
+  "hatsumon": "What does a seed need to become a plant?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, class. Sit down and be quiet, please. Today I have a surprise.",
+      "utterance_coloquial": "Good mor ning, class. Sit down, uh, quiet please. Today I got a surprise for you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Look at what I have in my hands: a small bag of dry beans.",
+      "utterance_coloquial": "Look what I have here in my hands, a little bag of dry beans, see?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Today we are going to follow a seed from the moment it is a tiny dry thing until it is a plant.",
+      "utterance_coloquial": "Today we're gonna follow a seed, from when it's a tiny dry little thing, until it's a plant.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "What does a seed need to become a plant? Think about it while I pass the bag around.",
+      "utterance_coloquial": "So, uh, what does a seed need to become a plant? Think about it while I pass the bag around.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Careful, do not drop them. Yes, Carlos, you can touch them. They are hard and dry, right?",
+      "utterance_coloquial": "Careful, don't drop them! Yes, Carlos, you can touch them. They're hard and dry, right?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "From Seed to Plant",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The seed",
+            "role": "subtitulo",
+            "group": "ins"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "A dry seed is hard to the touch",
+            "role": "cuerpo",
+            "group": "ins"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Raise your hand, please. Soil, says Elena. Sun, says Tomas. Good ideas, we will test them.",
+      "utterance_coloquial": "Raise your hand! Soil, says Elena. Sun, says Tomas. Good ideas, we'll test them all, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "First, let us look closely at a seed. Here is one that was soaking overnight.",
+      "utterance_coloquial": "First, let's look closely at a seed. This one was soaking, soaking all night.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "seed",
+            "group": "ins"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Outside, a seed has a tough skin, the seed coat, that protects it. Inside there is a tiny baby plant and some stored food.",
+      "utterance_coloquial": "Outside it has a tough skin, the seed coat, that protects it. And inside, a tiny baby plant, and some food saved up.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "A seed has a **seed coat** that protects it, a tiny baby plant and stored food",
+            "role": "cuerpo",
+            "group": "ins"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Who opened the bean? Be gentle. Do you see the little one inside?",
+      "utterance_coloquial": "Who opened the bean? Gently, gently. Do you see the little one inside?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The skin, the little plant, the food: three parts in every seed.",
+      "utterance_coloquial": "The skin, the little plant, the food: three parts in each seed, yeah.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "seed coat",
+            "group": "ins"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "baby plant",
+            "group": "ins"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "stored food",
+            "group": "ins"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_3",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Seeds come in many sizes: a bean is big, and a poppy seed is tiny.",
+      "utterance_coloquial": "Seeds come in all sizes, eh. A bean is big, and a poppy seed is, wow, tiny.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Seeds come in many sizes: a bean is big and a poppy seed is tiny.",
+            "role": "cuerpo",
+            "group": "ins"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Why does the baby plant need that food? Because it cannot make its own yet. Good thinking, Ana.",
+      "utterance_coloquial": "Why does the baby plant need that food? Because it can't make its own yet. Good thinking, Ana.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "Seeds come in many sizes: a bean is big and a poppy seed is tiny. Inside every seed, the baby plant lives on stored food until it can make its own."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Now your guesses. A seed needs three things to wake up and start growing.",
+      "utterance_coloquial": "Okay, now your guesses. A seed needs three things to wake up and, and start growing.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "What it needs",
+            "role": "subtitulo",
+            "group": "need"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "A seed needs three things to wake up and start growing",
+            "role": "cuerpo",
+            "group": "need"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_6",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "wakes up"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "The first is water. A dry seed is asleep, and water wakes it up.",
+      "utterance_coloquial": "The first one is water. A dry seed is sleeping, and the water wakes it up.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "water",
+            "group": "need"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "wakes up"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "That is why the seed swells when it is wet, like our soaked beans.",
+      "utterance_coloquial": "That's why the seed swells when it's wet, just like our soaked beans, see.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "A dry seed is asleep, and **water** wakes it up so it swells.",
+            "role": "cuerpo",
+            "group": "need"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "The second one is the air, because even a seed breathes, a little.",
+      "utterance_coloquial": "The second one is the air, because even the seed breath es, a little bit.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "A dry seed is asleep, and **water** wakes it up so it swells. **Air** is the second need, because even a seed breathes a little."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "air",
+            "group": "need"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_6",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "breathes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Pedro asks if seeds can breathe underwater. A little air is mixed in the water, but a seed in a puddle for weeks gets too little.",
+      "utterance_coloquial": "Pedro asks if seeds can breathe underwater. There's some air in the water, but, a seed in a puddle for weeks gets too little.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "A seed in a puddle for weeks gets too little air.",
+            "role": "cuerpo",
+            "group": "need"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "And the third is warmth: not too cold, not too hot.",
+      "utterance_coloquial": "And the third is warmth. Not too cold, not too hot.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "A seed in a puddle for weeks gets too little air. The third need is **warmth**, not too cold and not too hot."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "warmth",
+            "group": "need"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_7",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "needs"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "So water, air and warmth.",
+      "utterance_coloquial": "So, water, air, and warmth, yeah.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_5",
+              "concepto_1_6",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "What about the sun, Tomas? Most seeds do not need light to start; they grow in the dark soil.",
+      "utterance_coloquial": "What about the sun, Tomas? Most seeds don't need light to start, they grow in the dark soil, under the ground.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Most seeds do not need **light** to start growing, because they begin underground.",
+            "role": "cuerpo",
+            "group": "need"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Drinks of water for the whole class? No, I am just kidding. Back to our seeds.",
+      "utterance_coloquial": "Drinks of water for the whole class? No, no, kidding, kidding! Back to our seeds.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Now let us see what happens, step by step. First the seed takes in water and swells. Second, a root grows down. Third, a shoot grows up. And fourth, the leaves open.",
+      "utterance_coloquial": "Now let's see what happens, step by step. First, the seed soaks up water and swells. Second, a root goes down. Third, a shoot goes up. And fourth, the leaves open.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Stages",
+            "role": "subtitulo",
+            "group": "st"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "The seed takes in water and swells\nThe root grows down\nThe shoot grows up\nThe leaves open",
+            "role": "enumeracion",
+            "group": "st"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Say them with me, quietly: swell, root, shoot, leaves.",
+      "utterance_coloquial": "Say it with me, quietly: swell, root, shoot, leaves.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "The seed first sends out a root, which holds it in the soil.",
+      "utterance_coloquial": "The seed first sends out the, the root, which holds it in the soil.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "root",
+            "group": "st"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_1",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "first"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Then the shoot pushes up toward the surface.",
+      "utterance_coloquial": "Then comes the shoot, pushing up toward the surface.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "shoot",
+            "group": "st"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "then"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Does the shoot break the soil? Yes, it is small but strong. Look at Marta's face, she cannot believe it.",
+      "utterance_coloquial": "Does the shoot break the soil? Yes! Small but strong. Look at Marta's face, she can't believe it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "The **shoot** is small but strong, and it breaks through the soil.",
+            "role": "cuerpo",
+            "group": "st"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "When it reaches the light, the first leaves open.",
+      "utterance_coloquial": "When it gets to the light, the first leaves o pen.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "leaves",
+            "group": "st"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_9",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "reaches light"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "And, little by little, a young plant.",
+      "utterance_coloquial": "And little by little, a young plant, you know.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "plant",
+            "group": "st"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_10",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "grows"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Seed, root, shoot, leaves, plant.",
+      "utterance_coloquial": "Seed, root, shoot, leaves, and plant.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_8",
+              "concepto_1_9",
+              "concepto_1_10",
+              "concepto_1_11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "That first stage, when the seed wakes up and the root and shoot appear, has a name: germination.",
+      "utterance_coloquial": "That first part, when the seed wakes up and the root and shoot appear, has a name: ger mi nation.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "The first stage, when the root and shoot appear, is called **germination**",
+            "role": "cuerpo",
+            "group": "st"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "When the stored food runs out, the leaves use light to make food for the plant.",
+      "utterance_coloquial": "When the stored food runs out, the leaves use the light to make food for the plant, the whole thing.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "The first stage, when the root and shoot appear, is called **germination**, and later the leaves use **light** to make food."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Anyone ever planted a bean in cotton at home? Yes, Sofia did. Excellent, then you know this.",
+      "utterance_coloquial": "Anyone ever put a bean in cotton at home? Yes, Sofia did! Great, then you know all this.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "This is our experiment. We will put a bean in a jar with wet cotton and wait a few days.",
+      "utterance_coloquial": "This is our experiment, okay. We put a bean in a jar with wet cotton and wait a few days.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Bean experiment",
+            "role": "subtitulo",
+            "group": "exp"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "A bean in a jar with wet cotton **sprouts** in a few days",
+            "role": "cuerpo",
+            "group": "exp"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "texto_1_12",
+            "to": "texto_1_6",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "We put the jar near the window, where it is warm.",
+      "utterance_coloquial": "We put the jar by the window, where it is warm, okay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "A bean in a jar with wet cotton **sprouts** in a few days, if the jar stays somewhere warm."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Who wants to take care of the jar? Everyone? Okay, we will take turns, I will make a chart.",
+      "utterance_coloquial": "Who wants to take care of the jar? Everybody? Okay, we take turns, I'll make a chart.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "A second jar will have a dry bean, with no water at all.",
+      "utterance_coloquial": "A second jar will have a dry bean, with no water at all, okay.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "A second jar holds a dry bean with no **water**",
+            "role": "cuerpo",
+            "group": "exp"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 36,
+      "utterance_formal": "What do you think will happen to the dry one? Nothing, says Luis. Exactly.",
+      "utterance_coloquial": "What do you think will happen to the dry one? Nothing, says Luis. Exactly!",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "A second jar holds a dry bean with no **water**, and nothing happens to it"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "The wet one will sprout, and the dry one will stay the same: that shows water matters.",
+      "utterance_coloquial": "The wet one will sprout, and the dry one will stay the same, so, we see that water matters.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "A second jar holds a dry bean with no **water**, and nothing happens to it. The wet bean sprouts and the dry one stays the same, so water matters."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "The wet bean sprouts and the dry bean stays the same.",
+      "utterance_coloquial": "The wet bean sprouts and the dry bean stays the same, see, so.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_13",
+              "texto_1_14"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "We will check the jars every day and see what changes.",
+      "utterance_coloquial": "We check the jars every morning, okay, and see what changes.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "A second jar holds a dry bean with no **water**, and nothing happens to it. The wet bean sprouts and the dry one stays the same, so water matters. We check the jars every day."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "So the answer to our question: a seed needs water, air and warmth, and then it grows a root, a shoot and leaves.",
+      "utterance_coloquial": "So the answer to our question is, a seed needs water, air and warm th, and then it grows the root, a shoot and the leaves.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "A seed needs **water**, air and warmth to germinate, and then grows roots, a shoot and leaves.",
+            "role": "cuerpo",
+            "group": "need"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Water, air and warmth. Those were the three.",
+      "utterance_coloquial": "Water, air, and warmth. Those were the three, right.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_5",
+              "concepto_1_6",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Very good. Tomorrow we will look at the jars, so please remember them.",
+      "utterance_coloquial": "Very good. Tomorrow we check the jars, so remember them, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Put your notebooks away and line up for recess.",
+      "utterance_coloquial": "Put your notebooks away and line up for recess, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Excellent work today, everyone.",
+      "utterance_coloquial": "Great job today, everybody!",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

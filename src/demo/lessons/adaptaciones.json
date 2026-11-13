@@ -1,0 +1,1037 @@
+{
+  "id": "adaptaciones",
+  "tema": "How animals and plants adapt to their habitat",
+  "sesgo": "mixto",
+  "objetivo": "That the student understands that each living thing has body parts and behaviors (adaptations) that let it survive in its habitat, with examples from the desert, the polar regions and the ocean.",
+  "hatsumon": "Why does each animal live where it lives?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Come in and take your seats, please.",
+      "utterance_coloquial": "Good mor ning everyone. Come in, come in, take your seats, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Backpacks under the desk, and we start in one minute.",
+      "utterance_coloquial": "Backpacks under the desk, okay, and uh, we start in like one minute.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "I brought two photographs today: one of a camel and one of a penguin.",
+      "utterance_coloquial": "So, I brought two, two photos today. One is a camel and, and the other one is a penguin.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Here is a question for you: why does each animal live in the place where it lives?",
+      "utterance_coloquial": "Okay so my question is, why does, uh, why does each animal live in the place where it lives?",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Yes, Maria says a penguin would be too hot in the desert. Interesting, keep that thought.",
+      "utterance_coloquial": "Yes, Maria says the, the penguin would be too hot in the dessert. Interesting, hold on to that thought.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "The place where a living thing finds its food, its water and its shelter is called its habitat.",
+      "utterance_coloquial": "The, the place where an animal finds its food and its water and, and where it can hide, that's its habitat.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_2",
+            "object": "texto",
+            "text": "Habitat",
+            "role": "subtitulo",
+            "group": "hab"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "A **habitat** is the place where a living thing finds food, water and shelter.",
+            "role": "cuerpo",
+            "group": "hab"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Raise your hand, please, do not shout. A pond, yes, very good, a pond is a habitat.",
+      "utterance_coloquial": "Raise your hand, don't shout, please. A pond, yes! Very good, a pond is a habitat too.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "A **habitat** is the place where a living thing finds food, water and shelter. A pond is a habitat too."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Today we will visit three habitats: the desert, the polar regions and the ocean.",
+      "utterance_coloquial": "Today we're gonna visit three, three habitats: the desert, the po lar regions and the ocean.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_3",
+            "set": {
+              "text": "A **habitat** is the place where a living thing finds food, water and shelter. A pond is a habitat too. Three more are the desert, the polar regions and the ocean."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Let us begin with the desert: it almost never rains there, and during the day the sun is burning hot.",
+      "utterance_coloquial": "So, let's start with the desert. It almost never rains there and the sun is, wow, super hot in the day.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Desert",
+            "role": "subtitulo",
+            "group": "des"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "**Deserts** get very little rain and the days are very hot",
+            "role": "cuerpo",
+            "group": "des"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "texto_1_2",
+            "to": "texto_1_4",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Picture a camel crossing the sand all day long.",
+      "utterance_coloquial": "Imagine a camel, okay, walking and walking on the sand all day long.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "camel",
+            "group": "des"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "texto_1_4",
+            "to": "concepto_1_1",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Can you imagine walking in that heat? I could not do it. I would ask for ice cream every five minutes.",
+      "utterance_coloquial": "Can you imagine walking in that heat? I couldn't! I'd be asking for ice cream every five minutes, right?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "The lump on the camel's back is the hump, and inside it there is fat, not water, so the camel can go many days without food.",
+      "utterance_coloquial": "The lump on the camel's back, the hump, inside it there's fat, not water, so it can go many days without, without food.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "hump",
+            "group": "des"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "stores fat"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Camels store **fat** in the hump, so they can go many days without food",
+            "role": "cuerpo",
+            "group": "des"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Its feet are wide, so it does not sink into the sand.",
+      "utterance_coloquial": "Its feet are really wide, so it doesn't sink in the sand, you see.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "Camels store **fat** in the hump, so they can go many days without food, and wide feet keep them from sinking in the sand"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "So the camel has its hump with fat and its wide feet.",
+      "utterance_coloquial": "So, the camel, its hump with the fat, and the wide feet, yeah.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_2",
+              "texto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "All these special features of its body, and the way it behaves, help it survive in the desert. Scientists call them adaptations.",
+      "utterance_coloquial": "All these special things in its body, and what it does, they help it to survive in the desert. Scientists call them a dap tations.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Adaptations",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "An **adaptation** is a body part or a habit that helps a living thing survive in its habitat",
+            "role": "cuerpo",
+            "group": "des"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "texto_1_9",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "example"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Any questions so far? No? Luis, please stop talking and look at the board.",
+      "utterance_coloquial": "Any questions so far? No? Luis, stop talking please, eyes on the board.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Plants live in the desert too. The cactus keeps water inside its thick stem.",
+      "utterance_coloquial": "Plants live in the desert too, eh. The cactus keeps water inside its, its thick stem.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "cactus",
+            "group": "des"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "texto_1_4",
+            "to": "concepto_1_3",
+            "style": "arrow"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "A cactus stores **water** in its thick stem",
+            "role": "cuerpo",
+            "group": "des"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Those spines are really tiny leaves, and they lose very little water.",
+      "utterance_coloquial": "Those spines are actually tiny leaves, and they, they lose almost no water.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "A cactus stores **water** in its thick stem, and its spines are tiny leaves that lose very little water"
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "spines",
+            "group": "des"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_4",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "tiny leaves"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Many desert animals sleep in the shade during the day and come out at night, when it is cool.",
+      "utterance_coloquial": "Lots of desert animals sleep in the shade in the day and come out at night, when it's cool, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Many desert animals rest during the day and come out at **night**, when it is cool",
+            "role": "cuerpo",
+            "group": "des"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "A lizard under a rock, a snake in a burrow, yes, Ana, you are right, they hide from the sun.",
+      "utterance_coloquial": "A lizard under a rock, a snake in a burrow, yes Ana, you're right, they hide from the sun.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Many desert animals rest during the day and come out at **night**, when it is cool, hiding from the sun under rocks and in burrows"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Now the next habitat is at the other end of the planet, where it is freezing: the polar regions.",
+      "utterance_coloquial": "Now, the next habitat is like, at the other end of the planet, super freezing: the po lar regions.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Polar regions",
+            "role": "subtitulo",
+            "group": "pol"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "**Polar regions** are covered in ice and snow, and the cold is extreme",
+            "role": "cuerpo",
+            "group": "pol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "texto_1_2",
+            "to": "texto_1_12",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "In the north, around the Arctic, lives the polar bear.",
+      "utterance_coloquial": "In the north, around the Arctic, lives the polar bear, eh.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "polar bear",
+            "group": "pol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_12",
+            "to": "concepto_1_5",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "The bear has thick fur and, under its skin, a layer of fat that keeps it warm.",
+      "utterance_coloquial": "The bear has really thick fur and under the skin, a, a layer of fat that keeps it warm.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "A polar bear has thick fur and, under the skin, a layer of **fat** that keeps it warm",
+            "role": "cuerpo",
+            "group": "pol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Is anyone cold? It is just the story, do not worry. Who has seen snow in real life?",
+      "utterance_coloquial": "Is anyone cold? It's just the story, don't worry! Who's seen snow for real? Just a few, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "That layer of fat has a name: blubber.",
+      "utterance_coloquial": "That layer of fat has a name, it's called blu bber.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_14",
+            "set": {
+              "text": "A polar bear has thick fur and, under the skin, a layer of **fat** that keeps it warm, called **blubber**"
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "blubber",
+            "group": "pol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_6",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "keeps warm"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "In the far south, in Antarctica, live the penguins.",
+      "utterance_coloquial": "And in the far south, in Antarctica, live the, the penguins.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "penguin",
+            "group": "pol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "texto_1_12",
+            "to": "concepto_1_7",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Penguins have thick, waterproof feathers, and they huddle together in big groups to stay warm.",
+      "utterance_coloquial": "Penguins have thick feathers that, that don't get wet, and they stay together in big groups to keep warm.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Penguins have thick waterproof **feathers** and huddle together to stay warm",
+            "role": "cuerpo",
+            "group": "pol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Do penguins fly? No, they swim. Their wings work like flippers.",
+      "utterance_coloquial": "Do penguins fly? No! They swim. Their wings are like flippers, see.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Penguins have thick waterproof **feathers** and huddle together to stay warm, and swim fast with wings shaped like flippers"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "So in the cold: thick fur, a layer of fat and thick feathers.",
+      "utterance_coloquial": "So, in the cold, thick fur, a layer of fat, thick feathers.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_14",
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "The last habitat covers most of the planet: the ocean, with all that salty water.",
+      "utterance_coloquial": "The last habitat covers most of the, the planet: the ocean, with all that salty water.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Ocean",
+            "role": "subtitulo",
+            "group": "oce"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "The **ocean** is full of salt water, and animals there swim all their lives",
+            "role": "cuerpo",
+            "group": "oce"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_2",
+            "to": "texto_1_16",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "A fish, for example, spends its entire life underwater.",
+      "utterance_coloquial": "A fish, for example, it's all its life underwater.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "fish",
+            "group": "oce"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "texto_1_16",
+            "to": "concepto_1_8",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "A fish does not breathe air; it takes the oxygen out of the water.",
+      "utterance_coloquial": "A fish doesn't breathe air. It takes the oxy gen out of the water.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Fish take oxygen from the water using **gills**",
+            "role": "cuerpo",
+            "group": "oce"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "It does that with its gills, on both sides of its head.",
+      "utterance_coloquial": "With its gills, here on both sides of the head.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "gills",
+            "group": "oce"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "concepto_1_9",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "breathes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Has anyone had a fish at home? Yes, Pedro had two, and they were called Salt and Pepper. Nice.",
+      "utterance_coloquial": "Has anyone had a fish at home? Yes, Pedro, two fish, Salt and Pepper, ha, nice names.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "A dolphin lives in the sea too, but a dolphin is not a fish.",
+      "utterance_coloquial": "A dolphin also lives in the sea but, but it's not a fish, eh.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "dolphin",
+            "group": "oce"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "texto_1_16",
+            "to": "concepto_1_10",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "A dolphin is a mammal: it needs air, so it comes up to the surface and breathes through a hole on top of its head.",
+      "utterance_coloquial": "A dolphin is a mammal: it needs air, so it comes up to the surface and breathes through a hole in its head, the blow hole.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Dolphins are mammals and breathe **air** through a blowhole on top of the head",
+            "role": "cuerpo",
+            "group": "oce"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "So the fish has gills and the dolphin has a blowhole on its head.",
+      "utterance_coloquial": "So the fish has the gills and the dolphin has the blow hole.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_9",
+              "texto_1_19"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Would a camel survive at the North Pole? Think about it with your partner for a minute.",
+      "utterance_coloquial": "Would a camel survive at the North Pole? Talk to your partner for a minute, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Right, it would freeze, and a polar bear in the desert would overheat. Each body fits its place.",
+      "utterance_coloquial": "Right, it would freeze! And a polar bear in the desert would get way too hot. Each body fits its place.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Many desert animals rest during the day and come out at **night**, when it is cool, hiding from the sun under rocks and in burrows. A polar bear would overheat in the desert, so each body fits its place."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "A special body part or a habit that helps survive in the habitat: that is what we have been seeing all along.",
+      "utterance_coloquial": "A body part or a habit that helps it survive in its habitat, that is what we have been seeing, you know, the whole time.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "So that is why each animal lives where it lives: its body and its habits fit that place.",
+      "utterance_coloquial": "So that's why each animal lives where it lives, because its body and its, its habits are right for that place.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Each animal has **adaptations** that fit its habitat, so it can survive there",
+            "role": "cuerpo",
+            "group": "hab"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Remember the three habitats we visited: the desert, the polar regions and the ocean.",
+      "utterance_coloquial": "So, three habitats we visited: the desert, the po lar regions, the ocean, right.",
+      "case_tags": [
+        "recap-highlight",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_4",
+              "texto_1_12",
+              "texto_1_16"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "For tomorrow, each of you will choose an animal and find out one special feature of its body or its behavior.",
+      "utterance_coloquial": "For tomorrow, everybody picks an animal and finds out one special thing about its body or what it does.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Take-home task",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Choose an animal for tomorrow. Find one **adaptation** of its body or its behavior.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Does everyone have an animal in mind? Do not choose the same one as your neighbor.",
+      "utterance_coloquial": "Everybody has an animal in mind? Don't pick the same one as your neighbor, eh.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Good, books closed, and put your chairs in order, please.",
+      "utterance_coloquial": "Good, close your notebooks, and chairs in order, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Excellent work today. See you tomorrow.",
+      "utterance_coloquial": "Great job today, guys. See you tomorrow!",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

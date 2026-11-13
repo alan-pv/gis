@@ -1,0 +1,1015 @@
+{
+  "id": "estaciones-del-ano",
+  "tema": "The seasons of the year",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student explains that the seasons happen because Earth, tilted, travels around the Sun for a year (not because of its distance), describes each season and recognizes how living things respond.",
+  "hatsumon": "Why is it hot in summer and cold in winter?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, everyone. Backpacks under the desks, please.",
+      "utterance_coloquial": "Good morning, everybody, backpacks under the desks, please, under the desks.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Today we begin with something you all know: the seasons of the year.",
+      "utterance_coloquial": "So, today, we start with something you all know, the seasons, the seasons of the year.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Seasons",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Let's begin with a question: why is it hot in summer and cold in winter?",
+      "utterance_coloquial": "Let's start with a question, mm, why is it hot in summer and cold in winter?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Think about it for a moment, and then tell your partner what you believe.",
+      "utterance_coloquial": "Think a moment, and then tell your partner, tell your partner what you believe.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Lucía says it's because we are closer to the sun in summer. Many people think that. Good guess.",
+      "utterance_coloquial": "Lucía says it's cause we're closer to the sun in the summer. Many people think that, good guess, good guess.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "But that isn't what happens. We'll find out why before the bell.",
+      "utterance_coloquial": "But that's not what happens, no. We'll find out why before the bell, I promise.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "First, the year. Earth travels around the sun in a huge circle, and one full trip takes a year.",
+      "utterance_coloquial": "First, the year. The Earth trav-els around the sun, in a huge circle, and one full trip is one yer.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "One year",
+            "role": "subtitulo",
+            "group": "year"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Earth",
+            "group": "year"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "year"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "goes around"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Earth goes around the **Sun** in a path called an **orbit**",
+            "role": "cuerpo",
+            "group": "year"
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "One full trip takes about three hundred sixty-five days.",
+      "utterance_coloquial": "One full trip takes about three hundred and sixty-five days, so, 365.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Earth goes around the **Sun** in a path called an **orbit**, and one trip takes 365 days"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "A year, three hundred sixty-five days. Who was born in March? So you've done that trip a few times.",
+      "utterance_coloquial": "A year, 365 days, who was born in March? So you've done that trip, how many times, eight, nine.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "While it travels, the Earth also spins on itself once every day, and that gives us day and night.",
+      "utterance_coloquial": "And while it travels, the Earth also spins on itself, once a day, and that gives us day and night, day and night.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The Earth also spins once a day, giving day and night",
+            "role": "cuerpo",
+            "group": "year"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Now, the Earth is not straight up. It leans to one side, like a spinning top that is tilted.",
+      "utterance_coloquial": "Now, the Earth isn't standing straight, it's leaning to one side, like a, like a spinning top, till-ted.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Earth's lean",
+            "role": "subtitulo",
+            "group": "tilt"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Earth's tilt",
+            "group": "tilt"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_3",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "leans"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Everybody lean a little to the right. That's the Earth. Okay, sit up now.",
+      "utterance_coloquial": "Everybody lean a bit to the right, that's the Earth. Okay, sit back, sit back up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The Earth keeps that same tilt all year, as it goes around the sun.",
+      "utterance_coloquial": "The Earth keeps the same tilt, all year long, while it goes around the sun.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "The tilt, not the distance from the **Sun**, makes the **seasons**",
+            "role": "cuerpo",
+            "group": "tilt"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Scientists measured it: the tilt is about twenty-three and a half degrees.",
+      "utterance_coloquial": "Scientists measured it, the tilt is about, uh, twenty three and a half degrees.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_7",
+            "set": {
+              "text": "The tilt, not the distance from the **Sun**, makes the **seasons**; the tilt measures about 23.5°"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "So, Lucía, the distance is not the reason. Good question, thank you.",
+      "utterance_coloquial": "So, Lucía, it's not the distance. Good question though, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "When our half of the Earth leans toward the sun, the sun's light hits us more directly and the days are longer.",
+      "utterance_coloquial": "When our half of the Earth leans toward the sun, the light hits us more strait on, and the days get longer.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Summer",
+            "group": "tilt"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "toward the Sun"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Long days",
+            "group": "tilt"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "That is summer: more direct light, longer days, and warmer weather.",
+      "utterance_coloquial": "That's sumer, more direct light, longer days, warmer weather.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Direct **sunlight** and long days warm the summer",
+            "role": "cuerpo",
+            "group": "tilt"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Six months later, the Earth is on the other side of its trip, and our half leans away from the sun.",
+      "utterance_coloquial": "Six months later the Earth's on the other side of the trip, and our half leans away from the sun.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Winter",
+            "group": "tilt"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_3",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "away from the Sun"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Short days",
+            "group": "tilt"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "The light arrives at a slant, the days are short, and it gets cold.",
+      "utterance_coloquial": "The light comes in slanted, days are short, and it gets cold.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Slanted light and short days make winter cold",
+            "role": "cuerpo",
+            "group": "tilt"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "The shortest day of the year is in winter, and the longest is in summer.",
+      "utterance_coloquial": "The shortest day of the year is in the winter, and the longest one, in the summer, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "Slanted light and short days make winter cold, with the year's shortest day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Think of a flashlight: pointed straight at a wall it makes a bright circle, and from the side the light spreads out and gets weaker.",
+      "utterance_coloquial": "Think of a flashlight, straight at a wall is a bright circle, from the side the light spreads and gets weaker, mm.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "Slanted light and short days make winter cold, with the year's shortest day, like a flashlight that makes a bright circle when pointed straight at a wall but spreads weaker from the side"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Did that make sense? Okay, hold up your hands: who thinks summer is closer to the sun now?",
+      "utterance_coloquial": "Did that make sense? Hands up, who still thinks the summer's closer to the sun? Nobody, great.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Right. Same distance, different tilt toward the sun.",
+      "utterance_coloquial": "Right, right. Same distance, different, uh, tilt toward the sun.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Daniela asks if the moon has something to do with it. No, the moon is another topic, for another day.",
+      "utterance_coloquial": "Daniela asks if the moon has to do with it, no, no, the moon's another topic, another day.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "In between, we have two more seasons. After winter, the days get warmer and longer, and we have spring.",
+      "utterance_coloquial": "In between, two more, mm. After winter the days get warmer and longer, and that's spring.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Spring and autumn",
+            "role": "subtitulo",
+            "group": "sa"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Spring",
+            "group": "sa"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_6",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "then"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Spring brings **flowers**, warmer days and rain",
+            "role": "cuerpo",
+            "group": "sa"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "After summer, the days get shorter and cooler, and the leaves fall. That's autumn.",
+      "utterance_coloquial": "After summer the days get shorter and cooler, the leaves fall, that's autumn, ah-tum.",
+      "case_tags": [
+        "mixto",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Autumn",
+            "group": "sa"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Autumn brings falling leaves and cooler days",
+            "role": "cuerpo",
+            "group": "sa"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Who has a tree at home that loses its leaves? Right, it happens in autumn.",
+      "utterance_coloquial": "Who's got a tree at home that loses its leaves? Right, in autumn, uh-huh.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "And the days keep getting shorter, a little more every week, until winter arrives.",
+      "utterance_coloquial": "And the days keep getting shorter, a little more every week, until, until winter comes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "Autumn brings falling leaves and cooler days, while days keep getting shorter"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "So the seasons come one after another, in the same order, year after year.",
+      "utterance_coloquial": "So the seasons come one after another, same order, year after year.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_8",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "then"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_4",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "then"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_9",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "then"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Let's go through the whole circle, one by one, starting with spring.",
+      "utterance_coloquial": "Let's go around the whole circle, one by one, starting with spring.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_8",
+              "concepto_1_4",
+              "concepto_1_9",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Remember, all of this is for the northern half of the Earth, where we live.",
+      "utterance_coloquial": "Careful though, all of this is for the northern half of the Earth, where we live, mm.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Other places",
+            "role": "subtitulo",
+            "group": "other"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "In the southern half of the Earth, the seasons are **opposite**",
+            "role": "cuerpo",
+            "group": "other"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "When it is summer here, it is winter in Argentina, and the other way around.",
+      "utterance_coloquial": "When it's summer here it's winter in Argentina, and the other way around.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "In the southern half of the Earth, the seasons are **opposite**, so Argentina has winter when we have summer"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Yes, Jorge, they celebrate Christmas in the summer. Think about that for a second.",
+      "utterance_coloquial": "Yes, Jorge, they have Christmas in the summer, can you imagine?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Closer to the equator, like most of Mexico, the seasons are less marked.",
+      "utterance_coloquial": "And close to the e-quator, like most of Mexico, the seasons are less marked, you know, less, less different.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Near the **equator**, temperatures change little through the year",
+            "role": "cuerpo",
+            "group": "other"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Instead, we notice a rainy season and a dry season.",
+      "utterance_coloquial": "Instead we notice the rainy season and the dry season, mm.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "Near the **equator**, temperatures change little through the year, with a rainy and a dry season instead"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Ah, the rainy season, when you forget your umbrella every single time.",
+      "utterance_coloquial": "Ah, the rainy season, when you forget the umbrella, every, single, time.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Animals notice the seasons too. Some birds fly to warmer places when winter comes.",
+      "utterance_coloquial": "Animals notice it too, you know, some birds fly to warmer pla ces when winter's coming.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Living things",
+            "role": "subtitulo",
+            "group": "life"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "**migrate**: birds fly to warmer places\n**hibernate**: bears sleep through the winter",
+            "role": "lista",
+            "group": "life"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "The monarch butterflies come to Michoacán every year. Some of you have seen them.",
+      "utterance_coloquial": "The monarch butterflies come to Michoacán every year, some of you have seen them, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Monarch butterflies travel to Michoacán every year to escape the cold",
+            "role": "cuerpo",
+            "group": "life"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Trees change too: they lose their leaves when it is cold and grow them back in spring.",
+      "utterance_coloquial": "And trees change too, they drop the leaves when it's cold and get them back in spring.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "Monarch butterflies travel to Michoacán every year to escape the cold, and many trees lose their leaves in the cold and grow them again"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Flowers bloom mostly in spring, and many fruits ripen in summer.",
+      "utterance_coloquial": "Flours bloom mostly in spring, and lots of fruits ripen in the summer, like mangoes.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "Monarch butterflies travel to Michoacán every year to escape the cold, and many trees lose their leaves in the cold and grow them again, and many plants **bloom** in spring"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Many baby animals are born in spring, when there is more food.",
+      "utterance_coloquial": "Lots of baby animals are born in spring, when there's more food, aw.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "Monarch butterflies travel to Michoacán every year to escape the cold, and many trees lose their leaves in the cold and grow them again, and many plants **bloom** in spring, and many baby animals are born then"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "People change what they wear, what they eat and what they play. Raise your hand if you love ice cream in summer.",
+      "utterance_coloquial": "People change too, what we wear, what we eat, what we play, who loves ice cream in summer? Yeah, me too.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Okay, let's go back to our question.",
+      "utterance_coloquial": "Okay, back to our first question.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "It is hot in summer because the Earth leans toward the sun, and cold in winter because it leans away.",
+      "utterance_coloquial": "It's hot in summer cause the Earth leans toward the sun, and cold in winter cause it leans away.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "The Earth's tilt, while it travels for a **year**, gives us the **seasons**",
+            "role": "cuerpo",
+            "group": "tilt"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 44,
+      "utterance_formal": "So remember, leaning toward the sun means summer here, and leaning away means winter.",
+      "utterance_coloquial": "So remember, leaning toward the sun is summer here, and leaning away is winter, okay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_21",
+            "set": {
+              "text": "The Earth's tilt, while it travels for a **year**, gives us the **seasons**, so leaning toward the Sun means summer"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Perfect. Who can say it in their own words? Marisol, go ahead. Yes, the tilt.",
+      "utterance_coloquial": "Perfect. Who can say it with their own words? Marisol, go ahead. Yes, the tilt, the tilt.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "Tomorrow bring a picture or a leaf that shows your favorite season, and tell us why you chose it.",
+      "utterance_coloquial": "Tomorrow bring a picture, or a leaf, that shows your favorite season, okay?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Bring a picture or a leaf that shows your favorite season. Tell the class why you chose it.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "Alright, line up for the library, and walk, please, walk.",
+      "utterance_coloquial": "Alright, line up for the library, and walk, please, walk, no running.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

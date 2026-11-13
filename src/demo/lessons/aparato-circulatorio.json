@@ -1,0 +1,1000 @@
+{
+  "id": "aparato-circulatorio",
+  "tema": "The circulatory system",
+  "sesgo": "mixto",
+  "objetivo": "That the student describes the heart as a pump, names the blood, the arteries, veins and capillaries, follows the loop of the blood through the lungs and the body, feels the pulse, and names habits that keep the heart healthy.",
+  "hatsumon": "How does blood reach every part of the body?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, class. Please sit down quietly and put your pencil cases on your desks.",
+      "utterance_coloquial": "Okay, good morning, good morning, sit down please, quietly, uh, pencil cases on the desks, Mateo, yours too.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Put two fingers on the inside of your wrist, below the thumb. Press gently. Do you feel something tapping?",
+      "utterance_coloquial": "Two fingers on the inside of your wrist, under the thumb, press softly, softly. Feel something tapping? Yes?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "That tapping is the heart pushing blood through your body. Today we are going to talk about the circulatory system.",
+      "utterance_coloquial": "That tapping, that's your heart pushing blood through your body. So today, um, we're going to talk about the circulatory system.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "The Circulatory System",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Here is my question: how does blood reach every part of the body, even the tips of your toes?",
+      "utterance_coloquial": "So here's my question: how does the blood reach every part of the body, even, uh, the tips of your toes?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "With the heart, says Ana. Through tubes, says Luis. Both of you are on the right track.",
+      "utterance_coloquial": "With the heart, says Ana. In tubes, says Luis. Okay, okay, both of you are on the right track.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Blood travels through tubes all around the body, and the heart is what pushes it.",
+      "utterance_coloquial": "The blood travels through tubes, all around the body, and the heart is what pushes it along.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "The heart",
+            "role": "subtitulo",
+            "group": "heart"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Blood travels through tubes around the body, pushed by the **heart**.",
+            "role": "cuerpo",
+            "group": "heart"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "The heart is a muscle about the size of your fist, in the middle of your chest, a bit to the left.",
+      "utterance_coloquial": "The heart is a muscle, about the size of your fist, in the middle of the chest, a little to the left.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Blood travels through tubes around the body, pushed by the **heart**. The heart is a **muscle** the size of a fist in the middle of the chest."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Make a fist. That is about the size of your heart. Luis, your fist, not Mateo's.",
+      "utterance_coloquial": "Make a fist, okay, that's about the size of your own heart, Luis, your fist, not Mateo's, no.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "It squeezes and pushes the blood out, like a pump.",
+      "utterance_coloquial": "It squeezes and pushes the blood out, like, uh, like a pump.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Blood travels through tubes around the body, pushed by the **heart**. The heart is a **muscle** the size of a fist in the middle of the chest. The heart squeezes and pushes blood out, like a **pump**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "So the heart pumps the blood.",
+      "utterance_coloquial": "So the heart pumps the blood, that's the job of the heart, pumping.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Heart",
+            "group": "heart"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Blood is the red liquid that carries oxygen and food to every part of the body.",
+      "utterance_coloquial": "Blood is that red liquid, you know, that carries oxygen and food to every part of the body.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Blood",
+            "role": "subtitulo",
+            "group": "blood"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Blood is a red liquid that carries **oxygen** and food to the whole body.",
+            "role": "cuerpo",
+            "group": "blood"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "And on the way back it carries away waste, like carbon dioxide.",
+      "utterance_coloquial": "And on the way back it carries away the waste, like, um, carbon dioxide.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_7",
+            "set": {
+              "text": "Blood is a red liquid that carries **oxygen** and food to the whole body. On the way back, blood takes waste away."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The heart pumps the blood around the body.",
+      "utterance_coloquial": "The heart pumps the blood, around and around the body, yes.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Blood",
+            "group": "blood"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "pumps"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Who has given blood at a hospital? Nobody, children cannot. Your parents, maybe. Okay.",
+      "utterance_coloquial": "Who's given blood at a hospital? No one, kids can't. Your parents maybe, okay, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Blood has tiny red cells that carry the oxygen, and white cells that fight germs.",
+      "utterance_coloquial": "Blood has tiny red cells that carry the oxygen, and white sells, uh, white cells that fight the germs.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Tiny **red cells** carry oxygen and white cells fight germs.",
+            "role": "cuerpo",
+            "group": "blood"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Why is blood red? Because of the red cells, says Ana. Yes, Ana is right: the red cells.",
+      "utterance_coloquial": "Why is blood red, do you think? Because of the red cells, says Ana, yes, Ana's right, the red cells.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Tiny **red cells** carry oxygen and white cells fight germs. Red cells make blood red."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "The blood does not float free: it travels inside tubes called blood vessels.",
+      "utterance_coloquial": "The blood doesn't float around free, no, it travels inside tubes, that are called blood vessels.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Blood vessels",
+            "role": "subtitulo",
+            "group": "vessels"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Blood travels inside tubes called **blood vessels**.",
+            "role": "cuerpo",
+            "group": "vessels"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "The vessels that carry blood away from the heart are the arteries.",
+      "utterance_coloquial": "The vessels that carry the blood away from the heart, away, are the, our terries, the arteries.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Arteries",
+            "group": "vessels"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "away from"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Arteries branch into tinier and tinier tubes, the capillaries, thinner than a hair.",
+      "utterance_coloquial": "The arteries branch into tinier and tinier tubes, the capillary's, the capillaries, thinner than a hair.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Capillaries",
+            "group": "vessels"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "branch into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Look at the back of your hand. Do you see the bluish lines under the skin? Those are veins.",
+      "utterance_coloquial": "Look at the back of your hand, see the little bluish lines under the skin? Yeah, those, those are veins.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "The bluish lines under the skin are **veins**.",
+            "role": "cuerpo",
+            "group": "vessels"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Then the capillaries join up into veins, which bring the blood back to the heart.",
+      "utterance_coloquial": "Then the capillaries join up again into veins, and the veins bring the blood back to the heart.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Veins",
+            "group": "vessels"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "join into"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "return to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Arteries go away from the heart, veins go back to the heart. Away, back.",
+      "utterance_coloquial": "Arteries go away from the heart, veins go back to the heart, away, back, don't mix them up.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "**Arteries** carry blood away from the heart and **veins** bring it back",
+            "role": "cuerpo",
+            "group": "vessels"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Capillaries are the thinnest and they reach every part of the body, even the tips of your fingers.",
+      "utterance_coloquial": "The capillaries are the thinnest, and they reach every part of the body, even the tips of your fingers.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "**Arteries** carry blood away from the heart and **veins** bring it back. Capillaries are the thinnest and reach every part of the body"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "So blood leaves the heart through the arteries, passes through the capillaries and returns through the veins.",
+      "utterance_coloquial": "So, uh, the blood leaves the heart through the arteries, goes through the capillaries and comes back by the veins.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_3",
+              "concepto_1_4",
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Close your eyes and imagine one drop of blood leaving the heart. Keep your eyes closed for a moment.",
+      "utterance_coloquial": "Close your eyes, everybody, and imagine a drop of blood leaving the heart, eyes closed, yes, a moment.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Here is the interesting part: the blood goes first to the lungs to pick up oxygen.",
+      "utterance_coloquial": "Here's the interesting part, no, the blood goes first to the lungs, to pick up oxygen.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "A trip around the body",
+            "role": "subtitulo",
+            "group": "route"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "The heart pumps blood to the **lungs**, where it picks up oxygen.",
+            "role": "cuerpo",
+            "group": "route"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "The lungs are where the blood picks up oxygen, and then it goes back to the heart.",
+      "utterance_coloquial": "The lungs, right, that's where the blood picks up the oxygen, and then it goes back to the heart.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Lungs",
+            "group": "route"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_1",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "to the lungs"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_6",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "returns"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Then the heart sends the blood, full of oxygen, to the rest of the body.",
+      "utterance_coloquial": "Then the heart sends the blood, now full of oxygen, to the rest of the body, the whole body.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "The heart then sends the blood to the rest of the **body**.",
+            "role": "cuerpo",
+            "group": "route"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "And the blood comes back to the heart from the body.",
+      "utterance_coloquial": "And the blood comes back to the heart from the body, always coming back.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Body",
+            "group": "route"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_1",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "to the body"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_7",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "returns"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Circulatory comes from circulate, to go around in a circle. Mateo, what is the word that comes from circle?",
+      "utterance_coloquial": "Circulatory comes from circulate, to go around, like a circle, Mateo, what word comes from circle? Circulate, yes.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "**Circulatory** comes from circulate, to go around in a circle.",
+            "role": "cuerpo",
+            "group": "route"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "The blood goes around and around, all day and all night, and it never stops.",
+      "utterance_coloquial": "The blood goes around and around, in a circle, all day and all night, it never stops.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_23",
+            "set": {
+              "text": "**Circulatory** comes from circulate, to go around in a circle. Blood goes round all day and all night, and it never stops."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "So the heart sends blood to the lungs, then back, and then to the body.",
+      "utterance_coloquial": "So, the heart sends blood to the lungs, then back to the heart, and then out to the body.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_6",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Everybody put your fingers on your pulse again. Count how many taps you feel while I count to ten.",
+      "utterance_coloquial": "Everybody fingers on the pulse again, count how many taps you feel while I count to ten, ready?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Every time the heart squeezes, it pushes blood out, and we feel that push as the pulse in the wrist or the neck.",
+      "utterance_coloquial": "Every time the heart squeezes it pushes blood out, and we feel that push as the pulse, in the wrist or the neck.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Pulse and a healthy heart",
+            "role": "subtitulo",
+            "group": "pulse"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Each beat pushes blood out, and we feel it as a **pulse** at the wrist or neck.",
+            "role": "cuerpo",
+            "group": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "After running the heart beats faster, because the body needs more oxygen.",
+      "utterance_coloquial": "After running the heart beats faster, uh, because the body needs more oxygen, right.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "Each beat pushes blood out, and we feel it as a **pulse** at the wrist or neck. When we exercise, the heart beats faster."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Let's try it: twenty seconds of jumping jacks, all together. Ready? Go.",
+      "utterance_coloquial": "Let's try it, twenty seconds of jumping jacks, all together, ready? Go, go, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Stop. Check your pulse again. Is it faster? Yes, Ana says it is much faster.",
+      "utterance_coloquial": "Stop, stop, check your pulse again. Is it faster? Yes, Ana says it's much faster, much.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "Each beat pushes blood out, and we feel it as a **pulse** at the wrist or neck. When we exercise, the heart beats faster. After jumping, the pulse is much faster."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "To take care of the heart, we move every day, eat fruit and vegetables, and sleep enough.",
+      "utterance_coloquial": "To take care of the heart, um, we move every day, eat fruit and vegetables and, yeah, sleep enough.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "**Exercise** every day\nEat **fruit** and vegetables\nSleep enough",
+            "role": "lista",
+            "group": "pulse"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "That also means not sitting all day with the tablet, Mateo. Who sleeps eight hours? I do not believe it.",
+      "utterance_coloquial": "That also means not sitting all day with the tablet, Mateo. Who sleeps eight hours? Sure, sure, I don't believe it.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Exercise and fruit and vegetables help the heart.",
+      "utterance_coloquial": "So the exercise, and the fruit and the vegetables, they all help the heart, yes.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Exercise",
+            "group": "pulse"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Fruit and vegetables",
+            "group": "pulse"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_10",
+            "from": "concepto_1_8",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "helps"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "concepto_1_9",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "helps"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "So how does blood reach even your toes? The heart pumps it through the blood vessels, in a loop that never stops.",
+      "utterance_coloquial": "So how does the blood reach even your toes? The heart pumps it through the blood vessels, in a loop that never, never stops.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "The heart pumps blood through the **vessels** to every part of the body, in a loop that never stops.",
+            "role": "cuerpo",
+            "group": "heart"
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "The heart, the blood and the blood vessels: those are the parts of the circulatory system.",
+      "utterance_coloquial": "The heart, the blood and the blood vessels, those, those are the parts of the circulatory system.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3",
+              "texto_1_6",
+              "texto_1_9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "In pairs, tell each other the route of the blood. Start at the heart.",
+      "utterance_coloquial": "In pairs, tell each other the route of the blood, start at the heart, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Okay, time. Valeria explained it very well, she even remembered the lungs.",
+      "utterance_coloquial": "Okay, time. Valeria explained it very well, she even remembered the lungs, bravo.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "For tomorrow, find your pulse and count the beats in 15 seconds, then bring me the number.",
+      "utterance_coloquial": "For tomorrow, find your pulse and count the beats in fifteen seconds, and bring me the number, okay.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Take-home task",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Find your pulse and count the beats in 15 seconds. Bring me the number tomorrow.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Ana asks whether the heart is on the left side. It is in the middle, a little to the left.",
+      "utterance_coloquial": "Ana asks if the heart is on the left side. It's in the middle, a little to the left, a little.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "There is the bell. Leave your pencil cases on the desks and go out quietly.",
+      "utterance_coloquial": "There's the bell, okay. Pencil cases on the desks, and out quietly, quietly, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

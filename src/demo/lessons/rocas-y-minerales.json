@@ -1,0 +1,965 @@
+{
+  "id": "rocas-y-minerales",
+  "tema": "Rocks and minerals",
+  "sesgo": "mixto",
+  "objetivo": "That the student understands that rocks are made of minerals, can tell igneous, sedimentary and metamorphic rocks apart by how they form, knows simple ways to identify minerals (color, shine, hardness) and sees how people use rocks.",
+  "hatsumon": "What are rocks made of, and how do they form?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Settle down, please. Everyone has a rock on the desk, and nobody throws them.",
+      "utterance_coloquial": "Okay okay, settle down, please. Everybody has a rock on the desk, and nobody, nobody throws them.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Today we're going to study the rocks you brought: what they are and where they come from.",
+      "utterance_coloquial": "So today we're gonna study, uh, the rocks you brought, what they are and where they come from.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "To start: what are rocks made of, and how do they form?",
+      "utterance_coloquial": "To start, mm, what are rocks made of, and, and how do they form?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Hands up. Yes, Camila? It's a piece of the mountain. Good thinking.",
+      "utterance_coloquial": "Hands up. Yes, Camila? A piece of the mountain, okay, good, good thinking.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Pick up your rock and look at it with the magnifying glass. Describe what you see to your partner.",
+      "utterance_coloquial": "Pick up your rock, look at it with the magnifying glass, tell your partner what you see.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Tiny grains of different colors, some shiny. These grains are called minerals.",
+      "utterance_coloquial": "I hear tiny grains, different colors, some shiny. Those little grains are, they're called mini rails, eh, minerals.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Rocks and Minerals",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Minerals",
+            "role": "subtitulo",
+            "group": "min"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "A **rock** is a solid mixture of one or more minerals",
+            "role": "cuerpo",
+            "group": "min"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "A mineral is a natural solid that was never alive and has its own makeup.",
+      "utterance_coloquial": "A mineral is something natural, solid, that was never alive, and each one has its own makeup.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "A **rock** is a solid mixture of one or more minerals, and a **mineral** is a natural solid that was never alive."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Not alive. So wood is not a mineral, and a shell is not a mineral either.",
+      "utterance_coloquial": "Not alive, so wood isn't a mineral, a shell isn't a mineral, nothing that lived.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Look at the big gray rock on my desk with black and pink speckles. That's granite.",
+      "utterance_coloquial": "Look at this big gray rock on my desk with the black and pink speckles, that's granite.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Granite",
+            "group": "min"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "In it you can see glassy grains of quartz.",
+      "utterance_coloquial": "In there you can see, see these glassy little grains? That's quartz, quarts.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Quartz",
+            "group": "min"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "contains"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "The shiny flakes that peel off like paper are mica.",
+      "utterance_coloquial": "And the shiny flakes that peel like paper, those are mica.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Mica",
+            "group": "min"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "contains"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "The pink grains are feldspar.",
+      "utterance_coloquial": "The pink ones are feldspar, felt spar.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Feldspar",
+            "group": "min"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_1",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "contains"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "So each mineral has its own color and shine, and a rock can mix several.",
+      "utterance_coloquial": "So every mineral has its own color and its own shine, and a rock can have a few mixed.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Each mineral has its own color and shine, and a rock can mix several.",
+            "role": "cuerpo",
+            "group": "min"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Who has a rock with only one color? Then it may be mostly one mineral. Interesting.",
+      "utterance_coloquial": "Who's got a rock that's all one color? Then maybe it's mostly one mineral, interesting.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Now, how do rocks form? There are three ways, and the first one starts with fire.",
+      "utterance_coloquial": "Now how do rocks form? Three ways, and the first one, hmm, starts with fire.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Igneous rocks",
+            "role": "subtitulo",
+            "group": "ign"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Rocks form in three ways, and the first one starts with fire.",
+            "role": "cuerpo",
+            "group": "ign"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Deep underground, rock melts into a hot liquid called magma.",
+      "utterance_coloquial": "Way down underground the rock melts into a hot liquid, it's called magma.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Magma",
+            "group": "ign"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "**Magma** is melted rock found deep underground",
+            "role": "cuerpo",
+            "group": "ign"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "When magma cools slowly underground, it hardens into granite, like this one.",
+      "utterance_coloquial": "When the magma cools slowly down there, it hardens, and you get granite, like this one on my desk.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_5",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "cools slowly into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "When magma reaches the surface through a volcano, we call it lava.",
+      "utterance_coloquial": "And when it comes out of a volcano, on the surface, then it's called lava.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Lava",
+            "group": "ign"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "erupts as"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Lava cools fast and hardens into basalt, a dark, fine-grained rock.",
+      "utterance_coloquial": "Lava cools fast and becomes basalt, it's dark, very fine grain, ba-salt.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Basalt",
+            "group": "ign"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "cools quickly into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Rocks born from cooled magma or lava are called igneous.",
+      "utterance_coloquial": "Rocks that are born from cooled magma or lava, those are called igneous, igneus.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Hardened magma or lava gives **igneous** rocks",
+            "role": "cuerpo",
+            "group": "ign"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Careful, Pablo, that basalt is not a ball. Put it down.",
+      "utterance_coloquial": "Pablo! That basalt isn't a ball, put it down, put it down.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Igneous: from melted rock. Who remembers the two cooling places?",
+      "utterance_coloquial": "Igneous, from melted rock, who remembers where it cools, the two places?",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_5",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "The second kind forms with water: rivers carry sand and mud, and these settle at the bottom.",
+      "utterance_coloquial": "Second kind, with water, rivers carry sand and mud, and it all settles at the bottom, the bottom of the lake or the sea.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Sedimentary rocks",
+            "role": "subtitulo",
+            "group": "sed"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "Rivers carry sand and mud, and these settle at the bottom.",
+            "role": "cuerpo",
+            "group": "sed"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Sand",
+            "group": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Layer after layer piles up, and the weight squeezes the bottom layers for millions of years.",
+      "utterance_coloquial": "Layer over layer over layer, and the weight squeezes the bottom ones, for millions of years, mm-hm.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Layers of sand and mud pile up and press together over millions of years",
+            "role": "cuerpo",
+            "group": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Eventually, the grains are cemented into a rock such as sandstone.",
+      "utterance_coloquial": "In the end the grains get stuck together into a rock, like sandstone, sand stone.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Sandstone",
+            "group": "sed"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "pressed into"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "These rocks are called sedimentary, and you can often see the layers on their sides.",
+      "utterance_coloquial": "Those are called sedimentary, said a mentary, and you can see the layers on the side, look.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "**Sedimentary** rocks show layers on their sides",
+            "role": "cuerpo",
+            "group": "sed"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "They sometimes hold fossils, the remains of animals and plants that were buried.",
+      "utterance_coloquial": "Sometimes they have fossils inside, the remains of plants and animals that got buried.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Fossil",
+            "group": "sed"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_9",
+            "to": "concepto_1_10",
+            "style": "arrow",
+            "label": "may hold"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Someone found a seashell in a rock? If it's stuck inside, that's a good sign. Let me see it.",
+      "utterance_coloquial": "Someone found a seashell in the rock? If it's stuck inside, that's a great sign, let me see.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "The third kind starts as another rock, then heat and pressure transform it.",
+      "utterance_coloquial": "Third kind, it starts as another rock and then heat and pressure change it, they transform it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Metamorphic rocks",
+            "role": "subtitulo",
+            "group": "met"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "The third kind starts as another rock, and heat and pressure transform it.",
+            "role": "cuerpo",
+            "group": "met"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Limestone, for example, is soft and light. Deep underground, heat and pressure change it.",
+      "utterance_coloquial": "Like limestone, it's soft and light, right? Deep underground, heat and pressure change it.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Limestone",
+            "group": "met"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "It becomes marble, which is harder, with a smooth shine.",
+      "utterance_coloquial": "And it turns into marble, harder, with a smooth shine, meta morphic.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Marble",
+            "group": "met"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_11",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "heat and pressure"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "A rock that changed without melting is called metamorphic.",
+      "utterance_coloquial": "A rock that changed, but without melting, that's metamorphic.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Heat and pressure change rock into **metamorphic** rock",
+            "role": "cuerpo",
+            "group": "met"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "So: igneous melted, sedimentary pressed, metamorphic changed. Who can say them in order?",
+      "utterance_coloquial": "So: igneous melted, sedimentary pressed, metamorphic changed. Who says them, eh, in order?",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_1",
+              "concepto_1_9",
+              "concepto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Those changes take millions of years. A rock can turn into another kind many times.",
+      "utterance_coloquial": "These changes take millions of years, and a rock can become another kind, over and over.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Now, how can we identify a mineral? We look at its color, and its shine, and then try to scratch it.",
+      "utterance_coloquial": "Now how do we figure out a mineral? We check the color, the shine, and then we try to scratch it.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Look at the color\nCheck the shine\nTry to scratch it",
+            "role": "enumeracion",
+            "group": "min"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Hardness goes from one to ten: talc is one, the softest, and diamond is ten, the hardest.",
+      "utterance_coloquial": "Hardness goes from one to ten, talc is one, the softest, and diamond is ten, the hardest of all.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Hardness runs from 1 for **talc** to 10 for **diamond**.",
+            "role": "cuerpo",
+            "group": "min"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "A fingernail can scratch talc but not quartz. Try it on the soft white rock, Ana.",
+      "utterance_coloquial": "A fingernail scratches talc but not quartz. Try it on the soft white one, Ana.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Harder minerals scratch softer ones, never the other way around. Tell me, can quartz scratch talc?",
+      "utterance_coloquial": "Harder scratches softer, never the other way, so, can quartz scratch talc? Yes, exactly.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Finally, people use rocks every day: marble for floors, granite for buildings, gravel for roads.",
+      "utterance_coloquial": "Finally, people use rocks every day, marble for floors, granite for buildings, gravel for roads.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Uses of rocks",
+            "role": "subtitulo",
+            "group": "uses"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "People use rocks every day.",
+            "role": "cuerpo",
+            "group": "uses"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "**marble**: statues and floors\n**granite**: buildings and counters\ngravel: roads",
+            "role": "lista",
+            "group": "uses"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_17",
+            "to": "concepto_1_12",
+            "style": "arrow",
+            "label": "marble is used for"
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Slate for roofs and old school chalkboards. Your grandparents used them.",
+      "utterance_coloquial": "Slate for roofs, and the old chalkboards at school, your grandparents used those, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Slate was used for roofs and old school chalkboards.",
+            "role": "cuerpo",
+            "group": "uses"
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "So, back to our first question.",
+      "utterance_coloquial": "So, back to the question we started with, remember?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Rocks are made of minerals, and they form three ways: from cooled melted rock, pressed layers, or heat and pressure.",
+      "utterance_coloquial": "Rocks are made of minerals, and they form in three ways, cooled melted rock, pressed layers, or heat and pressure.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Rocks are made of minerals.",
+      "utterance_coloquial": "In the end, rocks are made of minerals.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Rocks are made of **minerals**, and they form by cooling melted rock, pressing layers, or heat and pressure.",
+            "role": "cuerpo",
+            "group": "met"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For homework, collect three different rocks and sort them by how they look.",
+      "utterance_coloquial": "For homework, collect three different rocks, bring them, and sort them by how they look.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Collect three different rocks. Sort them by how they look.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Okay, rocks back in the bag, and wash your hands before lunch.",
+      "utterance_coloquial": "Okay, rocks back in the bag, and wash your hands before lunch, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

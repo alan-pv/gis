@@ -1,0 +1,1084 @@
+{
+  "id": "fotosintesis",
+  "tema": "Photosynthesis",
+  "sesgo": "ilustrativo",
+  "objetivo": "That the student explains that plants make their own food using light, water, and carbon dioxide, and that in the process they release oxygen.",
+  "hatsumon": "Where do plants get their food if nobody gives it to them?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Today we're going to understand one of the most amazing things in nature: how plants feed themselves.",
+      "utterance_coloquial": "Okay so, today we're gonna look at something pretty amazing in nature: how plants manage to eat.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Photosynthesis",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Get comfortable and have your notebook handy. No rush.",
+      "utterance_coloquial": "Get comfortable, have your notebook right there handy. No rush, okay?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Think about this: we eat to get energy, but a plant never goes out looking for food and nobody brings it any. So, where does it get its food?",
+      "utterance_coloquial": "Okay, think about it: we eat to get energy, but the plant never goes out looking for food, and no body brings it anything to eat. So where's it get its food from?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Let's see, does anyone have a thought? Yes… you're on the right track. Very good.",
+      "utterance_coloquial": "Let's see, who's got a thought? Yeah… you're kinda on the right track, something like that. Very good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "The answer is that plants don't look for food: they make it themselves inside their leaves.",
+      "utterance_coloquial": "So it turns out plants don't look for food: they make it all by themselves inside their leaves.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Making food",
+            "role": "subtitulo",
+            "group": "ing"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Plants make their own **food**",
+            "role": "cuerpo",
+            "group": "ing"
+          }
+        ]
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Let's imagine a little plant, here, in the school garden.",
+      "utterance_coloquial": "Picture a little plant, here, in the school garden.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "arbol_1_1",
+            "object": "concepto",
+            "label": "plant",
+            "group": "ing"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "You've all seen a plant, right? At home, in the park, on the street.",
+      "utterance_coloquial": "You've all seen a plant, right? At home, in the park, out on the street.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "And up above, like every day, there's the Sun.",
+      "utterance_coloquial": "And way up there, like every day, there's the Sun.",
+      "case_tags": [
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "sol_1_1",
+            "object": "concepto",
+            "label": "Sun",
+            "group": "ing"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "To make its food, the plant needs to gather three things.",
+      "utterance_coloquial": "To make its food, the plant needs to gather three little things.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "The plant needs three things to make its food",
+            "role": "cuerpo",
+            "group": "ing"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "The first is the light that reaches it from the Sun.",
+      "utterance_coloquial": "The first is the light that reach es it from the Sun.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The plant needs three things to make its food: **light** from the Sun"
+            }
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "sol_1_1",
+            "to": "arbol_1_1",
+            "style": "arrow",
+            "label": "light"
+          }
+        ]
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Can you imagine how the light gets all the way to the leaves? Very good.",
+      "utterance_coloquial": "Can you imagine how… well, how the light gets all the way to the leaves? Alright.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "The second thing is water, which the plant takes in through the root.",
+      "utterance_coloquial": "The second is the… the water, which the plant grabs through the root.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_5",
+            "set": {
+              "text": "The plant needs three things to make its food: **light** from the Sun, and **water**, which it takes in through the root"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "The water enters through the root and goes up the stem to the leaves.",
+      "utterance_coloquial": "The water goes in through the root and goes up the ste m to the leaves.",
+      "case_tags": [
+        "mixto",
+        "ilustrativo",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "gota_1_1",
+            "object": "concepto",
+            "label": "water",
+            "group": "ing"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "gota_1_1",
+            "to": "arbol_1_1",
+            "style": "arrow",
+            "label": "water"
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "That's why we have to water plants; if they don't get enough water, they dry out.",
+      "utterance_coloquial": "That's why we have to water them; if they don't get enough, they dry out, poor things.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_33",
+            "object": "texto",
+            "text": "Plants dry out when they do not get enough water",
+            "role": "cuerpo",
+            "group": "ing"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "And the third is interesting: the plant takes a gas called carbon dioxide from the air.",
+      "utterance_coloquial": "And the third one's kinda interesting: the plant grabs a gas from the air called car bon dioxide.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_29",
+            "object": "texto",
+            "text": "The third thing is **carbon dioxide** (CO₂), a gas from the air",
+            "role": "cuerpo",
+            "group": "ing"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 15,
+      "utterance_formal": "That gas is the same one we let out when we breathe, and it goes in through tiny pores in the leaves.",
+      "utterance_coloquial": "That gas is the very same one we let out when we breathe, and it goes in through little pores in the leaves.",
+      "case_tags": [
+        "mixto",
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "nube_1_1",
+            "object": "concepto",
+            "label": "air",
+            "group": "ing"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "nube_1_1",
+            "to": "arbol_1_1",
+            "style": "arrow",
+            "label": "CO₂"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "So now we have all three: light, water, and that gas from the air.",
+      "utterance_coloquial": "So now we've got all three: light, water, and that gas from the air.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Say all three out loud for me, let's hear it: light, water, and carbon dioxide.",
+      "utterance_coloquial": "Say all three loud for me, let's hear it: light, water, and car bon dioxide.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "This whole process happens in one very specific place: inside the leaves.",
+      "utterance_coloquial": "This all happens in one really specific spot: inside the leaves.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "The process",
+            "role": "subtitulo",
+            "group": "proceso"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Everything happens inside the leaves",
+            "role": "cuerpo",
+            "group": "proceso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_25",
+            "to": "arbol_1_1",
+            "style": "arrow"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "texto_1_4",
+            "to": "texto_1_25",
+            "style": "arrow"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Leaves",
+            "group": "proceso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "arbol_1_1",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "inside"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "What gives the leaf its color is called chlorophyll, and that's exactly what traps the Sun's light.",
+      "utterance_coloquial": "What gives the leaf its color is called chloro phyll, and that's what traps the Sun's light.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "color-fill"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_30",
+            "object": "texto",
+            "text": "**Chlorophyll**, which gives the leaf its color, traps the light",
+            "role": "cuerpo",
+            "group": "proceso"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Chlorophyll",
+            "group": "proceso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "has"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "Have you noticed that almost all leaves are green? That's the reason why.",
+      "utterance_coloquial": "Have you noticed that almost all leaves are green? Well, that's the reason why.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_32",
+            "object": "texto",
+            "text": "Most leaves are green because of the chlorophyll inside them",
+            "role": "cuerpo",
+            "group": "proceso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "With those three ingredients and the energy from the light, the plant cooks up its own food. That whole process is called photosynthesis.",
+      "utterance_coloquial": "With those three things and the energy from the light, the plant cooks up its own food. That whole process is called pho to synthesis.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_31",
+            "object": "texto",
+            "text": "With light, water, and CO₂ the plant makes its food",
+            "role": "cuerpo",
+            "group": "proceso"
+          },
+          {
+            "op": "label",
+            "ref": "connect_1_6",
+            "text": "photosynthesis"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 22,
+      "utterance_formal": "That food is a kind of sugar called glucose.",
+      "utterance_coloquial": "That food is like a sugar called glucose.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_31",
+            "set": {
+              "text": "With light, water, and CO₂ the plant makes its food. The food is **glucose**, a kind of sugar"
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Glucose",
+            "group": "proceso"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "concepto_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "makes"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "We can see all this as if it were a cooking recipe.",
+      "utterance_coloquial": "We can see all this like it's a little cooking recipe, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "In goes light, plus water, plus carbon dioxide; and out comes glucose and oxygen.",
+      "utterance_coloquial": "In goes light, plus water, plus the car bon dioxide; and out comes glucose and oxy gen.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "What goes in is light, water and CO₂; what comes out is **glucose** and **oxygen** (O₂)",
+            "role": "cuerpo",
+            "group": "proceso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "The formula looks fancy, right? Don't worry, it's easier than it looks.",
+      "utterance_coloquial": "The formula looks kinda fancy, right? Don't freak out, it's easier than it looks.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "Notice something almost nobody catches: in that process, the plant releases oxygen.",
+      "utterance_coloquial": "And notice something almost nobody catches: in that process, the plant lets out oxy gen.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_13",
+            "set": {
+              "text": "What goes in is light, water and CO₂; what comes out is **glucose** and **oxygen** (O₂). In the process, the plant releases oxygen"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "That oxygen comes out of the leaves and goes back into the air.",
+      "utterance_coloquial": "That oxy gen comes out of the leaves and goes back into the air.",
+      "case_tags": [
+        "mixto"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Oxygen",
+            "role": "subtitulo",
+            "group": "oxigeno"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "The **oxygen** goes back into the air",
+            "role": "cuerpo",
+            "group": "oxigeno"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "arbol_1_1",
+            "to": "nube_1_1",
+            "style": "arrow",
+            "label": "O₂"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "And that oxygen, who do you think breathes it in after? Exactly: us.",
+      "utterance_coloquial": "And that oxy gen, who do you think breathes it in? That's right: us.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "The **oxygen** goes back into the air. People and animals breathe it in"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "That's why we say plants give us the air we breathe.",
+      "utterance_coloquial": "That's why we say plants give us the air we breathe, believe it or not.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "The **oxygen** goes back into the air. People and animals breathe it in, so plants give us the air we breathe"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Let's go back to the recipe: in go light, water, and gas; and out come the food and the oxygen.",
+      "utterance_coloquial": "Let's go back to the little recipe: in go light, water, and gas; and out come the food and the oxy gen.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_13",
+              "texto_1_8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Now think about why this is so important for all of nature.",
+      "utterance_coloquial": "Now think about why this is so important for all of nature.",
+      "case_tags": [
+        "no-op",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Since plants make their own food, we say they're producers.",
+      "utterance_coloquial": "Since plants make their own food all by themselves, we say they're producers.",
+      "case_tags": [
+        "texto-primero",
+        "color-fill",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Why it matters",
+            "role": "subtitulo",
+            "group": "importancia"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "Plants make their own food, so they are **producers**",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Do you remember the food chain we covered? Well, this goes hand in hand with it.",
+      "utterance_coloquial": "Do you remember the food chain from last class? Well, this goes right along with it.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Plants make their own food, so they are **producers**, which goes hand in hand with the food chains you studied"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Animals eat from plants, and other animals eat from those animals. Everything starts with the plant.",
+      "utterance_coloquial": "Animals eat from plants, and others eat from those. Everything starts with the little plant.",
+      "case_tags": [
+        "mixto",
+        "miss-placeholder",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "Plants make their own food, so they are **producers**, which goes hand in hand with the food chains you studied, and everything starts with the plant"
+            }
+          },
+          {
+            "op": "add",
+            "id": "conejo_1_1",
+            "object": "concepto",
+            "label": "animals",
+            "group": "importancia"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "arbol_1_1",
+            "to": "conejo_1_1",
+            "style": "arrow",
+            "label": "serves as their food"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Without photosynthesis, almost nobody would have anything to eat or air to breathe.",
+      "utterance_coloquial": "Without photo synthesis, almost nobody would have anything to eat or air to breathe.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Without **photosynthesis** there would be no food or oxygen",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Look how many things depend on it: it gives food, gives oxygen, and holds up the chains.",
+      "utterance_coloquial": "Look how many things depend on it: it gives food, gives oxy gen, and holds up the chains.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_18",
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "In the drawing we have it all: the Sun up top, the plant, and the water going up from the root.",
+      "utterance_coloquial": "In the drawing we've got it all set, the Sun up top, the plant, and the water going up from the root.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "sol_1_1",
+              "arbol_1_1",
+              "gota_1_1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Any questions so far? Feel free to ask.",
+      "utterance_coloquial": "Any questions so far? Feel free to ask, don't just sit on it.",
+      "case_tags": [
+        "no-op",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "A good way to remember it: the plant makes its own food, like a little factory for food and air.",
+      "utterance_coloquial": "A good way to remember it: the plant makes its own food, like a little fa ctory for food and air.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "The plant makes its own food: a **factory** for food and air",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Nice way to look at it, don't you think?",
+      "utterance_coloquial": "Nice way to look at it, right?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "And today's big word, the one you shouldn't forget, is photosynthesis.",
+      "utterance_coloquial": "And today's big ol' word, the one you shouldn't forget, is photo synthesis.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "The key word is **photosynthesis**",
+            "role": "cuerpo",
+            "group": "importancia"
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "And the most important thing in this whole class is this: the plant makes its own food.",
+      "utterance_coloquial": "And the biggest takeaway from this whole class is this: the plant makes its own food.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Very good, I can see it's clear. Excellent work.",
+      "utterance_coloquial": "Very good, I can see it's really clear. Excellent work, everyone.",
+      "case_tags": [
+        "no-op",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "For homework I want you to draw this whole process, with its arrows.",
+      "utterance_coloquial": "For homework I want you to draw me this whole process, with its little arrows.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "Draw the whole process with its arrows",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Take your time with it, in your notebook, it's not something to rush and turn in.",
+      "utterance_coloquial": "Take your time with it, in your notebook, it's not something to rush and turn in.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_23",
+            "set": {
+              "text": "Draw the whole process with its arrows, in your notebook, without rushing"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "And explain to me, in your own words, what a plant needs to make its food.",
+      "utterance_coloquial": "And ex plain to me, in your own words, what a plant needs to make its food.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_23",
+            "set": {
+              "text": "Draw the whole process with its arrows, in your notebook, without rushing. Explain in your own words what a plant needs to make its food"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 47,
+      "utterance_formal": "And with that we answered the question we started class with.",
+      "utterance_coloquial": "And with that we've answered the question we kicked off class with.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_21"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "Very good, that's all for today. Put your things away and see you tomorrow.",
+      "utterance_coloquial": "Very good, that's it for today. Put your stuff away and see you tomorrow, take care.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

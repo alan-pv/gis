@@ -1,0 +1,991 @@
+{
+  "id": "dientes-e-higiene",
+  "tema": "Our teeth and how to care for them",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student knows what teeth are for, the three kinds of teeth, the main parts of a tooth, why cavities form, and the habits that keep teeth healthy.",
+  "hatsumon": "How can we take good care of our teeth?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning, class. Take out your notebooks and sit down, please.",
+      "utterance_coloquial": "Good mor ning, class. Take out your notebooks and sit down, okay.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Whoever is still talking, please finish your conversation now.",
+      "utterance_coloquial": "Whoever is still talking, uh, finish your conversation now, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Today's class is about something we all have in our mouths: our teeth.",
+      "utterance_coloquial": "Today's class is about something we all have in our mouth, uh, our teeth.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Our Teeth",
+            "role": "titulo"
+          }
+        ]
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "The big question for today: how can we take good care of our teeth?",
+      "utterance_coloquial": "So the big question for today is, how can we take good care of our teeth?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Do not answer yet. Pedro, no, put your hand down, we will get there. First let us look at what teeth are.",
+      "utterance_coloquial": "Don't answer yet! Pedro, put your hand down, we'll get there. First let's see what teeth are.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Teeth help us bite and chew the food we eat, and they also help us pronounce words clearly.",
+      "utterance_coloquial": "Teeth help us bite and chew our food, and, and they help us say words clearly too.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "What teeth do",
+            "role": "subtitulo",
+            "group": "use"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Teeth cut and **chew** the food we eat",
+            "role": "cuerpo",
+            "group": "use"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "Try this: say a word without touching your teeth with your tongue. Hard, right?",
+      "utterance_coloquial": "Try this: say a word without touching your teeth with your tongue. Hard, right? Ha.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Teeth cut and **chew** the food we eat, and they help us speak clearly."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Teeth also give our face its shape. Look at your partner's smile.",
+      "utterance_coloquial": "Teeth also give our face its shape. Look at your partner's smile, go.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Teeth cut and **chew** the food we eat, and they help us speak clearly. They also give the face its shape."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "We have three kinds of teeth. The ones at the front are the incisors, and they cut. The pointed ones next to them are the canines, and they tear. And the wide ones at the back are the molars, and they grind.",
+      "utterance_coloquial": "We have three kinds of teeth. The ones in front are the in cisors, and they cut. The pointy ones are the canines, they tear. And the wide ones at the back, the molars, they grind.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Incisors: cut\nCanines: tear\nMolars: grind",
+            "role": "lista",
+            "group": "use"
+          }
+        ]
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Put your finger on a front tooth, then on a back one. Can you feel the difference?",
+      "utterance_coloquial": "Put your finger on a front tooth, then on a back one. Can you feel the difference?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Bite into an apple: the front teeth cut it, and the back ones grind it into little pieces.",
+      "utterance_coloquial": "Think of biting an apple: the front ones cut it, and the back ones grind it up in little pieces.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Biting an **apple**: front teeth cut and back teeth grind it into small pieces",
+            "role": "cuerpo",
+            "group": "use"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "Cut, tear, grind.",
+      "utterance_coloquial": "Cut, tear, and grind, right.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Children have twenty baby teeth. Around age six they begin to fall out, and adult teeth grow in their place.",
+      "utterance_coloquial": "Kids have twenty baby teeth. Around age six they start to fall out, and the adult teeth grow in, in their place.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Children have 20 **baby teeth**.",
+            "role": "cuerpo",
+            "group": "use"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Baby teeth are the first ones we get, and they are replaced.",
+      "utterance_coloquial": "Baby teeth are the first ones we get, and, uh, they get replaced.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Children have 20 **baby teeth**. They fall out and are replaced by adult teeth."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Who has lost a tooth already? A lot of you, wow. And who has the tooth fairy's address? Ha, Sofia does.",
+      "utterance_coloquial": "Who has lost a tooth already? Wow, a lot of you. And who has the tooth fairy's address? Ha, Sofia does.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Adults have thirty-two teeth, and those do not grow back, so we have to look after them for a whole lifetime.",
+      "utterance_coloquial": "Adults have thirty-two teeth, and those don't grow back, so we've got to look after them all our life.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Children have 20 **baby teeth**. They fall out and are replaced by adult teeth. Adults have 32 teeth that do not grow back."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "In every tooth, the part we can see is the crown, and the part hidden under the gum is the root.",
+      "utterance_coloquial": "In every tooth, the part we see is the crown, and the part hiding under the gum is the, the root.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Parts of a tooth",
+            "role": "subtitulo",
+            "group": "par"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "The part we see is the **crown**, and the part under the gum is the **root**.",
+            "role": "cuerpo",
+            "group": "par"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "A white layer covers the crown: the enamel. It is the hardest part of the whole body.",
+      "utterance_coloquial": "A white layer covers the crown: the e nam el. It's the hardest part of the whole body, yes.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "parrafo_nuevo": "giro",
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Enamel, the hardest part of the body, covers the crown",
+            "role": "cuerpo",
+            "group": "par"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Harder than a bone? Yes, Luis, harder than a bone. Surprising, right?",
+      "utterance_coloquial": "Harder than a bone? Yes, Luis, harder than a bone! Surprising, right?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "Enamel, the hardest part of the body, covers the crown, even harder than a bone."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "Let us look at it as a whole tooth: the enamel outside, the root underneath.",
+      "utterance_coloquial": "Let's see it as one whole tooth: the enamel outside, the root underneath.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "tooth",
+            "group": "par"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "enamel",
+            "group": "par"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "root",
+            "group": "par"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_2",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "covers"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_3",
+            "to": "concepto_1_1",
+            "style": "arrow",
+            "label": "holds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "The crown and the root.",
+      "utterance_coloquial": "The crown, and the root, uh huh.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_11"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "Inside, there are tiny nerves. That is why a toothache hurts so much.",
+      "utterance_coloquial": "Inside, there are tiny nerves. That's why a toothache hurts so much, yeah.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Tiny **nerves** inside the tooth make a toothache hurt",
+            "role": "cuerpo",
+            "group": "par"
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "Does soda hurt the teeth more than juice? Good question, Marta. Both have sugar, so both feed the bacteria.",
+      "utterance_coloquial": "Does soda hurt teeth more than juice? Good question, Marta. Both have sugar, so both feed the bacteria.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Okay, I see some tired faces. Stretch your arms for ten seconds.",
+      "utterance_coloquial": "Okay, I see some tired faces. Stretch your arms, ten seconds, come on.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Now the problem. Tiny living things called bacteria live in the mouth, and they feed on sugar. When they do, they make an acid that wears away the enamel.",
+      "utterance_coloquial": "Now the problem. Tiny living things called bac teria live in our mouth, and they eat sugar. And when they do, they make an acid that wears down the e namel.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Cavities",
+            "role": "subtitulo",
+            "group": "cav"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "**Bacteria** in the mouth feed on sugar and make acid, which wears away the enamel.",
+            "role": "cuerpo",
+            "group": "cav"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "Sweets, soda, cookies: all that sugar is food for the bacteria.",
+      "utterance_coloquial": "Candy, soda, cookies, uh, all that sugar is food for the bacteria.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "sugar",
+            "group": "cav"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "bacteria",
+            "group": "cav"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_4",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "feeds"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "With time, the acid digs a hole in the tooth, and that hole is a cavity.",
+      "utterance_coloquial": "With time the acid digs a hole in the tooth, and that hole is a ca vity.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "cavity",
+            "group": "cav"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_5",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "makes acid"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Does anyone have a cavity? No hands up, honest bunch. Or a hidden one. Ha.",
+      "utterance_coloquial": "Does anyone have a cavity? No hands up. Honest bunch! Or a hidden one, ha.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "A cavity does not heal by itself; the dentist has to fix it.",
+      "utterance_coloquial": "A cavity doesn't heal by itself, the den tist has to fix it.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "A cavity does not heal by itself, so the dentist must **repair** it",
+            "role": "cuerpo",
+            "group": "cav"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Bacteria, sugar, acid, cavity.",
+      "utterance_coloquial": "Bacteria, sugar, acid, cavity, right.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_4",
+              "concepto_1_5",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "What we eat matters too. Milk and cheese have calcium, and calcium makes teeth strong.",
+      "utterance_coloquial": "What we eat matters too. Milk and cheese have cal cium, and calcium makes the teeth strong.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "Foods for strong teeth",
+            "role": "subtitulo",
+            "group": "food"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_18",
+            "object": "texto",
+            "text": "**Calcium**, found in milk and cheese, makes teeth strong",
+            "role": "cuerpo",
+            "group": "food"
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "Who had milk for breakfast today? Good, a few of you. Who had only cookies? Ha, I saw that hand.",
+      "utterance_coloquial": "Who had milk for breakfast today? Good, a few of you. Who had only cookies? Ha, I saw that hand.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "Crunchy fruits and vegetables, like apples and carrots, also help clean the teeth.",
+      "utterance_coloquial": "Crunchy fruits and vegetables, like apples and carrots, they also help clean the teeth, you know.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_18",
+            "set": {
+              "text": "**Calcium**, found in milk and cheese, makes teeth strong, and crunchy fruits and vegetables help clean them."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Milk for strength, carrots for cleaning.",
+      "utterance_coloquial": "Milk for strength, carrots for the cleaning, yeah.",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "milk",
+            "group": "food"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "carrot",
+            "group": "food"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_11",
+            "from": "texto_1_17",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "calcium"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_12",
+            "from": "texto_1_17",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "crunchy"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "And after a snack, a few sips of water help wash away leftover sugar.",
+      "utterance_coloquial": "And after a snack, a few sips of water, that helps wash the sugar away.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "A few sips of **water** after a snack wash away leftover sugar.",
+            "role": "cuerpo",
+            "group": "food"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "So here is what we do. First, brush after meals, for two minutes. Second, clean between the teeth with floss, every day. Third, eat less sugar. And fourth, visit the dentist twice a year.",
+      "utterance_coloquial": "So here's what we do. First, brush after meals, two whole minutes. Second, floss, every day. Third, eat less sugar. And fourth, go to the den tist twice a year.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Healthy habits",
+            "role": "subtitulo",
+            "group": "hab"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Brush after meals, for two minutes\nFloss once a day\nEat less sugar\nVisit the dentist twice a year",
+            "role": "enumeracion",
+            "group": "hab"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_13",
+            "from": "texto_1_14",
+            "to": "texto_1_20",
+            "style": "arrow",
+            "label": "prevent"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "Two minutes is longer than you think. A song, maybe. Sing quietly in your head.",
+      "utterance_coloquial": "Two minutes is longer than you think! A whole song, maybe. Sing it in your head.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Use a soft toothbrush and a small amount of fluoride toothpaste.",
+      "utterance_coloquial": "Use a soft toothbrush and just a little fluoride toothpaste, eh.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "A soft brush and a little **fluoride** toothpaste protect the enamel",
+            "role": "cuerpo",
+            "group": "hab"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Nobody should share a toothbrush: not with a brother, not with a friend.",
+      "utterance_coloquial": "Nobody shares a toothbrush, okay: not with your brother, not with a friend.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_22",
+            "set": {
+              "text": "A soft brush and a little **fluoride** toothpaste protect the enamel, and every toothbrush belongs to one person."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Brush, floss, less sugar, dentist.",
+      "utterance_coloquial": "Brush, floss, less sugar, dentist, yeah.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_21"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "So the toothbrush is the best friend of our teeth.",
+      "utterance_coloquial": "So the toothbrush is, like, the best friend of our teeth.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "toothbrush",
+            "group": "hab"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_14",
+            "from": "concepto_1_9",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "prevents"
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Does everyone have a toothbrush at home? Good.",
+      "utterance_coloquial": "Does everybody have a toothbrush at home? Good, good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "So how do we take care of our teeth? By brushing them, flossing, eating less sugar and going to the dentist.",
+      "utterance_coloquial": "So how do we take good care of our teeth? By brushing, flossing, eating less sugar, and going to the den tist.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "Teeth stay healthy with **brushing**, flossing, less sugar and visits to the dentist.",
+            "role": "cuerpo",
+            "group": "hab"
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "For tomorrow, ask at home when you last visited the dentist. Write down what they tell you.",
+      "utterance_coloquial": "For tomorrow, ask at home when was your last visit to the dentist, okay. And write down what they tell you.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "For tomorrow",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Ask at home when the last **dentist** visit was. Write down the answer.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "Close your notebooks and pack your bags, please.",
+      "utterance_coloquial": "Close your notebooks and pack your bags, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "See you tomorrow, everyone. Brush your teeth tonight.",
+      "utterance_coloquial": "See you tomorrow, everybody. Brush your teeth tonight, okay!",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,1040 @@
+{
+  "id": "microorganismos",
+  "tema": "Microorganisms: helpful and harmful germs, hand washing",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student understands that microorganisms are tiny living things, that some help us (food, soil) and others make us sick, and that washing hands and basic hygiene prevent illness.",
+  "hatsumon": "Are all germs bad for us?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning. Please sit down and put your bags away.",
+      "utterance_coloquial": "Okay, good morning, uh, sit down please, bags away, bags under the, under the desk.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Raise your hand if you washed your hands before coming to class.",
+      "utterance_coloquial": "Raise your hand if you, ehm, if you washed your hands this morning. Okay, okay, put it down.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Today we are going to talk about microorganisms.",
+      "utterance_coloquial": "So today, we're gonna talk about, about micro organisms, microorganisms.",
+      "case_tags": [
+        "no-op",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Are all germs bad for us? Think about it for a moment.",
+      "utterance_coloquial": "Are all the germs bad for us? Like, think about it a little.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Some say yes, some say no. We will find out at the end.",
+      "utterance_coloquial": "Some say yes, some say no, okay. We'll see at the, at the end.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "Microorganisms are living things so small that we cannot see them without a microscope.",
+      "utterance_coloquial": "Microorganisms are, uh, living things so small we can't see them without a, a microscope.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Microorganisms",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "What they are",
+            "role": "subtitulo",
+            "group": "que"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "Microorganisms are living things too small to see with our eyes",
+            "role": "cuerpo",
+            "group": "que"
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "They live almost everywhere: in water, in soil, on our skin and even inside our bodies.",
+      "utterance_coloquial": "They live almost everywhere, in the water, soil, in our skin, inside the body even.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "Microorganisms are living things too small to see with our eyes, and they live almost everywhere, even on our skin."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Scientists use a microscope, which makes tiny things look much bigger.",
+      "utterance_coloquial": "Scientists use a micro scope, that makes the tiny things look way bigger.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Microscope",
+            "group": "que"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Microorganism",
+            "group": "que"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "shows"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Yes, Camila? Not now, we will see that later.",
+      "utterance_coloquial": "Yes Camila? No no, not now, we see that later, later.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Do you know the names of some of them?",
+      "utterance_coloquial": "Do you know, ehm, any names of them? Anybody?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "Bacteria, yes. There are also fungi and viruses.",
+      "utterance_coloquial": "Bac teria, yes Luis, good. And there's also, uh, fun guy, fungi, and viruses, those too.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Bacteria\nFungi\nViruses",
+            "role": "lista",
+            "group": "que"
+          }
+        ]
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "The green fuzz on old bread is a fungus too, called mold.",
+      "utterance_coloquial": "The green fuzzy stuff on old bread, that's a fungus too, mold, mould.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_7",
+            "object": "texto",
+            "text": "Mold on old bread is a **fungus** too",
+            "role": "cuerpo",
+            "group": "que"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Wait, does anyone smell something? No? Okay, good.",
+      "utterance_coloquial": "Wait, does somebody smell, like, something? No? Okay, good, good.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "Now the good news: many microorganisms are our friends.",
+      "utterance_coloquial": "Now the good news, the good news is a lot of them are our friends.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Helpful microorganisms",
+            "role": "subtitulo",
+            "group": "utiles"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_34",
+            "object": "texto",
+            "text": "Many microorganisms are our friends and help us",
+            "role": "cuerpo",
+            "group": "utiles"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "Yeast is a fungus that makes bread dough rise.",
+      "utterance_coloquial": "Yeast, the east, it's a fungus and it makes the dough of the bread rise.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Yeast",
+            "group": "utiles"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Bread",
+            "group": "utiles"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_3",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "makes it rise"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "Bacteria turn milk into yogurt.",
+      "utterance_coloquial": "The bacteria, they turn the milk into yogurt, yeah.",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Yogurt",
+            "group": "utiles"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "texto_1_8",
+            "to": "concepto_1_5",
+            "style": "arrow"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_9",
+            "object": "texto",
+            "text": "Some bacteria turn milk into **yogurt** and cheese",
+            "role": "cuerpo",
+            "group": "utiles"
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "Who here likes yogurt? Everyone, of course.",
+      "utterance_coloquial": "Who likes yogurt here? Everybody, of course, everybody.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "Others live in the soil and break down dead leaves and animals.",
+      "utterance_coloquial": "Others live in the soil and they break down, uh, dead leaves, dead animals, the, the nutri ents.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_9",
+            "set": {
+              "text": "Some bacteria turn milk into **yogurt** and cheese; others in the soil break down dead leaves into **nutrients**"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Then the plants use those nutrients to grow.",
+      "utterance_coloquial": "So then the plants use those, those nutrients to grow.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Dead leaves",
+            "group": "utiles"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "Soil",
+            "group": "utiles"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_6",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "enrich"
+          }
+        ]
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "So many microorganisms are helpful. Let me repeat that idea.",
+      "utterance_coloquial": "So many of them are helpful, okay, let me, let me repeat that.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_3",
+              "concepto_1_5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "But not all of them are friendly. Some make us sick.",
+      "utterance_coloquial": "But, but not all are friendly, eh. Some of them make us sick.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Harmful microorganisms",
+            "role": "subtitulo",
+            "group": "danos"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Some microorganisms make us sick when they enter the body",
+            "role": "cuerpo",
+            "group": "danos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "The flu, a cold or a stomachache can come from germs.",
+      "utterance_coloquial": "The flu, a cold, even a, a stomach ache can come from jerms, germs.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Some microorganisms make us sick when they enter the body, causing illnesses like the flu or a stomach infection"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "A doctor can give medicine when it is needed.",
+      "utterance_coloquial": "A doctor can give you the, the medicine when it's needed, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Some microorganisms make us sick when they enter the body, causing illnesses like the flu or a stomach infection; a doctor gives medicine when it is needed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "These germs are called pathogens by scientists.",
+      "utterance_coloquial": "Scientists call those germs, ehm, pathogens, patho gens.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Some microorganisms make us sick when they enter the body, causing illnesses like the flu or a stomach infection; a doctor gives medicine when it is needed. Scientists call these germs **pathogens**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Who has been sick this year? Wow, almost everybody.",
+      "utterance_coloquial": "Who got sick this year? Wow, almost everyone, wow.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "But how do these germs get to us?",
+      "utterance_coloquial": "But how, how do those germs get to us?",
+      "case_tags": [
+        "mixto",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_11",
+            "set": {
+              "text": "Some microorganisms make us sick when they enter the body, causing illnesses like the flu or a stomach infection; a doctor gives medicine when it is needed. Scientists call these germs **pathogens**. Germs spread from person to person through coughs, sneezes and dirty hands."
+            }
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "Dirty hands",
+            "group": "danos"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Mouth",
+            "group": "danos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_8",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "carry germs to"
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "We touch a door, then we touch our face, and the germs go in.",
+      "utterance_coloquial": "We touch the door handle, then we, we touch our face and the germs get in.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "texto_1_10",
+            "to": "concepto_1_8",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Also food that is left out can grow germs.",
+      "utterance_coloquial": "Also the food left out, uh, it can grow germs too.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_35",
+            "object": "texto",
+            "text": "Food that is left out can grow germs too",
+            "role": "cuerpo",
+            "group": "danos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "So how do we protect ourselves? With some simple habits.",
+      "utterance_coloquial": "So how do we protect, how do we protect ourselves? Simple habits.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_14",
+            "object": "texto",
+            "text": "Healthy habits",
+            "role": "subtitulo",
+            "group": "manos"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_36",
+            "object": "texto",
+            "text": "Simple habits keep germs away from us",
+            "role": "cuerpo",
+            "group": "manos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "First wet your hands, then use soap, rub for twenty seconds, rinse and dry.",
+      "utterance_coloquial": "First you wet them, then soap, rub for like twenty seconds, rinse and dry, yes.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Wet your hands with clean water\nRub them with **soap** for 20 seconds\nRinse well\nDry with a clean towel",
+            "role": "enumeracion",
+            "group": "manos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "Twenty seconds is about the time to sing Happy Birthday twice.",
+      "utterance_coloquial": "Twenty seconds is like singing Happy Birthday two times, haha.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "The soap lifts the germs and the water carries them away.",
+      "utterance_coloquial": "The soap lifts the germs, ehm, and the water takes them away.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Soap",
+            "group": "manos"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Germs",
+            "group": "manos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_10",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "removes"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "texto_1_14",
+            "to": "concepto_1_10",
+            "style": "arrow"
+          }
+        ]
+      }
+    },
+    {
+      "i": 32,
+      "utterance_formal": "When should we wash them? Before eating and after using the bathroom.",
+      "utterance_coloquial": "When do we wash them? Before we eat, and after the bathroom, always.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Wash hands before eating and after using the **bathroom**",
+            "role": "cuerpo",
+            "group": "manos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "There are other habits that help too.",
+      "utterance_coloquial": "Okay and there's other habits that help too.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_16",
+            "set": {
+              "text": "Wash hands before eating and after using the **bathroom**. Cover your mouth when you cough or sneeze."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Keep food in the fridge, around 4 °C, so germs grow more slowly.",
+      "utterance_coloquial": "Keep the food in the fridge, like at four degrees, so the germs grow slower.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_12",
+            "object": "concepto",
+            "label": "Fridge",
+            "group": "manos"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_12",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "slows"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Drink clean, boiled or purified water.",
+      "utterance_coloquial": "And drink clean water, boiled or, or purified.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "Drink clean, boiled or purified **water**",
+            "role": "cuerpo",
+            "group": "manos"
+          }
+        ]
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "And if you are sick, stay home so you do not spread germs.",
+      "utterance_coloquial": "And if you're sick, stay at home so, so you dont spread the germs.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "Drink clean, boiled or purified **water**. Stay home when you are sick so germs do not spread."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "Our body also has defenses that fight germs, and vaccines help prepare them.",
+      "utterance_coloquial": "Our body has, uh, defenses that fight the germs, and vaccines, vac cines, help get them ready.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Body defenses",
+            "role": "subtitulo",
+            "group": "defensas"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_22",
+            "object": "texto",
+            "text": "The body fights germs with its defenses.",
+            "role": "cuerpo",
+            "group": "defensas"
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Vaccines teach the defenses how to recognize a germ before it arrives.",
+      "utterance_coloquial": "The vaccines teach the defenses to know a germ before it, before it gets here.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_22",
+            "set": {
+              "text": "The body fights germs with its defenses. **Vaccines** prepare them in advance."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "Okay, let me go back to our first question for a second.",
+      "utterance_coloquial": "Okay, let me go back, back to the first question.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 40,
+      "utterance_formal": "Are all germs bad? Not at all: some help and some harm.",
+      "utterance_coloquial": "Are all germs bad? No, no way, some help and some harm us.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_8",
+              "texto_1_10"
+            ]
+          },
+          {
+            "op": "add",
+            "id": "texto_1_24",
+            "object": "texto",
+            "text": "No, many microorganisms are helpful and only some cause illness",
+            "role": "cuerpo",
+            "group": "utiles"
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "Quick review: where do the helpful ones live and what do they do?",
+      "utterance_coloquial": "Quick review, eh, where do the helpful ones live, what do they do?",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Yeast makes bread rise and soil bacteria help plants.",
+      "utterance_coloquial": "Yeast makes the bread rise, soil bacteria help plants, right.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_3",
+              "concepto_1_4",
+              "concepto_1_7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "And to stop the harmful ones, we wash our hands.",
+      "utterance_coloquial": "And to stop the harmful, uh, ones we wash the hands.",
+      "case_tags": [
+        "recap-highlight",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_14",
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "For homework, ask at home how your family keeps food safe. Write down two things they do.",
+      "utterance_coloquial": "Homework, okay, ask at home how the family keeps the food safe. Write down two things they do, okay.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "At home",
+            "role": "subtitulo",
+            "group": "tarea"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Ask the family how food is kept safe at home. Write down two things they do.",
+            "role": "cuerpo",
+            "group": "tarea"
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Good work, everyone. Now go wash your hands for lunch.",
+      "utterance_coloquial": "Good job everybody. Now go wash, wash your hands for lunch, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}

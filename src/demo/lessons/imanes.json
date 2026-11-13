@@ -1,0 +1,1129 @@
+{
+  "id": "imanes",
+  "tema": "Magnets: attraction, repulsion, magnetic materials",
+  "sesgo": "texto-primero",
+  "objetivo": "That the student discovers that a magnet attracts only some objects (those with iron or steel), that it has two poles, that opposite poles attract and equal poles repel, and that the force acts without touching.",
+  "hatsumon": "Why do some things stick to a magnet and others do not?",
+  "turnos": [
+    {
+      "i": 0,
+      "utterance_formal": "Good morning. Quiet, please. Tomas, I can see you have a magnet already; hand it over.",
+      "utterance_coloquial": "Okay, good morning, quiet please, quiet. Tomas, I see you already have a magnet there, give it here, thank you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 1,
+      "utterance_formal": "Today we are going to play with magnets.",
+      "utterance_coloquial": "So, today, um, magnets! We're going to play with magnets.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 2,
+      "utterance_formal": "Who has a magnet at home? On the fridge? Yes, many of you.",
+      "utterance_coloquial": "Who's got a magnet at home? On the fridge? Yeah, lots, lots of you.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 3,
+      "utterance_formal": "Look, this paper clip sticks to the magnet, but this eraser does not. Why do some things stick and others do not?",
+      "utterance_coloquial": "Look, look, this paperclip sticks to the magnet, but the eraser, nothing. So why do some things stick and others don't?",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_1",
+            "object": "texto",
+            "text": "Magnets",
+            "role": "titulo"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_3",
+            "object": "texto",
+            "text": "Attraction",
+            "role": "subtitulo",
+            "group": "att"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_4",
+            "object": "texto",
+            "text": "A paper clip sticks to the magnet, but an eraser does not",
+            "role": "cuerpo",
+            "group": "att"
+          }
+        ]
+      }
+    },
+    {
+      "i": 4,
+      "utterance_formal": "Think about it; we will experiment in a moment.",
+      "utterance_coloquial": "Think about it, think, and in a minute we're going to experiment.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 5,
+      "utterance_formal": "A magnet pulls some objects toward it. We say it attracts them.",
+      "utterance_coloquial": "A magnet pulls some objects toward it, like it's, um, pulling. We say it attracts them.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "A paper clip sticks to the magnet, but an eraser does not. A magnet **attracts** some objects, pulling them toward it."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 6,
+      "utterance_formal": "It pulls them toward itself with an invisible force, without glue or anything.",
+      "utterance_coloquial": "It pulls them towards itself, with an invisible force, no glue, no nothing.",
+      "case_tags": [
+        "texto-primero"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_4",
+            "set": {
+              "text": "A paper clip sticks to the magnet, but an eraser does not. A magnet **attracts** some objects, pulling them toward it. It pulls with an invisible **force**, without glue or anything."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 7,
+      "utterance_formal": "Like this magnet and this paper clip. See? Zip.",
+      "utterance_coloquial": "Like this magnet and this paperclip here. See? Zip!",
+      "case_tags": [
+        "ilustrativo"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_1",
+            "object": "concepto",
+            "label": "Magnet",
+            "group": "att"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_2",
+            "object": "concepto",
+            "label": "Paper clip",
+            "group": "att"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_1",
+            "from": "concepto_1_1",
+            "to": "concepto_1_2",
+            "style": "arrow",
+            "label": "attracts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 8,
+      "utterance_formal": "Take the magnet from your table, and please do not bang them on the desk; they break.",
+      "utterance_coloquial": "Everybody grab the magnet from your table, and don't, don't bang them on the desk, they break.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 9,
+      "utterance_formal": "Try the objects in the tray. Five minutes, in your groups.",
+      "utterance_coloquial": "Now try the stuff in the tray. Five minutes, in your groups, go.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 10,
+      "utterance_formal": "What did you find? Sofia says the nail stuck. Yes, the nail stuck, good.",
+      "utterance_coloquial": "So what did you find? Sofia says the nail stuck. The nail, yes. Good, the nail stuck.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 11,
+      "utterance_formal": "The nail, the paper clip and the screw all stuck.",
+      "utterance_coloquial": "So the nail, the paperclip and the screw, they all stuck.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_5",
+            "object": "texto",
+            "text": "Magnetic materials",
+            "role": "subtitulo",
+            "group": "stick"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_6",
+            "object": "texto",
+            "text": "Nails, paper clips and screws stick to the magnet",
+            "role": "cuerpo",
+            "group": "stick"
+          }
+        ]
+      }
+    },
+    {
+      "i": 12,
+      "utterance_formal": "Those are made of iron, or of steel, which has iron in it.",
+      "utterance_coloquial": "Those are made of iron, or steel, and steel has iron in it, yeah.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_6",
+            "set": {
+              "text": "Nails, paper clips and screws stick to the magnet, because they are made of **iron** or **steel**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 13,
+      "utterance_formal": "The nail jumped to the magnet; I saw it jump.",
+      "utterance_coloquial": "The nail jumped, it jumped to the magnet, I saw it!",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_3",
+            "object": "concepto",
+            "label": "Nail",
+            "group": "stick"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_2",
+            "from": "concepto_1_1",
+            "to": "concepto_1_3",
+            "style": "arrow",
+            "label": "attracts"
+          }
+        ]
+      }
+    },
+    {
+      "i": 14,
+      "utterance_formal": "But the eraser, the wood, the plastic ruler, the paper: nothing happened.",
+      "utterance_coloquial": "But the eraser, the wood, the plas tic ruler, the paper, nothing happened. Nothing.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_8",
+            "object": "texto",
+            "text": "Wood, plastic, paper and glass do not stick to the magnet",
+            "role": "cuerpo",
+            "group": "stick"
+          }
+        ]
+      }
+    },
+    {
+      "i": 15,
+      "utterance_formal": "They have no iron in them, so the magnet ignores them.",
+      "utterance_coloquial": "They don't have any iron inside, so the magnet just ignores them.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_8",
+            "set": {
+              "text": "Wood, plastic, paper and glass do not stick to the magnet, because they do not contain **iron**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 16,
+      "utterance_formal": "The piece of wood: nothing.",
+      "utterance_coloquial": "The piece of wood. Nothing. See?",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_4",
+            "object": "concepto",
+            "label": "Wood",
+            "group": "stick"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_3",
+            "from": "concepto_1_1",
+            "to": "concepto_1_4",
+            "style": "arrow",
+            "label": "no pull"
+          }
+        ]
+      }
+    },
+    {
+      "i": 17,
+      "utterance_formal": "The plastic ruler: nothing either.",
+      "utterance_coloquial": "And the plastic ruler, nothing either.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_5",
+            "object": "concepto",
+            "label": "Plastic",
+            "group": "stick"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_4",
+            "from": "concepto_1_1",
+            "to": "concepto_1_5",
+            "style": "arrow",
+            "label": "no pull"
+          }
+        ]
+      }
+    },
+    {
+      "i": 18,
+      "utterance_formal": "Marco, stop sticking the magnet to Pedro's jacket, please.",
+      "utterance_coloquial": "Marco, Marco, stop sticking the magnet on Pedro's jacket, please.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 19,
+      "utterance_formal": "So the nail, the clip and the screw stick; the wood, the plastic and the paper do not.",
+      "utterance_coloquial": "So, nail, clip, screw, yes; wood, plastic, paper, no.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_6",
+              "texto_1_8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 20,
+      "utterance_formal": "And careful: not every metal is magnetic. Aluminum foil is a metal, and the magnet does not care.",
+      "utterance_coloquial": "And careful, careful, not every metal is magnetic. The aluminum foil is metal and the magnet couldn't care less.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_10",
+            "object": "texto",
+            "text": "Aluminum foil is a metal, but a magnet does not attract it",
+            "role": "cuerpo",
+            "group": "stick"
+          }
+        ]
+      }
+    },
+    {
+      "i": 21,
+      "utterance_formal": "So only some metals are magnetic.",
+      "utterance_coloquial": "So only some metals, only some, are magnetic.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_10",
+            "set": {
+              "text": "Aluminum foil is a metal, but a magnet does not attract it, so only some metals are **magnetic**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 22,
+      "utterance_formal": "The foil: nothing happens.",
+      "utterance_coloquial": "The foil, nothing happens, see?",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_6",
+            "object": "concepto",
+            "label": "Aluminum foil",
+            "group": "stick"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_5",
+            "from": "concepto_1_1",
+            "to": "concepto_1_6",
+            "style": "arrow",
+            "label": "no pull"
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "utterance_formal": "Does the aluminum foil stick? Test it. Nothing, right? Nothing.",
+      "utterance_coloquial": "Does the foil stick? Test it, go. Nothing, right? Nothing at all.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 24,
+      "utterance_formal": "Every magnet has two ends, called poles: north and south.",
+      "utterance_coloquial": "Every magnet has two ends, they're called poles, north and south.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_11",
+            "object": "texto",
+            "text": "Two poles",
+            "role": "subtitulo",
+            "group": "pol"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_12",
+            "object": "texto",
+            "text": "Every magnet has two **poles**, called north and south",
+            "role": "cuerpo",
+            "group": "pol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "utterance_formal": "And the pull is strongest at the ends.",
+      "utterance_coloquial": "And the pull is, is strongest at the ends.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_12",
+            "set": {
+              "text": "Every magnet has two **poles**, called north and south, and the pull is strongest at the ends."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "utterance_formal": "One end is the north pole and the other end is the south pole.",
+      "utterance_coloquial": "One end is the north pole, the other end is the south pole.",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_7",
+            "object": "concepto",
+            "label": "North pole",
+            "group": "pol"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_8",
+            "object": "concepto",
+            "label": "South pole",
+            "group": "pol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_6",
+            "from": "concepto_1_1",
+            "to": "concepto_1_7",
+            "style": "arrow",
+            "label": "one end"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_7",
+            "from": "concepto_1_1",
+            "to": "concepto_1_8",
+            "style": "arrow",
+            "label": "other end"
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "utterance_formal": "Sometimes the magnet has a little N and a little S written on it.",
+      "utterance_coloquial": "Sometimes the magnet has a little N and a little S printed on it.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_13",
+            "object": "texto",
+            "text": "Many magnets are marked **N** and **S** at the ends.",
+            "role": "cuerpo",
+            "group": "pol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "utterance_formal": "Pick up paper clips with the middle of the magnet, and then with an end.",
+      "utterance_coloquial": "Try picking up paperclips with the middle of the magnet, and then with one end.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 29,
+      "utterance_formal": "Who got more paper clips at the end? Most of you. Right, at the ends.",
+      "utterance_coloquial": "Who got more paperclips with the end? Most of you, yeah. Right, at the ends.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 30,
+      "utterance_formal": "So the pull is strongest at the ends.",
+      "utterance_coloquial": "So the pull is strongest at the ends, remember.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_12"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 31,
+      "utterance_formal": "If you bring two magnets together, opposite poles pull toward each other.",
+      "utterance_coloquial": "If you bring two magnets close, a north and a south, they pull toward each other.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_15",
+            "object": "texto",
+            "text": "Opposite poles **attract** each other",
+            "role": "cuerpo",
+            "group": "pol"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 32,
+      "utterance_formal": "But two north poles push away from each other, and two south poles too.",
+      "utterance_coloquial": "But two norths, they push away, and two souths too, they push away.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_15",
+            "set": {
+              "text": "Opposite poles **attract** each other, while the same poles **repel**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 33,
+      "utterance_formal": "Put two magnets together and they either pull or push, depending on which ends face each other.",
+      "utterance_coloquial": "Put two magnets together and they either pull or push, it depends which ends are facing each other.",
+      "case_tags": [
+        "ilustrativo",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_9",
+            "object": "concepto",
+            "label": "Other magnet",
+            "group": "pol"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_8",
+            "from": "concepto_1_1",
+            "to": "concepto_1_9",
+            "style": "arrow",
+            "label": "attract or repel"
+          }
+        ]
+      }
+    },
+    {
+      "i": 34,
+      "utterance_formal": "Turn one magnet around and see: now it pushes.",
+      "utterance_coloquial": "Turn one magnet around, around, and see, now it pushes.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_28",
+            "object": "texto",
+            "text": "Turning one magnet around makes it push instead of pull.",
+            "role": "cuerpo",
+            "group": "pol"
+          }
+        ]
+      }
+    },
+    {
+      "i": 35,
+      "utterance_formal": "Did you feel it? Like an invisible hand. Cool, right?",
+      "utterance_coloquial": "Did you feel that? Like an invisible hand. Cool, right? Super cool.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 36,
+      "utterance_formal": "A magnet can pull an object without touching it.",
+      "utterance_coloquial": "A magnet can pull things without even, you know, touching them.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_16",
+            "object": "texto",
+            "text": "Force at a distance",
+            "role": "subtitulo",
+            "group": "dis"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_17",
+            "object": "texto",
+            "text": "A magnet can pull an object without **touching** it",
+            "role": "cuerpo",
+            "group": "dis"
+          }
+        ]
+      }
+    },
+    {
+      "i": 37,
+      "utterance_formal": "It works across the air, and even through a sheet of paper.",
+      "utterance_coloquial": "It works through the air, and even through a sheet of paper.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_17",
+            "set": {
+              "text": "A magnet can pull an object without **touching** it, even through a sheet of paper."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 38,
+      "utterance_formal": "Put a paper clip on the paper and the magnet underneath. See it move?",
+      "utterance_coloquial": "I put a paperclip on the paper and the magnet underneath. See it move? It moves!",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 39,
+      "utterance_formal": "The Earth is like a giant magnet. That is why a compass works.",
+      "utterance_coloquial": "The Earth is like a giant magnet. That's why a, a compass works, a come pass.",
+      "case_tags": [
+        "texto-primero",
+        "ruido-asr",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_19",
+            "object": "texto",
+            "text": "A compass needle is a small **magnet** that points north",
+            "role": "cuerpo",
+            "group": "dis"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 40,
+      "utterance_formal": "The Earth itself acts like a giant magnet and pulls the needle.",
+      "utterance_coloquial": "The Earth itself acts like a giant magnet and it pulls on the needle.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_19",
+            "set": {
+              "text": "A compass needle is a small **magnet** that points north, because the Earth itself acts like a giant magnet."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 41,
+      "utterance_formal": "The Earth pulls on the needle of the compass.",
+      "utterance_coloquial": "The Earth pulls on the little needle of the compass, see?",
+      "case_tags": [
+        "ilustrativo",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "concepto_1_10",
+            "object": "concepto",
+            "label": "Earth",
+            "group": "dis"
+          },
+          {
+            "op": "add",
+            "id": "concepto_1_11",
+            "object": "concepto",
+            "label": "Compass",
+            "group": "dis"
+          },
+          {
+            "op": "connect",
+            "id": "connect_1_9",
+            "from": "concepto_1_10",
+            "to": "concepto_1_11",
+            "style": "arrow",
+            "label": "pulls the needle"
+          }
+        ]
+      }
+    },
+    {
+      "i": 42,
+      "utterance_formal": "Sailors crossed the sea with compasses long, long ago.",
+      "utterance_coloquial": "Sailors crossed the sea with compasses, long, long ago.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    },
+    {
+      "i": 43,
+      "utterance_formal": "Magnets keep fridge doors shut and hold notes on the door.",
+      "utterance_coloquial": "Magnets keep the fridge door shut, and hold your notes up on the door.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_20",
+            "object": "texto",
+            "text": "Magnets at home",
+            "role": "subtitulo",
+            "group": "uso"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_21",
+            "object": "texto",
+            "text": "Magnets keep fridge doors shut and hold notes on the door",
+            "role": "cuerpo",
+            "group": "uso"
+          }
+        ]
+      }
+    },
+    {
+      "i": 44,
+      "utterance_formal": "In scrapyards, cranes with huge magnets lift heavy pieces of steel.",
+      "utterance_coloquial": "In scrapyards, cranes with huge magnets lift heavy pieces of steel, whole cars even.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_21",
+            "set": {
+              "text": "Magnets keep fridge doors shut and hold notes on the door, and cranes with big magnets lift heavy pieces of **steel**."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 45,
+      "utterance_formal": "Some backpacks have a little magnet in the flap, check yours.",
+      "utterance_coloquial": "Some backpacks have a little magnet in the flap, check yours later.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "update",
+            "ref": "texto_1_21",
+            "set": {
+              "text": "Magnets keep fridge doors shut and hold notes on the door, and cranes with big magnets lift heavy pieces of **steel**. Some backpacks close with a magnet in the flap."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "i": 46,
+      "utterance_formal": "If you cut a magnet in two, each piece has its own north and south pole.",
+      "utterance_coloquial": "If you cut a magnet in two, each little piece has its own north and its own south.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_23",
+            "object": "texto",
+            "text": "If a magnet is cut in two, each piece is a new **magnet** with its own north and south poles.",
+            "role": "cuerpo",
+            "group": "pol"
+          }
+        ]
+      },
+      "parrafo_nuevo": "giro"
+    },
+    {
+      "i": 47,
+      "utterance_formal": "So opposite poles pull and equal poles push.",
+      "utterance_coloquial": "So, remember, opposite poles pull and equal poles push.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "texto_1_15"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 48,
+      "utterance_formal": "So, back to our question: things with iron stick to a magnet, and wood, plastic and paper do not.",
+      "utterance_coloquial": "So, back to our question, what do we say? Things with iron stick, and wood, plastic and paper don't.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_25",
+            "object": "texto",
+            "text": "Things made of **iron** stick to a magnet; wood, plastic and paper do not.",
+            "role": "cuerpo",
+            "group": "stick"
+          }
+        ]
+      }
+    },
+    {
+      "i": 49,
+      "utterance_formal": "Let us check: the nail yes, the wood no, the plastic no, the foil no.",
+      "utterance_coloquial": "Let's check: nail, yes; wood, no; plastic, no; foil, no.",
+      "case_tags": [
+        "recap-highlight"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "highlight",
+            "refs": [
+              "concepto_1_3",
+              "concepto_1_4",
+              "concepto_1_5",
+              "concepto_1_6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "i": 50,
+      "utterance_formal": "For homework, find three things at home that stick to a magnet, and three that do not.",
+      "utterance_coloquial": "For homework, find three things at home that stick to a magnet and three that don't.",
+      "case_tags": [
+        "texto-primero",
+        "estado-denso"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": [
+          {
+            "op": "add",
+            "id": "texto_1_26",
+            "object": "texto",
+            "text": "Homework",
+            "role": "subtitulo",
+            "group": "tar"
+          },
+          {
+            "op": "add",
+            "id": "texto_1_27",
+            "object": "texto",
+            "text": "Find three things at home that stick to a magnet. Find three that do not.",
+            "role": "cuerpo",
+            "group": "tar"
+          }
+        ]
+      }
+    },
+    {
+      "i": 51,
+      "utterance_formal": "Great work today. Pack your things.",
+      "utterance_coloquial": "Great work today, really. Pack your things, pack up.",
+      "case_tags": [
+        "no-op"
+      ],
+      "envelope": {
+        "schema_version": "1.0",
+        "operations": []
+      }
+    }
+  ]
+}
