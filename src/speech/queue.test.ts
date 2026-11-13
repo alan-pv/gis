@@ -121,10 +121,10 @@ describe('markDiscarded', () => {
 describe('markError', () => {
   it('sets status error with the message', () => {
     const a = item({ id: 'a', status: 'processing' })
-    const result = markError([a], 'a', 'timeout del intérprete')
+    const result = markError([a], 'a', 'interpreter timeout')
     const updated = result.find((i) => i.id === 'a')
     expect(updated?.status).toBe('error')
-    expect(updated?.error).toBe('timeout del intérprete')
+    expect(updated?.error).toBe('interpreter timeout')
   })
 
   it('does not mutate the input queue', () => {

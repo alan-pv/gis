@@ -177,7 +177,7 @@ describe('buildTimeline', () => {
     // The word no longer travels in the animation step (it lives in SceneHighlight)
     const events: SceneEvent[] = [{
       type: 'highlight',
-      highlights: [{ id: HL1, ref: 'def_1', word: 'evaporación' }],
+      highlights: [{ id: HL1, ref: 'def_1', word: 'evaporation' }],
     }]
     const steps = buildTimeline(events, makeScene())
 
@@ -329,7 +329,7 @@ describe('buildTimeline', () => {
     const events: SceneEvent[] = [{ type: 'set_label', ref: 'nube_1' }]
     const scene = makeScene({
       objects: new Map([['nube_1', {
-        id: 'nube_1', object: 'concepto', label: 'condensación', text: null,
+        id: 'nube_1', object: 'concepto', label: 'condensation', text: null,
         role: null, box: { x: 0, y: 0, width: 160, height: 100 },
       }]]),
     })
@@ -340,7 +340,7 @@ describe('buildTimeline', () => {
     expect(typeStep).toMatchObject({
       kind: 'type_text',
       targetId: 'nube_1__label',
-      text: 'condensación',
+      text: 'condensation',
     })
   })
 

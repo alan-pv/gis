@@ -62,14 +62,14 @@ describe('estimateTextSize', () => {
 
 describe('estimateTextSize — roles', () => {
   it('titulo measures taller than cuerpo for the same text (fontSize 28 > 18)', () => {
-    const text = 'El ciclo del agua'
+    const text = 'The water cycle'
     const { height: heightTitle } = estimateTextSize(text, MAX_CONTENT_WIDTH, 'titulo')
     const { height: heightBody } = estimateTextSize(text, MAX_CONTENT_WIDTH, 'cuerpo')
     expect(heightTitle).toBeGreaterThan(heightBody)
   })
 
   it('lista with 3 lines measures 3 items with a "• " marker prefixed', () => {
-    const text = 'Mamíferos\nAves\nPeces'
+    const text = 'Mammals\nBirds\nFish'
     const { height } = estimateTextSize(text, MAX_CONTENT_WIDTH, 'lista')
     const threeLineHeight = Math.ceil(3 * ROLE_STYLE['lista'].fontSize * TEXT_LINE_HEIGHT) + 2 * TEXT_PADDING
     expect(height).toBe(threeLineHeight)
@@ -136,7 +136,7 @@ describe('markerizeText — list/enumeration markers', () => {
   })
 
   it('roles without a marker (cuerpo/subtitulo/titulo/nota): text unchanged', () => {
-    expect(markerizeText('Sólido', 'subtitulo')).toBe('Sólido')
+    expect(markerizeText('Solid', 'subtitulo')).toBe('Solid')
     expect(markerizeText('cuerpo normal', 'cuerpo')).toBe('cuerpo normal')
     expect(markerizeText('x', undefined)).toBe('x') // default 'cuerpo'
   })
@@ -184,7 +184,7 @@ describe('fitTitleFontSize', () => {
   })
 
   it('monotonicity: more available width → fontSize ≥', () => {
-    const text = 'El ciclo del agua en la naturaleza'
+    const text = 'The water cycle in nature'
     const fs1 = fitTitleFontSize(text, 300)
     const fs2 = fitTitleFontSize(text, 600)
     expect(fs2).toBeGreaterThanOrEqual(fs1)
@@ -198,7 +198,7 @@ describe('fitTitleFontSize', () => {
   })
 
   it('returns an integer', () => {
-    const result = fitTitleFontSize('Texto de prueba del pizarrón', 400)
+    const result = fitTitleFontSize('Test text on the board', 400)
     expect(Number.isInteger(result)).toBe(true)
   })
 })
@@ -210,7 +210,7 @@ describe('estimateTextSize — role titulo', () => {
   const MAX_CW_BOARD = 1136
 
   it('height = a single line at the fittedFontSize', () => {
-    const text = 'El ciclo del agua'
+    const text = 'The water cycle'
     const fittedFontSize = fitTitleFontSize(text, MAX_CW_BOARD)
     const expectedHeight = Math.ceil(fittedFontSize * TEXT_LINE_HEIGHT) + 2 * TEXT_PADDING
     const { height } = estimateTextSize(text, MAX_CW_BOARD, 'titulo')
@@ -227,15 +227,15 @@ describe('estimateTextSize — role titulo', () => {
   })
 
   it('text with \\n does not produce 2 lines (treated as a single line)', () => {
-    const { height: h1 } = estimateTextSize('Línea 1', MAX_CW_BOARD, 'titulo')
-    const { height: h2 } = estimateTextSize('Línea 1\nLínea 2', MAX_CW_BOARD, 'titulo')
+    const { height: h1 } = estimateTextSize('Line 1', MAX_CW_BOARD, 'titulo')
+    const { height: h2 } = estimateTextSize('Line 1\nLine 2', MAX_CW_BOARD, 'titulo')
     // Both must produce the height of a SINGLE line.
     expect(h1).toBe(h2)
   })
 
   it('short title in a wide width → natural width SMALLER than a long title (natural width, not full-width)', () => {
     const { width: w1 } = estimateTextSize('Hola', MAX_CW_BOARD, 'titulo')
-    const { width: w2 } = estimateTextSize('Un título bastante más largo que el anterior', MAX_CW_BOARD, 'titulo')
+    const { width: w2 } = estimateTextSize('A title quite a bit longer than the previous one', MAX_CW_BOARD, 'titulo')
     expect(w1).toBeLessThan(w2)
   })
 })

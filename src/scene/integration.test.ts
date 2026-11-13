@@ -131,7 +131,7 @@ describe('integration — water-cycle mini-script', () => {
           from: 'mar_1',
           to: 'nube_1',
           style: 'arrow',
-          label: 'evaporación',
+          label: 'evaporation',
         },
       ] as Operation[],
     }
@@ -145,7 +145,7 @@ describe('integration — water-cycle mini-script', () => {
     const eva = scene.connections.get('flecha_eva')!
     expect(eva.from).toBe('mar_1')
     expect(eva.to).toBe('nube_1')
-    expect(eva.label).toBe('evaporación')
+    expect(eva.label).toBe('evaporation')
     // curve, from_anchor, to_anchor are not set from the op (the app handles them)
     checkNoCollisions(scene)
 
@@ -155,7 +155,7 @@ describe('integration — water-cycle mini-script', () => {
     const env3 = {
       schema_version: '1.0',
       operations: [
-        { op: 'label', ref: 'nube_1', text: 'condensación' },
+        { op: 'label', ref: 'nube_1', text: 'condensation' },
         { op: 'highlight', refs: ['nube_1', 'flecha_eva'] },
       ] as Operation[],
     }
@@ -164,7 +164,7 @@ describe('integration — water-cycle mini-script', () => {
     scene = r3.scene
     allEvents.push(...r3.events)
 
-    expect(scene.objects.get('nube_1')!.label).toBe('condensación')
+    expect(scene.objects.get('nube_1')!.label).toBe('condensation')
     // labelPlacement is not set from the op (the app handles it)
     const highlightEvt = r3.events.find((e) => e.type === 'highlight') as
       | { type: 'highlight'; highlights: Array<{ id: string; ref: string; word?: string }> }
@@ -191,7 +191,7 @@ describe('integration — water-cycle mini-script', () => {
           from: 'nube_1',
           to: 'lluvia_1',
           style: 'arrow',
-          label: 'precipitación',
+          label: 'precipitation',
         },
       ] as Operation[],
     }
@@ -232,7 +232,7 @@ describe('integration — water-cycle mini-script', () => {
     // ── sceneToAgentState parses correctly ────────────────────────────────
 
     const agentState = sceneToAgentState(scene, CANVAS, [
-      'y cuando las nubes se llenan, cae la lluvia',
+      'and when the clouds fill up, the rain falls',
     ])
     const parseResult = CanvasStateSchema.safeParse(agentState)
     expect(parseResult.success).toBe(true)
@@ -276,7 +276,7 @@ describe('integration — water-cycle mini-script', () => {
       {
         schema_version: '1.0',
         operations: [
-          { op: 'connect', id: 'f1', from: 'NADA', to: 'TAMBIÉN_NADA', style: 'arrow' },
+          { op: 'connect', id: 'f1', from: 'NOTHING', to: 'ALSO_NOTHING', style: 'arrow' },
         ],
       },
       ctx,
@@ -342,7 +342,7 @@ describe('integration — add texto role:titulo', () => {
         id: 'titulo_1_1',
         object: 'texto',
         role: 'titulo',
-        text: 'El ciclo del agua',
+        text: 'The water cycle',
       } as Operation,
     ], localEnv)
 
@@ -369,7 +369,7 @@ describe('integration — add texto role:titulo', () => {
         id: 'titulo_1_1',
         object: 'texto',
         role: 'titulo',
-        text: 'Clasificación de los animales vertebrados e invertebrados',
+        text: 'Classification of vertebrate and invertebrate animals',
       } as Operation,
     ], localEnv)
 

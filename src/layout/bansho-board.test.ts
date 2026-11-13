@@ -15,7 +15,7 @@ function nonText(id: string, group: string | null = null): BoardItem {
   return { id, isText: false, group }
 }
 /** Helper for items with role === 'titulo'. */
-function titulo(id: string): BoardItem {
+function titleItem(id: string): BoardItem {
   return { id, isText: true, group: null, role: 'titulo' }
 }
 
@@ -276,7 +276,7 @@ describe('planBoard — gather', () => {
   it('title and opening are unaffected by gather (they are not part of the body)', () => {
     // Title and opening follow their own logic; gather only affects the body.
     const items: BoardItem[] = [
-      titulo('h_1'),
+      titleItem('h_1'),
       text('ap_1'),
       text('c_1', 'gA'),
       text('c_2', 'gB'),
@@ -298,7 +298,7 @@ describe('planBoard — gather', () => {
 describe('planBoard — late title', () => {
   it('a title that arrives mid-lesson goes to the band and does not alter the rest of the plan', () => {
     const noTitle: BoardItem[] = [text('a_1'), text('a_2'), nonText('fig_1')]
-    const withTitle: BoardItem[] = [text('a_1'), text('a_2'), titulo('h1_1'), nonText('fig_1')]
+    const withTitle: BoardItem[] = [text('a_1'), text('a_2'), titleItem('h1_1'), nonText('fig_1')]
     const base = planBoard(noTitle)
     const plan = planBoard(withTitle)
     expect(plan.title).toEqual(['h1_1'])
@@ -307,7 +307,7 @@ describe('planBoard — late title', () => {
   })
 
   it('a second late title (one already exists) flows as normal text', () => {
-    const plan = planBoard([titulo('h1_1'), text('a_1'), titulo('h1_2')])
+    const plan = planBoard([titleItem('h1_1'), text('a_1'), titleItem('h1_2')])
     expect(plan.title).toEqual(['h1_1'])
     expect([...plan.opening, ...plan.blocks.flatMap((b) => b.members)]).toContain('h1_2')
   })
@@ -316,7 +316,7 @@ describe('planBoard — late title', () => {
 describe('planBoard — role titulo', () => {
   it('a single titulo goes to title, the rest follows the normal logic', () => {
     const items: BoardItem[] = [
-      titulo('h1_1'),
+      titleItem('h1_1'),
       text('def_1'),
       nonText('fig_1'),
     ]
@@ -329,8 +329,8 @@ describe('planBoard — role titulo', () => {
 
   it('two consecutive titulos: only the 1st goes to the band; the 2nd goes to the opening strip', () => {
     const items: BoardItem[] = [
-      titulo('h1_1'),
-      titulo('h1_2'),
+      titleItem('h1_1'),
+      titleItem('h1_2'),
       text('cuerpo_1'),
     ]
     expect(planBoard(items)).toEqual({
@@ -349,7 +349,7 @@ describe('planBoard — role titulo', () => {
 
   it('titulo followed by a grouped item (no opening): empty opening', () => {
     const items: BoardItem[] = [
-      titulo('h1_1'),
+      titleItem('h1_1'),
       text('a_1', 'gA'),
     ]
     expect(planBoard(items)).toEqual({
@@ -360,7 +360,7 @@ describe('planBoard — role titulo', () => {
   })
 
   it('titulo goes neither to opening nor to blocks: only to title', () => {
-    const items: BoardItem[] = [titulo('h1_1')]
+    const items: BoardItem[] = [titleItem('h1_1')]
     const plan = planBoard(items)
     expect(plan.title).toEqual(['h1_1'])
     expect(plan.opening).toEqual([])

@@ -304,12 +304,12 @@ describe('documentToAgentState', () => {
 
   it('the agent state parses against CanvasStateSchema', () => {
     const doc = newDocument()
-    const state = documentToAgentState(doc, CANVAS, ['el sol calienta el agua'])
+    const state = documentToAgentState(doc, CANVAS, ['the sun heats the water'])
     expect(() => CanvasStateSchema.parse(state)).not.toThrow()
   })
 
   it('recent_utterances is passed through unmodified (global window)', () => {
-    const utterances = ['el sol calienta', 'el agua se evapora']
+    const utterances = ['the sun heats', 'the water evaporates']
     const doc = newDocument()
     const state = documentToAgentState(doc, CANVAS, utterances)
     expect(state.recent_utterances).toEqual(utterances)

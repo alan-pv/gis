@@ -7,7 +7,7 @@
  *                                      envelope, case_tags }> }
  *
  * Exports `loadSeeds(): LoadedSeed[]`: "The food chain" first, the rest by
- * alphabetical title. The legacy golden examples (src/__fixtures__) are not listed.
+ * alphabetical title. The golden examples (test fixtures in src/__fixtures__) are not listed.
  *
  * Defensive rules:
  *   - A turn without an envelope is skipped with console.warn; it does not throw.

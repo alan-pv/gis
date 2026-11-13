@@ -13,7 +13,7 @@ describe('loadSeeds()', () => {
     expect(seeds.length).toBeGreaterThanOrEqual(3)
   })
 
-  it('does not list the legacy golden examples', () => {
+  it('does not list the golden example fixtures', () => {
     const ids = seeds.map(s => s.id)
     expect(ids).not.toContain('dorado-1')
     expect(ids).not.toContain('dorado-2')

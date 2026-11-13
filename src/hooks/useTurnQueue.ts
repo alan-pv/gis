@@ -167,7 +167,7 @@ export function useTurnQueue({
   const enqueuePhrase = useCallback((
     text: string,
     source: QueueItem['source'],
-    datos: {
+    stats: {
       audioMs: number | null
       sttMs: number | null
       /** STT provider that produced `text`. undefined = not applicable (typed phrase). */
@@ -190,11 +190,11 @@ export function useTurnQueue({
       status: 'pending',
       ts: Date.now(),
       source,
-      audioMs: datos.audioMs,
-      sttMs: datos.sttMs,
-      stt: datos.stt ?? null,
-      sttFirstPartialMs: datos.sttFirstPartialMs ?? null,
-      earlyCut: datos.earlyCut ?? null,
+      audioMs: stats.audioMs,
+      sttMs: stats.sttMs,
+      stt: stats.stt ?? null,
+      sttFirstPartialMs: stats.sttFirstPartialMs ?? null,
+      earlyCut: stats.earlyCut ?? null,
       gateReason: null,
       llmMs: null,
       applyMs: null,

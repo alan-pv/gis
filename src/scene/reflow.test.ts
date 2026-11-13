@@ -28,7 +28,7 @@ function heightUsedRatio(boxes: ReadonlyMap<string, BBox>, canvas: Canvas): numb
 import { newDocument, activeScene } from '@/document/index.js'
 import { applyToActivePage } from '@/document/apply.js'
 import { defaultAreaTree } from '@/layout/index.js'
-import dorado2 from '../__fixtures__/golden-2.json'
+import golden2 from '../__fixtures__/golden-2.json'
 
 const CANVAS = { width: 1200, height: 800 }
 
@@ -70,7 +70,7 @@ function boxesOfScene(scene: Scene): Map<string, BBox> {
 
 describe('reflowScene', () => {
   it('golden #2: vertical-first reflow produces the same ratio as the live packing', () => {
-    const scene = replay(dorado2 as FixtureEntry[])
+    const scene = replay(golden2 as FixtureEntry[])
 
     // Vertical-first fill with semantic gaps. Groups are gathered (2 contiguous
     // blocks instead of 4 fragmented ones), so the result is more compact
@@ -84,7 +84,7 @@ describe('reflowScene', () => {
   })
 
   it('does not mutate the input scene', () => {
-    const scene = replay(dorado2 as FixtureEntry[])
+    const scene = replay(golden2 as FixtureEntry[])
     const before = boxesOfScene(scene)
     const snapshot = new Map<string, BBox>()
     for (const [id, b] of before) snapshot.set(id, { ...b })
@@ -98,7 +98,7 @@ describe('reflowScene', () => {
   })
 
   it('keeps connections and groups, and all objects', () => {
-    const scene = replay(dorado2 as FixtureEntry[])
+    const scene = replay(golden2 as FixtureEntry[])
     const reflowed = reflowScene(scene, CANVAS)
 
     expect([...reflowed.objects.keys()].sort()).toEqual([...scene.objects.keys()].sort())
@@ -163,7 +163,7 @@ describe('reflowScene — the page areaTree overrides the layout', () => {
   })
 
   it('falls back to defaultAreaTree(3) when no areaTree is passed', () => {
-    const scene = replay(dorado2 as FixtureEntry[])
+    const scene = replay(golden2 as FixtureEntry[])
     const withDefault = reflowScene(scene, CANVAS)
     const with3Explicit = reflowScene(scene, CANVAS, defaultAreaTree(3))
 
@@ -189,7 +189,7 @@ describe('applyToActivePage — live vs slide policy', () => {
   }
 
   it('live: vertical-first fill with semantic gaps (heightUsedRatio ≈ 0.5)', () => {
-    const doc = replayDoc(dorado2 as FixtureEntry[], 'live')
+    const doc = replayDoc(golden2 as FixtureEntry[], 'live')
     // Real groups packed tight (WITHIN_GROUP_GAP=-8) + inter-block gap (GROUP_GAP=16).
     // Gather: 2 blocks instead of 4 fragmented → more compact (≈ 0.5,
     // the English corpus is short).
@@ -198,7 +198,7 @@ describe('applyToActivePage — live vs slide policy', () => {
 
   it('slide: vertical-first fill with semantic gaps (heightUsedRatio ≈ 0.5, same as live)', () => {
     // Live and slide produce the same ratio (gather is consistent in both modes).
-    const doc = replayDoc(dorado2 as FixtureEntry[], 'slide')
+    const doc = replayDoc(golden2 as FixtureEntry[], 'slide')
     expect(heightUsedRatio(boxesOfScene(activeScene(doc)), CANVAS)).toBeCloseTo(0.5, 1)
   })
 })

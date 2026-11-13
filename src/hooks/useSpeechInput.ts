@@ -20,7 +20,7 @@ import { SIDECAR_OFFLINE_MESSAGE } from '@/demo/demo-mode.js'
 type EnqueuePhrase = (
   text: string,
   source: QueueItem['source'],
-  datos: {
+  stats: {
     audioMs: number | null
     sttMs: number | null
     stt?: 'webspeech' | null

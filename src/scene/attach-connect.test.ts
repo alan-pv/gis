@@ -123,25 +123,25 @@ describe('attach fallback: figure next to the target when the attachment is reve
   it('with the column full the attached figure continues at the top of the next column without moving anything (the attachment is no longer reverted)', () => {
     const s0 = fullColumn()
     const ops = [fig('c_1'), conn('f_1', 'c_1', 'a_19')]
-    const sin = applyOperations(s0, ops, { ...env, fallbackNearTarget: false })
-    const con = applyOperations(s0, ops, env)
-    expect(sin.warnings).toEqual([])
-    expect(con.warnings).toEqual([])
+    const withoutFallback = applyOperations(s0, ops, { ...env, fallbackNearTarget: false })
+    const withFallback = applyOperations(s0, ops, env)
+    expect(withoutFallback.warnings).toEqual([])
+    expect(withFallback.warnings).toEqual([])
     // The section splits across columns: the attachment is kept and no fallback is needed.
-    for (const r of [sin, con]) {
+    for (const r of [withoutFallback, withFallback]) {
       expect(r.scene.objects.get('c_1')!.layoutAttach).toBe('gA')
       expect(r.scene.objects.get('c_1')!.layoutNear).toBeUndefined()
     }
     // Nothing already placed moves (neither x nor y).
-    for (const [id, o] of s0.objects) expect(box(con.scene, id)).toEqual(o.box)
+    for (const [id, o] of s0.objects) expect(box(withFallback.scene, id)).toEqual(o.box)
     // The figure follows the group into the next column, colliding with nothing.
-    const c = box(con.scene, 'c_1')
-    expect(c.x).toBeGreaterThanOrEqual(box(con.scene, 'a_19').x)
-    expect(c.y).toBeGreaterThan(box(con.scene, 'a_19').y)
-    for (const [id, o] of con.scene.objects) if (id !== 'c_1') expect(overlap(c, o.box)).toBe(false)
+    const c = box(withFallback.scene, 'c_1')
+    expect(c.x).toBeGreaterThanOrEqual(box(withFallback.scene, 'a_19').x)
+    expect(c.y).toBeGreaterThan(box(withFallback.scene, 'a_19').y)
+    for (const [id, o] of withFallback.scene.objects) if (id !== 'c_1') expect(overlap(c, o.box)).toBe(false)
     // Membership in the scene and in the agent state is intact.
-    expect(con.scene.groups.get('gA')!.members).toHaveLength(19)
-    expect(JSON.stringify(sceneToAgentState(con.scene, CANVAS, []))).not.toContain('layoutNear')
+    expect(withFallback.scene.groups.get('gA')!.members).toHaveLength(19)
+    expect(JSON.stringify(sceneToAgentState(withFallback.scene, CANVAS, []))).not.toContain('layoutNear')
   })
 
   it('is stable under later adds and a later connect does not move it', () => {

@@ -257,7 +257,7 @@ describe('connect', () => {
           from: 'mar_1',
           to: 'nube_1',
           style: 'arrow',
-          label: 'evaporación',
+          label: 'evaporation',
           // curve, from_anchor, to_anchor are not declared in the op
         },
       ],
@@ -268,7 +268,7 @@ describe('connect', () => {
     expect(conn!.from).toBe('mar_1')
     expect(conn!.to).toBe('nube_1')
     expect(conn!.style).toBe('arrow')
-    expect(conn!.label).toBe('evaporación')
+    expect(conn!.label).toBe('evaporation')
     expect(eventTypes(events)).toContain('draw_connection')
   })
 
@@ -311,12 +311,12 @@ describe('label', () => {
       emptyScene(),
       [
         { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
-        { op: 'label', ref: 'nube_1', text: 'condensación' },
+        { op: 'label', ref: 'nube_1', text: 'condensation' },
       ],
       ENV,
     )
     const obj = scene.objects.get('nube_1')!
-    expect(obj.label).toBe('condensación')
+    expect(obj.label).toBe('condensation')
     expect(eventTypes(events)).toContain('set_label')
   })
 
@@ -327,11 +327,11 @@ describe('label', () => {
         { op: 'add', id: 'mar_1', object: 'concepto', label: 'mar' },
         { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'mar_1', to: 'nube_1', style: 'arrow' },
-        { op: 'label', ref: 'f1', text: 'evaporación' },
+        { op: 'label', ref: 'f1', text: 'evaporation' },
       ],
       ENV,
     )
-    expect(scene.connections.get('f1')!.label).toBe('evaporación')
+    expect(scene.connections.get('f1')!.label).toBe('evaporation')
   })
 
   it('applies a label to a group', () => {
@@ -341,11 +341,11 @@ describe('label', () => {
         { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'] },
-        { op: 'label', ref: 'ciclo', text: 'ciclo del agua' },
+        { op: 'label', ref: 'ciclo', text: 'water cycle' },
       ],
       ENV,
     )
-    expect(scene.groups.get('ciclo')!.label).toBe('ciclo del agua')
+    expect(scene.groups.get('ciclo')!.label).toBe('water cycle')
   })
 })
 
@@ -424,11 +424,11 @@ describe('update', () => {
         { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'group', id: 'cielo', members: ['sol_1', 'nube_1'] },
-        { op: 'update', ref: 'cielo', set: { label: 'el cielo' } },
+        { op: 'update', ref: 'cielo', set: { label: 'the sky' } },
       ],
       ENV,
     )
-    expect(scene.groups.get('cielo')!.label).toBe('el cielo')
+    expect(scene.groups.get('cielo')!.label).toBe('the sky')
     // Members get no label from this operation
     expect(scene.objects.get('sol_1')!.label).toBe('sol')
   })
@@ -558,7 +558,7 @@ describe('group / ungroup', () => {
       [
         { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
-        { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'], label: 'ciclo del agua' },
+        { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'], label: 'water cycle' },
       ],
       ENV,
     )
@@ -566,7 +566,7 @@ describe('group / ungroup', () => {
     expect(grp).toBeDefined()
     expect(grp.members).toContain('sol_1')
     expect(grp.members).toContain('nube_1')
-    expect(grp.label).toBe('ciclo del agua')
+    expect(grp.label).toBe('water cycle')
     expect(eventTypes(events)).toContain('group')
   })
 
@@ -660,7 +660,7 @@ describe('event order', () => {
         { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow' },
-        { op: 'label', ref: 'f1', text: 'evaporación' },
+        { op: 'label', ref: 'f1', text: 'evaporation' },
         { op: 'highlight', refs: ['sol_1', 'f1'] },
         { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'] },
       ],
@@ -799,7 +799,7 @@ describe('sceneToAgentState', () => {
         { op: 'add', id: 'sol_1', object: 'concepto', label: 'sol' },
         { op: 'add', id: 'nube_1', object: 'concepto', label: 'nube' },
         { op: 'connect', id: 'f1', from: 'sol_1', to: 'nube_1', style: 'arrow', label: 'evap' },
-        { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'], label: 'ciclo del agua' },
+        { op: 'group', id: 'ciclo', members: ['sol_1', 'nube_1'], label: 'water cycle' },
       ],
       ENV,
     )
@@ -830,8 +830,8 @@ describe('sceneToAgentState', () => {
   })
 
   it('recent_utterances are included as is', () => {
-    const state = sceneToAgentState(emptyScene(), CANVAS, ['frase uno', 'frase dos'])
-    expect(state.recent_utterances).toEqual(['frase uno', 'frase dos'])
+    const state = sceneToAgentState(emptyScene(), CANVAS, ['phrase one', 'phrase two'])
+    expect(state.recent_utterances).toEqual(['phrase one', 'phrase two'])
   })
 
   it('connections with a null label are included correctly', () => {
@@ -900,7 +900,7 @@ describe('sceneToAgentState', () => {
           id: 'txt_3',
           object: 'texto',
           text: 'contenido',
-          label: 'anotación',
+          label: 'annotation',
         },
       ],
       ENV,
@@ -919,7 +919,7 @@ describe('sceneToAgentState', () => {
           op: 'add',
           id: 'sol_99',
           object: 'concepto',
-          label: 'el sol',
+          label: 'the sun',
         },
       ],
       ENV,
@@ -927,7 +927,7 @@ describe('sceneToAgentState', () => {
     const state = sceneToAgentState(scene, CANVAS, [])
     const obj = state.objects.find((o) => o.id === 'sol_99')
     expect(obj).toBeDefined()
-    expect(obj!.label).toBe('el sol')
+    expect(obj!.label).toBe('the sun')
   })
 })
 
@@ -973,13 +973,13 @@ describe('highlight', () => {
     const { scene: s1 } = applyOperations(
       emptyScene(),
       [
-        { op: 'add', id: 'def_1', object: 'texto', text: 'La evaporación es un proceso' },
+        { op: 'add', id: 'def_1', object: 'texto', text: 'La evaporation es un proceso' },
       ],
       ENV,
     )
     const { scene: s2, events } = applyOperations(
       s1,
-      [{ op: 'highlight', refs: [{ ref: 'def_1', word: 'evaporación' }] }],
+      [{ op: 'highlight', refs: [{ ref: 'def_1', word: 'evaporation' }] }],
       ENV,
     )
     const hEvent = events.find((e) => e.type === 'highlight') as
@@ -988,11 +988,11 @@ describe('highlight', () => {
     expect(hEvent).toBeDefined()
     expect(hEvent!.highlights).toHaveLength(1)
     expect(hEvent!.highlights[0]!.ref).toBe('def_1')
-    expect(hEvent!.highlights[0]!.word).toBe('evaporación')
+    expect(hEvent!.highlights[0]!.word).toBe('evaporation')
     // The SceneHighlight also has the word
     const hl = Array.from(s2.highlights.values())[0]
     expect(hl).toBeDefined()
-    expect(hl!.word).toBe('evaporación')
+    expect(hl!.word).toBe('evaporation')
     expect(hl!.ref).toBe('def_1')
   })
 
