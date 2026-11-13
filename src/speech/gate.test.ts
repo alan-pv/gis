@@ -8,10 +8,10 @@ import { gateClause } from './gate.js'
 describe('gateClause', () => {
   // 1. A drawable clause passes with reason ok.
   it('drawable clause passes with reason ok', () => {
-    const result = gateClause('el sol calienta el mar')
+    const result = gateClause('the sun heats the sea')
     expect(result.pass).toBe(true)
     expect(result.reason).toBe('ok')
-    // 'sol', 'calienta', 'mar' — articles are ignored
+    // 'sun', 'heats', 'sea' — articles are ignored
     expect(result.contentWords).toBe(3)
   })
 
@@ -27,9 +27,9 @@ describe('gateClause', () => {
   })
 
   // 3. Only fillers → no-content.
-  // "o sea" tokenizes as "o"+"sea", both in the list.
+  // Every token ("uh", "this", "well", "um") is in the list.
   it('only fillers → no-content', () => {
-    const result = gateClause('eh, este, o sea, pues')
+    const result = gateClause('uh, this, well, um')
     expect(result.pass).toBe(false)
     expect(result.reason).toBe('no-content')
     expect(result.contentWords).toBe(0)
@@ -37,38 +37,38 @@ describe('gateClause', () => {
 
   // 4. A lone interjection → no-content.
   it('lone interjection → no-content', () => {
-    const result = gateClause('ajá')
+    const result = gateClause('hmm')
     expect(result.pass).toBe(false)
     expect(result.reason).toBe('no-content')
   })
 
   // 5. A single content word passes.
   it('a single content word passes', () => {
-    const result = gateClause('nubes')
+    const result = gateClause('clouds')
     expect(result.pass).toBe(true)
     expect(result.contentWords).toBe(1)
   })
 
   // 6. A phrase with a motion verb passes.
   it('phrase with a motion verb passes', () => {
-    // 'y' is ignored; 'sube' is content
-    const result = gateClause('y sube')
+    // 'and' is ignored; 'rises' is content
+    const result = gateClause('and rises')
     expect(result.pass).toBe(true)
   })
 
   // 7. ASR noise passes and is NOT modified.
   it('ASR noise passes and is NOT modified', () => {
-    const t = 'eba oración'
+    const t = 'eva poration'
     const result = gateClause(t)
     expect(result.pass).toBe(true)
     // The input must not have been mutated
-    expect(t).toBe('eba oración')
-    // 'eba' and 'oracion' count as content (they are not in the list)
+    expect(t).toBe('eva poration')
+    // 'eva' and 'poration' count as content (they are not in the list)
   })
 
-  // 8. Accent/case normalization on fillers.
-  it('accent/case normalization on fillers', () => {
-    const result = gateClause('O SEA, BUENO')
+  // 8. Case normalization on fillers.
+  it('case normalization on fillers', () => {
+    const result = gateClause('WELL, OKAY')
     expect(result.pass).toBe(false)
     expect(result.reason).toBe('no-content')
   })
@@ -84,9 +84,9 @@ describe('gateClause', () => {
   // 10. The water-cycle clauses in a row all pass.
   it('water-cycle clauses in a row all pass', () => {
     const clauses = [
-      'el sol calienta el mar',
-      'el agua se evapora y sube',
-      'forma nubes',
+      'the sun heats the sea',
+      'the water evaporates and rises',
+      'forms clouds',
     ]
     for (const c of clauses) {
       expect(gateClause(c).pass, `expected clause to pass: "${c}"`).toBe(true)

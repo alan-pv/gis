@@ -18,8 +18,8 @@
  *
  * The gate does not try to detect nouns with a POS tagger: a reliable "no nouns"
  * detector would amount to *deciding content*. Instead it approximates with a
- * closed list of fillers + function words (Spanish, since the lessons are spoken
- * in Spanish): if nothing is left after removing them (no word of at least
+ * closed list of fillers + function words (English, since the lessons are spoken
+ * in English): if nothing is left after removing them (no word of at least
  * minContentChars), the clause is discarded.
  */
 
@@ -48,22 +48,22 @@ export interface GateOptions {
 
 const IGNORE_WORDS: readonly string[] = [
   // Articles and determiners
-  'el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'lo', 'al', 'del',
+  'the', 'a', 'an', 'this', 'that', 'these', 'those',
   // Prepositions
-  'a', 'ante', 'bajo', 'con', 'contra', 'de', 'desde', 'en', 'entre', 'hacia',
-  'hasta', 'para', 'por', 'segun', 'sin', 'so', 'sobre', 'tras',
+  'of', 'to', 'in', 'on', 'at', 'by', 'for', 'with', 'from', 'into', 'about',
+  'over', 'under', 'onto', 'upon', 'than', 'via',
   // Conjunctions / connectors
-  'y', 'e', 'o', 'u', 'ni', 'que', 'pero', 'mas', 'sino', 'porque', 'pues',
-  'aunque', 'como', 'si', 'entonces',
-  // Pronouns and clitics
-  'me', 'te', 'se', 'nos', 'os', 'le', 'les', 'mi', 'tu', 'su', 'sus', 'mis',
-  'tus', 'yo', 'ella', 'ello', 'eso', 'esto', 'esta', 'este', 'esa', 'ese',
-  'estos', 'estas', 'esos', 'esas', 'aqui', 'alli', 'ahi',
-  // Copulative / existential verbs with little visual content on their own
-  'es', 'son', 'estan', 'sea', 'hay',
+  'and', 'or', 'but', 'nor', 'so', 'because', 'if', 'then', 'as', 'though',
+  'although', 'while', 'yet',
+  // Pronouns
+  'i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them',
+  'my', 'your', 'his', 'its', 'our', 'their', 'here', 'there',
+  // Copular / existential / auxiliary verbs with little visual content on their own
+  'is', 'are', 'was', 'were', 'be', 'am', 'been', 'being', 'do', 'does', 'did',
+  'have', 'has', 'had',
   // Fillers and interjections
-  'eh', 'em', 'mmm', 'mm', 'm', 'aja', 'ajaja', 'bueno', 'osea', 'verdad',
-  'vale', 'ya', 'ah', 'oh', 'uy', 'uf', 'hmm', 'okey', 'ok', 'digamos', 'nomas',
+  'uh', 'um', 'er', 'erm', 'hmm', 'mm', 'mmm', 'ah', 'oh', 'okay', 'ok', 'well',
+  'right', 'yeah', 'yes', 'like', 'alright',
 ]
 
 /** Default gate options. */
